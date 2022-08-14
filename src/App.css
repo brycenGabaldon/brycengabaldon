@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   background: url(/public/Solar_System_.jpeg);
-  background-size: contain;
+  background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
 }
