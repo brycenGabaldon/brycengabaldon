@@ -11,7 +11,6 @@ function App() {
 
         <p></p>
       </header>
-      </div>
     </div>
   );
 }
