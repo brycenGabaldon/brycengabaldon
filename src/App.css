@@ -2,6 +2,8 @@
   text-align: center;
   background: url(/public/Solar_System_.jpeg);
   background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .App-logo {
