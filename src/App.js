@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Branch Merge
+          Hey Baby, I think it's working!
         </p>
         <a
           className="App-link"
