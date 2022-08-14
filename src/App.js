@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Hey Baby, I think it's working!
+          Barely safe?
         </p>
         <a
           className="App-link"
@@ -23,3 +23,4 @@ function App() {
 }
 
 export default App;
+
