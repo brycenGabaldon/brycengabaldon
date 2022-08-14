@@ -1,26 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App Img">
+      <div className="Idk">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Barely safe?
+          <img src={logo} className="App-logo" alt="logo" />
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          here we fuckin go!
-        </a>
+
+        <p></p>
       </header>
+      </div>
     </div>
   );
 }
 
 export default App;
-
