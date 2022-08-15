@@ -1,0 +1,35 @@
+0000000000000000000000000000000000000000 310c74426fbd19501f37141dd4805519e7d18fac brycenGabaldon <47164000+brycenGabaldon@users.noreply.github.com> 1660439139 -0700	commit (initial): Initialize project using Create React App
+310c74426fbd19501f37141dd4805519e7d18fac 1858c2d3fe00038929395b19cf8a5a9ce8824273 brycenGabaldon <47164000+brycenGabaldon@users.noreply.github.com> 1660442100 -0700	commit: Site Init
+1858c2d3fe00038929395b19cf8a5a9ce8824273 1858c2d3fe00038929395b19cf8a5a9ce8824273 brycenGabaldon <47164000+brycenGabaldon@users.noreply.github.com> 1660442835 -0700	checkout: moving from master to main
+1858c2d3fe00038929395b19cf8a5a9ce8824273 a6296faf100592683756ab4a2b1d58aaddbacb83 brycenGabaldon <47164000+brycenGabaldon@users.noreply.github.com> 1660442848 -0700	commit: main branch
+a6296faf100592683756ab4a2b1d58aaddbacb83 c5cd2ef50fb33e7f19d913c91c2ab7156232745f brycenGabaldon <47164000+brycenGabaldon@users.noreply.github.com> 1660443119 -0700	commit: First Edit!
+c5cd2ef50fb33e7f19d913c91c2ab7156232745f c5cd2ef50fb33e7f19d913c91c2ab7156232745f brycenGabaldon <47164000+brycenGabaldon@users.noreply.github.com> 1660443740 -0700	checkout: moving from main to feature-x
+c5cd2ef50fb33e7f19d913c91c2ab7156232745f 834412e2ccb02ef5e5e9c2e01ba4755b99657312 brycenGabaldon <47164000+brycenGabaldon@users.noreply.github.com> 1660443883 -0700	commit: add feature
+834412e2ccb02ef5e5e9c2e01ba4755b99657312 708013aa3edb99c5f5bfa47fac3ec13c52558b9f brycenGabaldon <47164000+brycenGabaldon@users.noreply.github.com> 1660444713 -0700	commit: Branch Merge
+708013aa3edb99c5f5bfa47fac3ec13c52558b9f 89d11e2d47606e79f96469678a9d366b9658b44a brycenGabaldon <47164000+brycenGabaldon@users.noreply.github.com> 1660446463 -0700	commit: baby its working
+89d11e2d47606e79f96469678a9d366b9658b44a 5ae4ef8e9bc68150421cffd310d1dfd493462c0e brycenGabaldon <47164000+brycenGabaldon@users.noreply.github.com> 1660454663 -0700	commit: background and lotus logo
+5ae4ef8e9bc68150421cffd310d1dfd493462c0e 61e260947c5f82332d285edc7fd8dc8d636fce1b brycenGabaldon <47164000+brycenGabaldon@users.noreply.github.com> 1660455239 -0700	commit: background
+61e260947c5f82332d285edc7fd8dc8d636fce1b ffdc0025ae5382cd0113e4c98ead2b6f5dfc3d5e brycenGabaldon <47164000+brycenGabaldon@users.noreply.github.com> 1660455384 -0700	commit: links
+ffdc0025ae5382cd0113e4c98ead2b6f5dfc3d5e 92cded09471bbda6e5aac22b74303c29d1ed9918 brycenGabaldon <47164000+brycenGabaldon@users.noreply.github.com> 1660459877 -0700	reset: moving to 92cded09471bbda6e5aac22b74303c29d1ed9918
+92cded09471bbda6e5aac22b74303c29d1ed9918 05a43c52fa16a3280a833372b4e7fd7fab3eb780 brycenGabaldon <47164000+brycenGabaldon@users.noreply.github.com> 1660460028 -0700	commit: trash commit
+05a43c52fa16a3280a833372b4e7fd7fab3eb780 299394673fb6ab22c888dca5bee98044ac0636d9 brycenGabaldon <47164000+brycenGabaldon@users.noreply.github.com> 1660460037 -0700	pull --tags origin feature-x: Merge made by the 'recursive' strategy.
+299394673fb6ab22c888dca5bee98044ac0636d9 05a43c52fa16a3280a833372b4e7fd7fab3eb780 brycenGabaldon <47164000+brycenGabaldon@users.noreply.github.com> 1660460478 -0700	reset: moving to HEAD^
+05a43c52fa16a3280a833372b4e7fd7fab3eb780 92cded09471bbda6e5aac22b74303c29d1ed9918 brycenGabaldon <47164000+brycenGabaldon@users.noreply.github.com> 1660460483 -0700	reset: moving to HEAD^
+92cded09471bbda6e5aac22b74303c29d1ed9918 4b0e5dfa738176a53bfe41128d512563512a8313 brycenGabaldon <47164000+brycenGabaldon@users.noreply.github.com> 1660460493 -0700	reset: moving to HEAD^
+4b0e5dfa738176a53bfe41128d512563512a8313 1ebc7c1d61fff23d0f54fdab3dad0faa3a8e7025 brycenGabaldon <47164000+brycenGabaldon@users.noreply.github.com> 1660460502 -0700	reset: moving to HEAD^
+1ebc7c1d61fff23d0f54fdab3dad0faa3a8e7025 b0495a4095a94b4e127b32b64ba842a8b1644aaf brycenGabaldon <47164000+brycenGabaldon@users.noreply.github.com> 1660460765 -0700	commit: barely safe
+b0495a4095a94b4e127b32b64ba842a8b1644aaf d2f9dde4b2d6631a2c8234f1d553f62b9746f33e brycenGabaldon <47164000+brycenGabaldon@users.noreply.github.com> 1660461128 -0700	commit: ?
+d2f9dde4b2d6631a2c8234f1d553f62b9746f33e f054df41d85ef013401f15ffe2212488efd5a93b brycenGabaldon <47164000+brycenGabaldon@users.noreply.github.com> 1660467386 -0700	commit: added background and resized
+f054df41d85ef013401f15ffe2212488efd5a93b 6ee8b557290a2567e04ffd9bb4ee65c0e0263925 brycenGabaldon <47164000+brycenGabaldon@users.noreply.github.com> 1660467434 -0700	commit: BG and Resize
+6ee8b557290a2567e04ffd9bb4ee65c0e0263925 40bdc36e603ed4b77a9f489ed0fbacbcc42e0fd7 brycenGabaldon <47164000+brycenGabaldon@users.noreply.github.com> 1660467806 -0700	commit: cleanup
+40bdc36e603ed4b77a9f489ed0fbacbcc42e0fd7 ccae5959295c05f04731cef758c5b58590b9b261 brycenGabaldon <47164000+brycenGabaldon@users.noreply.github.com> 1660467847 -0700	commit: cleanup
+ccae5959295c05f04731cef758c5b58590b9b261 0535a3e2ad6edbefdbeca46afb85ce1756a00b3d brycenGabaldon <47164000+brycenGabaldon@users.noreply.github.com> 1660467895 -0700	commit: cleanup
+0535a3e2ad6edbefdbeca46afb85ce1756a00b3d 984f1bc3456c115002d3fc0e06b1c32f51049e66 brycenGabaldon <47164000+brycenGabaldon@users.noreply.github.com> 1660468150 -0700	commit: fixing to merge
+984f1bc3456c115002d3fc0e06b1c32f51049e66 10e82dfbf557c810c0e08422b4c23620a658d45f brycenGabaldon <47164000+brycenGabaldon@users.noreply.github.com> 1660468314 -0700	commit: ill get it
+10e82dfbf557c810c0e08422b4c23620a658d45f af53613a387972a5f768f40c27187d3499678224 brycenGabaldon <47164000+brycenGabaldon@users.noreply.github.com> 1660469136 -0700	commit: almost
+af53613a387972a5f768f40c27187d3499678224 297b671ef7841885ee21703036d77df128808c0d brycenGabaldon <47164000+brycenGabaldon@users.noreply.github.com> 1660469140 -0700	pull --tags origin feature-x: Merge made by the 'recursive' strategy.
+297b671ef7841885ee21703036d77df128808c0d cda9473892ed47cb3942163eae7e3f0a27af151b brycenGabaldon <47164000+brycenGabaldon@users.noreply.github.com> 1660469830 -0700	commit: aa
+cda9473892ed47cb3942163eae7e3f0a27af151b a4476e4fadf2650bcb08177542e07bb19d14be1c brycenGabaldon <47164000+brycenGabaldon@users.noreply.github.com> 1660471584 -0700	commit: vv
+a4476e4fadf2650bcb08177542e07bb19d14be1c d681df8c27303c9a73bdf84e198a05da9a83bf2b brycenGabaldon <47164000+brycenGabaldon@users.noreply.github.com> 1660472340 -0700	commit: stretch fit
+d681df8c27303c9a73bdf84e198a05da9a83bf2b 1f3d0cf6d72609635db5701d78a05ef484f94ee3 brycenGabaldon <47164000+brycenGabaldon@users.noreply.github.com> 1660531038 -0700	commit: I SHIT
+1f3d0cf6d72609635db5701d78a05ef484f94ee3 789e36152d72f9d0f0625ce831c8c38640766bce brycenGabaldon <47164000+brycenGabaldon@users.noreply.github.com> 1660534098 -0700	commit: installed tailwind
