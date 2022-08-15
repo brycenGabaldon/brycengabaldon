@@ -8,8 +8,9 @@ function App() {
       <header className="App-header">
         <motion.button
           class="Mandala"
-          whileHover={{ scale: 1.5, rotate: -90 }}
-          whileTap={{ scale: 0.6, rotate: 90 }}
+          whileHover={{ rotate: -90 }}
+          whileTap={{ scale: 1.6, rotate: 90 }}
+          
         >
           <img src={Mandala} className="App-logo" alt="Mandala" />
         </motion.button>
