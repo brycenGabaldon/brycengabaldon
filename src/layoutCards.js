@@ -3,14 +3,14 @@ import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 
 const cards = [1, 2, 3, 4];
-
+var myArray = [];
 const LayoutCards = () => {
 
   const [selectedId, setSelectedId] = useState(null);
 
   const [canDrag, setCanDrag] = useState(false);
 
-  const containerRefs = useRef(new Array());
+  const containerRefs = useRef(myArray);
 
   const handlePanEnd = (e, info, card) => {
 
