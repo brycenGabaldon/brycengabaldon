@@ -29,7 +29,7 @@ export default function Modal({ open, children , onClose }) {
     <>
     <div style={OVERLAY_STYLES}></div>
     <div style= {MODAL_STYLES} className="ServiceModal">
-    <button onClick={onClose}>x</button>
+    <button onClick={onClose} className="shadow-lg CloseButton">x</button>
     {children}</div>
     </>
   )

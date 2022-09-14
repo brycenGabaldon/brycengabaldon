@@ -27,7 +27,6 @@ export default function App() {
           </button>
 
           <Modal open={isOpen} onClose={() => setIsOpen(false)}>
-            Modal
             </Modal>
         </div>
       </div>
