@@ -1,12 +1,13 @@
 import React from 'react'
-import "./App.scss";
+import { motion } from 'framer-motion';
+import './pages.scss';
 
 const MODAL_STYLES = {
     position: 'fixed',
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    backgroundColor: '#FFF',
+    backgroundColor: 'red',
     padding: '50px',
     zIndex: 1000
   
@@ -22,15 +23,15 @@ const MODAL_STYLES = {
     zIndex: 1000
   
   }
-export default function Services({ open, children , onClose }) {
-    if (!open) return null
+export default function About({ open4, children , onClose4 }) {
+    if (!open4) return null
 
   return (
     <>
     <div style={OVERLAY_STYLES}></div>
-    <div style= {MODAL_STYLES} className="shadow-xl ServiceModal">
-    <button onClick={onClose} className="shadow-m hover:shadow-xl CloseButton">x</button>
-    {children}</div>
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} style= {MODAL_STYLES} className="shadow-xl ServiceModal">
+    <button onClick={onClose4} className="shadow-m hover:shadow-xl CloseButton">x</button>
+    {children}</motion.div>
     </>
   )
 }

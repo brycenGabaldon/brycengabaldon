@@ -1,0 +1,18 @@
+
+.ServiceModal {
+    height: 110%;
+    width: 100%;
+    border-radius: 1rem;
+  }
+  
+  .CloseButton {
+    background: lightgray;
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+    border: 1px solid black;
+    position: fixed;
+    top: -1rem;
+    left: -1rem;
+  
+  }
