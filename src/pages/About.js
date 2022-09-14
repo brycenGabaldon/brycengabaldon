@@ -4,7 +4,7 @@ import './pages.scss';
 
 const MODAL_STYLES = {
     position: 'fixed',
-    top: '50%',
+    top: '45%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
     backgroundColor: 'red',
@@ -28,9 +28,9 @@ export default function About({ open4, children , onClose4 }) {
 
   return (
     <>
-    <div style={OVERLAY_STYLES}></div>
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} style= {MODAL_STYLES} className="shadow-xl ServiceModal">
-    <button onClick={onClose4} className="shadow-m hover:shadow-xl CloseButton">x</button>
+    <motion.div initial={{ opacity: 0.5 }} animate={{ opacity: 1 }}onClick={onClose4} style={OVERLAY_STYLES}></motion.div>
+    <motion.div initial={{ y: '-150%', x: '-50%' }} animate={{ y: '-58%', x: '-50%'}}  style= {MODAL_STYLES} className="shadow-xl ServiceModal">
+
     {children}</motion.div>
     </>
   )
