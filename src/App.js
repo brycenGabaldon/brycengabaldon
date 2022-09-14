@@ -1,26 +1,35 @@
-import Mandala from "./Mandala.png";
 import "./App.scss";
-import { motion } from "framer-motion";
-import LayoutCards from "./layoutCards";
+import Services from "./Services";
+import React, { useState } from "react";
 
-function App() {
+
+export default function App() {
+  const [isOpen, setIsOpen] = useState(false)
   return (
-    <div className="App">
-              <LayoutCards />
-      <header className="App-header">
-        <motion.button
-          class="Mandala"
-          whileHover={{ rotate: -90 }}
-          whileTap={{ scale: 1.6, rotate: 90 }}
-        >
-          <img src={Mandala} className="App-logo" alt="Mandala" />
-        </motion.button>
-      </header>
-      <div className="Hello">
+    <>
+      <div className="App">
+        <div className="ButtonContainer">
+          <button class="shadow-lg  hover:shadow-gray-500/50 Button Big" onClick={() => setIsOpen(true)}>
+            {" "}
+            Services
+          </button>
+          <button class="shadow-lg  hover:shadow-gray-500/50 Button Small">
+            {" "}
+            Contact
+          </button>
+          <button class="shadow-lg  hover:shadow-gray-500/50 Button Small">
+            {" "}
+            Book Appointment
+          </button>
+          <button class="shadow-lg hover:shadow-gray-500/50 Button Big">
+            {" "}
+            About us
+          </button>
 
+          <Services open={isOpen} onClose={() => setIsOpen(false)}>
+            </Services>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
-
-export default App;
