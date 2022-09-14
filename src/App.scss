@@ -25,8 +25,6 @@
   background-size: cover;
   background-position: center;
   font-size: 1.5rem;
-  box-shadow: 10rem black;
-
 }
 
 .Big {
@@ -44,6 +42,12 @@
   }
 
   .ButtonContainer {
-    height: 100vh;
+    height: 100%;
   }
+}
+
+.ServiceModal {
+  height: 95%;
+  width: 95%;
+  border-radius: 1rem;
 }
