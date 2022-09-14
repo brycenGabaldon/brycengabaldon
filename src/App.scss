@@ -3,7 +3,7 @@
   width: 100vw;
   align-items: center;
   justify-items: center;
-  background: lightgrey;
+
 }
 
 .ButtonContainer{
@@ -13,26 +13,37 @@
   justify-content: space-evenly;
   height: 100%;
   width: 100%;
+  background: lightgrey;
 }
 
 
 .Button {
-  align-items: space-evenly;
   border-radius: 1rem;
   border: 1px solid black;
-  height: 47vh;
+  height: 48%;
   background-image: url("Lotus.jpg");
   background-size: cover;
   background-position: center;
-  align-content: center;
-  justify-content: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  box-shadow: 10rem black;
+
 }
 
 .Big {
-  width: 62vw;
+  width: 60%;
 }
 
 .Small {
-  width: 32vw;
+  width: 35%;
+}
+
+@media (max-width: 900px) {
+  .Button {
+    width: 97%;
+    height: 24%;
+  }
+
+  .ButtonContainer {
+    height: 100vh;
+  }
 }
