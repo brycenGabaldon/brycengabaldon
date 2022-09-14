@@ -22,14 +22,14 @@ const MODAL_STYLES = {
     zIndex: 1000
   
   }
-export default function Modal({ open, children , onClose }) {
+export default function Services({ open, children , onClose }) {
     if (!open) return null
 
   return (
     <>
     <div style={OVERLAY_STYLES}></div>
-    <div style= {MODAL_STYLES} className="ServiceModal">
-    <button onClick={onClose} className="shadow-lg CloseButton">x</button>
+    <div style= {MODAL_STYLES} className="shadow-xl ServiceModal">
+    <button onClick={onClose} className="shadow-m hover:shadow-xl CloseButton">x</button>
     {children}</div>
     </>
   )

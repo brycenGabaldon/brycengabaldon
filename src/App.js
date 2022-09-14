@@ -1,5 +1,5 @@
 import "./App.scss";
-import Modal from "./Modal";
+import Services from "./Services";
 import React, { useState } from "react";
 
 
@@ -26,8 +26,8 @@ export default function App() {
             About us
           </button>
 
-          <Modal open={isOpen} onClose={() => setIsOpen(false)}>
-            </Modal>
+          <Services open={isOpen} onClose={() => setIsOpen(false)}>
+            </Services>
         </div>
       </div>
     </>
