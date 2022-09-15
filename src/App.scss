@@ -14,7 +14,7 @@
   justify-content: space-evenly;
   height: 100%;
   width: 100%;
-  background: repeating-linear-gradient(rgb(202, 202, 202), rgb(146, 146, 146));
+
 }
 
 .Button {
@@ -35,7 +35,19 @@
   width: 35%;
 }
 
-@media (orientation: portrait) {
+@media (prefers-color-scheme: dark) {
+  .ButtonContainer {
+    background: repeating-linear-gradient(rgb(70, 70, 70), rgb(0, 0, 0));
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .ButtonContainer {
+    background: repeating-linear-gradient(rgb(202, 202, 202), rgb(146, 146, 146));
+  }
+}
+
+@media (orientation: portrait) and (max-width: 700px) {
   .Button {
     width: 96%;
     height: 23%;
