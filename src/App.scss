@@ -29,7 +29,7 @@ background: lightgray;
   justify-content: space-evenly;
   height: 100%;
   width: 100%;
-
+padding: 4rem;
 }
 
 .Button {
@@ -38,7 +38,7 @@ background: lightgray;
   height: 45%;
   background-size: cover;
   background-position: center;
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-family: 'Fraunces', serif;
 }
 
@@ -54,11 +54,26 @@ background: lightgray;
   .ButtonContainer {
     background-image: url("./black-carbon-fiber-texture-background_1017-23625.jpg");
   }
+  .Button {
+    color: black;
+  }
 }
 
 @media (prefers-color-scheme: light) {
   .ButtonContainer {
     background-image: url("./beautiful-golden-glittering-background-decoration-backdrop-merry-christmas-holiday-gold-abstract-texture_482257-33028.jpg");
+  }
+  .Button {
+    color: white;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 700px) {
+  .ButtonContainer {
+   padding: 2rem;
+  }
+  .Button {
+    font-size: 1.5rem;
   }
 }
 
@@ -66,12 +81,15 @@ background: lightgray;
   .Button {
     width: 95%;
     height: 23%;
+    font-size: 1.8rem;
   }
 
   .ButtonContainer {
     height: 100%;
     width: 100%;
     flex-direction: column;
+    padding: 0;
+    padding: 2rem;
   }
 }
 
