@@ -13,22 +13,21 @@
   justify-content: space-evenly;
   height: 100%;
   width: 100%;
-  background: lightgrey;
+  background: repeating-linear-gradient(rgb(202, 202, 202), rgb(146, 146, 146));
 }
-
 
 .Button {
   border-radius: 1rem;
-  border: 1px solid black;
-  height: 48%;
-  background-image: url("Lotus.jpg");
+  border: 2px solid black;
+  height: 45%;
   background-size: cover;
   background-position: center;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
+  font-family: 'Fraunces', serif;
 }
 
 .Big {
-  width: 60%;
+  width: 55%;
 }
 
 .Small {
@@ -37,8 +36,8 @@
 
 @media (max-width: 900px) {
   .Button {
-    width: 97%;
-    height: 24%;
+    width: 96%;
+    height: 23%;
   }
 
   .ButtonContainer {

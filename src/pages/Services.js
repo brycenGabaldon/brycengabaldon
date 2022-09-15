@@ -8,7 +8,6 @@ const MODAL_STYLES = {
     top: '45%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    backgroundColor: '#FFF',
     padding: '50px',
     zIndex: 1000
   
@@ -29,8 +28,12 @@ export default function Services({ open1, children , onClose1 }) {
 
   return (
     <>
-    <motion.div initial={{ opacity: 0.5 }} animate={{ opacity: 1 }}onClick={onClose1} style={OVERLAY_STYLES}></motion.div>
-    <motion.div initial={{ y: '-150%', x: '-50%' }} animate={{ y: '-58%', x: '-50%'}}  style= {MODAL_STYLES} className="shadow-xl ServiceModal">
+    <motion.div initial={{ opacity: 0.5 }} animate={{ opacity: 1, animationDuration: 50 }} transition={{ duration: .5}} onClick={onClose1} style={OVERLAY_STYLES}></motion.div>
+    <motion.div initial={{ y: '-150%', x: '-50%' }} animate={{ y: '-58%', x: '-50%' }} transition={{
+  delay: 0.1,
+  y: { duration: .2 },
+  default: { ease: "linear" }
+}} style= {MODAL_STYLES} className="ModalSpacer shadow-xl ServiceModal">
 
     {children}</motion.div>
     </>

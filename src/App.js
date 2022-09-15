@@ -4,7 +4,9 @@ import Contact from "./pages/Contact";
 import Book from "./pages/Book";
 import About from "./pages/About";
 import React, { useState } from "react";
-/* import { motion } from "framer-motion"; */
+import '../src/pages/pages.scss';
+
+import { motion } from "framer-motion";
 
 
 export default function App() {
@@ -19,23 +21,23 @@ export default function App() {
     <>
       <div className="App">
         <div className="ButtonContainer">
-          <button className="shadow-lg  hover:shadow-gray-500/50 Button Big" onClick={() => setIsOpen1(true)}>
+          <motion.button className= "Services shadow-lg  hover:shadow-gray-500/50 Button Big" whileHover={{ scale: 1.05 }} onClick={() => setIsOpen1(true)} whileTap={{ scale: 0.95 }}>
             {" "}
             Services
-          </button>
+          </motion.button>
 
-          <button className="shadow-lg  hover:shadow-gray-500/50 Button Small" onClick={() => setIsOpen2(true)}>
+          <motion.button className="Contact shadow-lg  hover:shadow-gray-500/50 Button Small" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} onClick={() => setIsOpen2(true)}>
             {" "}
             Contact
-          </button>
-          <button className="shadow-lg  hover:shadow-gray-500/50 Button Small" onClick={() => setIsOpen3(true)}>
+          </motion.button>
+          <motion.button className="Book shadow-lg  hover:shadow-gray-500/50 Button Small"  whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} onClick={() => setIsOpen3(true)}>
             {" "}
             Book Appointment
-          </button>
-          <button  className="shadow-lg hover:shadow-gray-500/50 Button Big" onClick={() => setIsOpen4(true)}>
+          </motion.button>
+          <motion.button  className="About shadow-lg hover:shadow-gray-500/50 Button Big"  whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} onClick={() => setIsOpen4(true)}>
             {" "}
             About us
-          </button>
+          </motion.button>
 
           <Services open1={isOpen1} onClose1={() => setIsOpen1(false)}>
             </Services>

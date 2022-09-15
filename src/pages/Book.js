@@ -29,8 +29,12 @@ export default function Book({ open3, children , onClose3 }) {
 
   return (
     <>
-    <motion.div initial={{ opacity: 0.5 }} animate={{ opacity: 1 }}onClick={onClose3} style={OVERLAY_STYLES}></motion.div>
-    <motion.div initial={{ y: '-150%', x: '-50%' }} animate={{ y: '-58%', x: '-50%'}}  style= {MODAL_STYLES} className="shadow-xl ServiceModal">
+    <motion.div initial={{ opacity: 0.5 }} animate={{ opacity: 1, animationDuration: 50 }} transition={{ duration: .5}} onClick={onClose3} style={OVERLAY_STYLES}></motion.div>
+    <motion.div initial={{ y: '-150%', x: '-50%' }} animate={{ y: '-58%', x: '-50%' }} transition={{
+  delay: 0.1,
+  y: { duration: .2 },
+  default: { ease: "linear" }
+}} style= {MODAL_STYLES} className="shadow-xl ServiceModal">
 
     {children}</motion.div>
     </>
