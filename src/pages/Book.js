@@ -14,6 +14,7 @@ const MODAL_STYLES = {
   
   }
 
+
   const OVERLAY_STYLES = {
     position: 'fixed',
     top: 0,

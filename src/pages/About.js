@@ -28,7 +28,8 @@ export default function About({ open4, children , onClose4 }) {
 
   return (
     <>
-    <motion.div initial={{ opacity: 0.5 }} animate={{ opacity: 1, animationDuration: 50 }} transition={{ duration: .5}} onClick={onClose4} style={OVERLAY_STYLES}></motion.div>
+    <motion.div initial={{ opacity: 0.5 }} animate={{ opacity: 1, animationDuration: 50 }} transition={{ duration: .5}} onClick={onClose4} style={OVERLAY_STYLES}>
+    </motion.div>
     <motion.div initial={{ y: '-150%', x: '-50%' }} animate={{ y: '-58%', x: '-50%' }} transition={{
   delay: 0.1,
   y: { duration: .2 },
