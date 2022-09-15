@@ -52,13 +52,13 @@ background: lightgray;
 
 @media (prefers-color-scheme: dark) {
   .ButtonContainer {
-    background: repeating-linear-gradient(rgb(70, 70, 70), rgb(0, 0, 0));
+    background-image: url("./black-carbon-fiber-texture-background_1017-23625.jpg");
   }
 }
 
 @media (prefers-color-scheme: light) {
   .ButtonContainer {
-    background: repeating-linear-gradient(rgb(202, 202, 202), rgb(146, 146, 146));
+    background-image: url("./beautiful-golden-glittering-background-decoration-backdrop-merry-christmas-holiday-gold-abstract-texture_482257-33028.jpg");
   }
 }
 
