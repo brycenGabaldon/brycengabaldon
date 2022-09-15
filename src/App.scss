@@ -8,6 +8,7 @@
 
 .ButtonContainer{
   display: flex;
+  flex-direction: row;
   flex-flow: row wrap;
   align-content: space-around;
   justify-content: space-evenly;
@@ -34,7 +35,7 @@
   width: 35%;
 }
 
-@media (max-width: 900px) {
+@media (orientation: portrait) {
   .Button {
     width: 96%;
     height: 23%;
@@ -42,5 +43,7 @@
 
   .ButtonContainer {
     height: 100%;
+    width: 100%;
+    flex-direction: column;
   }
 }
