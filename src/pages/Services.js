@@ -33,7 +33,7 @@ export default function Services({ open1, children , onClose1 }) {
   delay: 0.1,
   y: { duration: .2 },
   default: { ease: "linear" }
-}} style= {MODAL_STYLES} className="ModalSpacer shadow-xl ServiceModal">
+}} style= {MODAL_STYLES} className="ServiceModal shadow-xl Modal">
 
     {children}</motion.div>
     </>

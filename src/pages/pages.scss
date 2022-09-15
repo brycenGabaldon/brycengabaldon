@@ -1,22 +1,22 @@
 
-.ServiceModal {
+.Modal {
     height: 110%;
     width: 100%;
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     border-radius: 1rem;
     border-bottom: 0.2rem solid black;
   }
 
-  .ModalSpacer, .Services{
+  .Services, .ServiceModal {
     background-image: url("../../public/Solar_System_.jpeg");
   }
-  .Contact {
+  .Contact, .ContactModal{
     background-image: url("../../public/Untitled_Artwork.gif");
   }
-  .Book {
+  .Book, .BookModal{
     background-image: url("../../public/Moon.jpeg");
   }
-  .About {
+  .About, .AboutModal{
     background-image: url("../../public/Mountains.jpeg");
   }
