@@ -2,17 +2,21 @@
 .ServiceModal {
     height: 110%;
     width: 100%;
+    background-size: cover;
+    background-position: center;
     border-radius: 1rem;
+    border-bottom: 0.2rem solid black;
   }
-  
-  .CloseButton {
-    background: lightgray;
-    border-radius: 50%;
-    height: 2rem;
-    width: 2rem;
-    border: 1px solid black;
-    position: fixed;
-    top: -1rem;
-    left: -1rem;
-  
+
+  .ModalSpacer, .Services{
+    background-image: url("../../public/Solar_System_.jpeg");
+  }
+  .Contact {
+    background-image: url("../../public/Untitled_Artwork.gif");
+  }
+  .Book {
+    background-image: url("../../public/Moon.jpeg");
+  }
+  .About {
+    background-image: url("../../public/Mountains.jpeg");
   }
