@@ -34,7 +34,7 @@ export default function Contact({ open2, children , onClose2 }) {
   delay: 0.1,
   y: { duration: .2 },
   default: { ease: "linear" }
-}} style= {MODAL_STYLES} className="shadow-xl ServiceModal">
+}} style= {MODAL_STYLES} className="ContactModal shadow-xl Modal">
 
     {children}</motion.div>
     </>

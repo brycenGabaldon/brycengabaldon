@@ -33,7 +33,7 @@ export default function About({ open4, children , onClose4 }) {
   delay: 0.1,
   y: { duration: .2 },
   default: { ease: "linear" }
-}} style= {MODAL_STYLES} className="Modal shadow-xl ServiceModal">
+}} style= {MODAL_STYLES} className=" AboutModal shadow-xl Modal">
 
     {children}</motion.div>
     </>

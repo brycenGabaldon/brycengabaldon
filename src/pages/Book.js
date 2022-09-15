@@ -34,7 +34,7 @@ export default function Book({ open3, children , onClose3 }) {
   delay: 0.1,
   y: { duration: .2 },
   default: { ease: "linear" }
-}} style= {MODAL_STYLES} className="shadow-xl ServiceModal">
+}} style= {MODAL_STYLES} className="BookModal shadow-xl Modal">
 
     {children}</motion.div>
     </>
