@@ -8,12 +8,13 @@
 
 .ButtonContainer{
   display: flex;
+  flex-direction: row;
   flex-flow: row wrap;
   align-content: space-around;
   justify-content: space-evenly;
   height: 100%;
   width: 100%;
-  background: repeating-linear-gradient(rgb(202, 202, 202), rgb(146, 146, 146));
+
 }
 
 .Button {
@@ -34,7 +35,19 @@
   width: 35%;
 }
 
-@media (max-width: 900px) {
+@media (prefers-color-scheme: dark) {
+  .ButtonContainer {
+    background: repeating-linear-gradient(rgb(70, 70, 70), rgb(0, 0, 0));
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .ButtonContainer {
+    background: repeating-linear-gradient(rgb(202, 202, 202), rgb(146, 146, 146));
+  }
+}
+
+@media (orientation: portrait) and (max-width: 700px) {
   .Button {
     width: 96%;
     height: 23%;
@@ -42,5 +55,7 @@
 
   .ButtonContainer {
     height: 100%;
+    width: 100%;
+    flex-direction: column;
   }
 }
