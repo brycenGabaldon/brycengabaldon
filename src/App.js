@@ -14,7 +14,7 @@ function toggle() {
   var z = document.getElementById("backButtonContainer");
   var w = document.getElementById("appResize");
 
-    x.style.display = "contents";
+    x.style.display = "block";
     y.style.display = "none";
     z.style.display = "block";
     zz.style.display = "block";
