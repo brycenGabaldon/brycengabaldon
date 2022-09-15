@@ -29,13 +29,14 @@ background: lightgray;
   justify-content: space-evenly;
   height: 100%;
   width: 100%;
-padding: 4rem;
+  padding: 2rem;
+
 }
 
 .Button {
   border-radius: 1rem;
   border: 2px solid black;
-  height: 45%;
+  height: 48%;
   background-size: cover;
   background-position: center;
   font-size: 2rem;
@@ -47,7 +48,7 @@ padding: 4rem;
 }
 
 .Small {
-  width: 35%;
+  width: 40%;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -70,7 +71,7 @@ padding: 4rem;
 
 @media (orientation: landscape) and (max-width: 700px) {
   .ButtonContainer {
-   padding: 2rem;
+   padding: 1rem;
   }
   .Button {
     font-size: 1.5rem;
