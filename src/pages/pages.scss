@@ -1,6 +1,6 @@
 
 .Modal {
-    height: 110%;
+    height: 100%;
     width: 100%;
     background-size: contain;
     background-position: center;
@@ -14,8 +14,16 @@
   .Contact, .ContactModal{
     background-image: url("../finger-pushing-virtual-button.jpg");
   }
-  .Book, .BookModal{
+  .Book{
     background-image: url("../concept-event-planning-work-planning-close-up.jpg");
+  }
+  .BookModal {
+    margin-top: 1.5rem;
+    position: fixed;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 90%;
   }
   .About, .AboutModal{
     background-image: url("../about-us-concept-illustration_114360-639.jpg");

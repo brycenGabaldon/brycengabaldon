@@ -3,24 +3,6 @@
   width: 100%;
 }
 
-#backButton {
-  display: none;
-  border-radius: 1rem;
-  height: 100%;
-  width: 100%;
-  background-image: url("../public/Lotus.jpg");
-  background-size: contain;
-  background-position: center;
-font-size: 1.8rem;
-font-family: 'Fraunces', serif;
-}
-#backButtonContainer {
-  display: none;
-  height: 100%;
-  width: 100%;
-background: lightgray;
-}
-
 .ButtonContainer{
   display: flex;
   flex-direction: row;
@@ -91,33 +73,19 @@ background: lightgray;
     flex-direction: column;
     padding: 0;
     padding-top: 1rem;
-    padding-bottom: 1rem;
+
   }
 }
 
 
-
-.Hello .Application {
-  width: 5000px;
-  height: 100vh;
-  z-index: 1000;
-}
-
-.JobberForm {
-
-
-margin: 20px;
-
-}
-
 #jobberContainer {
-  display: none;
+  border-radius: 1rem;
+  height: 100%;
+  padding: 2rem;
+  overflow-y: auto;
   background-image: url("./beautiful-golden-glittering-background-decoration-backdrop-merry-christmas-holiday-gold-abstract-texture_482257-33028.jpg");
-  box-sizing: content-box;
-  width: 100%;
-  align-content: center;
-  justify-content: center;
-  padding: 2%;
+
+
 
 }
 
