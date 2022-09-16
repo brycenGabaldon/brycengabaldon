@@ -60,7 +60,7 @@
   }
 }
 
-@media (orientation: portrait) and (max-width: 700px) {
+@media (orientation: portrait) and (max-width: 500px) {
   .Button {
     width: 95%;
     height: 23%;
@@ -75,13 +75,16 @@
     padding-top: 1rem;
 
   }
+  #jobberContainer {
+    padding: 0rem;
+  }
 }
 
 
 #jobberContainer {
   border-radius: 1rem;
   height: 100%;
-  padding: 2rem;
+
   overflow-y: auto;
   background-image: url("./beautiful-golden-glittering-background-decoration-backdrop-merry-christmas-holiday-gold-abstract-texture_482257-33028.jpg");
 
