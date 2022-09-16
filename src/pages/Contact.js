@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import './pages.scss';
 import '../App';
 
+
 const MODAL_STYLES = {
     position: 'fixed',
     top: '45%',
@@ -36,7 +37,7 @@ export default function Contact({ open2, children , onClose2 }) {
   default: { ease: "linear" }
 }} style= {MODAL_STYLES} className="ContactModal shadow-xl Modal">
 
-    {children}</motion.div>
+        </motion.div>
     </>
   )
 }

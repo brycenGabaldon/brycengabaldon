@@ -2,7 +2,12 @@
   height: 100%;
   width: 100%;
 }
+.JobJob {
 
+  height: 100%;
+  width: 100%;
+  z-index: 2000;
+}
 #backButton {
   display: none;
   border-radius: 1rem;
@@ -95,23 +100,13 @@ background: lightgray;
   }
 }
 
-.JobberForm {
-
-
-margin: 20px;
-
-}
-
-#jobberContainer {
-  display: none;
-  background-image: url("./beautiful-golden-glittering-background-decoration-backdrop-merry-christmas-holiday-gold-abstract-texture_482257-33028.jpg");
+.Joberr {
   height: 100%;
-  width: 100%;
-  align-content: center;
-  justify-content: center;
-  padding: 2%;
-
+  width: 95%;
 }
+
+
+
 
 html,
 body,
