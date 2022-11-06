@@ -1,6 +1,6 @@
 
 .Modal {
-    height: 110%;
+    height: 100%;
     width: 100%;
     background-size: contain;
     background-position: center;
@@ -11,12 +11,16 @@
   .Services, .ServiceModal {
     background-image: url("../services.jpg");
   }
+
   .Contact, .ContactModal{
     background-image: url("../finger-pushing-virtual-button.jpg");
   }
-  .Book, .BookModal{
-    background-image: url("../concept-event-planning-work-planning-close-up.jpg");
+
+  .Book, .Bookmodal {
+    background-image: url("../macOS-Graphic-Light.webp");
   }
+
+
   .About, .AboutModal{
     background-image: url("../about-us-concept-illustration_114360-639.jpg");
   }

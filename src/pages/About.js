@@ -3,15 +3,15 @@ import { motion } from 'framer-motion';
 import './pages.scss';
 
 const MODAL_STYLES = {
-    position: 'fixed',
-    top: '45%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    backgroundColor: 'red',
-    padding: '50px',
-    zIndex: 1000
-  
-  }
+  position: 'fixed',
+  top: '45%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  backgroundColor: 'black',
+  padding: '50px',
+  zIndex: 1000
+
+}
 
   const OVERLAY_STYLES = {
     position: 'fixed',
