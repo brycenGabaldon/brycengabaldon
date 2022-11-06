@@ -80,6 +80,14 @@ margin-right: .5rem;
 }
 }
 
+@media screen and (max-width: 400px) {
+  .Button {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+  
+}
+
 @supports(padding:max(0px)) {
   body, header, footer {
       padding-left: min(0vmin, env(safe-area-inset-left));
