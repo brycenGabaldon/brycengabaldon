@@ -16,6 +16,14 @@
   font-family: "Fraunces", serif;
 }
 
+.Wallpaper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .ButtonContainer {
   height: 100%;
   width: 100%;
@@ -66,7 +74,7 @@ margin-right: .5rem;
 }
 
 @media (prefers-color-scheme: dark) {
-  .ButtonContainer {
+  .Wallpaper {
     background-image: url("./macOS-Ventura-wallpaper-1-1.webp");
     background-size: cover;
     background-position: center;
@@ -81,7 +89,7 @@ margin-right: .5rem;
 }
 
 @media (prefers-color-scheme: light) {
-  .ButtonContainer {
+  .Wallpaper {
     background-image: url("./macOS-Graphic-Light.webp");
     background-size: cover;
     background-position: center;
