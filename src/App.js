@@ -7,6 +7,7 @@ import React, { useState } from "react";
 import '../src/pages/pages.scss';
 import { motion } from "framer-motion";
 import Jobber from "./jobberForm"
+import Folder from "./folder";
 
 export default function App() {
   const [isOpen1, setIsOpen1] = useState(false)
@@ -21,9 +22,13 @@ export default function App() {
       <div className="App">
 
         <div className="Wallpaper" >
+<div>
+  <Folder/>
+</div>
+
 <div className="ButtonContainer">
           <motion.div className="IconDock shadow-2xl" initial={{ y: '150%', x: '0%', scale:1.2, opacity:.5}} animate={{ y: '0%', x: '0%', scale:1, opacity:1 }} transition={{
-    delay: 0.1,
+    delay: 0.5,
     y: { duration: .3 },
       default: { ease: "linear" }}}>
           <div className="Center">
