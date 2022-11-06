@@ -21,4 +21,5 @@ export default class Jobber extends React.Component {
       </div>
     );
   }
+}
 

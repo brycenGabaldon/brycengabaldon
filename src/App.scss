@@ -40,6 +40,7 @@
 }
 
 .Button {
+
   border-radius: 1rem;
   border: 2px solid black;
   height: 5rem;
@@ -55,6 +56,8 @@ margin-right: .5rem;
 @media (prefers-color-scheme: dark) {
   .ButtonContainer {
     background-image: url("./macOS-Graphic-Light.webp");
+    background-size: cover;
+    background-position: center;
   }
   .Button {
     color: black;
