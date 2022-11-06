@@ -1,0 +1,36 @@
+.Folder {
+
+}
+
+  .IconDock_folder {
+    border-radius: 1rem;
+    justify-content: center;
+    align-content: center;
+    height: 8rem;
+    width: 8rem;
+    padding: .25rem;
+    backdrop-filter: blur(.5rem);
+    display: flex;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 1.5rem;
+    left: 1.5rem;
+    background: rgba(43, 43, 43, 0.418);
+    border: .01rem solid rgba(162, 162, 162, 0.414);
+  }
+
+  .Button_folder {
+    border-radius: .5rem;
+      border: 2px solid black;
+      height: 3rem;
+      width: 3rem;
+    margin: .13rem;
+      background-size: cover;
+      background-position: center;
+      font-size: 1rem;
+      font-family: "Fraunces", serif;
+    }
+
+    .Text {
+        display: none;
+    }
