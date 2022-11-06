@@ -1,36 +1,70 @@
-.Folder {
-
+.Folder_box {
+  position: fixed;
+  top: 1.5rem;
+  left: 1.5rem;
 }
 
-  .IconDock_folder {
-    border-radius: 1rem;
-    justify-content: center;
-    align-content: center;
-    height: 8rem;
-    width: 8rem;
-    padding: .25rem;
-    backdrop-filter: blur(.5rem);
-    display: flex;
-    flex-wrap: wrap;
-    position: fixed;
-    top: 1.5rem;
-    left: 1.5rem;
-    background: rgba(43, 43, 43, 0.418);
-    border: .01rem solid rgba(162, 162, 162, 0.414);
+@keyframes slidein {
+    from {
+      margin-left: -100%;
+      margin-top: -100%;
+   }
+     to {
+      margin-left: 0%;
+   }
   }
 
-  .Button_folder {
-    border-radius: .5rem;
-      border: 2px solid black;
-      height: 3rem;
-      width: 3rem;
-    margin: .13rem;
-      background-size: cover;
-      background-position: center;
-      font-size: 1rem;
-      font-family: "Fraunces", serif;
-    }
+.ButtonContainer_folder {
+    animation-duration: .9s;
+  animation-name: slidein;
+  border-radius: 1.5rem;
+  height: 8rem;
+  width: 8rem;
+  padding: 0.5rem;
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  background: rgba(43, 43, 43, 0.418);
+  border: 0.01rem solid rgba(162, 162, 162, 0.414);
+  position: fixed;
+  top: 1.5rem;
+  left: 1.5rem;
+  backdrop-filter: blur(0.5rem);
+}
 
-    .Text {
-        display: none;
-    }
+.FlexRow {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+}
+
+.Button_folder {
+  border-radius: 20%;
+  height: 3rem;
+  width: 3rem;
+  margin: 0.2rem;
+  background-size: cover;
+  background-position: center;
+  font-size: 1rem;
+  font-family: "Fraunces", serif;
+}
+.Center_folder {
+  border-radius: 20%;
+  height: 2rem;
+  width: 2rem;
+  margin: 0.2rem;
+  background-size: cover;
+  background-position: center;
+  font-size: 1rem;
+  font-family: "Fraunces", serif;
+  background: white;
+}
+
+.Zoom {
+  transition: transform 0.2s;
+}
+
+.Zoom:hover {
+  transform: scale(1.2);
+}
