@@ -1,6 +1,6 @@
 
 import "./folder.scss"
-import React, { useState } from "react";
+import React from "react";
 import '../src/pages/pages.scss';
 import { motion } from "framer-motion";
 
