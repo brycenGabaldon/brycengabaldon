@@ -24,7 +24,6 @@
 }
 
 .IconDock {
-  background: rgba(220, 220, 220, 0.448);
   border-radius: 1.5rem;
   justify-content: center;
   height: fit-content;
@@ -43,8 +42,8 @@
 
   border-radius: 1rem;
   border: 2px solid black;
-  height: 5rem;
-  width: 5rem;
+  height: 4rem;
+  width: 4rem;
 margin-left: .5rem;
 margin-right: .5rem;
   background-size: cover;
@@ -55,12 +54,15 @@ margin-right: .5rem;
 
 @media (prefers-color-scheme: dark) {
   .ButtonContainer {
-    background-image: url("./macOS-Graphic-Light.webp");
+    background-image: url("./macOS-Graphic-Dark.webp");
     background-size: cover;
     background-position: center;
   }
-  .Button {
-    color: black;
+  .Center {
+    color: whitesmoke;
+  }
+  .IconDock {
+    background: rgba(0, 0, 0, 0.418);
   }
 }
 
@@ -70,10 +72,12 @@ margin-right: .5rem;
     background-size: cover;
     background-position: center;
   }
-  .Button {
-
-    color: black;
-  }
+.Center {
+  color: black;
+}
+.IconDock {
+  background: rgba(255, 255, 255, 0.518);
+}
 }
 
 #jobberContainer {
