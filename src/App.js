@@ -21,9 +21,11 @@ export default function App() {
       <div className="App">
 
         <div className="ButtonContainer">
+
           <div className="IconDock">
           <div className="Center">
           <motion.button className= "Services shadow-lg  hover:shadow-gray-500/50 Button Big" whileHover={{ scale: 1.2 }} onClick={() => setIsOpen1(true)} whileTap={{ scale: 0.95 }}>
+
             {" "}
           </motion.button>
           <div>Services</div>
@@ -33,6 +35,7 @@ export default function App() {
           <motion.button className="Contact shadow-lg  hover:shadow-gray-500/50 Button Small" whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.95 }} onClick={() => setIsOpen2(true)}>
             {" "}
           </motion.button>
+
           <div>Contact</div>
          </div>
 
@@ -45,10 +48,13 @@ export default function App() {
          
           <div className="Center">
          <motion.button  className="About shadow-lg hover:shadow-gray-500/50 Button Big"  whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.95 }} onClick={() => setIsOpen4(true)}>
+
             {" "}
           </motion.button>
+
           <div>About</div>
           </div>
+
 <div className="ModalContainers">
           <Services open1={isOpen1} onClose1={() => setIsOpen1(false)}>
             </Services>
@@ -57,13 +63,18 @@ export default function App() {
             </Contact>
 
             <Book open3={isOpen3} onClose3={() => setIsOpen3(false)}>
+
             <div id="jobberContainer"><Jobber /></div>
+
             </Book>
 
             <About open4={isOpen4} onClose4={() => setIsOpen4(false)}>
+
             </About>
             </div>
+
             </div>
+
         </div>
       </div>
 
