@@ -22,7 +22,7 @@ export default function App() {
 
         <div className="ButtonContainer">
 
-          <div className="IconDock">
+          <div className="IconDock shadow-2xl">
           <div className="Center">
           <motion.button className= "Services shadow-lg  hover:shadow-gray-500/50 Button Big" whileHover={{ scale: 1.2 }} onClick={() => setIsOpen1(true)} whileTap={{ scale: 0.95 }}>
 
