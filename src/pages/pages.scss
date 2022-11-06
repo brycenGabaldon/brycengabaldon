@@ -11,40 +11,17 @@
   .Services, .ServiceModal {
     background-image: url("../services.jpg");
   }
+
   .Contact, .ContactModal{
     background-image: url("../finger-pushing-virtual-button.jpg");
   }
-  .Book{
-    background-image: url("../concept-event-planning-work-planning-close-up.jpg");
+
+
+  .Book, .Bookmodal {
+    background-image: url("../macOS-Graphic-Light.webp");
   }
-  .BookModal {
-    margin-top: 1.5rem;
-    position: fixed;
-    top:53%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 100%;
-  }
+
+
   .About, .AboutModal{
     background-image: url("../about-us-concept-illustration_114360-639.jpg");
-  }
-.ButtonArrow {
-  background-image: url("../arrow-up-01-512.webp");
-  background-repeat: no-repeat;
-  height: 100%;
-  width: 100%;
-  background-size: contain;
-  background-position: center;
-
-  border-bottom: 0.2rem solid black;
-}
-  .BackButton {
-
-    position: fixed;
-    left: 0%;
-    bottom: 0;
-    height: 4rem;
-    width: 100%;
-    background: black;
-    color: white;
   }

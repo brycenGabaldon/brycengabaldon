@@ -22,25 +22,39 @@ export default function App() {
 
         <div className="ButtonContainer">
 
-          <motion.button className= "Services shadow-lg  hover:shadow-gray-500/50 Button Big" whileHover={{ scale: 1.05 }} onClick={() => setIsOpen1(true)} whileTap={{ scale: 0.95 }}>
+          <div className="IconDock">
+          <div className="Center">
+          <motion.button className= "Services shadow-lg  hover:shadow-gray-500/50 Button Big" whileHover={{ scale: 1.2 }} onClick={() => setIsOpen1(true)} whileTap={{ scale: 0.95 }}>
+
             {" "}
-            Services
+          </motion.button>
+          <div>Services</div>
+          </div>
+
+<div className="Center">
+          <motion.button className="Contact shadow-lg  hover:shadow-gray-500/50 Button Small" whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.95 }} onClick={() => setIsOpen2(true)}>
+            {" "}
           </motion.button>
 
-          <motion.button className="Contact shadow-lg  hover:shadow-gray-500/50 Button Small" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} onClick={() => setIsOpen2(true)}>
+          <div>Contact</div>
+         </div>
+
+          <div className="Center">
+            <motion.button className= "Book shadow-lg  hover:shadow-gray-500/50 Button Small" whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.95 }} onClick={() => setIsOpen3(true)}>
             {" "}
-            Contact
+          </motion.button>
+          <div>Book</div>
+          </div>
+         
+          <div className="Center">
+         <motion.button  className="About shadow-lg hover:shadow-gray-500/50 Button Big"  whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.95 }} onClick={() => setIsOpen4(true)}>
+
+            {" "}
           </motion.button>
 
-          <motion.button className= "Book shadow-lg  hover:shadow-gray-500/50 Button Small" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} onClick={() => setIsOpen3(true)}>
-            {" "}
-            Book
-          </motion.button>
+          <div>About</div>
+          </div>
 
-          <motion.button  className="About shadow-lg hover:shadow-gray-500/50 Button Big"  whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} onClick={() => setIsOpen4(true)}>
-            {" "}
-            About us
-          </motion.button>
 <div className="ModalContainers">
           <Services open1={isOpen1} onClose1={() => setIsOpen1(false)}>
             </Services>
@@ -49,13 +63,18 @@ export default function App() {
             </Contact>
 
             <Book open3={isOpen3} onClose3={() => setIsOpen3(false)}>
-            <div id="jobberContainer"><Jobber /><button className="BackButton" onClick={() => setIsOpen3(false)}><div className="ButtonArrow"/></button></div>
+
+            <div id="jobberContainer"><Jobber /></div>
+
             </Book>
 
             <About open4={isOpen4} onClose4={() => setIsOpen4(false)}>
 
             </About>
             </div>
+
+            </div>
+
         </div>
       </div>
 
