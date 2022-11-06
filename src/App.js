@@ -23,7 +23,7 @@ export default function App() {
         <div className="Wallpaper" >
 <div className="ButtonContainer">
           <motion.div className="IconDock shadow-2xl" initial={{ y: '150%', x: '0%', scale:1.2, opacity:.5}} animate={{ y: '0%', x: '0%', scale:1, opacity:1 }} transition={{
-    delay: 0.1,
+    delay: 0.5,
     y: { duration: .3 },
       default: { ease: "linear" }}}>
           <div className="Center">
