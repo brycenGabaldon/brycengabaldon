@@ -22,7 +22,10 @@ export default function App() {
 
         <div className="ButtonContainer">
 
-          <div className="IconDock shadow-2xl">
+          <motion.div className="IconDock shadow-2xl" initial={{ y: '150%', x: '0%', scale:1.2, opacity:.5}} animate={{ y: '0%', x: '0%', scale:1, opacity:1 }} transition={{
+    delay: 0.1,
+    y: { duration: .4 },
+      default: { ease: "linear" }}}>
           <div className="Center">
           <motion.button className= "Services shadow-lg  hover:shadow-gray-500/50 Button Big" whileHover={{ scale: 1.2 }} onClick={() => setIsOpen1(true)} whileTap={{ scale: 0.95 }}>
 
@@ -53,7 +56,7 @@ export default function App() {
           </motion.button>
 
           <div>About</div>
-          </div>
+
 
 <div className="ModalContainers">
           <Services open1={isOpen1} onClose1={() => setIsOpen1(false)}>
@@ -74,7 +77,7 @@ export default function App() {
             </div>
 
             </div>
-
+            </motion.div>
         </div>
       </div>
 
