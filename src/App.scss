@@ -1,8 +1,9 @@
 .App {
-  min-height: -webkit-fill-available;
+
   height: 100%;
   width: 100%;
   position: fixed;
+  bottom: 0;
 }
 
 
@@ -40,9 +41,21 @@
   bottom: 0;
 }
 
-.Button {
-
+#jobberContainer {
   border-radius: 1rem;
+  height: 95%;
+  overflow-y: auto;
+  background-image: url("./macOS-Graphic-Light.webp");
+  width: 100%;
+  padding: 3rem;
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  bottom: 0;
+}
+
+.Button {
+border-radius: 1rem;
   border: 2px solid black;
   height: 4rem;
   width: 4rem;
@@ -90,6 +103,9 @@ margin-right: .5rem;
   .Center {
     font-size: .75rem;
   }
+  #jobberContainer {
+    padding: 1rem;
+  }
 }
 
 @supports(padding:max(0px)) {
@@ -97,21 +113,6 @@ margin-right: .5rem;
       padding-left: min(0vmin, env(safe-area-inset-left));
       padding-right: min(0vmin, env(safe-area-inset-right));
   }
-}
-
-#jobberContainer {
-  border-radius: 1rem;
-  height: 95%;
-  overflow-y: auto;
-  background-image: url("./macOS-Graphic-Light.webp");
-  width: 100%;
-  padding: 1.5rem;
-  background-size: cover;
-  background-position: center;
-  position: fixed;
-  bottom: 0;
-
-
 }
 
 
