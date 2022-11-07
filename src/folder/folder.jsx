@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export default function Folder(){
   const [isNavExpanded, setIsNavExpanded] = useState(false)
-
+  // const [isOverlayOpen, setisOverlayOpen] = useState(false)
 
     return (
       <div className="Folder_box" 
