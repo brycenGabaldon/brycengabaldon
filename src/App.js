@@ -7,7 +7,7 @@ import React, { useState } from "react";
 import '../src/pages/pages.scss';
 import { motion } from "framer-motion";
 import Jobber from "./jobberForm"
-import Folder from "./folder";
+import Folder from "./folder/folder";
 
 export default function App() {
   const [isOpen1, setIsOpen1] = useState(false)
