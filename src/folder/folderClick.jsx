@@ -1,4 +1,4 @@
-import React from 'react'
+/* import React from 'react'
 import { motion } from 'framer-motion';
 import './folderClickStyles.scss';
 import '../App';
@@ -47,3 +47,4 @@ export default function Services({ open1, children , onClose1 }) {
     </>
   )
 }
+ */
