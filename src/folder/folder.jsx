@@ -23,10 +23,16 @@ export default function Folder(){
           setIsNavExpanded(!isNavExpanded)
         }}>
             <div className="Center_folder"></div>
+            <div className="Center_folder"></div>
+            <div className="Center_folder"></div>
             </div>
         <div className="FlexRow" onClick={() => {
           setIsNavExpanded(!isNavExpanded)
-        }}></div>
+        }}>
+          <div className="Center_folder"></div>
+          <div className="Center_folder"></div>
+          <div className="Center_folder"></div>
+        </div>
         <div className="ModalContainers" ></div>
             
         </motion.div>

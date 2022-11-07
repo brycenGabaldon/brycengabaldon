@@ -42,23 +42,30 @@
   flex-direction: row;
   height: 100%;
   width: 100%;
+  justify-content: space-evenly;
+  margin-top: 1%;
+  margin-bottom: 1%;
 }
 
 .Button_folder {
-  border-radius: 20%;
-  height: 3rem;
-  width: 3rem;
-  margin: 0.2rem;
+
+  height: 90%;
+  width: 30%;
+
   background-size: cover;
   background-position: center;
   font-size: 1rem;
   font-family: "Fraunces", serif;
+
+  justify-content: space-evenly;
+  
 }
 .Center_folder {
-  border-radius: 20%;
-  height: 2rem;
-  width: 2rem;
-  margin: 0.2rem;
+  border-radius: 27%;
+  height: 100%;
+  width: 33.33%;
+  margin: 1%;
+  justify-content: space-evenly;
   background-size: cover;
   background-position: center;
   font-size: 1rem;
