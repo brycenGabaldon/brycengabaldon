@@ -3,7 +3,6 @@ import "./folder.scss"
 import React, { useState } from "react";
 import '../pages/pages.scss';
 import { motion } from "framer-motion";
-import Services from "./folderClick";
 
 export default function Folder(){
   const [isNavExpanded, setIsNavExpanded] = useState(false)
@@ -29,10 +28,6 @@ export default function Folder(){
           setIsNavExpanded(!isNavExpanded)
         }}></div>
         <div className="ModalContainers" ></div>
-        <Services onClick={() => {
-          setIsNavExpanded(!isNavExpanded)
-        }}>
-            </Services>
             
         </motion.div>
       </div>
