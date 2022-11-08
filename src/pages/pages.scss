@@ -6,10 +6,33 @@
     background-position: center;
     border-radius: 1rem;
     border-bottom: 0.2rem solid black;
+    justify-items: center;
+    align-items: center;
   }
 
-  .Services, .ServiceModal {
-    background-image: url("../services.jpg");
+  .ServiceModal2 {
+    padding-top: 50%;
+    justify-items: center;
+
+  }
+
+.ServiceModal {
+  color: red;
+  background: rgb(255, 255, 255);
+  height: 100%;
+  width: 100%;
+  font-size: 50px;
+  position: relative;
+  bottom: 0;
+
+}
+
+  .Services {
+
+    background: radial-gradient(rgb(20, 209, 20), rgba(255, 255, 255, 0.142));
+    justify-content: center;
+    align-content: center;
+    padding: 15%;
   }
 
   .Contact, .ContactModal{

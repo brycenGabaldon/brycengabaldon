@@ -2,14 +2,17 @@ import React from 'react'
 import { motion } from 'framer-motion';
 import './pages.scss';
 import '../App';
+import { Link } from 'react-router-dom';
 
 const MODAL_STYLES = {
     position: 'fixed',
     top: '45%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    padding: '50px',
-    zIndex: 1000
+    paddingTop : '20%',
+    zIndex: 1000,
+    paddingLeft: '2%',
+    paddingRight: '2%'
   
   }
 
@@ -26,16 +29,16 @@ const MODAL_STYLES = {
 export default function Services({ open1, children , onClose1 }) {
     if (!open1) return null
 
-  return (
-    <>
-    <motion.div className='moadal' initial={{ opacity: 0.5 }} animate={{ opacity: 1, animationDuration: 50 }} transition={{ duration: .5}} onClick={onClose1} style={OVERLAY_STYLES}></motion.div>
-    <motion.div initial={{ y: '-150%', x: '-50%' }} animate={{ y: '-58%', x: '-50%' }} transition={{
-  delay: 0.1,
-  y: { duration: .2 },
-  default: { ease: "linear" }
-}} style= {MODAL_STYLES} className="ServiceModal shadow-xl Modal">
-
-    {children}</motion.div>
-    </>
-  )
-}
+    return (
+      <>
+      <motion.div initial={{ opacity: 0.5 }} animate={{ opacity: 1, animationDuration: 50 }} transition={{ duration: .5}} onClick={onClose1} style={OVERLAY_STYLES}></motion.div>
+      <motion.div  className="ServiceModal2" initial={{ y: '-150%', x: '-50%' }} animate={{ y: '-58%', x: '-50%' }} transition={{
+    delay: 0.1,
+    y: { duration: .2 },
+    default: { ease: "linear" }
+  }} style= {MODAL_STYLES} className="ServiceModal shadow-xl Modal">
+  <div className='ServiceModal'> <Link to="https://brycengabaldon.com/"><p>brycengabaldon.com</p></Link></div>
+      </motion.div>
+      </>
+    )
+  }
