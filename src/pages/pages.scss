@@ -27,7 +27,7 @@
 }
 
 .ServiceModal {
-  background: radial-gradient(green, black);
+  background: linear-gradient(green, black);
   height: 100%;
   width: 100%;
   font-size: 50px;
@@ -39,9 +39,15 @@
 
 }
 
+.Mail {
+  background: linear-gradient(rgb(50, 50, 142), rgb(113, 179, 200));
+  justify-content: center;
+  align-content: center;
+  padding: 15%;
+}
   .Services {
 
-    background: radial-gradient(rgb(20, 209, 20), rgba(255, 255, 255, 0.142));
+    background: linear-gradient(rgb(76, 207, 76), green);
     justify-content: center;
     align-content: center;
     padding: 15%;

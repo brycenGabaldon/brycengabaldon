@@ -8,7 +8,7 @@ import '../src/pages/pages.scss';
 import { motion } from "framer-motion";
 import Jobber from "./jobberForm"
 import Folder from "./folder/folder";
-import { FaPhoneAlt } from "react-icons/fa";
+import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
 export default function App() {
   const [isOpen1, setIsOpen1] = useState(false)
@@ -33,18 +33,23 @@ export default function App() {
     y: { duration: .3 },
       default: { ease: "linear" }}}>
           <div className="Center">
-          <motion.button className= "Services shadow-lg  hover:shadow-gray-500/50 Button Big" whileHover={{ scale: 1.2 }} onClick={() => setIsOpen1(true)} whileTap={{ scale: 0.95 }}>
-          <div><FaPhoneAlt style={{color: 'rgba(199, 199, 199, 1)', fontSize: '2rem', height: '100%', width: '100%'}}/></div>
+          <motion.button className= "Services shadow-lg  hover:shadow-gray-500/50 Button Big" whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.95 }}>
+          <a href="tel:602-816-1523">
+              <FaPhoneAlt style={{color: 'rgba(199, 199, 199, 1)', fontSize: '2rem', height: '100%', width: '100%'}}/>
+          
+          </a>
           </motion.button>
-          <div>Services</div>
+          <div>Call</div>
           </div>
 
 <div className="Center">
-          <motion.button className="Contact shadow-lg  hover:shadow-gray-500/50 Button Small" whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.95 }} onClick={() => setIsOpen2(true)}>
-            {" "}
+          <motion.button className="Mail shadow-lg  hover:shadow-gray-500/50 Button Small" whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.95 }}>
+            <a href="mailto:brycengabaldon@gmail.com">
+          <FaEnvelope style={{color: 'rgba(199, 199, 199, 1)', fontSize: '2rem', height: '100%', width: '100%'}}/>
+          </a>
           </motion.button>
 
-          <div>Contact</div>
+          <div>E-Mail</div>
          </div>
 
           <div className="Center">
