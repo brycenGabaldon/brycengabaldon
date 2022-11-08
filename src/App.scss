@@ -99,6 +99,24 @@ margin-right: .5rem;
 }
 }
 
+@media screen and (max-height: 400px) {
+
+  .IconDock {
+    border: 0;
+  }
+  
+    .Button {
+      width: 3.5rem;
+      height: 3.5rem;
+    }
+    .Center {
+      font-size: .75rem;
+    }
+    #jobberContainer {
+      padding: 1rem;
+    }
+  }
+
 @media screen and (max-width: 400px) {
 .IconDock {
   border: 0;

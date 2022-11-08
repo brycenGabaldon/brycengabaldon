@@ -8,6 +8,7 @@ import '../src/pages/pages.scss';
 import { motion } from "framer-motion";
 import Jobber from "./jobberForm"
 import Folder from "./folder/folder";
+import { FaPhoneAlt } from "react-icons/fa";
 
 export default function App() {
   const [isOpen1, setIsOpen1] = useState(false)
@@ -33,8 +34,7 @@ export default function App() {
       default: { ease: "linear" }}}>
           <div className="Center">
           <motion.button className= "Services shadow-lg  hover:shadow-gray-500/50 Button Big" whileHover={{ scale: 1.2 }} onClick={() => setIsOpen1(true)} whileTap={{ scale: 0.95 }}>
-
-            {" "}
+          <div><FaPhoneAlt style={{color: 'rgba(199, 199, 199, 1)', fontSize: '2rem', height: '100%', width: '100%'}}/></div>
           </motion.button>
           <div>Services</div>
           </div>
