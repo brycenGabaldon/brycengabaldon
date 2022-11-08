@@ -27,7 +27,7 @@ export default function Folder(){
           
         <div className="FlexRow">
             <div className="Center_folder aspect-w-1 aspect-h-1">
-              <FaYoutube className="Icon" style={{ color: 'black', fontSize: '1rem', height: '100%', width: '100%'}}/>
+              <FaYoutube className="Icon" style={{ fontSize: '1rem', }}/>
               </div>
             <div className="Center_folder aspect-w-1 aspect-h-1"></div>
             <div className="Center_folder aspect-w-1 aspect-h-1"></div>
