@@ -1,18 +1,15 @@
 import React from 'react'
+
 import { motion } from 'framer-motion';
 import './pages.scss';
 import '../App';
-import { Link } from 'react-router-dom';
 
 const MODAL_STYLES = {
     position: 'fixed',
     top: '45%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    paddingTop : '20%',
     zIndex: 1000,
-    paddingLeft: '2%',
-    paddingRight: '2%'
   
   }
 
@@ -32,12 +29,15 @@ export default function Services({ open1, children , onClose1 }) {
     return (
       <>
       <motion.div initial={{ opacity: 0.5 }} animate={{ opacity: 1, animationDuration: 50 }} transition={{ duration: .5}} onClick={onClose1} style={OVERLAY_STYLES}></motion.div>
-      <motion.div  className="ServiceModal2" initial={{ y: '-150%', x: '-50%' }} animate={{ y: '-58%', x: '-50%' }} transition={{
+      <motion.div  className="ServiceModal2 shadow-xl Modal" initial={{ y: '-150%', x: '-50%' }} animate={{ y: '-58%', x: '-50%' }} transition={{
     delay: 0.1,
     y: { duration: .2 },
     default: { ease: "linear" }
-  }} style= {MODAL_STYLES} className="ServiceModal shadow-xl Modal">
-  <div className='ServiceModal'> <Link to="https://brycengabaldon.com/"><p>brycengabaldon.com</p></Link></div>
+  }} style= {MODAL_STYLES}>
+  <div className='ServiceModal'> 
+  <a className='website' href="https://brycengabaldon.com/">Website: BrycenGabaldon.com</a>
+  <a className='phoneNumber' href="tel:602-816-1523"> Phone Number: 602-816-1523 </a>
+  </div>
       </motion.div>
       </>
     )
