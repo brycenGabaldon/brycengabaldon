@@ -3,10 +3,10 @@ export const data = {
     {
       
     key : 1,
-  name : "messages",
+  name : "Phone",
   iconImg : "iconName",
-  label : "yes?!",
-  ref : "refLink",
+  label : "Phone",
+  ref : "tel:602-816-1523",
   onClick : "Function",
   labelClass : "buttonLabel",
   active : "active",
