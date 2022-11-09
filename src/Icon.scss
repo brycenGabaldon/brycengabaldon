@@ -197,6 +197,13 @@ width: 100vw;
         width: 35vmin;
     }
   }
+@media (orientation: landscape) {
+    .App {
+        padding-left: 15vmin;
+        padding-right: 15vmin;
+    }
+}
+
 
   @media screen and (max-height: 500px) {
 
