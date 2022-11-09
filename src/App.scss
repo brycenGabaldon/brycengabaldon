@@ -1,4 +1,4 @@
-.App {
+/* .App {
   height: 100vh;
   width: 100vw;
 }
@@ -28,6 +28,7 @@
   align-items: center;
 }
 
+
 .IconDock {
   border-radius: 1.5rem;
   justify-content: center;
@@ -47,7 +48,7 @@
   border-radius: 1rem;
   height: 95%;
   overflow-y: auto;
-  background-image: url("./macOS-Graphic-Light.webp");
+  background-image: white;
   width: 100%;
   padding: 3rem;
   background-size: cover;
@@ -71,7 +72,7 @@ margin-right: .5rem;
 
 @media (prefers-color-scheme: dark) {
   .Wallpaper {
-    background-image: url("./macOS-Ventura-wallpaper-1-1.webp");
+    background: black;
     background-size: cover;
     background-position: center;
   }
@@ -86,7 +87,7 @@ margin-right: .5rem;
 
 @media (prefers-color-scheme: light) {
   .Wallpaper {
-    background-image: url("./macOS-Graphic-Light.webp");
+    background: white;
     background-size: cover;
     background-position: center;
   }
@@ -147,3 +148,4 @@ body,
 #root {
   height: 100%;
 }
+ */
