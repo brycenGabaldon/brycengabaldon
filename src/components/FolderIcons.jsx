@@ -17,7 +17,7 @@ handleClick() {
 render() {
     return (
         <div>
-            <div className={this.state.isActive ? 'Hide' : 'Show'} onClick={this.handleClick}> 
+            <div className={this.state.isActive ? 'Show' : 'Hide'} onClick={this.handleClick}> 
         <div className="Roww">
           <Icon active="Active"  labelClass={this.state.isActive ? 'LabelHide' : 'buttonLabel'}
           label="hello" iconColor="black" visible="IsVisible"/>
