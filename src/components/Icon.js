@@ -12,10 +12,10 @@ const Icon = (props) => {
     
     >
       <motion.div
-        className="Icons1 aspect-w-1 aspect-h-1 {props.iconImg} shadow-lg  hover:shadow-gray-500/50 Button Small" whileHover={{ scale: 1.3 }} whileTap={{ scale: 0.95 }}
+        className="Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 Button Small" whileHover={{ scale: 1. }} whileTap={{ scale: 0.95 }}
         style={{ color: "{props.iconColor}" }}
       >
-<div className={props.labelClass}>
+<div className="buttonLabel">
         {props.label}</div>
 
       </motion.div>
@@ -31,7 +31,6 @@ Icon.propTypes = {
   iconImg: PropTypes.string,
   iconColor: PropTypes.string,
   label: PropTypes.string,
-  labelClass: PropTypes.string,
   active: PropTypes.string,
   visible: PropTypes.string,
 };

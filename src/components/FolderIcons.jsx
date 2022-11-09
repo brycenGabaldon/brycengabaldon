@@ -42,5 +42,3 @@ render() {
 }
 
 export default FolderIcons;
-
-

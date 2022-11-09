@@ -3,8 +3,8 @@ import React from "react";
 import "./components/pages/pages.scss";
 import "./Icon.scss";
 import FolderIcons from "./components/FolderIcons";
-import DockIcons from "./components/DockIcons";
 import Clock from "./Clock";
+import Buttons from "./components/File";
 
 export default function App() {
 
@@ -13,7 +13,10 @@ export default function App() {
       <div className="App">
         <div className="ClockBanner"><Clock /></div>
      <div className="UnderBanner"><FolderIcons /></div>
-      <DockIcons />
+     
+ <div className="ContainerDock">
+      <Buttons /></div>
+
       </div>
 
     </>
