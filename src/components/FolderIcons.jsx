@@ -4,7 +4,7 @@ import Icon from './Icon';
 class FolderIcons extends React.Component{
 constructor(props) {
     super(props);
-    this.state = {isActive: false};
+    this.state = {isActive: true};
 
     this.handleClick = this.handleClick.bind(this);
 }
@@ -17,7 +17,7 @@ handleClick() {
 render() {
     return (
         <div>
-            <div className={this.state.isActive ? 'Show' : 'Hide'} onClick={this.handleClick}> 
+            <div className={this.state.isActive ? 'Hide' : 'Show'} onClick={this.handleClick}> 
         <div className="Roww">
           <Icon active="Active"  labelClass={this.state.isActive ? 'LabelHide' : 'buttonLabel'}
           label="hello" iconColor="black" visible="IsVisible"/>
