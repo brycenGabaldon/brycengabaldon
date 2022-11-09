@@ -24,7 +24,7 @@ padding: 8vmin;
 .LabelHide {
     display: none;
 &.Hide {
-
+    padding-top: 10vmin;
 }
 }
 
@@ -39,6 +39,8 @@ padding: 8vmin;
   backdrop-filter: blur(0.5rem);
   align-content: center;
   justify-content: center;
+  padding-top: 1.5%;
+
 }
 
 .Show {
@@ -155,17 +157,18 @@ padding: 8vmin;
 
   .Clock {
     position: fixed;
-    top: 1%;
+    top: 0;
     left: 50%;
     transform: translate(-50%, 0%);
     background: rgba(255, 255, 255, 0.421);
     border-radius: 1rem;
-    padding: 10px;
+    padding: 1vmin;
     backdrop-filter: blur(0.5rem);
+
   }
 
   .ClockBanner {
-    height: 5%;
+    height: 3%;
     width: 100vmax;
   }
   .UnderBannner {
@@ -175,4 +178,22 @@ padding: 8vmin;
   html {
 height: 100vh;
 width: 100vw;
+  }
+
+  @media screen and (max-width: 500px) {
+
+    .Show {
+        height: 80vmin;
+        width: 80vmin;
+    }
+
+    .ContainerDock {
+        height: 25vmin;
+        width: 95vmin;
+    }
+
+    .Hide {
+        height: 35vmin;
+        width: 35vmin;
+    }
   }
