@@ -4,7 +4,7 @@ export const data = {
       
     key : 1,
   name : "Phone",
-  iconImg : "faSolid",
+  icon : "faAngry",
   label : "Phone",
   ref : "tel:602-816-1523",
   onClick : "Function",
@@ -18,7 +18,7 @@ export const data = {
   {
     key : 2,
   name : "other",
-  iconImg : "coffee",
+  icon : "faAngry",
   label : "no?!",
   ref : "refLink",
   onClick : "Function",
@@ -31,7 +31,7 @@ export const data = {
 {
   "key" : 3,
   "name" : "one",
-  "iconImg" : "twitter",
+  "icon" : "faAngry",
   "label" : "yes?!",
   "ref" : "refLink",
   "onClick" : "Function",
@@ -41,7 +41,7 @@ export const data = {
   iconClass : "Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 Button  Small"},
   {    key : 1,
     name : "messages",
-    iconImg : "iconName",
+    icon : "faAngry",
     label : "yes?!",
     ref : "refLink",
     onClick : "Function",
