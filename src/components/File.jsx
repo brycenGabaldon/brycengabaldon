@@ -1,7 +1,6 @@
 import React from 'react';
 import { data } from '../iconData'
 import { motion } from 'framer-motion';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function Buttons() {
     
@@ -14,7 +13,6 @@ export default function Buttons() {
         className={iconn.iconClass} whileHover={{ scale: 1.3 }} whileTap={{ scale: 0.95 }}
         style={iconn.style}>
             <a href={iconn.ref}>
-            <FontAwesomeIcon icon={iconn.icon} /> 
           </a>
         <div className={iconn.labelClass} >
       {iconn.name}</div>
