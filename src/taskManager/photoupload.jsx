@@ -1,4 +1,4 @@
-import '../Icon.scss';
+/* import '../Icon.scss';
 import { useState } from "react";
 import { storage } from './firebase';
 import { ref, getDownloadURL, uploadBytesResumable } from "firebase/storage";
@@ -51,4 +51,4 @@ function App() {
   );
 }
 export default App;
-
+ */
