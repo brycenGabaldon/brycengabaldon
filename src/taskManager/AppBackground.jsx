@@ -25,7 +25,7 @@ function ViewImages() {
   };
 
   useEffect(() => {
-    const imagesListRef = ref(storage, "images/");
+     const imagesListRef = ref(storage, "images/");
     listAll(imagesListRef).then((response) => {
       response.items.forEach((item) => {
         getDownloadURL(item).then((url) => {

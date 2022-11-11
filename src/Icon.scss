@@ -5,6 +5,10 @@
   padding-left: 3vmin;
   padding-right: 3vmin;
   height: 17vmin;
+  min-height: 5rem;
+  min-width: 20rem;
+  max-height: 10rem;
+  max-width: 40rem;
   left: 50%;
   transform: translate(-50%, 0%);
   backdrop-filter: blur(0.5rem);
@@ -38,7 +42,8 @@ padding: 8vmin;
   align-content: center;
   justify-content: center;
   padding-top: 1.5%;
-
+min-height: 9rem;
+min-width: 9rem;
 }
 
 .Show {
@@ -47,7 +52,7 @@ padding: 8vmin;
   left: 50%;
   top: 50%;
   right: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -70%);
   border-radius: 2rem;
   height: 50vmin;
   width: 50vmin;
@@ -109,6 +114,7 @@ padding: 8vmin;
   position: absolute;
   bottom: -3%;
   z-index: 1000;
+  color: black;
 
 }
 
@@ -179,45 +185,5 @@ height: 100vh;
 width: 100vw;
   }
 
-  @media screen and (max-width: 500px) {
+ 
 
-    .Show {
-        height: 80vmin;
-        width: 80vmin;
-    }
-
-    .ContainerDock {
-        height: 24vmin;
-        width: 96vmin;
-    }
-
-    .Hide {
-        height: 35vmin;
-        width: 35vmin;
-    }
-  }
-@media (orientation: landscape) {
-    .App {
-        padding-left: 15vmin;
-        padding-right: 15vmin;
-    }
-}
-
-
-  @media screen and (max-height: 500px) {
-
-    .Show {
-        height: 80vmin;
-        width: 80vmin;
-    }
-
-    .ContainerDock {
-        height: 24vmin;
-        width: 96vmin;
-    }
-
-    .Hide {
-        height: 35vmin;
-        width: 35vmin;
-    }
-  }

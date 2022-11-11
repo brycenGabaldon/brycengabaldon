@@ -8,7 +8,9 @@ export default function Buttons() {
     
   return (
     <div className='Roww'>
-      {data.icons.map((icon, key) => {
+
+
+      {data.icons.slice(0,4).map((icon, key) => {
         return <div className="Spacing">
             <button className="buttons1 aspect-w-1 aspect-h-1" >
             <motion.button
