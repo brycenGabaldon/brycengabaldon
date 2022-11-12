@@ -11,7 +11,7 @@ export const data = {
   labelClass : "buttonLabel",
   active : "active",
   visible : "visible",
-  iconClass : "Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 Button",
+  iconClass : "Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 Button fab fa-react",
   style : { "background": "linear-gradient(rgb(0, 47, 255), rgb(255, 255, 255))"}
 
   },

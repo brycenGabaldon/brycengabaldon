@@ -5,7 +5,6 @@ import "./Icon.scss";
 import FolderIcons from "./components/FolderIcons";
 import Clock from "./Clock";
 import Buttons from "./components/File"; 
-import { motion } from "framer-motion";
 
 
 
