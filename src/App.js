@@ -5,11 +5,13 @@ import "./Icon.scss";
 import FolderIcons from "./components/FolderIcons";
 import Clock from "./Clock";
 import Buttons from "./components/File"; 
-
+import { motion } from "framer-motion";
 
 
 
 export default function App() {
+
+
 
   return (
     <>
@@ -18,6 +20,9 @@ export default function App() {
         <div className="ClockBanner"><Clock /></div>
      <div className="UnderBanner"><FolderIcons /></div>
      
+
+
+
  <div className="ContainerDock">
       <Buttons /></div>
 
