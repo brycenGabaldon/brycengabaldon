@@ -3,29 +3,29 @@ import { motion } from "framer-motion";
 import { data } from "../iconData";
 
 class FolderIcons extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { isActive: true };
 
-    this.handleClick = this.handleClick.bind(this);
-  }
+    state = { 
+      isActive: true 
+    };
 
-  handleClick() {
-    this.setState((prevState) => ({
-      isActive: !prevState.isActive,
-    }));
-  }
+
+
+  handleClick = () => {
+    this.setState({
+      isActive: !this.state.isActive
+    });
+  };
   render() {
     return (
-      <div classname="folderOverlayOn folderOverlayOff">
-        <div
+      <div className={this.state.isActive ? "" : "Overlay"}> 
+      <div
           className={this.state.isActive ? "Hide" : "Show"}
           onClick={this.handleClick}
-        >
+        > 
           <div className="Roww">
-            {data.icons.slice(4, 7).map((icon, key) => {
+            {data.icons.slice(0, 3).map((icon, index) => {
               return (
-                <div className="Spacing">
+                <div className="Spacing" key={index}>
                   <button className="buttons1 aspect-w-1 aspect-h-1">
                     <motion.button
                       className={icon.iconClass}
@@ -33,7 +33,7 @@ class FolderIcons extends React.Component {
                       whileTap={{ scale: 0.95 }}
                       style={icon.style}
                     >
-                      <div className={icon.labelClass}>{icon.name}</div>
+                      <div className={this.state.isActive ? "LabelHide" : "buttonLabel"}>{icon.name}</div>
                     </motion.button>
                   </button>
                 </div>
@@ -41,9 +41,9 @@ class FolderIcons extends React.Component {
             })}
           </div>
           <div className="Roww">
-            {data.icons.slice(7, 10).map((icon, key) => {
+            {data.icons.slice(3, 6).map((icon, index) => {
               return (
-                <div className="Spacing">
+                <div className="Spacing" key={index}>
                   <button className="buttons1 aspect-w-1 aspect-h-1">
                     <motion.button
                       className={icon.iconClass}
@@ -51,7 +51,7 @@ class FolderIcons extends React.Component {
                       whileTap={{ scale: 0.95 }}
                       style={icon.style}
                     >
-                      <div className={icon.labelClass}>{icon.name}</div>
+                      <div className={this.state.isActive ? "LabelHide" : "buttonLabel"}>{icon.name}</div>
                     </motion.button>
                   </button>
                 </div>
@@ -59,9 +59,9 @@ class FolderIcons extends React.Component {
             })}
           </div>
           <div className="Roww">
-            {data.icons.slice(10, 13).map((icon, key) => {
+            {data.icons.slice(6, 9).map((icon, index) => {
               return (
-                <div className="Spacing">
+                <div className="Spacing" key={index}>
                   <button className="buttons1 aspect-w-1 aspect-h-1">
                     <motion.button
                       className={icon.iconClass}
@@ -69,17 +69,18 @@ class FolderIcons extends React.Component {
                       whileTap={{ scale: 0.95 }}
                       style={icon.style}
                     >
-                      <div className={icon.labelClass}>{icon.name}</div>
+                      <div className={this.state.isActive ? "LabelHide" : "buttonLabel"}>{icon.name}</div>
                     </motion.button>
                   </button>
                 </div>
               );
             })}
           </div>
+
         </div>
-      </div>
+</div>
     );
+          }
   }
-}
 
 export default FolderIcons;

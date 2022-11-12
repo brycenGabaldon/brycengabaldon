@@ -12,7 +12,7 @@ export const data = {
   active : "active",
   visible : "visible",
   iconClass : "Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 Button",
-  iconStyles : "Color: white"
+  style : { "background": "linear-gradient(rgb(0, 47, 255), rgb(255, 255, 255))"}
 
   },
   {
@@ -25,8 +25,8 @@ export const data = {
   labelClass : "buttonLabel",
   active : "active",
   visible : "visible",
-  iconClass : "Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 Button  Small"
-  
+  iconClass : "Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 Button  Small",
+  style : { "background": "linear-gradient(rgb(155, 236, 0), rgba(0, 50, 0, 0.219))"}
 }, 
 {
   "key" : 3,
@@ -38,7 +38,10 @@ export const data = {
   "labelClass" : "buttonLabel",
   "active" : "active",
   "visible" : "visible",
-  iconClass : "Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 Button  Small"},
+  iconClass : "Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 Button  Small",
+  style : { "background": "linear-gradient(rgb(0, 255, 81), rgb(251, 248, 227))"}
+},
+
   {    key : 4,
     name : "four",
     icon : "faAngry",
@@ -48,7 +51,8 @@ export const data = {
     labelClass : "buttonLabel",
     active : "active",
     visible : "visible",
-    iconClass : "Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 Button Small"
+    iconClass : "Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 Button Small",
+    style : { "background": "linear-gradient(rgb(255, 153, 0), rgb(27, 155, 123))"}
     },
     {
       
@@ -62,7 +66,7 @@ export const data = {
     active : "active",
     visible : "visible",
     iconClass : "Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 Button",
-    iconStyles : "Color: white"
+  style : { "background": "linear-gradient(rgb(255, 148, 127), rgb(27, 55, 155))"}
   
     },
     {
@@ -75,7 +79,8 @@ export const data = {
     labelClass : "buttonLabel",
     active : "active",
     visible : "visible",
-    iconClass : "Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 Button  Small"
+    iconClass : "Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 Button  Small",
+    style : { "background": "linear-gradient(rgb(127, 144, 255), rgb(69, 160, 96))"}
     
   }, 
   {
@@ -88,7 +93,8 @@ export const data = {
     "labelClass" : "buttonLabel",
     "active" : "active",
     "visible" : "visible",
-    iconClass : "Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 Button  Small"},
+    iconClass : "Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 Button  Small",
+    style : { "background": "linear-gradient(rgb(131, 147, 86), rgb(140, 140, 140))"}},
     {    key : 8,
       name : "eight",
       icon : "faAngry",
@@ -98,7 +104,8 @@ export const data = {
       labelClass : "buttonLabel",
       active : "active",
       visible : "visible",
-      iconClass : "Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 Button Small"
+      iconClass : "Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 Button Small",
+      style : { "background": "linear-gradient(rgb(255, 255, 255), rgb(90, 90, 90))"}
       },
       {
             key : 9,
@@ -111,7 +118,7 @@ export const data = {
           active : "active",
           visible : "visible",
           iconClass : "Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 Button",
-          iconStyles : "Color: white"
+  style : { "background": "linear-gradient(rgb(0, 255, 81), rgb(251, 248, 227))"}
         
           },
           {
@@ -124,7 +131,8 @@ export const data = {
           labelClass : "buttonLabel",
           active : "active",
           visible : "visible",
-          iconClass : "Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 Button  Small"
+          iconClass : "Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 Button  Small",
+          style : { "background": "linear-gradient(rgb(0, 255, 81), rgb(251, 248, 227))"}
           
         }, 
         {
@@ -137,7 +145,8 @@ export const data = {
           "labelClass" : "buttonLabel",
           "active" : "active",
           "visible" : "visible",
-          iconClass : "Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 Button  Small"},
+          iconClass : "Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 Button  Small",
+          style : { "background": "linear-gradient(rgb(0, 255, 81), rgb(251, 248, 227))"}},
           {    key : 12,
             name : "twelve",
             icon : "faAngry",
@@ -147,7 +156,8 @@ export const data = {
             labelClass : "buttonLabel",
             active : "active",
             visible : "visible",
-            iconClass : "Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 Button Small"
+            iconClass : "Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 Button Small",
+            style : { "background": "linear-gradient(rgb(0, 255, 81), rgb(251, 248, 227))"}
             },
             {
               
@@ -161,7 +171,7 @@ export const data = {
             active : "active",
             visible : "visible",
             iconClass : "Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 Button",
-            iconStyles : "Color: white"
+            style : { "background": "linear-gradient(rgb(0, 255, 81), rgb(251, 248, 227))"}
           
             },
             {
@@ -174,7 +184,8 @@ export const data = {
             labelClass : "buttonLabel",
             active : "active",
             visible : "visible",
-            iconClass : "Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 Button  Small"
+            iconClass : "Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 Button  Small",
+            style : { "background": "linear-gradient(rgb(0, 255, 81), rgb(251, 248, 227))"}
             
           }, 
           {
@@ -187,7 +198,8 @@ export const data = {
             "labelClass" : "buttonLabel",
             "active" : "active",
             "visible" : "visible",
-            iconClass : "Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 Button  Small"},
+            iconClass : "Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 Button  Small",
+            style : { "background": "linear-gradient(rgb(0, 255, 81), rgb(251, 248, 227))"}},
             {    key : 8,
               name : "messages",
               icon : "faAngry",
@@ -197,7 +209,8 @@ export const data = {
               labelClass : "buttonLabel",
               active : "active",
               visible : "visible",
-              iconClass : "Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 Button Small"
+              iconClass : "Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 Button Small",
+              style : { "background": "linear-gradient(rgb(255, 153, 0), rgb(251, 248, 227))"}
               }
 ]
 }
