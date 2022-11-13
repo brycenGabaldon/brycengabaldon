@@ -1,27 +1,29 @@
-import React from 'react';
-import { data } from '../iconData'
-import { motion } from 'framer-motion';
-
+import React, { useState } from "react";
+import { data } from "../iconData";
+import Buttons from "./File";
 
 export default function DockIcons() {
+  const [dockActive, setDockIsActive] = useState(false);
 
-    
   return (
-    <div className='Roww'>
+    <div className="ContainerDock">
+      <div className="Roww">
+      {data.icons.slice(10, 14).map((icon, key) => {
+        return (
 
+            <Buttons
+              isActive={dockActive}
+              setIsActive={setDockIsActive}
+              iconClass={icon.iconClass}
+              style={icon.style}
+              labelClass={icon.labelClass}
+              key={key}
+              name={icon.name}
+            />
 
-      {data.icons.slice(5,9).map((icon, key) => {
-        return <div className="Spacing">
-            <button className="buttons1 aspect-w-1 aspect-h-1" >
-            <motion.button
-        className={icon.iconClass} whileHover={{ scale: 1.3 }} whileTap={{ scale: 0.95 }}
-        style={icon.style}>
-        <div className={icon.labelClass} >
-      {icon.name}</div>
-      </motion.button>
-      </button>
-    </div>
-      })}
+        );
+      })}</div>
+
     </div>
   );
 }
