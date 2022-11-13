@@ -1,47 +1,43 @@
-
-
 .ContainerDock {
   position: fixed;
   bottom: 4vmin;
-height: fit-content;
-padding-left: 1rem;
-padding-right: 1rem;
-padding-bottom: .5rem;
-padding-top: .5rem;
+
+  height: fit-content;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1.5rem;
+  padding-top: 0.5rem;
   left: 50%;
   transform: translate(-50%, 0%);
   backdrop-filter: blur(0.5rem);
 
   border-radius: 1.5rem;
   background: rgba(43, 43, 43, 0.418);
-      border: .01rem solid rgba(162, 162, 162, 0.414);
+  border: 0.01rem solid rgba(162, 162, 162, 0.414);
 }
 .App {
-display: flex;
-flex-wrap: wrap;
-flex-direction: column;
-height: 100%;
-width: 100%;
-
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
 }
 .LabelHide {
-    display: none;
-
+  display: none;
 }
 
 .Hide {
-margin: 3rem;
+  margin: 3rem;
   border-radius: 2rem;
-height: fit-content;
-width: fit-content;
-padding: 1rem;
+  height: fit-content;
+  width: fit-content;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   background: rgba(43, 43, 43, 0.418);
-  border: .01rem solid rgba(162, 162, 162, 0.414);
+  border: 0.01rem solid rgba(162, 162, 162, 0.414);
   backdrop-filter: blur(0.5rem);
   z-index: 1000;
-
 }
 
 .Show {
@@ -52,103 +48,107 @@ padding: 1rem;
   right: 50%;
   transform: translate(-50%, -70%);
   border-radius: 2rem;
-height: fit-content;
-width: fit-content;
-padding: 1.5rem;
+  height: fit-content;
+  width: fit-content;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
   background: rgba(43, 43, 43, 0.418);
-  border: .01rem solid rgba(162, 162, 162, 0.414);
+  border: 0.01rem solid rgba(162, 162, 162, 0.414);
   backdrop-filter: blur(0.5rem);
   z-index: 1000;
-
-
 }
 
 .Roww1 {
   position: relative;
   display: flex;
-    align-items: flex-end;
+  align-items: flex-end;
   flex-direction: row;
-
 
   align-content: center;
   justify-content: center;
-
 }
 
 .Roww {
   position: relative;
   display: flex;
-
+  align-items: center;
   flex-direction: row;
 
-
-  align-content: center;
-justify-content: center;
-
+  align-content: flex-end;
+  justify-content: center;
 }
 .buttons1 {
-height: 5rem;
-width: 5rem;
+  height: 5rem;
+  width: 5rem;
   background: rgba(255, 255, 255, 0);
 
+  align-self: center;
 
+  position: relative;
+  align-content: center;
+  justify-items: center;
 }
 .buttons {
   height: 2.5rem;
   width: 2.5rem;
-    background: rgba(255, 255, 255, 0);
-    align-content: center;
-    align-self: center;
+  background: rgba(255, 255, 255, 0);
+  align-content: center;
+  align-self: center;
   display: flex;
   flex-direction: column;
-    position: relative;
-padding-top: 10%;
+  position: relative;
+  padding-top: 10%;
 
-    justify-items: center;
-  }
+  justify-items: center;
+}
 .Spacing {
-align-content: center;
-justify-content: center;
-align-items: center;
-justify-items: center;
-align-self: center;
-justify-self: center;
-
-
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  align-self: center;
+  justify-self: center;
 }
 .Icons1 {
-
-  border-radius: 25%;  
+  border-radius: 25%;
   background: linear-gradient(rgb(255, 255, 255), rgb(90, 90, 90));
-min-width: 4rem;
-min-height: 4rem;
+  min-width: 4rem;
+  min-height: 4rem;
   align-self: center;
   justify-self: center;
 
   justify-items: center;
   position: relative;
-font-size: 2.5rem;
-color: white;
+  font-size: 3rem;
+  color: white;
 
   z-index: 1;
 }
 .Icons {
-
-  border-radius: 25%;  background: linear-gradient(rgb(255, 255, 255), rgb(90, 90, 90));
-min-width: 2rem;
-min-height: 2rem;
+  border-radius: 25%;
+  background: linear-gradient(rgb(255, 255, 255), rgb(90, 90, 90));
+  min-width: 2rem;
+  min-height: 2rem;
   align-self: center;
   justify-self: center;
-align-items: center;
+  align-items: flex-start;
   justify-items: center;
   position: relative;
 
-
   z-index: 1;
 }
+.folderOverlay {
+height: fit-content;
+width: fit-content;
+}
+.foClass{
 
+  height: fit-content;
+  width: fit-content;
+width: min-content;
+
+}
 .buttonLabel {
   height: 0.7vmin;
   font-size: small;
@@ -158,11 +158,9 @@ align-items: center;
   bottom: -3%;
   z-index: 1000;
   color: black;
-
 }
 
-
-.Overlay{
+.Overlay {
   height: 100vh;
   width: 100vw;
   backdrop-filter: blur(0.5rem);
@@ -171,69 +169,67 @@ align-items: center;
   left: 0%;
   right: 0;
   bottom: 0;
-
+background-color: rgba(66, 66, 66, 0.093);
   z-index: 1;
-
 }
 
 @media (prefers-color-scheme: dark) {
-    .App {
-      background-image: url("../src/images/macOS-Ventura-wallpaper-1-1.webp");
-      background-size: cover;
-      background-position: center;
-      height: 100vh;
-      width: 100vw;
-    }
-    .ContainerFolder, .ContainerDock {
-        background: rgba(43, 43, 43, 0.418);
-        border: .01rem solid rgba(162, 162, 162, 0.414);
-      }
-      .buttonLabel {
-        color: white;
-      }
-
+  .App {
+    background-image: url("../src/images/macOS-Ventura-wallpaper-1-1.webp");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
   }
-  
-  @media (prefers-color-scheme: light) {
-    .App {
-      background-image: url("../src/images/macOS-Graphic-Light.webp");
-      background-size: cover;
-      background-position: center;
-      height: 100vh;
-      width: 100vw;
-    }
-    .Show, .ContainerDock, .Hide {
-        background: rgba(232, 232, 232, 0.378);
-        border: .01rem solid rgba(162, 162, 162, 0.414);
-      }
-      .buttonLabel {
-        color: black;
-      }
+  .ContainerFolder,
+  .ContainerDock {
+    background: rgba(43, 43, 43, 0.418);
+    border: 0.01rem solid rgba(162, 162, 162, 0.414);
   }
-
-  .Clock {
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, 0%);
-    background: rgba(255, 255, 255, 0.421);
-    border-radius: 1rem;
-    padding: 1vmin;
-    backdrop-filter: blur(0.5rem);
-
+  .buttonLabel {
+    color: white;
   }
+}
 
-  .ClockBanner {
-    height: 3%;
-    width: 100vmax;
+@media (prefers-color-scheme: light) {
+  .App {
+    background-image: url("../src/images/macOS-Graphic-Light.webp");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
   }
-  .UnderBannner {
-    position: relative;
+  .Show,
+  .ContainerDock,
+  .Hide {
+    background: rgba(232, 232, 232, 0.378);
+    border: 0.01rem solid rgba(162, 162, 162, 0.414);
   }
-
-  html {
-height: 100vh;
-width: 100vw;
+  .buttonLabel {
+    color: black;
   }
+}
 
+.Clock {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  background: rgba(255, 255, 255, 0.421);
+  border-radius: 1rem;
+  padding: 1vmin;
+  backdrop-filter: blur(0.5rem);
+}
 
+.ClockBanner {
+  height: 3%;
+  width: 100vmax;
+}
+.UnderBannner {
+  position: relative;
+}
+
+html {
+  height: 100vh;
+  width: 100vw;
+}
