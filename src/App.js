@@ -10,13 +10,13 @@ import FolderStatus from './components/folderIcons';
 
 export default function App() {
 
-const [isActive, setIsActive] = useState('')
+const [isActive, setIsActive] = useState(false)
 
 
 function sayHello() {
 
   isActive ? 
-  setIsActive(!isActive) : setIsActive(!isActive)
+  setIsActive(!isActive) : setIsActive(isActive)
 
 }
 

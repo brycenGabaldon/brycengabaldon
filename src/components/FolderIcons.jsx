@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { data } from "../iconData";
 import Buttons from "./File";
 
@@ -6,26 +6,24 @@ import Buttons from "./File";
 
 export default function FolderStatus(props) {
 
-const isOpen = props.isActive
+  
+useEffect(() => {
+   props.setIsActive(props.isActive)
 
-
-  function checkActive() {
-    props.isActive ? props.setIsActive(!props.isActive) : props.setIsActive(!props.isActive)
-  }
-
-  if (isOpen) {
-    return <div onClick={()=>checkActive()}>
-      <OpenFolder   />
-    <div className="Overlay" onClick={props.setIsActive(!props.isActive)}></div>
-    </div>;
-  }
-  if (!isOpen) {
-    return <div className="folderOverlay">
-      <div className="folderOverlay">
-      <ClosedFolder  /></div>
-
-    </div>;
-  }
+}, )
+if (!props.isActive) {
+  return((
+    <div>
+          <OpenFolder   />
+        <div className="Overlay" ></div>
+        </div>))}
+          else {
+          return((
+            <div >
+                  <ClosedFolder />
+                <div  ></div>
+                </div>))}
+;
 }
 
 function ClosedFolder() {
@@ -113,7 +111,7 @@ function OpenFolder(props) {
         );
       })}</div>
             <div className="Roww1">
-      {data.icons.slice(0, 3).map((icon, key) => {
+      {data.icons.slice(3, 6).map((icon, key) => {
         return (
 
             <Buttons
@@ -130,7 +128,7 @@ function OpenFolder(props) {
         );
       })}</div>
             <div className="Roww1">
-      {data.icons.slice(0, 3).map((icon, key) => {
+      {data.icons.slice(6, 9).map((icon, key) => {
         return (
 
             <Buttons
