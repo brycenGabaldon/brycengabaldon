@@ -1,9 +1,5 @@
 import React from "react";
-<<<<<<< HEAD
-import { data } from "../iconData";
-=======
 import { data } from "./iconData"
->>>>>>> ab4ae52 (state)
 import Buttons from "./File";
 
 export default function FolderStatus({ isActive }) {
