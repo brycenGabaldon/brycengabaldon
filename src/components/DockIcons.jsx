@@ -8,7 +8,7 @@ export default function DockIcons() {
   return (
     <div className="ContainerDock">
       <div className="Roww">
-      {data.icons.slice(0, 4).map((icon, key) => {
+      {data.icons.slice(0, 4).map((icon, id) => {
         return (
 
             <Buttons
@@ -17,7 +17,7 @@ export default function DockIcons() {
             iconClass="Icons1"
             style={icon.style}
             labelClass="buttonLabel"
-            key={key}
+            key={id}
             name={icon.name}
             buttonClass="buttons1 aspect-w-1 aspect-h-1"
             />

@@ -4,13 +4,13 @@ import Buttons from "./File";
 
 
 
-export default function FolderStatus({isActive, setIsActive}) {
-console.log("wtf")
+export default function FolderStatus({isActive}) {
 
+  console.log("child");
+console.log(isActive);
 
 return (
-!isActive ? 
-  [<ClosedFolder />] : [<div><OpenFolder /><div className="Overlay" onClick={()=>setIsActive(!isActive)}></div></div>])
+isActive ? [<ClosedFolder />] : [<OpenFolder />])
   
 };
 
@@ -19,7 +19,7 @@ function ClosedFolder() {
   return (
     <div className="Hide" >
       <div className="Roww">
-      {data.icons.slice(0, 3).map((icon, key) => {
+      {data.icons.slice(0, 3).map((icon, id) => {
         return (
 
             <Buttons
@@ -28,7 +28,7 @@ function ClosedFolder() {
               iconClass="Icons"
               style={icon.style}
               labelClass="LabelHide"
-              key={key}
+              key={id}
               name={icon.name}
               buttonClass="buttons aspect-w-1 aspect-h-1"
    
@@ -36,7 +36,7 @@ function ClosedFolder() {
         );
       })}</div>
             <div className="Roww">
-      {data.icons.slice(3, 6).map((icon, key) => {
+      {data.icons.slice(3, 6).map((icon, id) => {
         return (
 
             <Buttons
@@ -45,14 +45,14 @@ function ClosedFolder() {
               iconClass="Icons"
               style={icon.style}
               labelClass="LabelHide"
-              key={key}
+              key={id}
               name={icon.name}
               buttonClass="buttons aspect-w-1 aspect-h-1"
             />
         );
       })}</div>
             <div className="Roww">
-      {data.icons.slice(6, 9).map((icon, key) => {
+      {data.icons.slice(6, 9).map((icon, id) => {
         return (
 
             <Buttons
@@ -61,7 +61,7 @@ function ClosedFolder() {
               iconClass="Icons"
               style={icon.style}
               labelClass="LabelHide"
-              key={key}
+              key={id}
               name={icon.name}
               buttonClass="buttons aspect-w-1 aspect-h-1"
             />

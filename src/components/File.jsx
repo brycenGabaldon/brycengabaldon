@@ -10,12 +10,13 @@ const Buttons = ({
   style,
   labelClass,
   name,
-  buttonClass
+  buttonClass,
+  id
 }) => {
 
 
   return (
-    <div className={"Spacing"} >
+    <div className={"Spacing"} key={id}>
       <div
         className={buttonClass}
         
@@ -35,3 +36,13 @@ const Buttons = ({
 };
 
 export default Buttons;
+
+
+/* {
+  [
+    "section_btn",
+    tab === id ? "active" : null // <-- conditionally apply active class
+  ]
+    .filter(Boolean)
+    .join(" ")
+} */
