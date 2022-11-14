@@ -1,32 +1,35 @@
 import "./App.scss";
-import React from "react";
+import React, { useState } from "react";
 import "./components/pages/pages.scss";
 import "./Icon.scss";
-import FolderIcons from "./components/FolderIcons";
 import Clock from "./Clock";
-import Buttons from "./components/File"; 
+import DockIcons from "./components/DockIcons";
+import FolderStatus from "./components/folderIcons";
 
 
 
 export default function App() {
-
-
-
+  const [isActive, setIsActive] = useState(false);
+console.log('setActive');
+console.log({isActive});
   return (
     <>
-    
       <div className="App">
-        <div className="ClockBanner"><Clock /></div>
-     <div className="UnderBanner"><FolderIcons /></div>
-     
+        <div className="ClockBanner">
+          <Clock />
+                                </div>
+          <div className={"UnderBanner"}>
 
 
-
- <div className="ContainerDock">
-      <Buttons /></div>
-
+<div onClick={() => isActive ? setIsActive(!isActive) : setIsActive(isActive)}>
+            <FolderStatus isActive={isActive} setIsActive={setIsActive}/>
+</div>
+<div className={isActive ? "" : "Overlay"} onClick={()=>setIsActive(!isActive)}> </div>
+          </div>
+        </div>
+        <div>
+  <DockIcons />
       </div>
-
     </>
   );
 }
