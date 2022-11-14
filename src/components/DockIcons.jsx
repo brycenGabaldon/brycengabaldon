@@ -3,28 +3,24 @@ import { data } from "../iconData";
 import Buttons from "./File";
 
 export default function DockIcons() {
-
-
   return (
-    <div className="ContainerDock">
-      <div className="Roww">
-      {data.icons.slice(0, 4).map((icon, id) => {
-        return (
-
+    <div className="ContainerDock" key={Math.floor(1 + Math.random() * 10000)}>
+      <div className="Roww" key={Math.floor(1 + Math.random() * 10000)}>
+        {data.icons.slice(9, 13).map((icon) => {
+          return (
             <Buttons
-            isActive=''
-            setIsActive=''
-            iconClass="Icons1"
-            style={icon.style}
-            labelClass="buttonLabel"
-            key={id}
-            name={icon.name}
-            buttonClass="buttons1 aspect-w-1 aspect-h-1"
+              key={Math.floor(1 + Math.random() * 10000)}
+              isActive=""
+              setIsActive=""
+              iconClass="Icons1"
+              style={icon.style}
+              labelClass="buttonLabel"
+              name={icon.name}
+              buttonClass="buttons1 aspect-w-1 aspect-h-1"
             />
-
-        );
-      })}</div>
-
+          );
+        })}
+      </div>
     </div>
   );
 }

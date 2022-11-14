@@ -6,29 +6,45 @@ import Clock from "./Clock";
 import DockIcons from "./components/DockIcons";
 import FolderStatus from "./components/folderIcons";
 
-
-
 export default function App() {
-  const [isActive, setIsActive] = useState(false);
-console.log('setActive');
-console.log({isActive});
+  const [isActive, setIsActive] = useState(true);
+  console.log("setActive");
+  console.log({ isActive });
   return (
     <>
-      <div className="App">
-        <div className="ClockBanner">
+      <div className="App" key={Math.floor(1 + Math.random() * 10000)}>
+        <div
+          className="ClockBanner"
+          key={Math.floor(1 + Math.random() * 10000)}
+        >
           <Clock />
-                                </div>
-          <div className={"UnderBanner"}>
-
-
-<div onClick={() => isActive ? setIsActive(!isActive) : setIsActive(isActive)}>
-            <FolderStatus isActive={isActive} setIsActive={setIsActive}/>
-</div>
-<div className={isActive ? "" : "Overlay"} onClick={()=>setIsActive(!isActive)}> </div>
+        </div>
+        <div
+          className={"UnderBanner"}
+          key={Math.floor(1 + Math.random() * 10000)}
+        >
+          <div
+            onClick={() =>
+              isActive ? setIsActive(!isActive) : setIsActive(isActive)
+            }
+          >
+            <FolderStatus
+              isActive={isActive}
+              setIsActive={setIsActive}
+              key={Math.floor(1 + Math.random() * 10000)}
+            />
+          </div>
+          <div
+            className={isActive ? "" : "Overlay"}
+            onClick={() => setIsActive(!isActive)}
+            key={Math.floor(1 + Math.random() * 10000)}
+          >
+            {" "}
           </div>
         </div>
-        <div>
-  <DockIcons />
+      </div>
+      <div>
+        <DockIcons />
       </div>
     </>
   );
