@@ -1,28 +1,51 @@
 import "./App.scss";
-import React from "react";
+import React, { useState } from "react";
 import "./components/pages/pages.scss";
 import "./Icon.scss";
-import FolderIcons from "./components/FolderIcons";
 import Clock from "./Clock";
-import Buttons from "./components/File"; 
-
-
-
+import DockIcons from "./components/DockIcons";
+import FolderStatus from "./components/folderIcons";
 
 export default function App() {
-
+  const [isActive, setIsActive] = useState(true);
+  console.log("setActive");
+  console.log({ isActive });
   return (
     <>
-    
-      <div className="App">
-        <div className="ClockBanner"><Clock /></div>
-     <div className="UnderBanner"><FolderIcons /></div>
-     
- <div className="ContainerDock">
-      <Buttons /></div>
-
+      <div className="App" key={Math.floor(1 + Math.random() * 10000)}>
+        <div
+          className="ClockBanner"
+          key={Math.floor(1 + Math.random() * 10000)}
+        >
+          <Clock />
+        </div>
+        <div
+          className={"UnderBanner"}
+          key={Math.floor(1 + Math.random() * 10000)}
+        >
+          <div
+            onClick={() =>
+              isActive ? setIsActive(!isActive) : setIsActive(isActive)
+            }
+          >
+            <FolderStatus
+              isActive={isActive}
+              setIsActive={setIsActive}
+              key={Math.floor(1 + Math.random() * 10000)}
+            />
+          </div>
+          <div
+            className={isActive ? "" : "Overlay"}
+            onClick={() => setIsActive(!isActive)}
+            key={Math.floor(1 + Math.random() * 10000)}
+          >
+            {" "}
+          </div>
+        </div>
       </div>
-
+      <div>
+        <DockIcons />
+      </div>
     </>
   );
 }

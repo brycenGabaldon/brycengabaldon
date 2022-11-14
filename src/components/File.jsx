@@ -1,27 +1,46 @@
-import React from 'react';
-import { data } from '../iconData'
-import { motion } from 'framer-motion';
+import React from "react";
 
 
-export default function Buttons() {
 
-    
+const Buttons = ({
+  iconClass,
+  style,
+  labelClass,
+  name,
+  buttonClass,
+  id
+}) => {
+
+
   return (
-    <div className='Roww'>
+    <div className={"Spacing"} key={Math.random()} >
+      <div
+        className={buttonClass} key={Math.random()}
+        
+      >
+        <button 
+key={ Math.floor(1 + Math.random() * 10000)}
+          className={iconClass}
 
-
-      {data.icons.slice(0,4).map((icon, key) => {
-        return <div className="Spacing">
-            <button className="buttons1 aspect-w-1 aspect-h-1" >
-            <motion.button
-        className={icon.iconClass} whileHover={{ scale: 1.3 }} whileTap={{ scale: 0.95 }}
-        style={icon.style}>
-        <div className={icon.labelClass} >
-      {icon.name}</div>
-      </motion.button>
-      </button>
-    </div>
-      })}
+          style={style}
+          
+        >
+          <div className={labelClass
+          } key={Math.random()}>{name}</div>
+        </button>
+      </div>
     </div>
   );
-}
+};
+
+export default Buttons;
+
+
+/* {
+  [
+    "section_btn",
+    tab === id ? "active" : null // <-- conditionally apply active class
+  ]
+    .filter(Boolean)
+    .join(" ")
+} */

@@ -1,85 +1,122 @@
 import React from "react";
-import { motion } from "framer-motion";
-import { data } from "../iconData";
+import { data } from "./iconData"
+import Buttons from "./File";
 
-class FolderIcons extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { isActive: true };
+export default function FolderStatus({ isActive }) {
+  console.log("child");
+  console.log(isActive);
 
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleClick() {
-    this.setState((prevState) => ({
-      isActive: !prevState.isActive,
-    }));
-  }
-  render() {
-    return (
-      <div classname="folderOverlayOn folderOverlayOff">
-        <div
-          className={this.state.isActive ? "Hide" : "Show"}
-          onClick={this.handleClick}
-        >
-          <div className="Roww">
-            {data.icons.slice(4, 7).map((icon, key) => {
-              return (
-                <div className="Spacing">
-                  <button className="buttons1 aspect-w-1 aspect-h-1">
-                    <motion.button
-                      className={icon.iconClass}
-                      whileHover={{ scale: 1.3 }}
-                      whileTap={{ scale: 0.95 }}
-                      style={icon.style}
-                    >
-                      <div className={icon.labelClass}>{icon.name}</div>
-                    </motion.button>
-                  </button>
-                </div>
-              );
-            })}
-          </div>
-          <div className="Roww">
-            {data.icons.slice(7, 10).map((icon, key) => {
-              return (
-                <div className="Spacing">
-                  <button className="buttons1 aspect-w-1 aspect-h-1">
-                    <motion.button
-                      className={icon.iconClass}
-                      whileHover={{ scale: 1.3 }}
-                      whileTap={{ scale: 0.95 }}
-                      style={icon.style}
-                    >
-                      <div className={icon.labelClass}>{icon.name}</div>
-                    </motion.button>
-                  </button>
-                </div>
-              );
-            })}
-          </div>
-          <div className="Roww">
-            {data.icons.slice(10, 13).map((icon, key) => {
-              return (
-                <div className="Spacing">
-                  <button className="buttons1 aspect-w-1 aspect-h-1">
-                    <motion.button
-                      className={icon.iconClass}
-                      whileHover={{ scale: 1.3 }}
-                      whileTap={{ scale: 0.95 }}
-                      style={icon.style}
-                    >
-                      <div className={icon.labelClass}>{icon.name}</div>
-                    </motion.button>
-                  </button>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </div>
-    );
-  }
+  return isActive
+    ? [<ClosedFolder key={Math.floor(1 + Math.random() * 10000)} />]
+    : [<OpenFolder key={Math.floor(1 + Math.random() * 10000)} />];
 }
 
-export default FolderIcons;
+function ClosedFolder() {
+  return (
+    <div className="Hide" key={Math.floor(1 + Math.random() * 10000)}>
+      <div className="Roww" key={Math.floor(1 + Math.random() * 10000)}>
+        {data.icons.slice(0, 3).map((icon) => {
+          return (
+            <Buttons
+              isActive=""
+              setIsActive=""
+              iconClass="Icons"
+              style={icon.style}
+              labelClass="LabelHide"
+              key={Math.floor(1 + Math.random() * 10000)}
+              name={icon.name}
+              buttonClass="buttons aspect-w-1 aspect-h-1"
+            />
+          );
+        })}
+      </div>
+      <div className="Roww">
+        {data.icons.slice(3, 6).map((icon) => {
+          return (
+            <Buttons
+              key={Math.floor(1 + Math.random() * 10000)}
+              isActive=""
+              setIsActive=""
+              iconClass="Icons"
+              style={icon.style}
+              labelClass="LabelHide"
+              name={icon.name}
+              buttonClass="buttons aspect-w-1 aspect-h-1"
+            />
+          );
+        })}
+      </div>
+      <div className="Roww">
+        {data.icons.slice(6, 9).map((icon) => {
+          return (
+            <Buttons
+              key={Math.floor(1 + Math.random() * 10000)}
+              isActive=""
+              setIsActive=""
+              iconClass="Icons"
+              style={icon.style}
+              labelClass="LabelHide"
+              name={icon.name}
+              buttonClass="buttons aspect-w-1 aspect-h-1"
+            />
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+function OpenFolder(props) {
+  return (
+    <div className="Show" key={Math.floor(1 + Math.random() * 10000)}>
+      <div className="Roww" key={Math.floor(1 + Math.random() * 10000)}>
+        {data.icons.slice(0, 3).map((icon) => {
+          return (
+            <Buttons
+              key={Math.floor(1 + Math.random() * 10000)}
+              isActive=""
+              setIsActive=""
+              iconClass="Icons1"
+              style={icon.style}
+              labelClass={icon.labelClass}
+              name={icon.name}
+              buttonClass="buttons1 aspect-w-1 aspect-h-1"
+            />
+          );
+        })}
+      </div>
+      <div className="Roww1">
+        {data.icons.slice(3, 6).map((icon) => {
+          return (
+            <Buttons
+              key={Math.floor(1 + Math.random() * 10000)}
+              isActive=""
+              setIsActive=""
+              iconClass="Icons1"
+              style={icon.style}
+              labelClass={icon.labelClass}
+              name={icon.name}
+              buttonClass="buttons1 aspect-w-1 aspect-h-1"
+            />
+          );
+        })}
+      </div>
+      <div className="Roww1">
+        {data.icons.slice(6, 9).map((icon) => {
+          return (
+            <Buttons
+              key={Math.floor(1 + Math.random() * 10000)}
+              isActive=""
+              setIsActive=""
+              iconClass="Icons1"
+              style={icon.style}
+              labelClass={icon.labelClass}
+              name={icon.name}
+              buttonClass="buttons1 aspect-w-1 aspect-h-1"
+            />
+          );
+        })}
+      </div>
+    </div>
+  );
+}
