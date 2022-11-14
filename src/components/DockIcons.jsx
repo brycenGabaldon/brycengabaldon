@@ -1,5 +1,5 @@
 import React from "react";
-import { data } from "../iconData";
+import { data } from "./iconData"
 import Buttons from "./File";
 
 export default function DockIcons() {
