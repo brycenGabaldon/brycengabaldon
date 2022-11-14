@@ -1,11 +1,8 @@
 import React from "react";
 
-import { motion } from "framer-motion";
+
 
 const Buttons = ({
-  isActive,
-  setIsActive,
-  type,
   iconClass,
   style,
   labelClass,
@@ -16,20 +13,21 @@ const Buttons = ({
 
 
   return (
-    <div className={"Spacing"} key={id}>
+    <div className={"Spacing"} key={Math.random()} >
       <div
-        className={buttonClass}
+        className={buttonClass} key={Math.random()}
         
       >
-        <motion.button
+        <button 
+key={ Math.floor(1 + Math.random() * 10000)}
           className={iconClass}
-          whileHover={{ scale: 1.3 }}
-          whileTap={{ scale: 0.95 }}
+
           style={style}
+          
         >
           <div className={labelClass
-          }>{name}</div>
-        </motion.button>
+          } key={Math.random()}>{name}</div>
+        </button>
       </div>
     </div>
   );

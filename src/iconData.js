@@ -39,8 +39,8 @@ export const data = {
   "labelClass" : "buttonLabel",
   "active" : "active",
   "visible" : "visible",
-  iconClass : "Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 Button  Small fas fa-comments",
-  style : { "background": "linear-gradient(rgb(0, 255, 81), rgb(251, 248, 227))", "color": "green"}
+  "iconClass" : "Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 Button  Small fas fa-comments",
+  "style" : { "background": "linear-gradient(rgb(0, 255, 81), rgb(251, 248, 227))", "color": "green"}
 },
 
   {    key : 4,
