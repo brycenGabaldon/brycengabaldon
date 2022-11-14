@@ -13,11 +13,9 @@ export default function App() {
 const [isActive, setIsActive] = useState(false)
 
 
-function sayHello() {
-
-  isActive ? 
-  setIsActive(!isActive) : setIsActive(isActive)
-
+console.log('first false')
+const handleClick = () => {
+  !isActive ? setIsActive(!isActive) : setIsActive(isActive)
 }
 
 
@@ -29,13 +27,11 @@ function sayHello() {
      <div className="UnderBanner">
 
 
-      
-      <div className="foClass" onClick={sayHello}>
+      <div className="foClass" onClick={()=>handleClick()}>
       <FolderStatus isActive={isActive} setIsActive={setIsActive}/>  
       </div>
       </div>
-     
-
+    
 
 
 

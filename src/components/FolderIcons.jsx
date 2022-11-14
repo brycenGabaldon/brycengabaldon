@@ -1,35 +1,20 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { data } from "../iconData";
 import Buttons from "./File";
 
 
 
-export default function FolderStatus(props) {
+export default function FolderStatus({isActive, setIsActive}) {
+console.log("wtf")
 
+
+return (
+!isActive ? 
+  [<ClosedFolder />] : [<div><OpenFolder /><div className="Overlay" onClick={()=>setIsActive(!isActive)}></div></div>])
   
-useEffect(() => {
-   props.setIsActive(props.isActive)
-
-}, )
-if (!props.isActive) {
-  return((
-    <div>
-          <OpenFolder   />
-        <div className="Overlay" ></div>
-        </div>))}
-          else {
-          return((
-            <div >
-                  <ClosedFolder />
-                <div  ></div>
-                </div>))}
-;
-}
+};
 
 function ClosedFolder() {
-
-
-
 
   return (
     <div className="Hide" >
