@@ -26,7 +26,7 @@ function ClosedFolder({setOpen4, open4}) {
 
       <div className="Hide" key={Math.floor(1 + Math.random() * 10000)}>
         
-        {data.icons.slice(0, 5).map((icon) => {
+        {data.icons.slice(0, 9).map((icon) => {
           return (
             <Buttons
               key={Math.floor(1 + Math.random() * 10000)}
