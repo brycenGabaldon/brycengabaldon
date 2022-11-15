@@ -24,6 +24,7 @@ flex-direction: row;
   align-content: flex-start;
   height: 100%;
   width: 100%;
+  padding: 1rem;
 }
 .LabelHide {
   display: none;
@@ -34,15 +35,13 @@ position: relative;
   height: 6rem;
   width: 6rem;
   padding: .25rem;
-
-margin: 2.5rem;
   border-radius: 1rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-content: flex-start;
-
+margin: 1rem;
   
   background: rgba(43, 43, 43, 0.418);
   border: 0.01rem solid rgba(162, 162, 162, 0.414);
