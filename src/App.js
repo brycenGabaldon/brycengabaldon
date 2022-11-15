@@ -29,19 +29,23 @@ export default function App() {
             onClick={() =>
               isActive ? setIsActive(!isActive) : setIsActive(isActive)
             }
-          ></div>
+          >
             <FolderStatus
               isActive={isActive}
               setIsActive={setIsActive}
               key={Math.floor(1 + Math.random() * 10000)}
 
-            />
+            /></div><div
+            onClick={() =>
+              isActive ? setIsActive(!isActive) : setIsActive(isActive)
+            }
+          >
             <FolderStatus
               isActive={isActive}
               setIsActive={setIsActive}
               key={Math.floor(1 + Math.random() * 10000)}
 
-            />
+            /></div>
           
           <div
             className={isActive ? "" : "Overlay"}
