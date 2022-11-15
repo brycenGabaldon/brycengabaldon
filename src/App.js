@@ -7,8 +7,14 @@ import "./components/IconStyle.scss"
 
 export default function App() {
   const [isActive, setIsActive] = useState(true);
+
+
+
+
+
   console.log("setActive");
   console.log({ isActive });
+  console.log("app is Open");
   return (
     <>
       <div className="App" key={Math.floor(1 + Math.random() * 10000)}>
@@ -31,6 +37,7 @@ export default function App() {
               isActive={isActive}
               setIsActive={setIsActive}
               key={Math.floor(1 + Math.random() * 10000)}
+
             />
           </div>
           <div
@@ -43,6 +50,7 @@ export default function App() {
         </div>
       </div>
       <div>
+
         <DockIcons />
       </div>
     </>

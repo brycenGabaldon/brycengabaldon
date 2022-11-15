@@ -2,12 +2,15 @@ import React from "react";
 import { data } from "./iconData"
 import Buttons from "./File";
 
+
 export default function DockIcons() {
+
   return (
     <div className="ContainerDock" key={Math.floor(1 + Math.random() * 10000)}>
       <div className="Roww" key={Math.floor(1 + Math.random() * 10000)}>
         {data.icons.slice(0, 4).map((icon) => {
           return (
+
             <Buttons
               key={Math.floor(1 + Math.random() * 10000)}
               isActive=""

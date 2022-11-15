@@ -2,16 +2,17 @@ import React from "react";
 import { data } from "./iconData"
 import Buttons from "./File";
 
-export default function FolderStatus({ isActive }) {
+export default function FolderStatus({ isActive}) {
   console.log("child");
   console.log(isActive);
+
 
   return isActive
     ? [<ClosedFolder key={Math.floor(1 + Math.random() * 10000)} />]
     : [<OpenFolder key={Math.floor(1 + Math.random() * 10000)} />];
 }
 
-function ClosedFolder() {
+function ClosedFolder({setOpen4, open4}) {
   return (
     <div className="Hide" key={Math.floor(1 + Math.random() * 10000)}>
       <div className="Roww" key={Math.floor(1 + Math.random() * 10000)}>
@@ -28,6 +29,7 @@ function ClosedFolder() {
               icon={icon.icon}
               iconName={icon.iconName}
               label={icon.label}
+      open4={open4}
             />
           );
         })}
@@ -72,7 +74,9 @@ function ClosedFolder() {
   );
 }
 
-function OpenFolder() {
+function OpenFolder({open4, setOpen4}) {
+  console.log(open4)
+  console.log("check is open")
   return (
     <div className="Show" key={Math.floor(1 + Math.random() * 10000)}>
       <div className="Roww" key={Math.floor(1 + Math.random() * 10000)}>
@@ -125,6 +129,8 @@ function OpenFolder() {
               icon={icon.icon}
               iconName={icon.iconName}
               label={icon.label}
+              setOpen4={setOpen4}
+              open4={open4}
             />
           );
         })}
