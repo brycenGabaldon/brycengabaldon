@@ -31,8 +31,8 @@ flex-direction: row;
 
   height: 6rem;
   width: 6rem;
-  padding: .5rem;
-  padding-left: .75rem;
+  padding: .25rem;
+
 margin: 2.5rem;
   border-radius: 1rem;
   display: flex;
@@ -101,8 +101,8 @@ margin: 2.5rem;
   justify-items: center;
 }
 .buttons {
-  height: 1.5rem;
-  width: 1.5rem;
+  height: 1.75rem;
+  width: 1.75rem;
   background: rgba(255, 255, 255, 0);
   align-content: center;
   align-self: center;
@@ -152,8 +152,8 @@ width: 3.5rem;
 }
 .Icons {
   border-radius: 25%;
- min-width: 1.2rem;
-  min-height: 1.2rem;
+ min-width: 1.5rem;
+  min-height: 1.5rem;
   align-self: center;
   justify-self: center;
   align-items: flex-start;
