@@ -24,22 +24,25 @@ export default function App() {
         >
           <Clock />
         </div>
-        <div
-          className={"UnderBanner"}
-          key={Math.floor(1 + Math.random() * 10000)}
-        >
+
           <div
             onClick={() =>
               isActive ? setIsActive(!isActive) : setIsActive(isActive)
             }
-          >
+          ></div>
             <FolderStatus
               isActive={isActive}
               setIsActive={setIsActive}
               key={Math.floor(1 + Math.random() * 10000)}
 
             />
-          </div>
+            <FolderStatus
+              isActive={isActive}
+              setIsActive={setIsActive}
+              key={Math.floor(1 + Math.random() * 10000)}
+
+            />
+          
           <div
             className={isActive ? "" : "Overlay"}
             onClick={() => setIsActive(!isActive)}
@@ -47,7 +50,7 @@ export default function App() {
           >
             {" "}
           </div>
-        </div>
+       
       </div>
       <div>
 
