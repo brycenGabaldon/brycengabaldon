@@ -23,7 +23,7 @@ export const data = {
     labelClass : "buttonLabel",
     active : "active",
     visible : "visible",
-    iconClass : "Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 fas fa-envelope",
+    iconClass : " aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 fas fa-envelope",
   }, 
   {
     "key" : 3,
@@ -35,7 +35,7 @@ export const data = {
     "labelClass" : "buttonLabel",
     "active" : "active",
     "visible" : "visible",
-    "iconClass" : "Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 Button  Small fas fa-comments",
+    "iconClass" : "aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 Button  Small fas fa-comments",
 
   },
   
@@ -48,7 +48,7 @@ export const data = {
       labelClass : "buttonLabel",
       active : "active",
       visible : "visible",
-      iconClass : "Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 fas fa-file"
+      iconClass : "aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 fas fa-file"
       },
       {
         

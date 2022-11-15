@@ -1,7 +1,8 @@
 .ContainerDock {
   position: fixed;
   bottom: 4vmin;
-
+display: flex;
+flex-direction: row;
   height: fit-content;
   padding-left: 1.5rem;
   padding-right: .5rem;
@@ -95,6 +96,21 @@ width: 15rem;
   align-content: flex-end;
   justify-content: center;
 }
+
+.buttons2 {
+  height: 5.5rem;
+  width: 5rem;
+  background: rgba(255, 255, 255, 0);
+  align-content: center;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-top: 10%;
+
+  justify-items: center;
+}
+
 .buttons1 {
   height: 6.2rem;
   width: 5.75rem;
@@ -127,6 +143,21 @@ width: 15rem;
   align-self: center;
   justify-self: center;
 }
+.Icons2 {
+  border-radius: 25%;
+width: 4rem;
+ height: 4rem;
+  align-self: center;
+  justify-self: center;
+
+  justify-items: center;
+  position: relative;
+  font-size: 2.75rem;
+
+
+  z-index: 1;
+}
+
 .Icons1 {
   border-radius: 25%;
  min-width: 5rem;
