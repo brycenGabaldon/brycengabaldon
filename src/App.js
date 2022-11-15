@@ -1,10 +1,9 @@
-import "./App.scss";
 import React, { useState } from "react";
-import "./components/pages/pages.scss";
 import "./Icon.scss";
 import Clock from "./Clock";
 import DockIcons from "./components/DockIcons";
 import FolderStatus from "./components/FolderIcons"
+import "./components/IconStyle.scss"
 
 export default function App() {
   const [isActive, setIsActive] = useState(true);

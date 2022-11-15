@@ -3,9 +3,9 @@
   bottom: 4vmin;
 
   height: fit-content;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-bottom: 1.5rem;
+  padding-left: 1.5rem;
+  padding-right: .5rem;
+  padding-bottom: .5rem;
   padding-top: 0.5rem;
   left: 50%;
   transform: translate(-50%, 0%);
@@ -81,7 +81,7 @@
 .buttons1 {
   height: 5rem;
   width: 5rem;
-  background: rgba(255, 255, 255, 0);
+  background: rgba(254, 6, 6, 0);
 
   align-self: center;
 
@@ -112,8 +112,7 @@
 }
 .Icons1 {
   border-radius: 25%;
-  background: linear-gradient(rgb(255, 255, 255), rgb(90, 90, 90));
-  min-width: 4rem;
+ min-width: 4rem;
   min-height: 4rem;
   align-self: center;
   justify-self: center;
@@ -121,21 +120,20 @@
   justify-items: center;
   position: relative;
   font-size: 3rem;
-  color: white;
+
 
   z-index: 1;
 }
 .Icons {
   border-radius: 25%;
-  background: linear-gradient(rgb(255, 255, 255), rgb(90, 90, 90));
-  min-width: 2rem;
+ min-width: 2rem;
   min-height: 2rem;
   align-self: center;
   justify-self: center;
   align-items: flex-start;
   justify-items: center;
   position: relative;
-
+  font-size: 1.5rem;
   z-index: 1;
 }
 .folderOverlay {
@@ -155,9 +153,8 @@ width: min-content;
   text-align: center;
   width: 100%;
   position: absolute;
-  bottom: -3%;
+  bottom: -5%;
   z-index: 1000;
-  color: black;
 }
 
 .Overlay {

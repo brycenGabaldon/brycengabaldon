@@ -18,14 +18,16 @@ function ClosedFolder() {
         {data.icons.slice(0, 3).map((icon) => {
           return (
             <Buttons
+              key={Math.floor(1 + Math.random() * 10000)}
               isActive=""
               setIsActive=""
-              iconClass="Icons"
-              style={icon.style}
+              iconClass={"Icons aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 " + icon.label + icon.iconClass}
               labelClass="LabelHide"
-              key={Math.floor(1 + Math.random() * 10000)}
               name={icon.name}
               buttonClass="buttons aspect-w-1 aspect-h-1"
+              icon={icon.icon}
+              iconName={icon.iconName}
+              label={icon.label}
             />
           );
         })}
@@ -37,11 +39,13 @@ function ClosedFolder() {
               key={Math.floor(1 + Math.random() * 10000)}
               isActive=""
               setIsActive=""
-              iconClass="Icons"
-              style={icon.style}
+              iconClass={"Icons aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 " + icon.label + icon.iconClass}
               labelClass="LabelHide"
               name={icon.name}
               buttonClass="buttons aspect-w-1 aspect-h-1"
+              icon={icon.icon}
+              iconName={icon.iconName}
+              label={icon.label}
             />
           );
         })}
@@ -53,11 +57,13 @@ function ClosedFolder() {
               key={Math.floor(1 + Math.random() * 10000)}
               isActive=""
               setIsActive=""
-              iconClass="Icons"
-              style={icon.style}
+              iconClass={"Icons aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 " + icon.label + icon.iconClass}
               labelClass="LabelHide"
               name={icon.name}
               buttonClass="buttons aspect-w-1 aspect-h-1"
+              icon={icon.icon}
+              iconName={icon.iconName}
+              label={icon.label}
             />
           );
         })}
@@ -66,7 +72,7 @@ function ClosedFolder() {
   );
 }
 
-function OpenFolder(props) {
+function OpenFolder() {
   return (
     <div className="Show" key={Math.floor(1 + Math.random() * 10000)}>
       <div className="Roww" key={Math.floor(1 + Math.random() * 10000)}>
@@ -76,11 +82,13 @@ function OpenFolder(props) {
               key={Math.floor(1 + Math.random() * 10000)}
               isActive=""
               setIsActive=""
-              iconClass="Icons1"
+              iconClass={"Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 " + icon.label + icon.iconClass}
               style={icon.style}
               labelClass={icon.labelClass}
-              name={icon.name}
+              name={icon.label}
               buttonClass="buttons1 aspect-w-1 aspect-h-1"
+              iconName={icon.iconName}
+              label={icon.label}
             />
           );
         })}
@@ -92,11 +100,13 @@ function OpenFolder(props) {
               key={Math.floor(1 + Math.random() * 10000)}
               isActive=""
               setIsActive=""
-              iconClass="Icons1"
-              style={icon.style}
+              iconClass={"Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 " + icon.label + icon.iconClass}
               labelClass={icon.labelClass}
               name={icon.name}
               buttonClass="buttons1 aspect-w-1 aspect-h-1"
+              icon={icon.icon}
+              iconName={icon.iconName}
+              label={icon.label}
             />
           );
         })}
@@ -108,11 +118,13 @@ function OpenFolder(props) {
               key={Math.floor(1 + Math.random() * 10000)}
               isActive=""
               setIsActive=""
-              iconClass="Icons1"
-              style={icon.style}
+              iconClass={"Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 " + icon.label + icon.iconClass}
               labelClass={icon.labelClass}
               name={icon.name}
               buttonClass="buttons1 aspect-w-1 aspect-h-1"
+              icon={icon.icon}
+              iconName={icon.iconName}
+              label={icon.label}
             />
           );
         })}
@@ -120,3 +132,6 @@ function OpenFolder(props) {
     </div>
   );
 }
+
+
+// {"images/" + this.props.name}
