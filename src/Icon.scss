@@ -28,14 +28,17 @@
 
 .Hide {
 
-  height: fit-content;
-  width: fit-content;
+  height: 12rem;
+  width: 12rem;
   padding: .5rem;
   padding-left: .75rem;
-margin: 2rem;
+margin: 2.5rem;
   border-radius: 2rem;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
 
   
   background: rgba(43, 43, 43, 0.418);
@@ -50,16 +53,17 @@ margin: 2rem;
   left: 50%;
   top: 50%;
   right: 50%;
-  height: fit-content;
-  width: fit-content;
+  height: 20rem;
+  width: 20rem;
   padding: .75rem;
   padding-left: 1.5rem;
   transform: translate(-50%, -70%);
   border-radius: 2rem;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
   
   background: rgba(43, 43, 43, 0.418);
   border: 0.01rem solid rgba(162, 162, 162, 0.414);
@@ -92,8 +96,8 @@ width: 15rem;
   justify-content: center;
 }
 .buttons1 {
-  height: 4.5rem;
-  width: 4.5rem;
+  height: 5.75rem;
+  width: 5.75rem;
   background: rgba(254, 6, 6, 0);
 
   align-self: center;
@@ -103,8 +107,8 @@ width: 15rem;
   justify-items: center;
 }
 .buttons {
-  height: 2.5rem;
-  width: 2.5rem;
+  height: 3.5rem;
+  width: 3.5rem;
   background: rgba(255, 255, 255, 0);
   align-content: center;
   align-self: center;
@@ -125,8 +129,8 @@ width: 15rem;
 }
 .Icons1 {
   border-radius: 25%;
- min-width: 3.5rem;
-  min-height: 3.5rem;
+ min-width: 5rem;
+  min-height: 5rem;
   align-self: center;
   justify-self: center;
 
@@ -139,8 +143,8 @@ width: 15rem;
 }
 .Icons {
   border-radius: 25%;
- min-width: 2rem;
-  min-height: 2rem;
+ min-width: 3rem;
+  min-height: 3rem;
   align-self: center;
   justify-self: center;
   align-items: flex-start;
