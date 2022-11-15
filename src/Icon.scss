@@ -145,14 +145,14 @@ width: 15rem;
 }
 .Icons2 {
   border-radius: 25%;
-width: 4rem;
- height: 4rem;
+width: 3.5rem;
+ height: 3.5rem;
   align-self: center;
   justify-self: center;
 
   justify-items: center;
   position: relative;
-  font-size: 2.75rem;
+  font-size: 2.5rem;
 
 
   z-index: 1;
@@ -160,8 +160,8 @@ width: 4rem;
 
 .Icons1 {
   border-radius: 25%;
- min-width: 5rem;
-  min-height: 5rem;
+ min-width: 4.5rem;
+  min-height: 4.5rem;
   align-self: center;
   justify-self: center;
 
@@ -174,8 +174,8 @@ width: 4rem;
 }
 .Icons {
   border-radius: 25%;
- min-width: 3rem;
-  min-height: 3rem;
+ min-width: 2.75rem;
+  min-height: 2.75rem;
   align-self: center;
   justify-self: center;
   align-items: flex-start;
@@ -201,7 +201,7 @@ width: min-content;
   text-align: center;
   width: 100%;
   position: absolute;
-  bottom: -5%;
+  bottom: -10%;
   z-index: 1000;
 }
 
