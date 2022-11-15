@@ -27,13 +27,17 @@
 }
 
 .Hide {
-  margin: 2rem;
-  border-radius: 2rem;
+
   height: fit-content;
   width: fit-content;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
+  padding: .5rem;
+  padding-left: .75rem;
+margin: 2rem;
+  border-radius: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  
   background: rgba(43, 43, 43, 0.418);
   border: 0.01rem solid rgba(162, 162, 162, 0.414);
   backdrop-filter: blur(0.5rem);
@@ -46,25 +50,34 @@
   left: 50%;
   top: 50%;
   right: 50%;
-  transform: translate(-50%, -70%);
-  border-radius: 2rem;
   height: fit-content;
   width: fit-content;
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
+  padding: .75rem;
+  padding-left: 1.5rem;
+  transform: translate(-50%, -70%);
+  border-radius: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  
   background: rgba(43, 43, 43, 0.418);
   border: 0.01rem solid rgba(162, 162, 162, 0.414);
   backdrop-filter: blur(0.5rem);
   z-index: 1000;
+  
+
+  
 }
 
 .Roww1 {
   position: relative;
   display: flex;
   align-items: flex-end;
+  flex-wrap: wrap;
   flex-direction: row;
-
+height: 15rem;
+width: 15rem;
   align-content: center;
   justify-content: center;
 }

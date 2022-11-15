@@ -13,7 +13,7 @@ const MODAL_STYLES = {
 
 export default function ModalPortal({ open, children, childToParent}) {
 
-if(!open) return null
+if(open) return null
 console.log(open)
   return ReactDom.createPortal(
     <>

@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useState} from "react";
 import { data } from "./iconData"
 import Buttons from "./File";
+
+
+
+let appStates = [
+  0, 0, 0
+];
+
 
 export default function FolderStatus({ isActive}) {
   console.log("child");
@@ -13,29 +20,13 @@ export default function FolderStatus({ isActive}) {
 }
 
 function ClosedFolder({setOpen4, open4}) {
+
+
   return (
-    <div className="Hide" key={Math.floor(1 + Math.random() * 10000)}>
-      <div className="Roww" key={Math.floor(1 + Math.random() * 10000)}>
-        {data.icons.slice(0, 3).map((icon) => {
-          return (
-            <Buttons
-              key={Math.floor(1 + Math.random() * 10000)}
-              isActive=""
-              setIsActive=""
-              iconClass={"Icons aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 " + icon.label + icon.iconClass}
-              labelClass="LabelHide"
-              name={icon.name}
-              buttonClass="buttons aspect-w-1 aspect-h-1"
-              icon={icon.icon}
-              iconName={icon.iconName}
-              label={icon.label}
-      open4={open4}
-            />
-          );
-        })}
-      </div>
-      <div className="Roww">
-        {data.icons.slice(3, 6).map((icon) => {
+
+      <div className="Hide" key={Math.floor(1 + Math.random() * 10000)}>
+        
+        {data.icons.slice(0, 9).map((icon) => {
           return (
             <Buttons
               key={Math.floor(1 + Math.random() * 10000)}
@@ -52,71 +43,39 @@ function ClosedFolder({setOpen4, open4}) {
           );
         })}
       </div>
-      <div className="Roww">
-        {data.icons.slice(6, 9).map((icon) => {
-          return (
-            <Buttons
-              key={Math.floor(1 + Math.random() * 10000)}
-              isActive=""
-              setIsActive=""
-              iconClass={"Icons aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 " + icon.label + icon.iconClass}
-              labelClass="LabelHide"
-              name={icon.name}
-              buttonClass="buttons aspect-w-1 aspect-h-1"
-              icon={icon.icon}
-              iconName={icon.iconName}
-              label={icon.label}
-            />
-          );
-        })}
-      </div>
-    </div>
   );
 }
 
 function OpenFolder({open4, setOpen4}) {
   console.log(open4)
   console.log("check is open")
+
+  const [isactive, setActive] = useState(
+    appStates
+  );
+
+  
+  function handleClick(index) {
+    const nextOpen = isactive.map((c, i) => {
+      if (i === index) {
+        // Increment the clicked counter
+
+       return c;
+      } else {
+        // The rest haven't changed
+
+        return !c;
+      }
+    });
+    setActive(nextOpen);
+    console.log(nextOpen);
+  } 
+
   return (
-    <div className="Show" key={Math.floor(1 + Math.random() * 10000)}>
-      <div className="Roww" key={Math.floor(1 + Math.random() * 10000)}>
-        {data.icons.slice(0, 3).map((icon) => {
-          return (
-            <Buttons
-              key={Math.floor(1 + Math.random() * 10000)}
-              isActive=""
-              setIsActive=""
-              iconClass={"Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 " + icon.label + icon.iconClass}
-              style={icon.style}
-              labelClass={icon.labelClass}
-              name={icon.label}
-              buttonClass="buttons1 aspect-w-1 aspect-h-1"
-              iconName={icon.iconName}
-              label={icon.label}
-            />
-          );
-        })}
-      </div>
-      <div className="Roww1">
-        {data.icons.slice(3, 6).map((icon) => {
-          return (
-            <Buttons
-              key={Math.floor(1 + Math.random() * 10000)}
-              isActive=""
-              setIsActive=""
-              iconClass={"Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 " + icon.label + icon.iconClass}
-              labelClass={icon.labelClass}
-              name={icon.name}
-              buttonClass="buttons1 aspect-w-1 aspect-h-1"
-              icon={icon.icon}
-              iconName={icon.iconName}
-              label={icon.label}
-            />
-          );
-        })}
-      </div>
-      <div className="Roww1">
-        {data.icons.slice(6, 9).map((icon) => {
+   
+      <div className="Show" key={Math.floor(1 + Math.random() * 10000)}>
+        
+        {data.icons.slice(0, 9).map((icon) => {
           return (
             <Buttons
               key={Math.floor(1 + Math.random() * 10000)}
@@ -131,11 +90,12 @@ function OpenFolder({open4, setOpen4}) {
               label={icon.label}
               setOpen4={setOpen4}
               open4={open4}
+              onClick={()=>handleClick()}
             />
           );
         })}
       </div>
-    </div>
+
   );
 }
 
