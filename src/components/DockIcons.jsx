@@ -5,11 +5,12 @@ import Buttons from "./File";
 
 export default function DockIcons() {
 
+
+
   return (
     <div className="ContainerDock" key={Math.floor(1 + Math.random() * 10000)}>
-        {data.icons.slice(0, 4).map((icon) => {
+        {data.icons.slice(0, 4).map((icon, i) => {
           return (
-
             <Buttons
               key={Math.floor(1 + Math.random() * 10000)}
               isActive=""
@@ -20,8 +21,11 @@ export default function DockIcons() {
               name={icon.name}
               buttonClass="buttons2 aspect-w-1 aspect-h-1"
               icon={icon.icon}
-              iconName={icon.iconName}
+              iconName={"/"+icon.iconName}
               label={icon.label}
+              id={icon.key}
+              page={icon.page}
+              
               
             />
           );

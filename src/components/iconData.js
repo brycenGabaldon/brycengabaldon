@@ -12,6 +12,7 @@ export const data = {
         active : "active",
         visible : "visible",
         iconClass : "aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 fas fa-phone-alt",
+        page : "/ImageUpload"
     },
     {
       key : 2,
@@ -24,6 +25,8 @@ export const data = {
     active : "active",
     visible : "visible",
     iconClass : " aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 fas fa-envelope",
+    page : "/TaskManager"
+  
   }, 
   {
     "key" : 3,
@@ -36,7 +39,7 @@ export const data = {
     "active" : "active",
     "visible" : "visible",
     "iconClass" : "aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 Button  Small fas fa-comments",
-
+    page : "/Folders"
   },
   
     {    key : 4,
@@ -48,7 +51,8 @@ export const data = {
       labelClass : "buttonLabel",
       active : "active",
       visible : "visible",
-      iconClass : "aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 fas fa-file"
+      iconClass : "aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 fas fa-file",
+      page : "/FB"
       },
       {
         
@@ -61,8 +65,8 @@ export const data = {
       labelClass : "buttonLabel",
       active : "active",
       visible : "visible",
-      iconClass : " fab fa-github"
-    
+      iconClass : " fab fa-github",
+      page : "/ImageUpload"
       },
       {
         key : 6,
@@ -75,7 +79,7 @@ export const data = {
       active : "active",
       visible : "visible",
       iconClass : " fab fa-discord",
-
+      page : "/Folders"
       
     }, 
     {
@@ -88,8 +92,8 @@ export const data = {
       "labelClass" : "buttonLabel",
       "active" : "active",
       "visible" : "visible",
-      iconClass : " fab fa-youtube"
-    },
+      iconClass : " fab fa-youtube",
+      page : "/ImageUpload"},
       {    key : 8,
         name : "eight",
         icon : "faAngry",
@@ -99,7 +103,8 @@ export const data = {
         labelClass : "buttonLabel",
         active : "active",
         visible : "visible",
-        iconClass : " fas fa-project-diagram"
+        iconClass : " fas fa-project-diagram",
+        page: "/Home"
         },
         {
               key : 9,
@@ -111,7 +116,8 @@ export const data = {
             labelClass : "buttonLabel",
             active : "active",
             visible : "visible",
-            iconClass : " fas fa-list-ul"
+            iconClass : " fas fa-list-ul",
+            page: "/Home"
           
             },
             {
@@ -125,7 +131,7 @@ export const data = {
             active : "active",
             visible : "visible",
             iconClass : "Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50",
-
+            click : "FB"
             
           }, 
           {
@@ -139,6 +145,7 @@ export const data = {
             "active" : "active",
             "visible" : "visible",
             iconClass : "Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50",
+            click : "FB"
 },
             {    key : 12,
               name : "twelve",
@@ -149,7 +156,8 @@ export const data = {
               labelClass : "buttonLabel",
               active : "active",
               visible : "visible",
-              iconClass : "Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50"
+              iconClass : "Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50",
+              click : "FB"
 
               },
               {
@@ -164,6 +172,7 @@ export const data = {
               active : "active",
               visible : "visible",
               iconClass : "Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50",
+              click : "FB"
 
             
               },
@@ -178,6 +187,7 @@ export const data = {
               active : "active",
               visible : "visible",
               iconClass : "Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 Button",
+              click : "FB"
 
               
             }, 
@@ -191,7 +201,8 @@ export const data = {
               "labelClass" : "buttonLabel",
               "active" : "active",
               "visible" : "visible",
-              iconClass : "Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50"
+              iconClass : "Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50",
+              click : "FB"
 },
               {    key : 8,
                 name : "messages",
@@ -202,7 +213,8 @@ export const data = {
                 labelClass : "buttonLabel",
                 active : "active",
                 visible : "visible",
-                iconClass : "Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50"
+                iconClass : "Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50",
+                click : "FB"
 
                 }
   ]

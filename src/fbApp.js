@@ -1,5 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { Routes, Route } from "react-router-dom";
+import { UserAuthContextProvider } from "./fbcontext/userAuthContext";
 import "./fbApp.css";
 import Home from "./fbcomponents/Home";
 import Login from "./fbcomponents/Login";
@@ -11,7 +12,7 @@ function FB() {
       <Row>
         <Col>
           <Routes>
-            <Route path="/home" element={<Home />} />
+            <Route path="/Home" element={<Home />} />
             <Route path="/" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
           </Routes>

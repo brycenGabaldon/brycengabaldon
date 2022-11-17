@@ -1,6 +1,6 @@
 import "./Icon.scss";
 import { useState } from "react";
-import { storage } from './firebase.config'
+import { storage } from './firebase'
 import { ref, getDownloadURL, uploadBytesResumable } from "firebase/storage";
 
 function ImageUpload() {

@@ -3,3 +3,9 @@ https://www.techiediaries.com/react-usestate-hook-update-array/
 helps with state array
 
 https://stackoverflow.com/questions/72164551/how-to-toggle-only-one-element-of-a-collection-of-elements-on-click-in-reactjs
+
+https://stackoverflow.com/questions/61826918/mapping-over-an-array-onclick-button-in-react
+mapping onclick/functions
+
+https://stackoverflow.com/questions/71985011/calling-onclick-inside-map-function
+mapping onclick

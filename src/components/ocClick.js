@@ -1,0 +1,16 @@
+export const click = [
+    "phone",
+    "home",
+    "phone",
+    "phone",
+    "phone",
+    "phone",
+    "phone",
+    "phone",
+    "phone",
+    "phone",
+    "phone",
+    "phone",
+    "phone",
+    "phone",
+]

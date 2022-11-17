@@ -5,6 +5,7 @@ import { Button } from "react-bootstrap";
 import GoogleButton from "react-google-button";
 import { useUserAuth } from "../fbcontext/userAuthContext";
 
+
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -17,21 +18,13 @@ const Login = () => {
     setError("");
     try {
       await logIn(email, password);
-      navigate("/home");
+      navigate("/Home");
     } catch (err) {
       setError(err.message);
     }
   };
 
-/*   const handleGoogleSignIn = async (e) => {
-    e.preventDefault();
-    try {
-      await googleSignIn();
-      navigate("/home");
-    } catch (error) {
-      console.log(error.message);
-    }
-  }; */
+
 
   return (
     <>
@@ -66,6 +59,7 @@ const Login = () => {
           <GoogleButton
             className="g-btn"
             type="dark"
+            onClick=""
             
           />
         </div>
