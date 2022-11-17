@@ -6,14 +6,14 @@ import React from "react";
 const Buttons = ({ iconClass, label, labelClass, name, buttonClass, id, iconName}) => {
 
   return (
-    <div className={"Spacing"} key={Math.random()}>
-      <motion.div className={buttonClass} key={Math.random()} whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
+    <div className={"Spacing"} key={Math.floor(1 + Math.random() * 10000)}>
+      <motion.div className={buttonClass} key={Math.floor(1 + Math.random() * 10000)} whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
         <button
           key={Math.floor(1 + Math.random() * 10000)}
           className={iconClass}
   
-          ><i className={"iconitag" +iconName}></i>
-          <div className={labelClass} key={Math.random()}>
+          >
+          <div className={labelClass} key={Math.floor(1 + Math.random() * 10000)}>
             {label}
           </div>
         </button>

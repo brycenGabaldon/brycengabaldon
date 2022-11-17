@@ -50,22 +50,16 @@ margin: 1rem;
 }
 
 .Show {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  top: 50%;
-  right: 50%;
-  height: 20rem;
-  width: 19rem;
-  padding: .75rem;
-  padding-left: 1.5rem;
-  transform: translate(-50%, -70%);
-  border-radius: 2rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-content: flex-start;
+  height: 20rem;
+  width: 20rem;
+  padding: .75rem;
+  border-radius: 2rem;
+
   
   background: rgba(43, 43, 43, 0.418);
   border: 0.01rem solid rgba(162, 162, 162, 0.414);
@@ -174,20 +168,30 @@ width: fit-content;
 width: min-content;
 
 }
-.buttonLabel {
+.buttonLabel1 {
   height: 0.7vmin;
-  font-size: small;
+  font-size: .75rem;
   text-align: center;
   width: 100%;
   position: absolute;
-  bottom: -10%;
+  bottom: -12%;
+  z-index: 1000;
+}
+
+.buttonLabel {
+  height: 0.7vmin;
+  font-size: .25rem;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  bottom: -12%;
   z-index: 1000;
 }
 
 .Overlay {
   height: 100vh;
   width: 100vw;
-  backdrop-filter: blur(0.5rem);
+  backdrop-filter: blur(1rem);
   position: fixed;
   top: 0%;
   left: 0%;
@@ -257,4 +261,25 @@ background-color: rgba(66, 66, 66, 0.093);
 html {
   height: 100vh;
   width: 100vw;
+}
+
+.folders {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.taskmanager {
+  background: white;
+  z-index: 10;
+}
+
+.login{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  z-index: 1000;
+  background: white;
 }

@@ -16,7 +16,7 @@ export default function DockIcons() {
               setIsActive=""
               iconClass={"Icons2 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 " + icon.label + icon.iconClass}
               style={icon.style}
-              labelClass="buttonLabel"
+              labelClass="buttonLabel1"
               name={icon.name}
               buttonClass="buttons2 aspect-w-1 aspect-h-1"
               icon={icon.icon}

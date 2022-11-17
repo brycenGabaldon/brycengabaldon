@@ -1,29 +1,39 @@
-import React from 'react';
-import ReactDom from 'react-dom';
-
+import React from "react";
+import ReactDom from "react-dom";
+import { motion, AnimatePresence } from "framer-motion";
 
 const MODAL_STYLES = {
-  positon: 'fixed',
+  positon: "fixed",
   top: 0,
   bottom: 0,
   left: 0,
   right: 0,
-  zIndex: 1000,
-}
+  zIndex: 100,
+};
 
-export default function ModalPortal({ open, children, childToParent}) {
+export default function ModalPortal({
+  isActive,
+  children,
+  handleClick
 
-if(open) return null
-console.log(open)
+}) {
   return ReactDom.createPortal(
     <>
-    <div className='Overlay' style={MODAL_STYLES} onClick={()=>childToParent(open)}>
-        {children}
-    </div>
-    </>
-    ,
-    document.getElementById('portal')
-  )
+      <AnimatePresence>
+        {isActive && (
+          <motion.div
+            className="Overlay"
+            style={MODAL_STYLES}
+            onClick={handleClick}
+            initial={{ opacity: 1 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 1}}
+          >
+            {children}
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>,
+    document.getElementById("portal")
+  );
 }
-
-

@@ -1,8 +1,8 @@
-/* import './taskManager.css'
+import './taskManager.css'
 import Task from './Task'
 import {useState, useEffect} from 'react'
 import {collection, query, orderBy, onSnapshot} from "firebase/firestore"
-import {db} from './firebase'
+import {db} from '../firebase.config'
 import AddTask from './AddTask'
 
 function TaskManager() {
@@ -11,7 +11,7 @@ function TaskManager() {
   const [tasks, setTasks] = useState([])
 
   /* function to get all tasks from firestore in realtime */ 
- /*  useEffect(() => {
+ useEffect(() => {
     const taskColRef = query(collection(db, 'tasks'), orderBy('created', 'desc'))
     onSnapshot(taskColRef, (snapshot) => {
       setTasks(snapshot.docs.map(doc => ({
@@ -53,4 +53,3 @@ function TaskManager() {
 }
 
 export default TaskManager
- */ 
