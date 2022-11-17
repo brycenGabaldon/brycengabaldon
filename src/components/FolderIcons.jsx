@@ -11,6 +11,7 @@ export default function FolderStatus({ isActive }) {
     : [<OpenFolder key={Math.floor(1 + Math.random() * 10000)} />];
 }
 
+
 function ClosedFolder() {
   return (
     <div className="Hide" key={Math.floor(1 + Math.random() * 10000)}>
