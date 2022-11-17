@@ -43,7 +43,7 @@ function OpenFolder({isActive, handleClick, val1, val2}) {
               key={Math.floor(1 + Math.random() * 10000)}
               iconClass={"Icons aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 " + icon.label + icon.iconClass}
               labelClass={!isActive ? icon.labelClass : "labelHide"}
-              name={icon.name}
+              
               buttonClass="buttons aspect-w-1 aspect-h-1"
               icon={icon.icon}
               iconName={icon.iconName}
