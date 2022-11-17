@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -12,7 +12,7 @@ const Buttons = ({ iconClass, label, labelClass, name, buttonClass, id, iconName
 
 
 
-  const handleSubmit = async (e) => {
+/*   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
@@ -20,7 +20,7 @@ const Buttons = ({ iconClass, label, labelClass, name, buttonClass, id, iconName
     } catch (err) {
 
     }
-  };
+  }; */
 
   return (
     <div className={"Spacing"} key={Math.floor(1 + Math.random() * 10000)}>
