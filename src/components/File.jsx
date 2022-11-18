@@ -12,7 +12,7 @@ const Buttons = ({ iconClass, label, labelClass, name, buttonClass, id, iconName
 
 
 
-  const handleSubmit = () => {
+  const handleSubmit = async() => {
 
 
     try {

@@ -248,7 +248,7 @@ background-color: rgba(255, 255, 255, 0.017);
   transform: translate(-50%, 0%);
   background: rgba(255, 255, 255, 0.421);
   border-radius: 1rem;
-  padding: 1vmin;
+  padding: .5rem;
   backdrop-filter: blur(0.5rem);
 }
 
@@ -290,10 +290,11 @@ border-radius: 1.5rem;
 .UploadImage{
   background: rgba(255, 255, 255, 0.389);
   backdrop-filter: blur(0.5rem);
-  margin: 2rem;
+
   position: absolute;
+  top: 5rem;
   left: 50%;
-  transform: translate(-60%, 0);  
+  transform: translate(-50%, 0);  
   padding: 2rem;
   border-radius: 1rem;
   border: .2rem solid black;
