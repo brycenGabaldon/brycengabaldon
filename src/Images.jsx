@@ -5,7 +5,7 @@ import {
   uploadBytes,
   getDownloadURL,
   listAll,
-  list,
+  
 } from "firebase/storage";
 import { storage } from "./firebase";
 import { v4 } from "uuid";
@@ -33,7 +33,7 @@ function Images() {
         });
       });
     });
-  }, []);
+  }, );
 
   return (
     <div className="UploadImage">
@@ -45,7 +45,7 @@ function Images() {
       />
       <button onClick={uploadFile}> Upload Image</button>
       {imageUrls.map((url) => {
-        return <img src={url} />;
+        return <img src={url} alt="altimage"/>;
       })}
     </div>
   );
