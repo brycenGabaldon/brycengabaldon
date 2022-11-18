@@ -33,7 +33,7 @@ function Images() {
         });
       });
     });
-  }, );
+  }, [imagesListRef]);
 
   return (
     <div className="UploadImage">

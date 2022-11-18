@@ -36,7 +36,7 @@ const [isFolder, setIsFolder] = useState(true)
    
       <div className="Hide" key={Math.floor(1 + Math.random() * 10000)}>
         
-        {data.icons.slice(0, 5).map((icon) => {
+        {data.icons.slice(1, 10).map((icon) => {
           return (
             <Buttons
               key={Math.floor(1 + Math.random() * 10000)}

@@ -9,7 +9,7 @@ export default function DockIcons() {
 
   return (
     <div className="ContainerDock" key={Math.floor(1 + Math.random() * 10000)}>
-        {data.icons.slice(0, 4).map((icon, i) => {
+        {data.icons.slice(0, 5).map((icon, i) => {
           return (
             <Buttons
               key={Math.floor(1 + Math.random() * 10000)}

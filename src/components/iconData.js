@@ -5,27 +5,27 @@ export const data = {
         key : 1,
         name : "Phone",
         icon : "faAngry",
-        label : "Phone ",
+        label : "Home ",
         ref : "refLink",
         onClick : "Function",
         labelClass : "buttonLabel",
         active : "active",
         visible : "visible",
-        iconClass : "aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 fas fa-phone-alt",
-        page : "/Images"
+        iconClass : "aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 fas fa-home",
+        page : "/"
     },
     {
       key : 2,
     name : "two",
     icon : "faAngry",
-    label : "Mail ",
+    label : "Photos ",
     ref : "refLink",
     onClick : "Function",
     labelClass : "buttonLabel",
     active : "active",
     visible : "visible",
-    iconClass : " aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 fas fa-envelope",
-    page : "/TaskManager"
+    iconClass : " aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 fas fa-atom",
+    page : "/Images"
   
   }, 
   {
@@ -121,19 +121,19 @@ export const data = {
           
             },
             {
-              key : 10,
-            name : "ten",
-            icon : "faAngry",
-            label : "ten",
-            ref : "refLink",
-            onClick : "Function",
-            labelClass : "buttonLabel",
-            active : "active",
-            visible : "visible",
-            iconClass : "Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50",
-            click : "FB"
-            
-          }, 
+        
+              key : 1,
+              name : "Phone",
+              icon : "faAngry",
+              label : "Phone ",
+              ref : "refLink",
+              onClick : "Function",
+              labelClass : "buttonLabel",
+              active : "active",
+              visible : "visible",
+              iconClass : "aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 fas fa-phone-alt",
+              page : "/ImageUpload"
+          },
           {
             "key" :11,
             "name" : "eleven",
