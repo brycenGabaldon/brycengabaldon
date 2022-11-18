@@ -43,7 +43,7 @@ function Images() {
           setImageUpload(event.target.files[0]);
         }}
       />
-      <button onClick={uploadFile}> Upload Image</button>
+      <button className="UploadButton" onClick={uploadFile}> Upload Image</button>
       {imageUrls.map((url) => {
         return <img src={url} alt="altimage"/>;
       })}
