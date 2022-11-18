@@ -37,7 +37,7 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
                <Route path="/Folders" element={<FolderStatus isActive={isActive} setIsActive={setIsActive}
                  key={Math.floor(1 + Math.random() * 10000)} />}  />
               <Route path="/TaskManager" element={<TaskManager className="taskmanager"/>} />
-              <Route path="/FB" element={  <FB className="login"/>} />
+              <Route path="/FB" element={ <FB className="login"/>} />
               <Route path="/ImageUpload" element={  <ImageUpload />} />
           </Routes>
         <DockIcons />

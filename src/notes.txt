@@ -9,3 +9,6 @@ mapping onclick/functions
 
 https://stackoverflow.com/questions/71985011/calling-onclick-inside-map-function
 mapping onclick
+
+https://www.kirupa.com/html5/css3_animations_vs_transitions.htm
+css animations

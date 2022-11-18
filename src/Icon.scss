@@ -24,7 +24,7 @@ flex-direction: row;
   align-content: flex-start;
   height: 100%;
   width: 100%;
-  padding: 1rem;
+
 }
 .LabelHide {
   display: none;
@@ -41,11 +41,11 @@ position: relative;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-content: flex-start;
-margin: 1rem;
+
   
   background: rgba(43, 43, 43, 0.418);
   border: 0.01rem solid rgba(162, 162, 162, 0.414);
-  backdrop-filter: blur(0.5rem);
+
   z-index: 1000;
 }
 
@@ -189,29 +189,19 @@ width: min-content;
 }
 
 .Overlay1 {
-  height: fit-content;
-  width: fit-content;
-  backdrop-filter: blur(1rem);
-  position: fixed;
-  top: 0%;
-  left: 0%;
-  right: 0;
-  bottom: 0;
-background-color: rgba(66, 66, 66, 0);
-  z-index: 1000;
+align-content: center;
+justify-content: center;
+margin: 2rem;
+
 }
 
 .Overlay2 {
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   backdrop-filter: blur(1rem);
-  position: fixed;
-  top: 0%;
-  left: 0%;
-  right: 0;
-  bottom: 0;
-background-color: rgba(66, 66, 66, 0.093);
-  z-index: 1000;
+height: 100%;
+background-color: rgba(255, 255, 255, 0.017);
+  z-index: 10;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -280,29 +270,56 @@ html {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+
 }
 
-.taskmanager {
-  background: white;
-  z-index: 10;
-}
 
 .login{
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-
+  transform: translate(-50%, -70%);
+padding: 2rem;
+border-radius: 1.5rem;
   z-index: 1000;
   background: white;
 }
 
-.taskModal {
-  background: white;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  
+
+
+.UploadImage{
+  background: rgba(255, 255, 255, 0.389);
+  backdrop-filter: blur(0.5rem);
+  margin: 2rem;
+  position: absolute;
+  left: 50%;
+  transform: translate(-60%, 0);  
+  padding: 2rem;
+  border-radius: 1rem;
+  border: .2rem solid black;
 }
+.innerbar {
+  background: black;
+
+}
+.outerbar {
+  background: white;
+  padding: .5rem;
+  margin-top: 1rem;
+}
+.UploadButton{
+  width: 100%;
+  background: rgba(0, 0, 0, 0.971);
+  color: white;
+  padding: .5rem;
+  border-radius: .5rem;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+.FolderSpacer {
+  padding: 1 rem;
+  height: 100vh;
+  width: 100vh;
+  background: red;
+}
+

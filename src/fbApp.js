@@ -7,6 +7,7 @@ import Signup from "./fbcomponents/Signup";
 
 function FB() {
   return (
+    <div className="login">
     <Container style={{ width: "400px" }}>
       <Row>
         <Col>
@@ -17,7 +18,7 @@ function FB() {
           </Routes>
         </Col>
       </Row>
-    </Container>
+    </Container></div>
   );
 }
 

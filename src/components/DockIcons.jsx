@@ -1,11 +1,11 @@
-import React from "react";
+import React, {useState} from "react";
 import { data } from "./iconData"
 import Buttons from "./File";
 
 
 export default function DockIcons() {
 
-
+  const [isDock, setIsDock] = useState(true)
 
   return (
     <div className="ContainerDock" key={Math.floor(1 + Math.random() * 10000)}>
@@ -25,6 +25,8 @@ export default function DockIcons() {
               label={icon.label}
               id={icon.key}
               page={icon.page}
+              folder={isDock}
+              isActive="true"
               
               
             />

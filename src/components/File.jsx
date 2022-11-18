@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 
 
-const Buttons = ({ iconClass, label, labelClass, name, buttonClass, id, iconName, page}) => {
+const Buttons = ({ iconClass, label, labelClass, name, buttonClass, id, iconName, page, isActive, folder}) => {
   const navigate = useNavigate();
 
 
@@ -12,19 +12,19 @@ const Buttons = ({ iconClass, label, labelClass, name, buttonClass, id, iconName
 
 
 
-/*   const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleSubmit = () => {
+
 
     try {
-      navigate("/TaskManager");
+      navigate(String(page));
     } catch (err) {
 
     }
-  }; */
-
+  };
+console.log(isActive)
   return (
     <div className={"Spacing"} key={Math.floor(1 + Math.random() * 10000)}>
-      <motion.div className={buttonClass} key={Math.floor(1 + Math.random() * 10000)} whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }} onClick={()=>navigate(String(page))}>
+      <motion.div className={buttonClass} key={Math.floor(1 + Math.random() * 10000)} whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }} onClick={isActive && folder ? ()=> handleSubmit() : handleSubmit()}>
         <button
           key={Math.floor(1 + Math.random() * 10000)}
           className={iconClass}

@@ -32,10 +32,10 @@ function ImageUpload() {
   }
 
   return (
-    <div className="App">
+    <div className="UploadImage">
       <form onSubmit={handleSubmit} className='form'>
         <input type='file' />
-        <button type='submit'>Upload</button>
+        <button className="UploadButton"type='submit'>Upload</button>
       </form>
       {
         !imgUrl &&
