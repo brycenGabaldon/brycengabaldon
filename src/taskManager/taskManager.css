@@ -39,3 +39,14 @@
   gap: 20px;
   margin-top: 20px;
 }
+.taskManager{
+  position: fixed;
+  top: 4rem;
+  left: 10%;
+  right: 10%;
+  bottom: 9rem;
+  padding: 2rem;
+  background: white;
+  border-radius: 2rem;
+
+}

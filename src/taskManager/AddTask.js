@@ -1,7 +1,7 @@
 import Modal from "./Modal"
 import {useState} from 'react'
 import './addTask.css'
-import {db} from './firebase'
+import {db} from '../firebase'
 import {collection, addDoc, Timestamp} from 'firebase/firestore'
 
 
@@ -10,7 +10,6 @@ function AddTask({onClose, open}) {
 
   const [title, setTitle] = useState('')
   const [description, setDescription] = useState('')
-
   
 
   /* function to add new task to firestore */
@@ -30,7 +29,7 @@ function AddTask({onClose, open}) {
   }
 
   return (
-    <Modal modalLable='Add Task' onClose={onClose} open={open}>
+    <Modal modalLable='Add Task' onClose={onClose} open={open} className="taskModal">
       <form onSubmit={handleSubmit} className='addTask' name='addTask'>
         <input 
           type='file' 

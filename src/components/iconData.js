@@ -12,7 +12,7 @@ export const data = {
         active : "active",
         visible : "visible",
         iconClass : "aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 fas fa-phone-alt",
-        page : "/ImageUpload"
+        page : "/Images"
     },
     {
       key : 2,
