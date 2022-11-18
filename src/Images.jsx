@@ -1,14 +1,14 @@
 import "./App.scss";
-import { useState, useEffect } from "react";
+import {useState, useEffect } from "react";
 import {
   ref,
   uploadBytes,
   getDownloadURL,
   listAll,
-  
 } from "firebase/storage";
 import { storage } from "./firebase";
 import { v4 } from "uuid";
+
 
 function Images() {
   const [imageUpload, setImageUpload] = useState(null);
@@ -33,19 +33,19 @@ function Images() {
         });
       });
     });
-  }, [imagesListRef]);
+  },);
 
   return (
-    <div className="UploadImage">
+    <div className="App">
       <input
         type="file"
         onChange={(event) => {
           setImageUpload(event.target.files[0]);
         }}
       />
-      <button className="UploadButton" onClick={uploadFile}> Upload Image</button>
+      <button onClick={uploadFile}> Upload Image</button>
       {imageUrls.map((url) => {
-        return <img src={url} alt="altimage"/>;
+        return <img src={url} alt="hhh"/>;
       })}
     </div>
   );
