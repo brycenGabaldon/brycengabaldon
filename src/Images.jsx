@@ -45,7 +45,7 @@ function Images() {
       />
       <button onClick={uploadFile}> Upload Image</button>
       {imageUrls.map((url) => {
-        return <img src={url} alt="hhh"/>;
+        return <img src={url} alt="altname"/>;
       })}
     </div>
   );
