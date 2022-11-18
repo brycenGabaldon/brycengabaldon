@@ -13,8 +13,6 @@ export default function DockIcons() {
           return (
             <Buttons
               key={Math.floor(1 + Math.random() * 10000)}
-              isActive=""
-              setIsActive=""
               iconClass={"Icons2 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 " + icon.label + icon.iconClass}
               style={icon.style}
               labelClass="buttonLabel1"
@@ -27,6 +25,7 @@ export default function DockIcons() {
               page={icon.page}
               folder={isDock}
               isActive="true"
+              setIsActive={setIsDock}
               
               
             />

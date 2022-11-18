@@ -50,6 +50,7 @@ const [isFolder, setIsFolder] = useState(true)
               isActive={isActive}
               page={icon.page}
               folder={isFolder}
+              setIsActive={setIsFolder}
             />
           );
         })}
