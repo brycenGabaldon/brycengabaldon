@@ -66,7 +66,7 @@ position: relative;
   width: 20rem;
   padding: .75rem;
   border-radius: 2rem;
-
+padding-left: 1.5rem;
   
   background: rgba(43, 43, 43, 0.418);
   border: 0.01rem solid rgba(162, 162, 162, 0.414);
@@ -147,7 +147,7 @@ width: 3.5rem;
 
   justify-items: center;
   position: relative;
-  font-size: 2.5rem;
+  font-size: 3rem;
 
 
   z-index: 1;
@@ -187,13 +187,13 @@ width: min-content;
 }
 
 .buttonLabel {
-  height: 0.7vmin;
-  font-size: .25rem;
+  height: 0.8vmin;
+  font-size: 1rem;
   font-weight: 600;
   text-align: center;
   width: 100%;
   position: absolute;
-  bottom: -20%;
+  bottom: -8%;
   z-index: 1000;
   font-family: 'Roboto', sans-serif;
 }
