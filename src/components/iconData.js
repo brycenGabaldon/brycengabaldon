@@ -14,22 +14,8 @@ export const data = {
         iconClass : "aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 fas fa-home",
         page : "/"
     },
-    {
-      key : 2,
-    name : "two",
-    icon : "faAngry",
-    label : "Photos ",
-    ref : "refLink",
-    onClick : "Function",
-    labelClass : "buttonLabel",
-    active : "active",
-    visible : "visible",
-    iconClass : " aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 fas fa-atom",
-    page : "/Images"
-  
-  }, 
   {
-    "key" : 3,
+    "key" : 2,
     "name" : "three",
     "icon" : "faAngry",
     "label" : "Message ",
@@ -42,7 +28,7 @@ export const data = {
     page : "/Folders"
   },
   
-    {    key : 4,
+    {    key : 3,
       name : "four",
       icon : "faAngry",
       label : "Resume ",
@@ -56,7 +42,7 @@ export const data = {
       },
       {
         
-        key : 5,
+        key : 4,
       name : "five",
       icon : "faAngry",
       label : "Github ",
@@ -69,7 +55,7 @@ export const data = {
       page : "/Component"
       },
       {
-        key : 6,
+        key : 5,
       name : "six",
       icon : "faAngry",
       label : "Discord ",
@@ -83,7 +69,7 @@ export const data = {
       
     }, 
     {
-      "key" : 7,
+      "key" : 6,
       "name" : "seven",
       "icon" : "faAngry",
       "label" : "Youtube ",
@@ -94,7 +80,7 @@ export const data = {
       "visible" : "visible",
       iconClass : " fab fa-youtube",
       page : "/ImageUpload"},
-      {    key : 8,
+      { key : 7,
         name : "eight",
         icon : "faAngry",
         label : "Lotus ",
@@ -106,23 +92,23 @@ export const data = {
         iconClass : " fas fa-project-diagram",
         page: "/Home"
         },
-        {
-              key : 9,
-            name : "nine",
-            icon : "faAngry",
-            label : "Planner ",
-            ref : "tel:602-816-1523",
-            onClick : "Function",
-            labelClass : "buttonLabel",
-            active : "active",
-            visible : "visible",
-            iconClass : " fas fa-list-ul",
-            page: "/Home"
-          
-            },
+    {
+          key : 8,
+          name : "two",
+          icon : "faAngry",
+          label : "Photos ",
+          ref : "refLink",
+          onClick : "Function",
+          labelClass : "buttonLabel",
+          active : "active",
+          visible : "visible",
+          iconClass : "fas fa-atom",
+          page : "/Images"
+        
+        }, 
             {
         
-              key : 1,
+              key : 9,
               name : "Phone",
               icon : "faAngry",
               label : "Phone ",
@@ -131,7 +117,7 @@ export const data = {
               labelClass : "buttonLabel",
               active : "active",
               visible : "visible",
-              iconClass : "aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 fas fa-phone-alt",
+              iconClass : "fas fa-phone-alt",
               page : "/ImageUpload"
           },
           {

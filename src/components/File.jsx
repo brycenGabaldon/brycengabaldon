@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 
 
-const Buttons = ({ iconClass, label, labelClass, name, buttonClass, iconName, page, isActive, folder}) => {
+const Buttons = ({ iconClass, label, labelClass, name, buttonClass, id, iconName, page, isActive, folder}) => {
   const navigate = useNavigate();
 
 
@@ -21,20 +21,20 @@ const Buttons = ({ iconClass, label, labelClass, name, buttonClass, iconName, pa
 
     }
   };
-
+console.log(isActive)
   return (
     <div className={"Spacing"} key={Math.floor(1 + Math.random() * 10000)}>
-      <motion.div className={buttonClass} key={Math.floor(1 + Math.random() * 10000)} whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }} onClick={isActive && folder ? ()=> handleSubmit() : handleSubmit()} >
-         <button
+      <motion.div className={buttonClass} key={Math.floor(1 + Math.random() * 10000)} whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }} onClick={isActive && folder ? ()=> handleSubmit() : handleSubmit()}>
+        <button
           key={Math.floor(1 + Math.random() * 10000)}
           className={iconClass}
           
-
-          > 
+  
+          >
           <div className={labelClass} key={Math.floor(1 + Math.random() * 10000)}>
             {label}
           </div>
-        </button> 
+        </button>
       </motion.div>
 
     </div>
