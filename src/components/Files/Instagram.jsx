@@ -5,7 +5,7 @@ import "./Files.scss"
 
 
 
-const Github = () => {
+const Instagram = () => {
 
 
     
@@ -19,4 +19,4 @@ const Github = () => {
     );
   };
 
-  export default Github;
+  export default Instagram;
