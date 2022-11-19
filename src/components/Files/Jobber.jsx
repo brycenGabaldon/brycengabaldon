@@ -8,6 +8,8 @@ const Jobber = () => {
 
 
     return (
+        <div>
+        
         <motion.div className="Outer"initial={{scale:0}} animate={{scale: 1}} whileHover={{scale:1.2}}>
         <div className="Inner">
       <div className="Application" id="f6f2802e-49e8-477b-b405-8b2b18dded97">
@@ -23,7 +25,7 @@ const Jobber = () => {
             />
 
         </Helmet>
-      </div></div></motion.div>
+      </div></div></motion.div><div className="Overlay3"></div></div>
     );
   };
 

@@ -8,35 +8,7 @@
     overflow-y: auto;
     background: linear-gradient(rgb(250, 246, 0), rgb(131, 31, 8));
   }
-  
-  @keyframes fadein {
-    from {
-      scale: .1;
-      opacity: 0;
-    }
-  
-    to {
-      scale: 1;
-      opacity: 1;
-    }
-  }
-  @keyframes fadeout {
-    from {
-      scale: 1;
-      opacity: 1;
-    }
-    to {
-      scale: 5;
-      opacity: 1;
-  
-    }
-    to {
-      scale: .1;
-      opacity: 0;
-      display: none;
-      animation-play-state: paused;
-    }
-  }
+
   .Outer {
     position: fixed;
     top: 1rem;
@@ -51,36 +23,17 @@
     transition: scale .3s linear;
     z-index: 1000;
   }
-  .JobberOpen:hover {
-    box-shadow: 20px 20px 20px rgba(82, 82, 82, 0.351);
-    border: 5px solid rgb(0, 65, 118);
-  }
-  .JobberClosed{
-      position: fixed;
-      top: 10%;
-      left: 10%;
-      bottom: 10%;
-      right: 10%;
-      border: 5px solid black;
-      border-radius: 3rem;
-      overflow: hidden;
-      visibility: hidden;
-      scale: 0;
-      transition: visibility 0s 2s, scale .3s linear;
-    
   
-  }
-  
-  
-  .Overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: rgba(255, 255, 255, 0.116);
-    z-index: 1;
-  
+  .Overlay3 {
+position: absolute;
+top: 0%;
+bottom: 0;
+left: 0;
+right: 0;
+
+    backdrop-filter: blur(1rem);
+  background-color: rgba(255, 255, 255, 0.017);
+    z-index: 10;
   }
   
   .Button{
@@ -102,7 +55,3 @@
     font-weight: bold;
   }
   
-  .Button:hover{
-  
-    box-shadow: 20px 20px 20px rgba(82, 82, 82, 0.351);
-    border: .3rem solid black;}
