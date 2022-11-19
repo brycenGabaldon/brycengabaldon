@@ -3,8 +3,8 @@ export const data = {
       {
         
         key : 1,
-        name : "Phone",
-        icon : "faAngry",
+        name : "Home",
+        icon : "",
         label : "Home ",
         ref : "refLink",
         onClick : "Function",
@@ -38,7 +38,7 @@ export const data = {
     "labelClass" : "buttonLabel",
     "active" : "active",
     "visible" : "visible",
-    "iconClass" : "aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 Button  Small fas fa-comments",
+    "iconClass" : "aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 Small fas fa-comments",
     page : "/Folders"
   },
   
@@ -66,7 +66,7 @@ export const data = {
       active : "active",
       visible : "visible",
       iconClass : " fab fa-github",
-      page : "/ImageUpload"
+      page : "/Component"
       },
       {
         key : 6,

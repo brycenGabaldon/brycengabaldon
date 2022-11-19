@@ -10,7 +10,8 @@ import FB from "./fbApp";
 import { Route, Routes } from "react-router-dom";
 import Home from "./fbcomponents/Home";
 import Images from "./Images";
-
+import Component from "./components/Files/ocClick";
+import Jobber from "./components/Files/Jobber";
 
 
 
@@ -42,6 +43,8 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
               <Route path="/FB" element={  <FB className="login"/>} />
               <Route path="/ImageUpload" element={  <ImageUpload />} />
               <Route path="/Images" element={  <Images />} />
+              <Route path="/Component" element={  <Component><Jobber/></Component>} />
+              
           </Routes>
         <DockIcons />
       </div> 

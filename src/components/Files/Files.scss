@@ -1,0 +1,112 @@
+.App {
+
+    height: 100vh;
+    width: 100vw;
+  }
+  .Inner {
+    height: 100%;
+    overflow-y: auto;
+    background: linear-gradient(rgb(255, 255, 255), rgb(238, 238, 238));
+  }
+  
+  @keyframes fadein {
+    from {
+      scale: .1;
+      opacity: 0;
+    }
+  
+    to {
+      scale: 1;
+      opacity: 1;
+    }
+  }
+  @keyframes fadeout {
+    from {
+      scale: 1;
+      opacity: 1;
+    }
+    to {
+      scale: 5;
+      opacity: 1;
+  
+    }
+    to {
+      scale: .1;
+      opacity: 0;
+      display: none;
+      animation-play-state: paused;
+    }
+  }
+  .Outer {
+    position: fixed;
+    top: 5rem;
+    left: 15%;
+    bottom: 15%;
+    right: 10%;
+    border: 5px solid black;
+    border-radius: 3rem;
+    overflow: hidden;
+    visibility: visible;
+    scale: 1;
+    transition: scale .3s linear;
+    z-index: 1000;
+  }
+  .JobberOpen:hover {
+    box-shadow: 20px 20px 20px rgba(82, 82, 82, 0.351);
+    border: 5px solid rgb(0, 65, 118);
+  }
+  .JobberClosed{
+      position: fixed;
+      top: 10%;
+      left: 10%;
+      bottom: 10%;
+      right: 10%;
+      border: 5px solid black;
+      border-radius: 3rem;
+      overflow: hidden;
+      visibility: hidden;
+      scale: 0;
+      transition: visibility 0s 2s, scale .3s linear;
+    
+  
+  }
+  
+  .Application {
+    margin: 2rem;
+    padding: 2rem;
+  }
+  
+  .Overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.116);
+    z-index: 1;
+  
+  }
+  
+  .Button{
+    z-index: 1000;
+    height: 2rem;
+    width: 20rem;
+    background: rgb(152, 152, 152);
+  border: .2rem solid black;;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,0);
+    border-radius: 2rem;
+    margin-top: 1rem;
+    padding-top: .75rem;
+    font-weight: bold;
+  }
+  
+  .Button:hover{
+  
+    box-shadow: 20px 20px 20px rgba(82, 82, 82, 0.351);
+    border: .3rem solid black;}
