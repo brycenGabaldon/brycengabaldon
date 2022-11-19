@@ -23,11 +23,12 @@ export default function ModalPortal({ isActive, children, handleClick }) {
             </div>,
           ]
         : [
-            <div>
+            <div>hello
                    <Helmet>
-                   <div id="curator-feed-default-feed-layout">
                     
-                    <a href="https://curator.io" target="_blank" class="crt-logo crt-tag">Powered by Curator.io</a>
+                   <div id="curator-feed-default-feed-layout">
+                   
+                    <a href="https://curator.io" target="_blank" rel="noreferrer" class="crt-logo crt-tag">Powered by Curator.io</a>
                     </div>
                     
                     <script type="text/javascript">{'(function(){var i,e,d=document,s="script";i=d.createElement("script");i.async=1;i.charset="UTF-8";i.src="https://cdn.curator.io/published/f2607526-e3b0-465e-992e-697ed873dfc4.js";e=d.getElementsByTagName(s)[0];e.parentNode.insertBefore(i, e);})();'}</script>
