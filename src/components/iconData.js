@@ -114,7 +114,7 @@ export const data = {
     labelClass : "buttonLabel",
     active : "active",
     visible : "visible",
-    iconClass : "fas fa-atom",
+    iconClass : "fa-brands fa-instagram",
     page : "/Images"
   
   }, 
