@@ -20,7 +20,7 @@ const Component = ({children, backgroundColor}) => {
     return (
         <div>
         
-        <motion.div className="Outer"initial={{scale:0}} animate={{scale: 1}} whileHover={{scale:1.1}}>
+        <motion.div className="Outer"initial={{scale:0}} animate={{scale: 1}}>
         <div className="Inner" style={{backgroundColor}}>
 
 {children}

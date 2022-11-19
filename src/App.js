@@ -11,6 +11,7 @@ import { Route, Routes } from "react-router-dom";
 import Images from "./Images";
 import Component from "./components/Files/ocClick";
 import Jobber from "./components/Files/Jobber";
+import Resume from "./components/Files/Resume";
 
 
 
@@ -52,7 +53,7 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
               <Route path="/Youtube" element={  <Component backgroundColor="red"></Component>} />
               <Route path="/Planner" element={  <Component backgroundColor="white"></Component>} />
               <Route path="/Planner" element={  <Component className="taskmanager" backgroundColor="white"><TaskManager/></Component>} />
-              <Route path="/Resume" element={  <Component backgroundColor="red"></Component>} />
+              <Route path="/Resume" element={  <Component backgroundColor="white"><Resume/></Component>} />
               <Route path="/Settings" element={  <Component backgroundColor="grey"></Component>} />
           </Routes>
         <DockIcons />
