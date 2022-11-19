@@ -19,11 +19,11 @@
 }
 .Github {
     background: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0));
-    color: rgb(91, 90, 90);
+    color: rgb(140, 140, 140);
 
 }
 .Discord {
-    background: radial-gradient(rgb(48, 51, 253), rgb(96, 99, 251));
+    background: radial-gradient(rgb(35, 38, 247), rgb(122, 124, 255));
     color: rgb(255, 255, 255);
 }
 .Youtube {
@@ -49,8 +49,8 @@
     color: rgb(26, 163, 40);
 }
 .LinkedIn{
-        background: linear-gradient(rgb(37, 80, 251), rgb(10, 26, 168));
-        color: rgb(216, 216, 216);
+        background: linear-gradient(rgb(95, 127, 255), rgb(68, 87, 255));
+        color: rgb(255, 255, 255);
 
 }
 
@@ -58,4 +58,9 @@
     background: linear-gradient(rgb(188, 188, 188), rgb(82, 82, 82));
     color: rgb(3, 3, 3);
 
+}
+
+.DiscordView {
+    height: 100vh;
+    
 }

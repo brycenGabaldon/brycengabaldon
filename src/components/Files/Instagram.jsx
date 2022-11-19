@@ -1,7 +1,8 @@
 
 import React from "react";
-import InstagramPortal from "./InstagramPortal";
+
 import "./Files.scss"
+import { Helmet } from "react-helmet";
 
 
 
@@ -10,10 +11,10 @@ const Instagram = () => {
 
     
     return (
-      <div>
-<InstagramPortal>
+      <div>Hello
+<Helmet>
 
-</InstagramPortal>
+</Helmet>
         </div>
  
     );
