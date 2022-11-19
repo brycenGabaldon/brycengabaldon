@@ -9,12 +9,12 @@ export default function DockIcons() {
 
   return (
     <div className="ContainerDock" key={Math.floor(1 + Math.random() * 10000)}>
-        {data.icons.slice(0, 5).map((icon, i) => {
+        {data.icons.slice(0, 4).map((icon, i) => {
           return (
             <Buttons
               key={Math.floor(1 + Math.random() * 10000)}
               iconClass={"Icons2 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 " + icon.label + icon.iconClass}
-              style={icon.style}
+     
               labelClass="buttonLabel1"
               name={icon.name}
               buttonClass="buttons2 aspect-w-1 aspect-h-1"

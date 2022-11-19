@@ -8,7 +8,6 @@ import TaskManager from "./taskManager/TaskManager";
 import ImageUpload from "./ImageUpload";
 import FB from "./fbApp";
 import { Route, Routes } from "react-router-dom";
-import Home from "./fbcomponents/Home";
 import Images from "./Images";
 import Component from "./components/Files/ocClick";
 import Jobber from "./components/Files/Jobber";
@@ -36,15 +35,25 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
     <>
       <div className="App" key={Math.floor(1 + Math.random() * 10000)}>
         <Clock className="ClockBanner"/>
-          <Routes exact path="/*" element={<Home />}>
-               <Route path="/Folders" element={<FolderStatus isActive={isActive} setIsActive={setIsActive}
+          <Routes exact path="/*" element={<FolderStatus isActive={isActive} setIsActive={setIsActive}
+                 key={Math.floor(1 + Math.random() * 10000)} />}>
+               <Route path="/Home" element={<FolderStatus isActive={isActive} setIsActive={setIsActive}
                  key={Math.floor(1 + Math.random() * 10000)} />}  />
-              <Route path="/TaskManager" element={<TaskManager className="taskmanager"/>} />
               <Route path="/FB" element={  <FB className="login"/>} />
-              <Route path="/ImageUpload" element={  <ImageUpload />} />
-              <Route path="/Images" element={  <Images />} />
-              <Route path="/Component" element={  <Component><Jobber/></Component>} />
-              
+              <Route path="/ImageUpload" element={  <Component backgroundColor="white"><ImageUpload backgroundColor="white" /></Component>} />
+              <Route path="/Images" element={  <Component backgroundColor="white"><Images /></Component>} />
+              <Route path="/Jobber" element={  <Component backgroundColor="black"><Jobber/></Component>} />
+              <Route path="/Phone" element={  <Component backgroundColor="white"></Component>} />
+              <Route path="/Message" element={  <Component backgroundColor="black"></Component>} />
+              <Route path="/Mail" element={  <Component backgroundColor="blue"></Component>} />
+              <Route path="/Github" element={  <Component backgroundColor="black"></Component>} />
+              <Route path="/Discord" element={  <Component backgroundColor="blue"></Component>} />
+              <Route path="/LinkedIn" element={  <Component backgroundColor="blue"></Component>} />
+              <Route path="/Youtube" element={  <Component backgroundColor="red"></Component>} />
+              <Route path="/Planner" element={  <Component backgroundColor="white"></Component>} />
+              <Route path="/Planner" element={  <Component className="taskmanager" backgroundColor="white"><TaskManager/></Component>} />
+              <Route path="/Resume" element={  <Component backgroundColor="red"></Component>} />
+              <Route path="/Settings" element={  <Component backgroundColor="grey"></Component>} />
           </Routes>
         <DockIcons />
       </div> 

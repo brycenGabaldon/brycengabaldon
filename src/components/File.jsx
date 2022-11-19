@@ -27,8 +27,7 @@ console.log(isActive)
       <motion.div className={buttonClass} key={Math.floor(1 + Math.random() * 10000)} whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }} onClick={isActive && folder ? ()=> handleSubmit() : handleSubmit()}>
         <button
           key={Math.floor(1 + Math.random() * 10000)}
-          className={iconClass}
-          
+          className={iconClass} disabled={!isActive}
   
           >
           <div className={labelClass} key={Math.floor(1 + Math.random() * 10000)}>
