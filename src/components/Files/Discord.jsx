@@ -12,7 +12,7 @@ const Discord = () => {
     return (
       <div className="DiscordView">
 
-<iframe title="discord" src="https://e.widgetbot.io/channels/1043659503259877437/1043659504157470772" height="90%" width="100%"></iframe>
+<iframe title="discord" src="https://e.widgetbot.io/channels/1043659503259877437/1043659504157470772" height="92%" width="100%"></iframe>
 
         </div>
  
