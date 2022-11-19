@@ -1,21 +1,5 @@
-.ContainerDock {
-  position: fixed;
-  bottom: 4vmin;
-display: flex;
-flex-direction: row;
-  height: fit-content;
-  padding-left: .75rem;
-  padding-right: .75rem;
-  padding-bottom: .5rem;
-  padding-top: 0.5rem;
-  left: 50%;
-  transform: translate(-50%, 0%);
-  backdrop-filter: blur(0.5rem);
-z-index: 100;
-  border-radius: 1.5rem;
-  background: rgba(43, 43, 43, 0.418);
-  border: 0.01rem solid rgba(162, 162, 162, 0.414);
-}
+
+
 .App {
   display: flex;
   flex-direction: row;
@@ -30,33 +14,55 @@ z-index: 100;
   left: 0;
   right: 0;
   overflow-y: scroll;
-  
-
 }
 .LabelHide {
   display: none;
 }
-
-.Hide {
-position: relative;
-  height: 6rem;
-  width: 6rem;
-  padding: .25rem;
-  border-radius: 1rem;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-content: flex-start;
-
-  
-  background: rgba(43, 43, 43, 0.418);
-  border: 0.01rem solid rgba(162, 162, 162, 0.414);
-
-  z-index: 1000;
+@keyframes fadeIn1 {
+  0% {
+    opacity: 0;
+    scale: 3;
+    transform: translate(50%, 50%);
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
+@keyframes fadeOut1 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    scale: 0.25;
+    left: 10%;
+    top: 20%
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .Show {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -64,20 +70,124 @@ position: relative;
   align-content: flex-start;
   height: 20rem;
   width: 20rem;
-  padding: .75rem;
+  padding: 0.75rem;
   border-radius: 2rem;
-padding-left: 1.5rem;
-  
+  padding-left: 1.5rem;
   background: rgba(43, 43, 43, 0.418);
   border: 0.01rem solid rgba(162, 162, 162, 0.414);
   backdrop-filter: blur(0.5rem);
   z-index: 1000;
-  
+  scale: 1;
+  animation: fadeIn ease 0.5s;
+  animation-fill-mode: backwards;
+  .buttons1 {
+    //Open
+    height: 6.2rem;
+    width: 5.5rem;
+    background: rgba(254, 6, 6, 0);
 
-  
+    align-self: center;
+
+    position: relative;
+    align-content: center;
+    justify-items: center;
+  }
+  .Icons1 {
+    //Open
+    border-radius: 25%;
+    min-width: 4.5rem;
+    min-height: 4.5rem;
+    align-self: center;
+    justify-self: center;
+
+    justify-items: center;
+    position: relative;
+    font-size: 3rem;
+
+    z-index: 1;
+  }
+  .buttonLabel {
+    //Open
+    height: 0.8vmin;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: -8%;
+    z-index: 1000;
+    font-family: "Roboto", sans-serif;
+  }
 }
 
+.Hide {
+  position: fixed;
+  top: 3rem;
+  left: 3rem;
+  height: 6rem;
+  width: 6rem;
+  padding: 0.25rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  background: rgba(43, 43, 43, 0.418);
+  border: 0.01rem solid rgba(162, 162, 162, 0.414);
+  z-index: 10;
+  scale: 1;
+  animation: fadeIn1 ease 0.5s;
+  animation-fill-mode: both;
+  .buttons {
+    //Closed
+    height: 1.75rem;
+    width: 1.75rem;
+    background: rgba(255, 255, 255, 0);
+    align-content: center;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-top: 10%;
+  
+    justify-items: center;
+  }
+  .Icons {
+    //Closed
+    border-radius: 25%;
+    min-width: 1.5rem;
+    min-height: 1.5rem;
+    align-self: center;
+    justify-self: center;
+    align-items: flex-start;
+    justify-items: center;
+    position: relative;
+    font-size: 0.65rem;
+    z-index: 1;
+  }
+
+}
+
+.ContainerDock {
+  position: fixed;
+  bottom: 4vmin;
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  backdrop-filter: blur(0.5rem);
+  z-index: 100;
+  border-radius: 1.5rem;
+  background: rgba(43, 43, 43, 0.418);
+  border: 0.01rem solid rgba(162, 162, 162, 0.414);
 .buttons2 {
+  //Dock
   height: 5rem;
   width: 4rem;
   background: rgba(255, 255, 255, 0);
@@ -90,31 +200,36 @@ padding-left: 1.5rem;
 
   justify-items: center;
 }
-
-.buttons1 {
-  height: 6.2rem;
-  width: 5.5rem;
-  background: rgba(254, 6, 6, 0);
-
+.Icons2 {
+  //Dock
+  border-radius: 25%;
+  width: 3.5rem;
+  height: 3.5rem;
   align-self: center;
-
-  position: relative;
-  align-content: center;
-  justify-items: center;
-}
-.buttons {
-  height: 1.75rem;
-  width: 1.75rem;
-  background: rgba(255, 255, 255, 0);
-  align-content: center;
-  align-self: center;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  padding-top: 10%;
+  justify-self: center;
 
   justify-items: center;
+  position: relative;
+  font-size: 2rem;
+
+  z-index: 1;
 }
+.buttonLabel1 {
+  //Dock
+  height: 0.7vmin;
+  font-size: 0.75rem;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  bottom: -12%;
+  z-index: 1000;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+}
+
+
+
 .Spacing {
   align-content: center;
   justify-content: center;
@@ -123,95 +238,31 @@ padding-left: 1.5rem;
   align-self: center;
   justify-self: center;
 }
-.Icons2 {
-  border-radius: 25%;
-width: 3.5rem;
- height: 3.5rem;
-  align-self: center;
-  justify-self: center;
-
-  justify-items: center;
-  position: relative;
-  font-size: 2rem;
 
 
-  z-index: 1;
-}
-
-.Icons1 {
-  border-radius: 25%;
- min-width: 4.5rem;
-  min-height: 4.5rem;
-  align-self: center;
-  justify-self: center;
-
-  justify-items: center;
-  position: relative;
-  font-size: 3rem;
-
-
-  z-index: 1;
-}
-.Icons {
-  border-radius: 25%;
- min-width: 1.5rem;
-  min-height: 1.5rem;
-  align-self: center;
-  justify-self: center;
-  align-items: flex-start;
-  justify-items: center;
-  position: relative;
-  font-size: .65rem;
-  z-index: 1;
-}
 .folderOverlay {
-height: fit-content;
-width: fit-content;
-}
-.foClass{
-
   height: fit-content;
   width: fit-content;
-width: min-content;
-
 }
-.buttonLabel1 {
-  height: 0.7vmin;
-  font-size: .75rem;
-  text-align: center;
-  width: 100%;
-  position: absolute;
-  bottom: -12%;
-  z-index: 1000;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-.buttonLabel {
-  height: 0.8vmin;
-  font-size: 1rem;
-  font-weight: 600;
-  text-align: center;
-  width: 100%;
-  position: absolute;
-  bottom: -8%;
-  z-index: 1000;
-  font-family: 'Roboto', sans-serif;
+.foClass {
+  height: fit-content;
+  width: fit-content;
+  width: min-content;
 }
 
 .Overlay1 {
-align-content: center;
-justify-content: center;
-margin: 2rem;
-
+  align-content: center;
+  justify-content: center;
+  margin: 2rem;
 }
 
 .Overlay2 {
   height: 100%;
   width: 100%;
   backdrop-filter: blur(1rem);
-height: 100%;
-transform: translate(0, -10);
-background-color: rgba(255, 255, 255, 0.017);
+  height: 100%;
+  transform: translate(0, -10);
+  background-color: rgba(255, 255, 255, 0.017);
   z-index: 1000;
 }
 
@@ -259,7 +310,7 @@ background-color: rgba(255, 255, 255, 0.017);
   transform: translate(-50%, 0%);
   background: rgba(255, 255, 255, 0.421);
   border-radius: 1rem;
-  padding: .5rem;
+  padding: 0.5rem;
   backdrop-filter: blur(0.5rem);
 }
 
@@ -281,55 +332,49 @@ html {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-
 }
 
-
-.login{
+.login {
   position: fixed;
   top: 50%;
   left: 50%;
   width: 100%;
   height: 70%;
   transform: translate(-50%, -70%);
-padding: 2rem;
-border-radius: 1.5rem;
+  padding: 2rem;
+  border-radius: 1.5rem;
   z-index: 1000;
   background: white;
 }
 
-
-
-.UploadImage{
+.UploadImage {
   background: rgba(255, 255, 255, 0.389);
   backdrop-filter: blur(0.5rem);
-width: 90%;
+  width: 90%;
   position: absolute;
   top: 5rem;
   left: 50%;
-  transform: translate(-50%, 0);  
+  transform: translate(-50%, 0);
   padding: 2rem;
   border-radius: 1rem;
-  border: .2rem solid black;
+  border: 0.2rem solid black;
 }
 .innerbar {
   background: black;
-
 }
 .outerbar {
   background: white;
-  padding: .5rem;
+  padding: 0.5rem;
   margin-top: 1rem;
 }
-.UploadButton{
+.UploadButton {
   width: 90%;
   background: rgba(34, 50, 145, 0.971);
   color: rgb(255, 255, 255);
-  padding: .5rem;
-  border-radius: .5rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
   margin: 1rem;
   font-weight: bold;
- 
 }
 .FolderSpacer {
   padding: 1 rem;
@@ -337,5 +382,12 @@ width: 90%;
   width: 100vh;
   background: red;
 }
-
-
+.Overlay {
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(1rem);
+  height: 100%;
+  transform: translate(0, -10);
+  background-color: rgba(255, 255, 255, 0.017);
+  z-index: 1000;
+}

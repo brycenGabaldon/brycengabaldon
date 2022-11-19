@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { data } from "./iconData"
 import Buttons from "./File";
 import { motion } from "framer-motion";
-import ModalPortal from "./ModalPortal";
 
 
 
@@ -10,14 +9,14 @@ import ModalPortal from "./ModalPortal";
 
 
 export default function FolderStatus({isActive, setIsActive}) {
- 
+
 
   return !isActive
-    ? [<div className="Overlay1" isActive={isActive}><motion.div onClick={()=>setIsActive(previsActive => true)} className="folders" initial={{scale:3}} animate={{ scale: 1}} ><OpenFolder folderOpen="Hide" id="closed" key={Math.floor(1 + Math.random() * 10000)} isActive={isActive}/></motion.div> </div>]
+    ? [<div><motion.div onClick={()=>setIsActive(previsActive => true)} className="folders" ><OpenFolder folderOpen="Hide fadeOut" id="closed" key={Math.floor(1 + Math.random() * 10000)} isActive={isActive}/></motion.div></div>]
 
     : 
     
-    [<div className="Overlay2"><motion.div  className="folders" initial={{ position: "fixed", top: "20%", left: "50%" }} animate={{ scale: 1, position: "fixed", top: "25%", left: "15%", zIndex: "1000"}} ><OpenFolder folderOpen="Show" disabled={isActive} id="open" key={Math.floor(1 + Math.random() * 10000)} isActive={isActive} /><ModalPortal onClick={()=>setIsActive(previsActive => !isActive)} isActive={isActive} /></motion.div><div className="Overlay2" isActive={isActive} onClick={()=>setIsActive(previsActive => false)}></div> </div>];
+    [<div ><motion.div  className="folders" ><OpenFolder folderOpen="Show fadeIn" disabled={isActive} id="open" key={Math.floor(1 + Math.random() * 10000)} isActive={isActive} /></motion.div> </div>];
 
     
 }

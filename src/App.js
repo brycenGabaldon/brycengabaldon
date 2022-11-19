@@ -12,6 +12,7 @@ import Images from "./Images";
 import Component from "./components/Files/ocClick";
 import Jobber from "./components/Files/Jobber";
 import Resume from "./components/Files/Resume";
+import ModalPortal from "./components/ModalPortal";
 
 
 
@@ -21,6 +22,11 @@ export default function App() {
 
   
   const [isActive, setIsActive] = useState(false);
+
+
+const handleClick = () => {
+  setIsActive(!isActive)
+}
 
 
 /*   const onClick = () => {
@@ -38,8 +44,8 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
         <Clock className="ClockBanner"/>
           <Routes exact path="/*" element={<FolderStatus isActive={isActive} setIsActive={setIsActive}
                  key={Math.floor(1 + Math.random() * 10000)} />}>
-               <Route path="/Home" element={<FolderStatus isActive={isActive} setIsActive={setIsActive}
-                 key={Math.floor(1 + Math.random() * 10000)} />}  />
+               <Route path="/Home" element={  <ModalPortal  handleClick={handleClick} isActive={isActive}> <FolderStatus isActive={isActive} setIsActive={setIsActive}
+                 key={Math.floor(1 + Math.random() * 10000)} /></ModalPortal>}  />
               <Route path="/FB" element={  <FB className="login"/>} />
               <Route path="/ImageUpload" element={  <Component backgroundColor="white"><ImageUpload backgroundColor="white" /></Component>} />
               <Route path="/Images" element={  <Component backgroundColor="white"><Images /></Component>} />
