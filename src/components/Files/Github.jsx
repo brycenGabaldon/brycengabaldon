@@ -21,7 +21,7 @@ return(
            Illustrator/ ProCreate.
     </p>
 
-    <Button href={"https://github.com/brycenGabaldon/brycengabaldon"} class="btn btn-dark btn-lg"  >Here is a link to my GitHub Repo!</Button>
+    <h2 class="drop-shadow-xl ..."><Button href={"https://github.com/brycenGabaldon/brycengabaldon"} className="GitBtn" class="btn btn-dark btn-lg"  >Here is a link to my GitHub Repo!</Button></h2>
 </div></div>
 
 )
