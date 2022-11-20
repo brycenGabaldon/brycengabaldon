@@ -21,7 +21,7 @@ return(
            Illustrator/ ProCreate.
     </p>
 
-    <button style={{backgroundColor: "black", height: "4rem", borderRadius: "2rem", color: "white"}} className="GitBtn" href="https://github.com/brycenGabaldon/brycengabaldon" class="drop-shadow-xl ...">Here is a link to my GitHub Repo!</button>
+    <div className="GitBtn fab fa-github drop-shadow-xl"></div><button  style={{backgroundColor: "black", height: "4rem", borderRadius: "2rem", color: "white", border: ".2rem solid white", fontWeight: "bold"}} href="https://github.com/brycenGabaldon/brycengabaldon" className="drop-shadow-xl ...">Here is a link to my GitHub Repo!</button>
 </div></div>
 
 )
