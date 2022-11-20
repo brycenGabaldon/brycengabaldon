@@ -1,5 +1,5 @@
 import React from "react"
-import { Button } from "react-bootstrap";
+
 
 
 const Github = () => {
@@ -21,7 +21,7 @@ return(
            Illustrator/ ProCreate.
     </p>
 
-    <h2 class="drop-shadow-xl ..."><Button href={"https://github.com/brycenGabaldon/brycengabaldon"} className="GitBtn" class="btn btn-dark btn-lg"  >Here is a link to my GitHub Repo!</Button></h2>
+    <button style={{backgroundColor: "black", height: "4rem", borderRadius: "2rem", color: "white"}} className="GitBtn" href="https://github.com/brycenGabaldon/brycengabaldon" class="drop-shadow-xl ...">Here is a link to my GitHub Repo!</button>
 </div></div>
 
 )
