@@ -16,6 +16,7 @@ import ModalPortal from "./components/ModalPortal";
 import Instagram from "./components/Files/Instagram";
 import Discord from "./components/Files/Discord";
 import Youtube from "./components/Files/Youtube";
+import Github from "./components/Files/Github";
 
 
 
@@ -56,7 +57,7 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
               <Route path="/Phone" element={  <Component backgroundColor="white"></Component>} />
               <Route path="/Message" element={  <Component backgroundColor="black"></Component>} />
               <Route path="/Mail" element={  <Component backgroundColor="blue"></Component>} />
-              <Route path="/Github" element={  <Component backgroundColor="white"></Component>} />
+              <Route path="/Github" element={  <Component backgroundColor="lightGray"><Github/></Component>} />
               <Route path="/Discord" element={  <Component backgroundColor="rgb(45, 50, 55)"><Discord/></Component>} />
               <Route path="/LinkedIn" element={  <Component backgroundColor="blue"></Component>} />
               <Route path="/Youtube" element={  <Component backgroundColor="black"><Youtube/></Component>} />
