@@ -1,4 +1,5 @@
 import React from "react"
+import { Button } from "react-bootstrap";
 
 
 const Github = () => {
@@ -19,6 +20,8 @@ return(
            Lightsail. Also designing marketing content using 
            Illustrator/ ProCreate.
     </p>
+
+    <Button href={"https://github.com/brycenGabaldon/brycengabaldon"} class="btn btn-dark btn-lg"  >Here is a link to my GitHub Repo!</Button>
 </div></div>
 
 )
