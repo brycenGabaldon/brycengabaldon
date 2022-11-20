@@ -1,8 +1,7 @@
 
 import React from "react";
-
 import "./Files.scss"
-import { Helmet } from "react-helmet";
+
 
 
 
@@ -11,10 +10,10 @@ const Instagram = () => {
 
     
     return (
-      <div>Hello
-<Helmet>
+      <div className="DiscordView">
 
-</Helmet>
+<iframe title="instagram" src="https://widget.tagembed.com/75514?view" style={{width:"100%", height:"100%", overflow: "auto"}} frameBorder="0" allowtransparency="true"></iframe>
+
         </div>
  
     );

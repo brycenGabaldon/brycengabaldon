@@ -51,7 +51,7 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
                  key={Math.floor(1 + Math.random() * 10000)} /></ModalPortal>}  />
               <Route path="/FB" element={  <FB className="login"/>} />
               <Route path="/ImageUpload" element={  <Component backgroundColor="white"><ImageUpload backgroundColor="white" /></Component>} />
-              <Route path="/Images" element={  <Component backgroundColor="white"><Instagram/></Component>} />
+              <Route path="/Images" element={  <Component backgroundColor="black"><Instagram/></Component>} />
               <Route path="/Jobber" element={  <Component backgroundColor="black"><Jobber/></Component>} />
               <Route path="/Phone" element={  <Component backgroundColor="white"></Component>} />
               <Route path="/Message" element={  <Component backgroundColor="black"></Component>} />
