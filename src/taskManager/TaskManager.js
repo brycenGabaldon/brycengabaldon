@@ -1,4 +1,4 @@
-import './taskManager.css'
+import './taskManager.scss'
 import Task from './Task'
 import {useState, useEffect} from 'react'
 import {collection, query, orderBy, onSnapshot} from "firebase/firestore"

@@ -1,6 +1,6 @@
 
 import {useState} from 'react'
-import './addTask.css'
+import './addTask.scss'
 import {db} from '../firebase'
 import {collection, addDoc, Timestamp} from 'firebase/firestore'
 
@@ -29,7 +29,7 @@ function AddTask({onClose, open}) {
   }
 
   return (
-    <div>
+    <div className='addTask'>
       <form onSubmit={handleSubmit} className='addTask' name='addTask'>
         <input 
           type='file' 

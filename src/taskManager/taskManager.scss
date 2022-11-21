@@ -41,12 +41,13 @@
 }
 .taskManager{
   position: fixed;
-  top: 4rem;
-  left: 10%;
-  right: 10%;
-  bottom: 9rem;
-  padding: 2rem;
+  top: -.2rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0rem;
   background: white;
   border-radius: 2rem;
+  overflow-y: scroll;
 
 }

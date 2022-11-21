@@ -4,6 +4,7 @@
   gap: 10px;
   margin-top: 10px;
   z-index: 1000;
+  overflow-y: scroll;
 }
 
 .addTask input{
@@ -15,6 +16,7 @@
   -moz-box-sizing: border-box;
   border-bottom: 1.5px solid hsl(210, 10%, 75%);
   padding-left: 5px;
+  overflow-y: scroll;
 }
 
 .addTask input:focus{
