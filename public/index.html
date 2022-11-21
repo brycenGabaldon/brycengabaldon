@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
@@ -33,7 +34,21 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
       <div id="portal" >
-
+        <div class="container"></div>
+        <script src="./three.r134.min.js"></script>
+        <script src="./vanta.birds.js"></script>
+        <script>
+        VANTA.BIRDS({
+          el: "#your-element-selector",
+          mouseControls: true,
+          touchControls: true,
+          gyroControls: false,
+          minHeight: 200.00,
+          minWidth: 200.00,
+          scale: 1.00,
+          scaleMobile: 1.00
+        })
+        </script>
 
       </div>
   </body>

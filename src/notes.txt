@@ -12,3 +12,34 @@ mapping onclick
 
 https://www.kirupa.com/html5/css3_animations_vs_transitions.htm
 css animations
+=========================
+  const HandleClick = (variable, can receive as parameter) => {
+    useImages({...images,  variable : true});
+  console.log("image was clicked")
+  this.setState({ variable });
+}
+========================
+
+const HandleClick = (index) => {
+  console.log("toggled index", index);
+  console.log("selected state", this.state.images);
+  useImages(prevState => {
+    // copy state and update index
+    const images = {...prevState.images};
+    images[index] = !images[index];
+    return { images };
+  });
+  ===========================
+indiviual states!
+
+https://stackoverflow.com/questions/60750302/unable-to-toggle-individual-item-of-an-array-in-react
+
+
+renderSwitch(param) {
+  switch(param) {
+    case 'foo':
+      return 'bar';
+    default:
+      return 'foo';
+  }
+}

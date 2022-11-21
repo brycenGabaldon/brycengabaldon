@@ -20,6 +20,7 @@
     "react": "^18.2.0",
     "react-bootstrap": "^2.6.0",
     "react-dom": "^18.2.0",
+    "react-firebase-hooks": "^5.1.1",
     "react-frame-component": "^5.2.3",
     "react-google-button": "^0.7.2",
     "react-helmet": "^6.1.0",
@@ -29,7 +30,9 @@
     "react-scripts": "5.0.1",
     "sass": "^1.54.5",
     "sass-loader": "^13.0.2",
+    "three": "^0.121.0",
     "use-fit-text": "^2.4.0",
+    "vanta": "^0.5.24",
     "web-vitals": "^2.1.4",
     "webpack": "^5.74.0"
   },

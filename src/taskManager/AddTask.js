@@ -1,4 +1,4 @@
-import Modal from "./Modal"
+
 import {useState} from 'react'
 import './addTask.css'
 import {db} from '../firebase'
@@ -29,7 +29,7 @@ function AddTask({onClose, open}) {
   }
 
   return (
-    <Modal modalLable='Add Task' onClose={onClose} open={open} className="taskModal">
+    <div>
       <form onSubmit={handleSubmit} className='addTask' name='addTask'>
         <input 
           type='file' 
@@ -42,8 +42,7 @@ function AddTask({onClose, open}) {
           placeholder='Enter task decription'
           value={description}></textarea>
         <button type='submit'>Done</button>
-      </form> 
-    </Modal>
+      </form> </div>
   )
 }
 

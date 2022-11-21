@@ -7,7 +7,7 @@ const MODAL_STYLES = {
   bottom: "75%",
   left: 0,
   right: "50%",
-  backgroundColor: 'rgba(0, 0, 0, 0)',
+  backgroundColor: 'rgba(0, 0, 0, .0)',
   zIndex: 1000,
 };
 

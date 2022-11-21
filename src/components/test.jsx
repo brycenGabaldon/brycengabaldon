@@ -1,44 +1,48 @@
-/* import { useState } from 'react';
+/* import { Overlay } from "react-bootstrap";
+import * as React from React;
 
-let appStates = [
-  { id: 0, name: false },
-  { id: 1, name: false},
-  { id: 2, name: false},
-  { id: 3, name: false },
-  { id: 4, name: false},
-  { id: 5, name: false},
-  { id: 6, name: false },
-  { id: 7, name: false},
-  { id: 8, name: false},
-  { id: 9, name: false },
-  { id: 10, name: false},
-  { id: 11, name: false},
-  { id: 12, name: false },
-  { id: 13, name: false},
-  { id: 14, name: false},
-];
 
-export default function List() {
-  const [artists, setArtists] = useState(
-    appStates
-  );
 
-if({appStates.state == false}){
-    return(
-        <div>
-            empty page for now
-        </div>
-    )
+const [ disabled, setDisabled] = useState([false]);
+const [ clicked, setClicked] = useState([false]);
+const [ folderActive, setFolderActive]= useState([false]); 
+const [ type, useType]= useState([false]); 
 
+
+
+const HandleClick = () => {
+{!disabled && setClicked(true)}
 }
-else
 
-  return (
-    <>
-            <div>
-                
-            </div>
-      </>
-  );
+{type == "folder" ? {folderClass} : {dockClass}}
+
+
+
+{appClicked && {activeFolder(i)}}
+
+disable Overlay, keep folder active
+
+const HandleOverlayActive = () => {
+  folderActive && setOverlayActive(false)
 }
+
+const HandleFolderActive = () => {
+  folderActive ? setFolderActive(false) : setFolderActive(true)
+}
+
+const HandleAppActive = (pageOpen) => {
+  console.log("toggled index", pageOpen);
+  console.log("selected state", this.state.app);
+  useImages(prevState => {
+    // copy state and update index
+    const app = {...prevState.app};
+    app[pageOpen] = !app[pageOpen];
+    return { app };
+  });
+
+
+
  */
+
+
+  

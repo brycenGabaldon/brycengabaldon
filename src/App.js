@@ -17,6 +17,7 @@ import Instagram from "./components/Files/Instagram";
 import Discord from "./components/Files/Discord";
 import Youtube from "./components/Files/Youtube";
 import Github from "./components/Files/Github";
+import Mail from "./components/Files/Mail";
 
 
 
@@ -66,6 +67,7 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
               <Route path="/Settings" element={  <Component backgroundColor="grey"></Component>} />
           </Routes>
         <DockIcons />
+        <Mail/>
       </div> 
     </>
   );

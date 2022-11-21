@@ -1,20 +1,20 @@
-import "./App.scss";
-import {useState, useEffect } from "react";
+
+import { useState, useEffect } from "react";
 import {
   ref,
   uploadBytes,
   getDownloadURL,
   listAll,
+  
 } from "firebase/storage";
 import { storage } from "./firebase";
 import { v4 } from "uuid";
-
 
 function Images() {
   const [imageUpload, setImageUpload] = useState(null);
   const [imageUrls, setImageUrls] = useState([]);
 
-  const imagesListRef = ref(storage, "files/");
+  const imagesListRef = ref(storage, "images/");
   const uploadFile = () => {
     if (imageUpload == null) return;
     const imageRef = ref(storage, `images/${imageUpload.name + v4()}`);
@@ -28,12 +28,12 @@ function Images() {
   useEffect(() => {
     listAll(imagesListRef).then((response) => {
       response.items.forEach((item) => {
-        getDownloadURL(item).then((url) => {
+        getDownloadURL(item).then(url => {
           setImageUrls((prev) => [...prev, url]);
         });
       });
     });
-  },);
+  }, []);
 
   return (
     <div className="App">
@@ -45,7 +45,7 @@ function Images() {
       />
       <button onClick={uploadFile}> Upload Image</button>
       {imageUrls.map((url) => {
-        return <img src={url} alt="altname"/>;
+        return <img src={url} />;
       })}
     </div>
   );

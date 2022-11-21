@@ -1,11 +1,15 @@
-import "./Icon.scss";
-import { useState } from "react";
-import { storage } from './firebase'
-import { ref, getDownloadURL, uploadBytesResumable } from "firebase/storage";
+/* import "./Icon.scss";
+import {useState, useEffect } from "react";
+import { storage } from './firebase';
+import { ref, getDownloadURL, uploadBytesResumable, listAll} from "firebase/storage";
+import { v4 } from "uuid";
 
 function ImageUpload() {
   const [imgUrl, setImgUrl] = useState(null);
   const [progresspercent, setProgresspercent] = useState(0);
+
+
+
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -30,6 +34,17 @@ function ImageUpload() {
       }
     );
   }
+  useEffect(() => {
+    const storageRef = ref(storage, `files/${file.name}`);
+    listAll(storageRef).then((response) => {
+      response.items.forEach((item) => {
+        getDownloadURL(item).then((url) => {
+          setImgUrl((prev) => [...prev, url]);
+        });
+      });
+    });
+  },[listAll]);
+
 
   return (
     <div className="UploadImage">
@@ -44,10 +59,14 @@ function ImageUpload() {
         </div>
       }
       {
-        imgUrl &&
-        <img src={imgUrl} alt='uploaded file' height={200} />
+imgUrl && imgUrl.map((url) => {
+  return <img src={url} alt="altname" height={200}/>;
+})
+
+
+
       }
     </div>
   );
 }
-export default ImageUpload;
+export default ImageUpload; */
