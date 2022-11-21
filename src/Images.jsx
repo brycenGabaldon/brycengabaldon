@@ -33,7 +33,7 @@ function Images() {
         });
       });
     });
-  },[] );
+  },[null] );
 
   return (
     <div className="App">
