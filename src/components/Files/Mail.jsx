@@ -21,7 +21,7 @@ import * as THREE from "three";
           scaleMobile: 1.00,
           color: 0x16162f,
           shininess: 19.00,
-          waveHeight: 2.50,
+          waveHeight: 5.50,
           waveSpeed: 2.00,
           zoom: 0.97
 
