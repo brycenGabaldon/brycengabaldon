@@ -36,14 +36,14 @@ function Images() {
   },[] );
 
   return (
-    <div className="App">
-      <input
+    <div className="ImagesApp">
+      <input style={{backgroundColor: "black", color: "white", height:"2rem"}}
         type="file"
         onChange={(event) => {
           setImageUpload(event.target.files[0]);
         }}
       />
-      <button onClick={uploadFile}> Upload Image</button>
+      <button style={{backgroundColor: "blue", color: "white", height:"2rem", margin: ".5rem"}} onClick={uploadFile}> Upload Image</button>
       {imageUrls.map((url) => {
         return <img src={url} alt="altname" />;
       })}
