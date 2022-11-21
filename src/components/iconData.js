@@ -108,14 +108,14 @@ export const data = {
     key : 8,
     name : "two",
     icon : "faAngry",
-    label : "Photos ",
+    label : "Planner ",
     ref : "refLink",
     onClick : "Function",
     labelClass : "buttonLabel",
     active : "active",
     visible : "visible",
     iconClass : "fa-brands fa-instagram",
-    page : "/Images"
+    page : "/TaskManager"
   
   }, 
   {
@@ -158,14 +158,14 @@ export const data = {
     {    key : 3,
       name : "four",
       icon : "faAngry",
-      label : "Settings ",
+      label : "Images ",
       ref : "refLink",
       onClick : "Function",
       labelClass : "buttonLabel ",
       active : "active",
       visible : "visible",
-      iconClass : "fa-solid fa-gear",
-      page : "/Settings"
+      iconClass : "fa-solid fa-icons",
+      page : "/Photos"
       },
       { key : 7,
         name : "eight",

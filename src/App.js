@@ -65,6 +65,7 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
               <Route path="/Planner" element={  <Component className="taskmanager" backgroundColor="white"><TaskManager/></Component>} />
               <Route path="/Resume" element={  <Component backgroundColor="white"><Resume/></Component>} />
               <Route path="/Settings" element={  <Component backgroundColor="grey"></Component>} />
+              <Route path="/Photos" element={  <Component backgroundColor="grey"><Images/></Component>} />
           </Routes>
         <DockIcons />
         <Mail/>
