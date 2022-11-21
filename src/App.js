@@ -49,7 +49,7 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
           <Routes exact path="/*" element={<Component><FolderStatus className="login"/></Component>}>
                <Route path="/Home" element={  <ModalPortal  handleClick={handleClick} isActive={isActive}> <FolderStatus isActive={isActive} setIsActive={setIsActive}
                  key={Math.floor(1 + Math.random() * 10000)} /></ModalPortal>}  />
-              <Route path="/" element={  <Component><FB className="login"/></Component>} />
+              <Route path="/" element={  <Mail/>} />
               <Route path="/ImageUpload" element={  <Component backgroundColor="white"><ImageUpload backgroundColor="white" /></Component>} />
               <Route path="/Images" element={  <Component backgroundColor="black"><Instagram/></Component>} />
               <Route path="/Jobber" element={  <Component backgroundColor="black"><Jobber/></Component>} />
