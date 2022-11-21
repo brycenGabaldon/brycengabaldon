@@ -316,11 +316,13 @@
   margin-top: 0;
   backdrop-filter: blur(0.5rem);
   z-index: 100;
+  pointer-events: none;
 }
 
 .ClockBanner {
   height: 3%;
   width: 100vmax;
+  pointer-events: none;
 }
 .UnderBannner {
   display: flex;
