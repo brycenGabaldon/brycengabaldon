@@ -123,7 +123,7 @@
 .Hide {
   position: fixed;
   top: 3rem;
-  left: 3rem;
+  left: 2rem;
   height: 6rem;
   width: 6rem;
   padding: 0.25rem;
@@ -307,11 +307,15 @@
   position: fixed;
   top: 0;
   left: 50%;
+  height: 2rem;
+  font-size: 1rem;
   transform: translate(-50%, 0%);
   background: rgba(255, 255, 255, 0.421);
   border-radius: 1rem;
-  padding: 0.5rem;
+  padding-top: .25rem;
+  margin-top: .5rem;
   backdrop-filter: blur(0.5rem);
+  z-index: 100;
 }
 
 .ClockBanner {
