@@ -21,6 +21,7 @@ function Images() {
     uploadBytes(imageRef, imageUpload).then((snapshot) => {
       getDownloadURL(snapshot.ref).then((url) => {
         setImageUrls((prev) => [...prev, url]);
+        
       });
     });
   };

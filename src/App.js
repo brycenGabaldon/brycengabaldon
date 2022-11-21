@@ -65,6 +65,7 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
               <Route path="/Resume" element={  <Component backgroundColor="white"><Resume/></Component>} />
               <Route path="/Settings" element={  <Component backgroundColor="grey"></Component>} />
               <Route path="/Photos" element={  <Component backgroundColor="grey"><Images/></Component>} />
+              <Route path="/Instagram" element={  <Component backgroundColor="black"><Instagram/></Component>} />
           </Routes>
         <DockIcons />
         <Mail/>

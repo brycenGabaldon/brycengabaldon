@@ -115,7 +115,7 @@ export const data = {
     active : "active",
     visible : "visible",
     iconClass : "fa-brands fa-instagram",
-    page : "/TaskManager"
+    page : "/Instagram"
   
   }, 
   {
