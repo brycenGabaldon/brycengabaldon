@@ -50,7 +50,7 @@ export const data = {
         active : "active",
         visible : "visible",
         iconClass : "fa-solid fa-home",
-        page : "/Home"
+        page : "/Folders"
     },
     {
         

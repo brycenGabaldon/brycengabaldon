@@ -33,7 +33,7 @@ function Images() {
         });
       });
     });
-  }, []);
+  },    );
 
   return (
     <div className="App">
@@ -45,7 +45,7 @@ function Images() {
       />
       <button onClick={uploadFile}> Upload Image</button>
       {imageUrls.map((url) => {
-        return <img src={url} />;
+        return <img src={url} alt="alktname"/>;
       })}
     </div>
   );
