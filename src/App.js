@@ -46,7 +46,8 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
     <>
       <div className="App" key={Math.floor(1 + Math.random() * 10000)}>
         <Clock className="ClockBanner"/>
-          <Routes exact path="/*" element={<Component><FolderStatus className="login"/></Component>}>
+          <Routes exact path="/*" element={  <ModalPortal  handleClick={handleClick} isActive={isActive}> <FolderStatus isActive={isActive} setIsActive={setIsActive}
+                 key={Math.floor(1 + Math.random() * 10000)} /></ModalPortal>}>
                <Route path="/Home" element={  <ModalPortal  handleClick={handleClick} isActive={isActive}> <FolderStatus isActive={isActive} setIsActive={setIsActive}
                  key={Math.floor(1 + Math.random() * 10000)} /></ModalPortal>}  />
               <Route path="/" element={  <Mail/>} />
