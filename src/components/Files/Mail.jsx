@@ -17,13 +17,13 @@ import * as THREE from "three";
           gyroControls: false,
           minHeight: 200.00,
           minWidth: 200.00,
-          scale: 1.00,
-          scaleMobile: 1.00,
+          scale: .50,
+          scaleMobile: .50,
           color: 0x16162f,
-          shininess: 19.00,
-          waveHeight: 5.50,
-          waveSpeed: 2.00,
-          zoom: 0.97
+          shininess: 25.00,
+          waveHeight: 10.50,
+          waveSpeed: 1.00,
+          zoom: 0.7
 
 
         })
