@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { GiLotus } from "react-icons/gi";
 
 
-
-const Buttons = ({ iconClass, label, labelClass, name, buttonClass, id, iconName, page, isActive, folder}) => {
+const Buttons = ({ iconClass, label, labelClass, name, buttonClass, id, iconName, page, isActive, folder, iconPass}) => {
   const navigate = useNavigate();
 
 
@@ -29,7 +29,7 @@ console.log(isActive)
           key={Math.floor(1 + Math.random() * 10000)}
           className={iconClass} disabled={!isActive}
   
-          >
+          >{iconPass ? <GiLotus/>: ""}
           <div className={labelClass} key={Math.floor(1 + Math.random() * 10000)}>
             {label}
           </div>

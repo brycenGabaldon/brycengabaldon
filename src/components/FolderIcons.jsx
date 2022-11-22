@@ -49,6 +49,7 @@ const [isFolder, setIsFolder] = useState(true)
               page={icon.page}
               folder={isFolder}
               setIs={setIsFolder}
+              iconPass={icon.iconPass}
             />
           );
         })}

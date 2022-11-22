@@ -101,7 +101,8 @@ export const data = {
   labelClass : "buttonLabel",
   active : "active",
   visible : "visible",
-  iconClass : "fas fa-project-diagram",
+  iconClass : "GiLotus",
+  iconPass : "GiLotus",
   page: "/Jobber"
   },
   {
@@ -176,7 +177,7 @@ export const data = {
         labelClass : "buttonLabel",
         active : "active",
         visible : "visible",
-        iconClass : " fas fa-project-diagram",
+        iconClass : "",
         page: "/Home"
         },
           {
