@@ -10,7 +10,6 @@ import FB from "./fbApp";
 import { Route, Routes } from "react-router-dom";
 import Images from "./Images";
 import Component from "./components/Files/ocClick";
-import Jobber from "./components/Files/Jobber";
 import Resume from "./components/Files/Resume";
 import ModalPortal from "./components/ModalPortal";
 import Instagram from "./components/Files/Instagram";
