@@ -1,0 +1,172 @@
+root{
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+}
+
+.A1 {
+  position: fixed;
+height: 100vh;
+width: 100vw;
+top:0;
+left:0;
+right:0;
+bottom:0;
+background-image: url("./Lotus.jpg");
+background-size: contain;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.CardContainer {
+
+  height: 87%;
+  width: 87%;
+  background: rgba(58, 58, 58, 0);
+  border-radius: 5rem;
+display: flex;
+flex-wrap: wrap;
+align-content: center;
+justify-content: center;
+}
+.CardOuter {
+ 
+height: 43%;
+width: 43%;
+flex-direction: column;
+flex-wrap: wrap;
+background: rgba(255, 255, 255, 0.463);
+margin: 1rem;
+border-radius: 2rem;
+justify-content:space-around;
+display: flex;
+border-radius: 2rem;
+padding: .5rem;
+margin: 1rem;
+
+}
+.LeftTop{
+  display: flex;
+  width: 48%;
+  height: 100%;
+
+  border-radius: 1rem;
+  
+
+}
+.RightBottom {
+  display: flex;
+  width: 48%;
+  height: 100%;
+  background: rgba(40, 40, 40, 0.035);
+  border-radius: 1rem;
+  text-align: center;
+justify-items: center;
+align-items: center;
+  padding: 1rem;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  backdrop-filter: blur(0.5rem);
+}
+
+.CenterLogo{
+  filter: drop-shadow(0px 0px 5px rgba(108, 108, 108, 0.663));
+border: .2rem solid white;
+  position: fixed;
+  width: 8rem;
+  height: 8rem;
+background: rgb(0, 0, 0);
+border-radius: 50%;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+
+}
+.logoHolder{
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+font-size: 6rem;
+width: 6rem;
+height: 6rem;
+color: rgb(21, 141, 17);
+background: rgb(0, 0, 0);
+border-radius: 1rem;
+}
+@media only screen and (max-width: 800px) {
+.CardOuter{
+  height: 22%;
+  width: 100%;
+  align-content: space-between ;
+}
+
+.RightBottom {
+  width: 48%;
+  height: 100%;
+}
+.LeftTop {
+  width: 48%;
+  height: 100%;
+
+}
+
+  }
+ 
+  .About {
+    background-image: url("./house-cleaning-services.jpeg");
+height: 100%;
+width: 100%;
+background-size: cover;
+font-size: 1.5rem;
+text-align: center;
+font-weight: bold;
+
+  }
+  .Services {
+    background-image: url("./House-Cleaner-Services.jpg");
+height: 100%;
+width: 100%;
+background-size: cover;
+font-size: 1.5rem;
+text-align: center;
+font-weight: bold;
+  }
+  .Contact {
+    background-image: url("./house-cleaning-in-danbury-ct-06811.png");
+height: 100%;
+width: 100%;
+background-size: contain;
+background-position: center;
+text-align: center;
+font-weight: bold;
+font-size: 1.5rem;
+  }
+  .Reviews {
+    background-image: url("./08ea4c4513e2832c4a09565241007d58.jpg");
+height: 100%;
+width: 100%;
+background-size: contain;
+background-position: center;
+text-align: center;
+font-size: 1.5rem;
+font-weight: bold;
+
+  }
+
+  .Hide {
+    display: none;
+  }
+  .Open{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.206);
+    backdrop-filter: blur(0.5rem);
+    padding: 2rem;
+    overflow-y: scroll;
+    padding-bottom: 5rem;
+  }

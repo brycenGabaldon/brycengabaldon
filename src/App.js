@@ -18,6 +18,7 @@ import Discord from "./components/Files/Discord";
 import Youtube from "./components/Files/Youtube";
 import Github from "./components/Files/Github";
 import Mail from "./components/Files/Mail";
+import Lotus from "./lotusSrc/App";
 
 
 
@@ -53,7 +54,7 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
               <Route path="/" element={  <Mail/>} />
               <Route path="/ImageUpload" element={  <Component backgroundColor="white"><ImageUpload backgroundColor="white" /></Component>} />
               <Route path="/Images" element={  <Component backgroundColor="black"><Instagram/></Component>} />
-              <Route path="/Jobber" element={  <Component backgroundColor="black"><Jobber/></Component>} />
+              <Route path="/Jobber" element={  <Component backgroundColor="black"><Lotus/></Component>} />
               <Route path="/Phone" element={  <Component backgroundColor="white"><FB/></Component>} />
               <Route path="/Message" element={  <Component backgroundColor="black"></Component>} />
               <Route path="/Mail" element={  <Component backgroundColor="blue"></Component>} />
