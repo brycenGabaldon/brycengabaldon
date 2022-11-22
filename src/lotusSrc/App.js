@@ -37,7 +37,7 @@ console.log(CardData)
   return (
     <div className='A1'>
       <div className='Logo'></div>
-<motion.div initial={{scale:.1}} animate={{scale: .85}} transition={{ duration: .6, times: [0, 0.2, 1] }}  className='CardContainer'>
+<motion.div initial={{scale:.1}} animate={{scale: .95}} transition={{ duration: .6, times: [0, 0.2, 1] }}  className='CardContainer'>
 {CardData.map((card, i) => {
 return (
   <>
