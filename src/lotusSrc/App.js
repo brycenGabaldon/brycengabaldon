@@ -49,10 +49,10 @@ return (
 </div> 
 </div>     
 </motion.div>
-<motion.div onClick={HandleClick} initial={{x:-75,y: -75, scale: 0.5}} animate={{rotate: -0, scale: 1}} whileTap={{scale: .9}} transition={{ duration: .2, times: [0, 0.2, 1] }} whileHover={{scale: 1.5}} className='CenterLogo'><div className="logoHolder"><GiLotus/></div> </motion.div>
+
 </>
 )
-} )}   
+} )}<motion.div onClick={HandleClick} initial={{x:-75,y: -75, scale: 0.5}} animate={{rotate: -0, scale: 1}} whileTap={{scale: .9}} transition={{ duration: .2, times: [0, 0.2, 1] }} whileHover={{scale: 1.5}} className='CenterLogo'><div className="logoHolder"><GiLotus/></div> </motion.div>   
       </motion.div>
 <div onClick={HandleClick} className={Jobber ? "A2":"A3"}>
       <div className="Application" id="f6f2802e-49e8-477b-b405-8b2b18dded97">
@@ -69,7 +69,7 @@ return (
 
         </Helmet>
       </div>
-      </div></div>
+      </div>    </div>
   )
 }
 export default Lotus;

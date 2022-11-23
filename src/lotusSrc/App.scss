@@ -15,7 +15,8 @@ bottom:0;
 background-image: url("./Lotus.jpg");
 background-size: contain;
 display: flex;
-align-items: center;
+
+align-items: flex-start;
 justify-content: center;
 }
 
@@ -29,6 +30,8 @@ display: flex;
 flex-wrap: wrap;
 align-content: center;
 justify-content: center;
+padding-right: 1rem;
+padding-top: 2rem;
 }
 .CardOuter {
  
@@ -37,14 +40,16 @@ width: 43%;
 flex-direction: column;
 flex-wrap: wrap;
 background: rgba(255, 255, 255, 0.463);
-margin: 1rem;
+
 border-radius: 2rem;
 justify-content:space-around;
 border: .2rem solid rgb(233, 214, 167);
 display: flex;
 border-radius: 2rem;
 padding: .5rem;
-margin: 1rem;
+
+margin-top: 2rem;
+margin: .5rem;
 
 }
 .LeftTop{
@@ -80,16 +85,12 @@ align-items: center;
   height: 8rem;
 background: rgb(0, 0, 0);
 border-radius: 50%;
-top: 50%;
-left: 50%;
-transform: translate(-50%,-50%);
+
 
 }
 .logoHolder{
 position: fixed;
-top: 50%;
-left: 50%;
-transform: translate(-50%,-50%);
+
 font-size: 6rem;
 width: 6rem;
 height: 6rem;
@@ -97,9 +98,22 @@ color: rgb(237, 237, 237);
 background: rgb(0, 0, 0);
 border-radius: 1rem;
 }
+@media only screen and (min-width: 800px) {
+  .CenterLogo {  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);}
+
+  .logoHolder{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+  }
+}
+
 @media only screen and (max-width: 800px) {
 .CardOuter{
-  height: 22%;
+  height: 24%;
   width: 100%;
   align-content: space-between ;
 }
@@ -113,9 +127,29 @@ border-radius: 1rem;
   height: 100%;
 
 }
+.logoHolder{
+  font-size: 3rem;
+  width: 3rem;
+  height: 3rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+}
+.CenterLogo {
+  width: 4rem;
+  height: 4rem;
+  position: fixed;
+  top: 57%;
+  left: 15%;
+  transform: translate(-50%,-50%);
+}
+
 .RightBottom{ font-size: xx-small;}
 
   }
+
+  
  
   .About {
     background-image: url("./house-cleaning-services.jpeg");
