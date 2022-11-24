@@ -47,7 +47,7 @@ console.log(CardData)
 return (
   <>
 <motion.div initial={{scale: .5}} animate={{rotate: -0, scale: 1}} transition={{ duration: .2, times: [0, 0.2, 1] }}className='CardOuter' >         
-    <div className="CardInner" style={{fontSize: "1.5rem"}}>
+    <div className="CardInner" style={{fontSize: "1rem"}}>
        
     {card.title}
 <div className='CardContents'>{card.description} {card.book && <button style={{ fontSize: ".75rem", zIndex: 1000, padding:"1rem", height: "3rem", width: "100%"}} onClick={HandleClick}>{card.description2}</button>}
