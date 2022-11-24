@@ -50,7 +50,7 @@ return (
     <div className="CardInner" style={{fontSize: "1.5rem"}}>
        
     {card.title}
-<div className='CardContents'>{card.description} {card.book && <button style={{ fontSize: "1.5rem", zIndex: 1000, padding:"1rem", height: "3rem", width: "100%"}} onClick={HandleClick}>{card.description2}</button>}
+<div className='CardContents'>{card.description} {card.book && <button style={{ fontSize: ".75rem", zIndex: 1000, padding:"1rem", height: "3rem", width: "100%"}} onClick={HandleClick}>{card.description2}</button>}
 </div>   <div className={card.image}> </div>     </div>
     
 </motion.div>
