@@ -53,26 +53,45 @@ align-self: center;
 margin: .5rem;
 
 }
-
-
-.CardContents:hover{
-  position: relative;
-height: fit-content;
-  padding: .5rem;
-  color: black;
-  z-index: inherit;
-  z-index: 1000;
-  backdrop-filter: blur(.5rem);
-  
+.CardInner:hover{
+  .Services{
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(.1rem);
+  }
+  .Contact{
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(.5rem);
+  }
+  .Reviews{
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(.5rem);
+  }
+  .About{
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(.5rem);
   
   }
+  .CardContents{
+    color: rgb(1, 1, 1);
+    display: block;
+  }
+}
+
 .CardContents{
 position: relative;
-top: -18rem;
+top: -90%;
+
+
 padding: .5rem;
-color: rgba(255, 255, 255, 0);
+color: black;
 z-index: 1000;
-height: 100%;
+height: fit-content;
+margin:2rem;
+font-weight: bold;
+font-size: small;
+display: none;
+
+
 
 
 
@@ -135,19 +154,9 @@ color: rgb(1, 0, 0);
 .CenterLogo {
   height: 3rem;
  
-  .CardContents:hover{
-    position: relative;
-    top: -18rem;
-    padding: .5rem;
-    color: black;
-    z-index: inherit;
-    z-index: 1000;
-    width: fit-content;
-    height: fit-content;
-    backdrop-filter: blur(.5rem);
+
     
-    
-    }
+
 }
 
 .RightBottom{ font-size: xx-small;}
