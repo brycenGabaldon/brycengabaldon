@@ -12,19 +12,19 @@ const CardData = [
   "image": "About" },
   
   
-  { "title": "Contact",
-  "description": ["Phone Number: 480-358-8203\n", 
-  "\nemail: lotusclean@lotusco.com \n", "\nAddress: Chandler, Az \n", "\nSomething: Something"],
+  { "title": "Contact Us",
+  "description": ["Phone Number: 480-358-8203", 
+  "\nemail: lotusclean@lotusco.com ", "\nAddress: Chandler, Az ", "\nSomething: Something"],
   "image": "Contact"
   },
   
-  {"title": "Book Appointment",
-  "description2": "This Is a description for the appointment booking section",
+  {"title": "Book an Appointment",
+  "description2": "This Is a description for the appointment booking section. You can click these words to see the booking request form!",
   "image": "Reviews",
   "book": true
   },
   
-  {"title": "Services",
+  {"title": "Services we offer:",
   "description": "We wipe all solid surfaces, appliances, windows, and mirrors. Make beds, vacuume floors, and organize items.",
   "image": "Services"
   }
@@ -48,10 +48,10 @@ return (
   <>
 <motion.div initial={{scale: .5}} animate={{rotate: -0, scale: 1}} transition={{ duration: .2, times: [0, 0.2, 1] }}className='CardOuter' >         
     <div className="CardInner">
-<div className={card.image}> {card.title}</div>        
-    
-<div className='CardContents'>{card.description2} {card.book && <button style={{ fontSize: "1.5rem", zIndex: 1000, padding:"1rem",background: "rgba(0,0,0,.1)", position:"absolute", top: "-50%", left:"0", height: "3rem", width: "100%"}} onClick={HandleClick}>{card.description}</button>}
-</div> </div>
+       
+    {card.title}
+<div className='CardContents'>{card.description} {card.book && <button style={{ fontSize: "1.5rem", zIndex: 1000, padding:"1rem", height: "3rem", width: "100%"}} onClick={HandleClick}>{card.description2}</button>}
+</div>   <div className={card.image}> </div>     </div>
     
 </motion.div>
 
