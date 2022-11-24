@@ -28,7 +28,10 @@ const CardData = [
   }
 
 ]
-const [Jobber, setJobber] = useState(false)
+const [Jobber, setJobber] = useState(false);
+
+
+
 const HandleClick = () => {
 setJobber(!Jobber)
 console.log(Jobber)
