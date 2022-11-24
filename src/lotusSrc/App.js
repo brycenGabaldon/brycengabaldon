@@ -41,13 +41,13 @@ console.log(CardData)
 {CardData.map((card, i) => {
 return (
   <>
-<motion.div initial={{scale: .5}} animate={{rotate: -0, scale: 1}} transition={{ duration: .2, times: [0, 0.2, 1] }} whileHover={{scale: 1.1}} className='CardOuter' >         
-<div className='LeftTop' >    
-<div className={card.image}> {card.title}</div></div>        
-<div className='RightBottom'>     
+<motion.div initial={{scale: .5}} animate={{rotate: -0, scale: 1}} transition={{ duration: .2, times: [0, 0.2, 1] }}className='CardOuter' >         
+    <div className="CardInner">
+<div className={card.image}> {card.title}</div>        
+    
 <div className='CardContents'>{card.description} 
-</div> 
-</div>     
+</div> </div>
+    
 </motion.div>
 
 </>
