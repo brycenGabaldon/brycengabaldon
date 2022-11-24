@@ -40,16 +40,16 @@ console.log(Jobber)
 }
 console.log(CardData)
   return (
-    <div className='A1'><motion.div  animate={{rotate: -0, scale: 1}}  transition={{ duration: .2, times: [0, 0.2, 1] }}  className='CenterLogo'><div className="logoHolder" style={{ fontSize: "1.5rem", position: "fixed", left: 0, top: ".5rem", zIndex: 1000, padding:"1rem"}}><GiLotus/>Lotus Cleaning Co.</div> </motion.div> 
+    <div className='A1'><motion.div  animate={{rotate: -0, scale: 1}}  transition={{ duration: .2, times: [0, 0.2, 1] }}  className='CenterLogo'><div className="logoHolder drop-shadow-2xl" style={{ fontSize: "1.5rem", position: "fixed", left: 0, top: ".5rem", zIndex: 1000, padding:"1rem"}}><GiLotus/>Lotus Cleaning Co.</div> </motion.div> 
       <div className='Logo'></div>
 <motion.div initial={{scale:.1}} animate={{scale: .85}} transition={{ duration: .6, times: [0, 0.2, 1] }}  className='CardContainer'>
 {CardData.map((card, i) => {
 return (
   <>
-<motion.div initial={{scale: .5}} animate={{rotate: -0, scale: 1}} transition={{ duration: .2, times: [0, 0.2, 1] }}className='CardOuter' >         
-    <div className="CardInner" style={{fontSize: "1rem"}}>
+<motion.div initial={{scale: .5}} animate={{rotate: -0, scale: 1}} transition={{ duration: .2, times: [0, 0.2, 1] }}className='CardOuter ' >         
+    <div className="CardInner drop-shadow-2xl" style={{fontSize: "1rem"}}>
        
-    {card.title}
+   <div className="Title"> {card.title}</div>
 <div className='CardContents'>{card.description} {card.book && <button style={{ fontSize: ".75rem", zIndex: 1000, padding:"1rem", height: "3rem", width: "100%"}} onClick={HandleClick}>{card.description2}</button>}
 </div>   <div className={card.image}> </div>     </div>
     
