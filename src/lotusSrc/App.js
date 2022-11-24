@@ -15,17 +15,18 @@ const CardData = [
   { "title": "Contact",
   "description": ["Phone Number: 480-358-8203\n", 
   "\nemail: lotusclean@lotusco.com \n", "\nAddress: Chandler, Az \n", "\nSomething: Something"],
-  "image": "Services"
+  "image": "Contact"
   },
   
-  {"title": "Prepared",
-  "description": "We have every product and device that is required to get your home back in order! you won't need to worry about supplying anything, we come prepared!",
-  "image": "Contact"
+  {"title": "Book Appointment",
+  "description2": "This Is a description for the appointment booking section",
+  "image": "Reviews",
+  "book": true
   },
   
   {"title": "Services",
   "description": "We wipe all solid surfaces, appliances, windows, and mirrors. Make beds, vacuume floors, and organize items.",
-  "image": "Reviews"
+  "image": "Services"
   }
 
 ]
@@ -39,8 +40,8 @@ console.log(Jobber)
 }
 console.log(CardData)
   return (
-    <div className='A1'><motion.div  animate={{rotate: -0, scale: 1}}  transition={{ duration: .2, times: [0, 0.2, 1] }}  className='CenterLogo'><div className="logoHolder" style={{ fontSize: "2rem", position: "fixed", left: 0, top: 0, zIndex: 1000, padding:"1rem"}}><GiLotus/>Lotus Cleaning Co.</div> </motion.div> 
-      <div className='Logo'><button style={{ fontSize: "1rem", position: "fixed", right: 0, top: 0, zIndex: 1000, padding:"1rem"}} onClick={HandleClick}>Book Appointment</button></div>
+    <div className='A1'><motion.div  animate={{rotate: -0, scale: 1}}  transition={{ duration: .2, times: [0, 0.2, 1] }}  className='CenterLogo'><div className="logoHolder" style={{ fontSize: "1.5rem", position: "fixed", left: 0, top: 0, zIndex: 1000, padding:"1rem"}}><GiLotus/>Lotus Cleaning Co.</div> </motion.div> 
+      <div className='Logo'></div>
 <motion.div initial={{scale:.1}} animate={{scale: .85}} transition={{ duration: .6, times: [0, 0.2, 1] }}  className='CardContainer'>
 {CardData.map((card, i) => {
 return (
@@ -49,7 +50,7 @@ return (
     <div className="CardInner">
 <div className={card.image}> {card.title}</div>        
     
-<div className='CardContents'>{card.description} 
+<div className='CardContents'>{card.description2} {card.book && <button style={{ fontSize: "1.5rem", zIndex: 1000, padding:"1rem",background: "rgba(0,0,0,.1)", position:"absolute", top: "-50%", left:"0", height: "3rem", width: "100%"}} onClick={HandleClick}>{card.description}</button>}
 </div> </div>
     
 </motion.div>

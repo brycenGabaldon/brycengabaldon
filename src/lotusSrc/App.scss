@@ -97,13 +97,8 @@ display: none;
 
 }
 .CenterLogo{
-  width: 100vw;
-  height: 7rem;
-text-align: center;
-color: rgb(7, 27, 246);
-z-index: 1000;
-font-family: 'Courier New', Courier, monospace;
-padding: 1.5rem;
+
+  height: 5rem;
 backdrop-filter: blur(.5rem);
 
 
@@ -148,23 +143,6 @@ font-size: x-small;
 
   align-content: space-between ;
 }
-
-
-.logoHolder{
-  font-size: 5vw;
-  top: 10vh;
-
-
-}
-.CenterLogo {
-  height: 3rem;
- 
-
-    
-
-}
-
-.RightBottom{ font-size: xx-small;}
 
   }
 
