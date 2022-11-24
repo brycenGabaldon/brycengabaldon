@@ -80,7 +80,7 @@ margin: .5rem;
 .CardContents{
 position: relative;
 top: -90%;
-
+white-space: pre-wrap;
 
 padding: .5rem;
 color: black;
@@ -88,7 +88,7 @@ z-index: 1000;
 height: fit-content;
 margin:2rem;
 font-weight: bold;
-font-size: small;
+font-size: medium;
 display: none;
 
 
@@ -105,7 +105,7 @@ z-index: 1000;
 font-family: 'Courier New', Courier, monospace;
 padding: 1.5rem;
 backdrop-filter: blur(.5rem);
-cursor:grab;
+
 
 }
 .logoHolder{
@@ -196,7 +196,7 @@ font-size: x-small;
     border-radius: 1rem;
   }
   .Contact {
-    background-image: url("../../public/08ea4c4513e2832c4a09565241007d58.jpg");
+    background-image: url("./Cleaning-supplies.webp");
 
     height: 100%;
     width: 100%;
@@ -207,12 +207,13 @@ font-size: x-small;
     font-size: 1rem;
     font-weight: bold;
     border-radius: 1rem;
+    white-space: pre-wrap;
   }
   .Reviews {
-    background-image: url("../../public/house-cleaning-in-danbury-ct-06811.png");
+    background-image: url("./house-cleaning-solutions-4-p082mkmysutujpi8xstminy1ovwx2c2z2sn8ba7tj4.jpg");
     height: 100%;
     width: 100%;
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     text-align: center;
     align-self: center;

@@ -12,18 +12,19 @@ const CardData = [
   "image": "About" },
   
   
-  { "title": "Orderly",
-  "description": "We are a family owned private housekeeping service. With over 20 years of experience we will treat your own with the best care and service that we possibly can",
+  { "title": "Contact",
+  "description": ["Phone Number: 480-358-8203\n", 
+  "\nemail: lotusclean@lotusco.com \n", "\nAddress: Chandler, Az \n", "\nSomething: Something"],
   "image": "Services"
   },
   
   {"title": "Prepared",
-  "description": "We are a family owned private housekeeping service. With over 20 years of experience we will treat your own with the best care and service that we possibly can",
+  "description": "We have every product and device that is required to get your home back in order! you won't need to worry about supplying anything, we come prepared!",
   "image": "Contact"
   },
   
   {"title": "Services",
-  "description": "We are a family owned private housekeeping service. With over 20 years of experience we will treat your own with the best care and service that we possibly can",
+  "description": "We wipe all solid surfaces, appliances, windows, and mirrors. Make beds, vacuume floors, and organize items.",
   "image": "Reviews"
   }
 
@@ -38,8 +39,8 @@ console.log(Jobber)
 }
 console.log(CardData)
   return (
-    <div className='A1'><motion.div onClick={HandleClick}  animate={{rotate: -0, scale: 1}} whileTap={{scale: .9}} transition={{ duration: .2, times: [0, 0.2, 1] }}  className='CenterLogo'><div className="logoHolder"><GiLotus/>Lotus Cleaning Co.</div> </motion.div> 
-      <div className='Logo'></div>
+    <div className='A1'><motion.div  animate={{rotate: -0, scale: 1}}  transition={{ duration: .2, times: [0, 0.2, 1] }}  className='CenterLogo'><div className="logoHolder" style={{ fontSize: "2rem", position: "fixed", left: 0, top: 0, zIndex: 1000, padding:"1rem"}}><GiLotus/>Lotus Cleaning Co.</div> </motion.div> 
+      <div className='Logo'><button style={{ fontSize: "1rem", position: "fixed", right: 0, top: 0, zIndex: 1000, padding:"1rem"}} onClick={HandleClick}>Book Appointment</button></div>
 <motion.div initial={{scale:.1}} animate={{scale: .85}} transition={{ duration: .6, times: [0, 0.2, 1] }}  className='CardContainer'>
 {CardData.map((card, i) => {
 return (
