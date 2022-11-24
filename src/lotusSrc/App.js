@@ -35,9 +35,9 @@ console.log(Jobber)
 }
 console.log(CardData)
   return (
-    <div className='A1'>
+    <div className='A1'><motion.div onClick={HandleClick}  animate={{rotate: -0, scale: 1}} whileTap={{scale: .9}} transition={{ duration: .2, times: [0, 0.2, 1] }}  className='CenterLogo'><div className="logoHolder"><GiLotus/>Lotus Cleaning Co.</div> </motion.div> 
       <div className='Logo'></div>
-<motion.div initial={{scale:.1}} animate={{scale: .95}} transition={{ duration: .6, times: [0, 0.2, 1] }}  className='CardContainer'>
+<motion.div initial={{scale:.1}} animate={{scale: .85}} transition={{ duration: .6, times: [0, 0.2, 1] }}  className='CardContainer'>
 {CardData.map((card, i) => {
 return (
   <>
@@ -52,7 +52,7 @@ return (
 
 </>
 )
-} )}<motion.div onClick={HandleClick} initial={{x:-75,y: -75, scale: 0.5}} animate={{rotate: -0, scale: 1}} whileTap={{scale: .9}} transition={{ duration: .2, times: [0, 0.2, 1] }} whileHover={{scale: 1.5}} className='CenterLogo'><div className="logoHolder"><GiLotus/></div> </motion.div>   
+} )}  
       </motion.div>
 <div onClick={HandleClick} className={Jobber ? "A2":"A3"}>
       <div className="Application" id="f6f2802e-49e8-477b-b405-8b2b18dded97">

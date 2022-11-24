@@ -53,7 +53,7 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
               <Route path="/" element={  <Mail/>} />
               <Route path="/ImageUpload" element={  <Component backgroundColor="white"><ImageUpload backgroundColor="white" /></Component>} />
               <Route path="/Images" element={  <Component backgroundColor="black"><Instagram/></Component>} />
-              <Route path="/Jobber" element={  <Component backgroundColor="black"><Lotus/></Component>} />
+              <Route path="/Jobber" element={  <Lotus/>} />
               <Route path="/Phone" element={  <Component backgroundColor="white"><FB/></Component>} />
               <Route path="/Message" element={  <Component backgroundColor="black"></Component>} />
               <Route path="/Mail" element={  <Component backgroundColor="blue"></Component>} />
