@@ -221,6 +221,9 @@ background: url("./abstract-gold-background-20261442.jpg");
 span{
         font-size: 8vmin;
     font-family: cursive;
+    position: absolute;
+    top: 0;
+    left:5vmin;
 }
 .lotus2 {
     background: url("./white-marble-texture-natural-pattern-high-resolution-background-design-art-work-white-stone-floor-white-marble-112030128.jpg");
@@ -237,4 +240,5 @@ span{
     scale: 1;
     transition: scale .3s linear;
     z-index: 1000;
+    padding-top: 10vmin;
 }
