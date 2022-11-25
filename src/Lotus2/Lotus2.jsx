@@ -56,7 +56,7 @@ const Lotus2 = () => {
             transition={{ duration: 2 }} className="lotusContainer drop-shadow-2xl">
             <div className="flowerCenter"></div>
             <div onClick={() => setOpen1(!open1)} className="topLeft">
-              <div> {open1 ? "Reviews" : data.one} </div>
+              <div> {open1 ? "Reviews" : <div className="Petal1">hello</div>} </div>
             </div>
             <div onClick={() => setOpen2(!open2)} className="topRight">
               <div> {open2 ? "Reviews" : data.two}</div>
