@@ -71,6 +71,7 @@ const Lotus = () => {
             zIndex: 1000,
             backgroundColor:"lightGreen",
             color: "black",
+            fontFamily: "cursive",
             padding: "1rem",}} onClick={HandleClick}>Book Appointment</Button> {" "}
       </div>
       <div className="Logo"></div>
