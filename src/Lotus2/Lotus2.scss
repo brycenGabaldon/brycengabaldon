@@ -35,7 +35,7 @@ rotate: 45deg;
     width: 50vmin;
     border-bottom-left-radius: 70%;
     border-top-right-radius: 70%;
-    border: .2rem solid rgb(91, 82, 68);
+    border: .1vmin solid rgb(91, 82, 68);
     font-size: smaller;
     overflow-wrap: break-word;
 }
@@ -46,12 +46,12 @@ rotate: 45deg;
     width: 50vmin;
     border-top-left-radius: 70%;
     border-bottom-right-radius: 70%;
-    border: .2rem solid rgb(91, 82, 68);
+    border: .1vmin solid rgb(91, 82, 68);
 }
 .bottomLeft2{
     background: url("./Lotus.jpg");
     background-size: 10rem;
-    border: .2rem solid rgb(91, 82, 68);
+    border: .1vmin solid rgb(91, 82, 68);
     height: 50vmin;
     width: 50vmin;
     border-top-left-radius: 70%;
@@ -64,7 +64,7 @@ rotate: 45deg;
     width: 50vmin;
     border-bottom-left-radius: 70%;
     border-top-right-radius: 70%;
-    border: .2rem solid rgb(91, 82, 68);
+    border: .1vmin solid rgb(91, 82, 68);
 }
 .topLeft:hover{
   
@@ -80,7 +80,7 @@ rotate: 45deg;
     width: 50vmin;
     border-bottom-left-radius: 50%;
     border-top-right-radius: 50%;
-    border: .2rem solid rgb(0, 0, 0);
+    border: .1vmin solid rgb(0, 0, 0);
     font-size: smaller;
     overflow-wrap: break-word;
     display: flex;
@@ -106,7 +106,7 @@ rotate: 45deg;
     width: 50vmin;
     border-top-left-radius: 50%;
     border-bottom-right-radius: 50%;
-    border: .2rem solid rgb(0, 0, 0);
+    border: .1vmin solid rgb(0, 0, 0);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -126,7 +126,7 @@ rotate: 45deg;
     background: url("./Lotus.jpg");
     background-size: 45rem;
     background-position: -15rem;
-    border: .2rem solid rgb(0, 0, 0);
+    border: .1vmin solid rgb(0, 0, 0);
     height: 50vmin;
     width: 50vmin;
     border-top-left-radius: 50%;
@@ -158,7 +158,7 @@ rotate: 45deg;
     width: 50vmin;
     border-bottom-left-radius: 50%;
     border-top-right-radius: 50%;
-    border: .2rem solid rgb(0, 0, 0);
+    border: .1vmin solid rgb(0, 0, 0);
     font-size: 6vmin;
     transition: all .5s;
     font-family: cursive;
