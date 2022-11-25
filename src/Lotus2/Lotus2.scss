@@ -35,7 +35,7 @@ rotate: 45deg;
     width: 50vmin;
     border-bottom-left-radius: 70%;
     border-top-right-radius: 70%;
-    border: .2rem solid rgb(217, 176, 120);
+    border: .2rem solid rgb(91, 82, 68);
     font-size: smaller;
     overflow-wrap: break-word;
 }
@@ -46,12 +46,12 @@ rotate: 45deg;
     width: 50vmin;
     border-top-left-radius: 70%;
     border-bottom-right-radius: 70%;
-    border: .2rem solid rgb(217, 176, 120);
+    border: .2rem solid rgb(91, 82, 68);
 }
 .bottomLeft2{
     background: url("./Lotus.jpg");
     background-size: 10rem;
-    border: .2rem solid rgb(217, 176, 120);
+    border: .2rem solid rgb(91, 82, 68);
     height: 50vmin;
     width: 50vmin;
     border-top-left-radius: 70%;
@@ -64,7 +64,7 @@ rotate: 45deg;
     width: 50vmin;
     border-bottom-left-radius: 70%;
     border-top-right-radius: 70%;
-    border: .2rem solid rgb(217, 176, 120);
+    border: .2rem solid rgb(91, 82, 68);
 }
 .topLeft:hover{
   
@@ -75,12 +75,12 @@ rotate: 45deg;
 }
 .topLeft{
     background: url("./Lotus.jpg");
-    background-size: 30rem;
+    background-size: 35rem;
     height: 50vmin;
     width: 50vmin;
     border-bottom-left-radius: 50%;
     border-top-right-radius: 50%;
-    border: .2rem solid rgb(217, 176, 120);
+    border: .2rem solid rgb(0, 0, 0);
     font-size: smaller;
     overflow-wrap: break-word;
     display: flex;
@@ -101,11 +101,12 @@ rotate: 45deg;
 .topRight{
     background: url("./Lotus.jpg");
     background-size: 30rem;
+    background-position: (0, -15rem);
     height: 50vmin;
     width: 50vmin;
     border-top-left-radius: 50%;
     border-bottom-right-radius: 50%;
-    border: .2rem solid rgb(217, 176, 120);
+    border: .2rem solid rgb(0, 0, 0);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -123,8 +124,9 @@ rotate: 45deg;
 }
 .bottomLeft{
     background: url("./Lotus.jpg");
-    background-size: 30rem;
-    border: .2rem solid rgb(217, 176, 120);
+    background-size: 45rem;
+    background-position: -15rem;
+    border: .2rem solid rgb(0, 0, 0);
     height: 50vmin;
     width: 50vmin;
     border-top-left-radius: 50%;
@@ -147,7 +149,8 @@ rotate: 45deg;
 }
 .bottomRight{
     background: url("./Lotus.jpg");
-    background-size: 30rem;
+    background-size: 40rem;
+    background-position: 15rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -155,7 +158,7 @@ rotate: 45deg;
     width: 50vmin;
     border-bottom-left-radius: 50%;
     border-top-right-radius: 50%;
-    border: .2rem solid rgb(217, 176, 120);
+    border: .2rem solid rgb(0, 0, 0);
     font-size: 4vmin;
     transition: all .5s;
     font-family: cursive;
