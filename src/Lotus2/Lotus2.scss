@@ -9,7 +9,6 @@
     left: 50%;
 transform: translate(-83%,-83%);
 scale: .6;
-font-size: 5vmin;
 
 
 
@@ -73,6 +72,7 @@ rotate: 45deg;
     scale:1.5;
     transform: translate(-15%,-15%);
     background: rgba(255, 255, 255, 0.489);
+    color: rgba(255, 255, 255, 0);
 }
 .topLeft{
     background: url("./Lotus.jpg");
@@ -87,6 +87,7 @@ rotate: 45deg;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 5vmin;
 }
 
 .topRight:hover{
@@ -94,6 +95,7 @@ rotate: 45deg;
     scale:1.5;
     transform: translate(15%,-15%);
     background: rgba(255, 255, 255, 0.489);
+    color: rgba(255, 255, 255, 0);
 }
 .topRight{
     background: url("./Lotus.jpg");
@@ -106,6 +108,7 @@ rotate: 45deg;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 5vmin;
 }
 
 .bottomLeft:hover{
@@ -113,6 +116,7 @@ rotate: 45deg;
     scale:1.5;
     transform: translate(-15%,15%);
     background: rgba(255, 255, 255, 0.489);
+    color: rgba(255, 255, 255, 0);
 }
 .bottomLeft{
     background: url("./Lotus.jpg");
@@ -125,6 +129,7 @@ rotate: 45deg;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 5vmin;
 }
 
 .bottomRight:hover {
@@ -132,9 +137,8 @@ rotate: 45deg;
     scale:1.5;
     transform: translate(15%,15%);
     background: rgba(255, 255, 255, 0.489);
-   .lotusContainer{
-    color: white;
-   }
+    color: rgba(255, 255, 255, 0);
+   
 }
 .bottomRight{
     background: url("./Lotus.jpg");
@@ -147,11 +151,12 @@ rotate: 45deg;
     border-bottom-left-radius: 50%;
     border-top-right-radius: 50%;
     border: .2rem solid rgb(217, 176, 120);
+    font-size: 5vmin;
 }
 .flowerCenter{
     height: 20vmin;
     line-height: 8vmin;
-line-clamp: 1;
+
     overflow-wrap: break-word;
     font-size: 3vmin;
     width: 20vmin;
