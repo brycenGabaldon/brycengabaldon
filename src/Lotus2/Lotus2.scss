@@ -75,7 +75,7 @@ rotate: 45deg;
 }
 .topLeft{
     background: url("./Lotus.jpg");
-    background-size: 35rem;
+    background-size: 10rem;
     height: 50vmin;
     width: 50vmin;
     border-bottom-left-radius: 50%;
@@ -101,7 +101,7 @@ rotate: 45deg;
 }
 .topRight{
     background: url("./Lotus.jpg");
-    background-size: 30rem;
+    background-size: 10rem;
     background-position: (0, -15rem);
     height: 50vmin;
     width: 50vmin;
@@ -126,7 +126,7 @@ rotate: 45deg;
 }
 .bottomLeft{
     background: url("./Lotus.jpg");
-    background-size: 45rem;
+    background-size: 10rem;
     background-position: -15rem;
     border: .1vmin solid rgb(0, 0, 0);
     height: 50vmin;
@@ -152,7 +152,7 @@ rotate: 45deg;
 }
 .bottomRight{
     background: url("./Lotus.jpg");
-    background-size: 40rem;
+    background-size: 10rem;
     background-position: 15rem;
   display: flex;
   align-items: center;
