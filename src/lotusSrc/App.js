@@ -54,20 +54,25 @@ const Lotus = () => {
           className="logoHolder drop-shadow-2xl"
           style={{
             fontSize: "2.5rem",
-            position: "fixed",
-            left: 0,
-            top: ".5rem",
+        width:"100vw",
+        position:"relative",
+        top:"4rem",
+   
             zIndex: 1000,
             padding: "1rem",
           }}
         >
           <GiLotus />
           Lotus Cleaning Co.</div>
-       <Button class="drop-shadow-2xl hover:drop-shadow-2xl" style={{            fontSize: "1.5rem",
+       <Button class="drop-shadow-2xl hover:drop-shadow-2xl" style={{            fontSize: "1.75rem",
+       fontWeight:"bold",
             position: "fixed",
-            right: "0rem",
-            top: "6rem",
-            width: "100%",
+         left:"50%",
+         transform:"translate(-50%,0)",
+            top: "1rem",
+            width: "90%",
+            alignSelf:"center",
+            justifySelf:"center",
             zIndex: 1000,
             backgroundColor:"lightGreen",
             color: "black",
