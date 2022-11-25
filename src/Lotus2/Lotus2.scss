@@ -87,8 +87,9 @@ rotate: 45deg;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 5vmin;
+    font-size: 4vmin;
     transition: all .5s;
+    font-family: cursive;
 }
 
 .topRight:hover{
@@ -109,8 +110,9 @@ rotate: 45deg;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 5vmin;
+    font-size: 4vmin;
     transition: all .5s;
+    font-family: cursive;
 }
 
 .bottomLeft:hover{
@@ -131,8 +133,9 @@ rotate: 45deg;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 5vmin;
+    font-size: 4vmin;
     transition: all .5s;
+    font-family: cursive;
 }
 
 .bottomRight:hover {
@@ -154,16 +157,21 @@ rotate: 45deg;
     border-bottom-left-radius: 50%;
     border-top-right-radius: 50%;
     border: .2rem solid rgb(217, 176, 120);
-    font-size: 5vmin;
+    font-size: 4vmin;
     transition: all .5s;
+    font-family: cursive;
 }
-.flowerCenter{
-    height: 20vmin;
-    line-height: 8vmin;
+.flowerCenter:hover{
+    scale: 1.2;
+}
 
+.flowerCenter{
+    height: 30vmin;
+    line-height: 30vmin;
+    transition: all .5s;
     overflow-wrap: break-word;
     font-size: 3vmin;
-    width: 20vmin;
+    width: 30vmin;
     border-radius: 50%;
     background: rgb(217, 176, 120);
     position: absolute ;
@@ -172,6 +180,7 @@ rotate: 45deg;
     border: .2rem solid rgb(0, 0, 0);
     transform: translate(-50%,-50%);
     text-align: center;
+    font-family: cursive;
 
 
 
@@ -189,6 +198,7 @@ rotate: 45deg;
     border: .2rem solid rgb(255, 255, 255);
     transform: translate(-50%,-50%);
     text-align: center;
+    font-family: cursive;
 
 
    
