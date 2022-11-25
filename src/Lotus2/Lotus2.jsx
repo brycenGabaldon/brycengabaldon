@@ -11,7 +11,7 @@ const Lotus2 = () => {
   const [open3, setOpen3] = useState(true);
   const [open4, setOpen4] = useState(true);
   const data = {
-    one: "   Shayna Torres\n   480-358-8202\n     Chandler,az",
+    one: " Address: 1234 Address St. Chandler,az \n",
     two: "   Shayna Torres\n   480-358-8202\n     Chandler,az",
     three: "   Shayna Torres\n   480-358-8202\n     Chandler,az",
     four: "   Shayna Torres\n   480-358-8202\n     Chandler,az",
@@ -56,16 +56,16 @@ const Lotus2 = () => {
             transition={{ duration: 2 }} className="lotusContainer drop-shadow-2xl">
             <div className="flowerCenter"></div>
             <div onClick={() => setOpen1(!open1)} className="topLeft">
-              <div> {open1 ? "Reviews" : <div className="Petal1">hello</div>} </div>
+              <div> {open1 ? "Contact Us" : <div className="Petal1">{data.one}<br/><a href="tel: 480-358-8203">Phone: 480-358-8203</a> <br/><a href="email:customers@lotuscleaning.com">Email: Customers@LotusCleaning.com</a></div>} </div>
             </div>
             <div onClick={() => setOpen2(!open2)} className="topRight">
-              <div> {open2 ? "Reviews" : data.two}</div>
+              <div> {open2 ? "About Us" : <div className="Petal1">{data.one}<br/><a href="tel: 480-358-8203">Phone: 480-358-8203</a> <br/><a href="email:customers@lotuscleaning.com">Email: Customers@LotusCleaning.com</a></div>}</div>
             </div>
             <div onClick={() => setOpen3(!open3)} className="bottomLeft">
-              <div> {open3 ? "Reviews" : data.three}</div>
+              <div> {open3 ? "Services" : <div className="Petal1">{data.one}<br/><a href="tel: 480-358-8203">Phone: 480-358-8203</a> <br/><a href="email:customers@lotuscleaning.com">Email: Customers@LotusCleaning.com</a></div>}</div>
             </div>
             <div onClick={() => setOpen4(!open4)} className="bottomRight">
-              <div> {open4 ? "Reviews" : data.four}</div>
+              <div> {open4 ? "Reviews" : <div className="Petal1">{data.one}<br/><a href="tel: 480-358-8203">Phone: 480-358-8203</a> <br/><a href="email:customers@lotuscleaning.com">Email: Customers@LotusCleaning.com</a></div>}</div>
             </div>
           </motion.div>
         </motion.div>
