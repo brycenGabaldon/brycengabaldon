@@ -53,7 +53,7 @@ const Lotus = () => {
         <div
           className="logoHolder drop-shadow-2xl"
           style={{
-            fontSize: "2.5rem",
+            
         width:"100vw",
         position:"relative",
         top:"4rem",
