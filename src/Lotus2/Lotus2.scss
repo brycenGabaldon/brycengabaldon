@@ -29,8 +29,8 @@ rotate: 45deg;
 
 }
 .topLeft2{
-       background: url("./Lotus.jpg");
-    background-size: cover;
+    background: url("./Lotus.jpg");
+    background-size: 10rem;
     height: 50vmin;
     width: 50vmin;
     border-bottom-left-radius: 70%;
@@ -41,7 +41,7 @@ rotate: 45deg;
 }
 .topRight2{
     background: url("./Lotus.jpg");
-    background-size: cover;
+    background-size: 10rem;
     height: 50vmin;
     width: 50vmin;
     border-top-left-radius: 70%;
@@ -50,7 +50,7 @@ rotate: 45deg;
 }
 .bottomLeft2{
     background: url("./Lotus.jpg");
-    background-size: cover;
+    background-size: 10rem;
     border: .2rem solid rgb(217, 176, 120);
     height: 50vmin;
     width: 50vmin;
@@ -59,8 +59,7 @@ rotate: 45deg;
 }
 .bottomRight2{
     background: url("./Lotus.jpg");
- 
-    background-size: cover;
+    background-size: 10rem;
     height: 50vmin;
     width: 50vmin;
     border-bottom-left-radius: 70%;
@@ -76,7 +75,7 @@ rotate: 45deg;
 }
 .topLeft{
     background: url("./Lotus.jpg");
-    background-size: cover;
+    background-size: 30rem;
     height: 50vmin;
     width: 50vmin;
     border-bottom-left-radius: 50%;
@@ -101,7 +100,7 @@ rotate: 45deg;
 }
 .topRight{
     background: url("./Lotus.jpg");
-    background-size: cover;
+    background-size: 30rem;
     height: 50vmin;
     width: 50vmin;
     border-top-left-radius: 50%;
@@ -124,7 +123,7 @@ rotate: 45deg;
 }
 .bottomLeft{
     background: url("./Lotus.jpg");
-    background-size: cover;
+    background-size: 30rem;
     border: .2rem solid rgb(217, 176, 120);
     height: 50vmin;
     width: 50vmin;
@@ -148,10 +147,10 @@ rotate: 45deg;
 }
 .bottomRight{
     background: url("./Lotus.jpg");
+    background-size: 30rem;
   display: flex;
   align-items: center;
   justify-content: center;
-    background-size: cover;
     height: 50vmin;
     width: 50vmin;
     border-bottom-left-radius: 50%;
@@ -173,7 +172,8 @@ rotate: 45deg;
     font-size: 3vmin;
     width: 30vmin;
     border-radius: 50%;
-    background: rgb(217, 176, 120);
+background: url("./abstract-gold-background-20261442.jpg");
+    background-size: 80rem;
     position: absolute ;
     top: 50%;
     left:50%;
@@ -213,4 +213,8 @@ rotate: 45deg;
 span{
         font-size: 8vmin;
     font-family: cursive;
+}
+.lotus2 {
+    background: url("./white-marble-texture-natural-pattern-high-resolution-background-design-art-work-white-stone-floor-white-marble-112030128.jpg");
+    background-size: 150vmin;
 }

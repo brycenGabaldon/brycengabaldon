@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
 
-const Component = ({children, backgroundColor}) => {
+const Component = ({children, backgroundColor, className}) => {
 
   const navigate = useNavigate();
 
@@ -20,7 +20,7 @@ const Component = ({children, backgroundColor}) => {
     return (
         <div>
         
-        <motion.div className="Outer"initial={{scale:0}} animate={{scale: 1}}>
+        <motion.div className="Outer lotus2" initial={{scale:0}} animate={{scale: 1}}>
         <div className="Inner" style={{backgroundColor}}>
 
 {children}
