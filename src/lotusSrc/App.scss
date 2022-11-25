@@ -14,102 +14,28 @@ right:0;
 bottom:0;
 background-image: url("./Lotus.jpg");
 background-size: contain;
-display: flex;
-flex-direction: column;
+
 z-index: 100;
-padding-bottom: 2rem;
-
+overflow-y: scroll;
 }
 
 
 
-.CardInner {
-  width: 100%;
-  height:100%;
-  z-index: 100;
-  border-radius: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-backdrop-filter: blur(.25rem);
-}
+
 .CardContainer {
-  height:100%;
+  height:fit-content;
   width: 100%;
   background: rgba(58, 58, 58, 0);
-align-self: center;
-justify-items: center;
 display: flex;
 flex-direction: column;
-flex-wrap: wrap;
-align-content: center;
-padding-left: 1rem;
-padding-right: 1rem;
-
-}
-.CardOuter {
-height: 47%;
-width: 47%;
-
-display: flex;
-border-radius: 1rem;
-justify-content:space-around;
-padding: .21rem;
-
-align-self: center;
 
 
 }
-.CardInner:hover{
-  .Services{
-    background: rgba(255, 255, 255, 0);
-
-  }
-  .Contact{
-    background: rgba(255, 255, 255, 0);
-
-  }
-  .Reviews{
-    background: rgba(255, 255, 255, 0);
-
-  }
-  .About{
-    background: rgba(255, 255, 255, 0);
-
-  
-  }
-  .CardContents{
-    color: rgb(1, 1, 1);
-    display: block;
-  }
-  .Title{
-    display: none;
-  }
-}
-
-.CardContents{
-display: flex;
-white-space: pre-wrap;
-
-padding: .5rem;
-color: black;
-z-index: 1000;
-height: fit-content;
-
-font-weight: bold;
-font-size: medium;
-display: none;
 
 
 
-
-
-}
 .CenterLogo{
-
 height: 2rem;
-
-
 }
 .logoHolder{
   text-align: center;
@@ -122,91 +48,48 @@ font-family: cursive;
 width: 100%;
 backdrop-filter: blur(.5rem);
 color: rgb(1, 0, 0);
-
-
-}
-@media only screen and (min-width: 800px) {
-  .CenterLogo {   }
-
-  .logoHolder{
-
-
-  }
 }
 
-@media only screen and (max-width: 800px) {
-.CardContents{
-  font-weight: bold;
-font-size: x-small;
+.About{
+  background-image: url("./Cleaning-supplies.webp");
+  height: 45vh;
+  width: 100vw;
+  display:block;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.CardContainer{
-  flex-direction: column;
-  
-}
-
-.CardOuter{
-  height: 23%;
-  width: 100%;
-  margin: .2rem;
-
-  align-content: space-between ;
-}
-
-  }
-
-  
- 
-  .About {
-    background-image: url("../../public/house-cleaning-services.jpeg");
-    height: 100%;
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    align-self: center;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 1rem;
-
-  }
   .Services {
-    background-image: url("../../public/House-Cleaner-Services.jpg");
-    height: 100%;
-    width: 100%;
+    background-image: url("./house-cleaning-in-danbury-ct-06811.png");
+    height: 45vh;
+    width: 100vw;
+    display:block;
     background-size: cover;
-    background-position: center;
-    text-align: center;
-    align-self: center;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 1rem;
+    background-repeat: no-repeat;
+    background-position: bottom;
+
+ 
   }
   .Contact {
-    background-image: url("./Cleaning-supplies.webp");
-
-    height: 100%;
-    width: 100%;
+    background-image: url("./house-cleaning-services.jpeg");
+    height: 45vh;
+    width: 100vw;
+    display:block;
     background-size: cover;
-    background-position: center;
-    text-align: center;
-    align-self: center;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 1rem;
-    white-space: pre-wrap;
+    background-repeat: no-repeat;
+    background-position: bottom;
+
   }
   .Reviews {
     background-image: url("./house-cleaning-solutions-4-p082mkmysutujpi8xstminy1ovwx2c2z2sn8ba7tj4.jpg");
-    height: 100%;
-    width: 100%;
+    height: 55vh;
+    width: 100vw;
+    display:block;
     background-size: cover;
-    background-position: center;
-    text-align: center;
-    align-self: center;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 1rem;
+    background-repeat: no-repeat;
+    background-position: bottom;
+
 
   }
 
@@ -226,15 +109,55 @@ font-size: x-small;
     padding-bottom: 5rem;
     padding-top: 5rem;
   }
+  .modalOut1{
+position: fixed;
+top: 0;
+bottom: 0;
+right:0;
+left:0;
+background: rgba(1, 1, 1, 0.099);
+z-index: 100;
+backdrop-filter: blur(.5rem);
+  }
 
-  .Title{
+
+
+
+
+.CardInner {
+  width: 100%;
+  height:80vh;
+  z-index: 100;
+  backdrop-filter: blur(.5rem);
+  padding-top: 0rem;
+
+}
+.CardOuter {
+height: 75vh;
+width: 100%;
+
+margin-top: 8rem;
+
+
+
+}
+.backdrop{
+
+}
+
+.Words{
+  height: 50vh;
+
+  width: 100vw;
+  text-align: center;
+  z-index: 1000;
+
+ padding: 2rem;
+} 
+ .Title{
     color: rgb(255, 255, 255);
     text-shadow: 1px 1px 1px black;
-    position: absolute;
-    top: 50%;
-    left:  50%;
-  
-    transform: translate(-50%, -50%);
     font-size: 1.5rem;
-  
+    text-align: center;
+
   }
