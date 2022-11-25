@@ -166,9 +166,7 @@ rotate: 45deg;
     font-weight: 600;
     transition: all .5s;
     font-family: cursive;
-}
-.flowerCenter:hover{
-    scale: 1.2;
+ 
 }
 
 .flowerCenter{
@@ -180,7 +178,7 @@ rotate: 45deg;
     width: 30vmin;
     border-radius: 50%;
 background: url("./abstract-gold-background-20261442.jpg");
-    background-size: 30rem;
+    background-size: 35rem;
     position: absolute ;
     top: 50%;
     left:50%;
@@ -189,6 +187,7 @@ background: url("./abstract-gold-background-20261442.jpg");
     text-align: center;
     font-family: cursive;
     font-weight: 600;
+    cursor: grab;
 
 
 
