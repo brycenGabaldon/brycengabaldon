@@ -9,6 +9,7 @@
     left: 50%;
 transform: translate(-83%,-83%);
 scale: .6;
+font-size: 5vmin;
 
 
 
@@ -69,7 +70,9 @@ rotate: 45deg;
 }
 .topLeft:hover{
   
-    scale:2;
+    scale:1.5;
+    transform: translate(-15%,-15%);
+    background: rgba(255, 255, 255, 0.489);
 }
 .topLeft{
     background: url("./Lotus.jpg");
@@ -81,11 +84,16 @@ rotate: 45deg;
     border: .2rem solid rgb(217, 176, 120);
     font-size: smaller;
     overflow-wrap: break-word;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .topRight:hover{
  
-    scale:2;
+    scale:1.5;
+    transform: translate(15%,-15%);
+    background: rgba(255, 255, 255, 0.489);
 }
 .topRight{
     background: url("./Lotus.jpg");
@@ -95,11 +103,16 @@ rotate: 45deg;
     border-top-left-radius: 50%;
     border-bottom-right-radius: 50%;
     border: .2rem solid rgb(217, 176, 120);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .bottomLeft:hover{
 
-scale:2;
+    scale:1.5;
+    transform: translate(-15%,15%);
+    background: rgba(255, 255, 255, 0.489);
 }
 .bottomLeft{
     background: url("./Lotus.jpg");
@@ -109,15 +122,25 @@ scale:2;
     width: 50vmin;
     border-top-left-radius: 50%;
     border-bottom-right-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .bottomRight:hover {
 
-    scale:2
+    scale:1.5;
+    transform: translate(15%,15%);
+    background: rgba(255, 255, 255, 0.489);
+   .lotusContainer{
+    color: white;
+   }
 }
 .bottomRight{
     background: url("./Lotus.jpg");
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
     background-size: cover;
     height: 50vmin;
     width: 50vmin;

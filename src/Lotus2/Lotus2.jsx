@@ -16,10 +16,10 @@ const Lotus2 = () => {
         </div>
         <div className='lotusContainer'>
 <div className='flowerCenter'>Book Appointment</div>
-         <div className='topLeft'> </div>
-         <div className='topRight'></div>
-         <div className='bottomLeft'></div>
-         <div className='bottomRight'></div>
+         <div className='topLeft'><div>Contact Us</div> </div>
+         <div className='topRight'><div>Services</div></div>
+         <div className='bottomLeft'><div>Book Appointment</div></div>
+         <div className='bottomRight'><div>About Us</div></div>
         </div>
 
         
