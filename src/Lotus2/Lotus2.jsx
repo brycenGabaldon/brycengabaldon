@@ -25,9 +25,9 @@ const Lotus2 = () => {
       "And more!"
     ],
     four: [
-        "$300 (1,500SqFt. 3 bedroom 2 bath",
-        "$400 (1,800SqFt. 4 bedroom 2 bath",
-        "$500 (2,500SqFt. 5 bedroom 3 bath",
+        "$300 (1,500SqFt. 3 bedroom, 2 bath)",
+        "$400 (1,800SqFt. 4 bedroom, 2 bath)",
+        "$500 (2,500SqFt. 5 bedroom, 3 bath)",
 
       ],
   };
