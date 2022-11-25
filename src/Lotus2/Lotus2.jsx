@@ -27,7 +27,7 @@ const Lotus2 = () => {
         <motion.div
           className="motion"
           initial={{ scale: 3, opacity: 0 }}
-          animate={{ scale: .8, rotate: 360, opacity:1}}
+          animate={{ scale: .7, rotate: 360, opacity:1}}
           transition={{ duration: 2 }}
         >
             <motion.div
