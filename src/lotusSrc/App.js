@@ -53,7 +53,7 @@ const Lotus = () => {
         <div
           className="logoHolder drop-shadow-2xl"
           style={{
-            fontSize: "1.5rem",
+            fontSize: "2.5rem",
             position: "fixed",
             left: 0,
             top: ".5rem",
@@ -62,14 +62,16 @@ const Lotus = () => {
           }}
         >
           <GiLotus />
-          Lotus Cleaning Co.
+          Lotus Cleaning Co.</div>
        <Button style={{            fontSize: "1.5rem",
             position: "fixed",
-            right: "2rem",
-            top: "0rem",
+            right: "0rem",
+            top: "6rem",
+            width: "100%",
             zIndex: 1000,
-            backgroundColor:"black",
-            padding: "1rem",}} onClick={HandleClick}>Book Appointment</Button> </div>{" "}
+            backgroundColor:"lightGreen",
+            color: "black",
+            padding: "1rem",}} onClick={HandleClick}>Book Appointment</Button> {" "}
       </div>
       <div className="Logo"></div>
       <motion.div
@@ -91,7 +93,7 @@ const Lotus = () => {
                   className="CardInner drop-shadow-2xl hover:drop-shadow-2xl"
                   style={{ fontSize: "1rem" }}
                 >
-                  <img className={card.image} alt="" style={{borderRadius: "2rem"}}/>
+                  <img className={card.image} alt="" />
 
                   <div className="Title">{card.title}</div>
                   <div className="Words">{card.description} <div className="backdrop"> </div></div>
