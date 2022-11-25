@@ -1,37 +1,77 @@
-import React from 'react';
-import { useState } from 'react';
-import './Lotus2.scss';
-import { Helmet } from 'react-helmet';
+import React from "react";
+import { useState } from "react";
+import "./Lotus2.scss";
+import { Helmet } from "react-helmet";
+import { motion } from "framer-motion";
 
 const Lotus2 = () => {
+  const [open, setOpen] = useState(false);
+  const [open1, setOpen1] = useState(true);
+  const [open2, setOpen2] = useState(true);
+  const [open3, setOpen3] = useState(true);
+  const [open4, setOpen4] = useState(true);
+  const data = {
+    one: "   Shayna Torres\n   480-358-8202\n     Chandler,az",
+    two: "   Shayna Torres\n   480-358-8202\n     Chandler,az",
+    three: "   Shayna Torres\n   480-358-8202\n     Chandler,az",
+    four: "   Shayna Torres\n   480-358-8202\n     Chandler,az",
+  };
+  console.log(data.one);
+  return (
+    <div className="lotus2">
+      <div className="container">
+        <span> Lotus Cleaning Co.</span>
+        <button className="jobButton" onClick={() => setOpen(true)}>
+          Book An Appointment!
+        </button>
+        <motion.div
+          className="motion"
+          initial={{ scale: 3, opacity: 0 }}
+          animate={{ scale: .8, rotate: 360, opacity:1}}
+          transition={{ duration: 2 }}
+        >
+            <motion.div
+            animate={{ scale: .9, rotate: 33.3 }}
+            transition={{ duration: 2 }}
+            className="lotusContainer2 drop-shadow-2xl"
+          >
+            <div className="flowerCenter2"></div>
+            <div className="topLeft2"> </div>
+            <div className="topRight2"></div>
+            <div className="bottomLeft2"></div>
+            <div className="bottomRight2"></div>
+          </motion.div>
+          <motion.div
+            animate={{ scale: .8 }}
+            transition={{ duration: 2 }}
+            className="lotusContainer2 drop-shadow-2xl"
+          >
+            <div className="flowerCenter2"></div>
+            <div className="topLeft2"> </div>
+            <div className="topRight2"></div>
+            <div className="bottomLeft2"></div>
+            <div className="bottomRight2"></div>
+          </motion.div>
+          <motion.div initial={{scale:.6}} animate={{ scale: .7 }}
+            transition={{ duration: 2 }} className="lotusContainer drop-shadow-2xl">
+            <div className="flowerCenter"></div>
+            <div onClick={() => setOpen1(!open1)} className="topLeft">
+              <div> {open1 ? "Reviews" : data.one} </div>
+            </div>
+            <div onClick={() => setOpen2(!open2)} className="topRight">
+              <div> {open2 ? "Reviews" : data.two}</div>
+            </div>
+            <div onClick={() => setOpen3(!open3)} className="bottomLeft">
+              <div> {open3 ? "Reviews" : data.three}</div>
+            </div>
+            <div onClick={() => setOpen4(!open4)} className="bottomRight">
+              <div> {open4 ? "Reviews" : data.four}</div>
+            </div>
+          </motion.div>
+        </motion.div>
+      </div>
 
-const [open, setOpen] = useState(false)
-
-    return (
-<div className='lotus2'>
-        <div className='container'>
-           <span> Lotus Cleaning Co.</span>
-           <button className='jobButton'  onClick={()=> setOpen(true)}>Book An Appointment!</button>
-        <div className='lotusContainer2 drop-shadow-2xl'>
-<div className='flowerCenter2'></div>
-         <div className='topLeft2'> </div>
-         <div className='topRight2'></div>
-         <div className='bottomLeft2'></div>
-         <div className='bottomRight2'></div>
-        </div>
-        <div className='lotusContainer drop-shadow-2xl'>
-<div className='flowerCenter' ></div>
-         <div className='topLeft'><div>Reviews</div> </div>
-         <div className='topRight'><div>Services</div></div>
-         <div className='bottomLeft'><div>Contact Us</div></div>
-         <div className='bottomRight'><div>About Us</div></div>
-        </div>
-
-        
-        
-        </div>
-        
-        <div onClick={()=>setOpen(false)} className={open ? "A4" : "A3"}>
+      <div onClick={() => setOpen(false)} className={open ? "A4" : "A3"}>
         <div className="Application" id="f6f2802e-49e8-477b-b405-8b2b18dded97">
           <Helmet>
             <div id="f6f2802e-49e8-477b-b405-8b2b18dded97"></div>
@@ -48,9 +88,8 @@ const [open, setOpen] = useState(false)
           </Helmet>
         </div>
       </div>
-        
-        </div>
-    );
+    </div>
+  );
 };
 
 export default Lotus2;
