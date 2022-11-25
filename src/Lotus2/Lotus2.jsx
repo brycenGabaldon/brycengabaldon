@@ -12,9 +12,24 @@ const Lotus2 = () => {
   const [open4, setOpen4] = useState(true);
   const data = {
     one: " Address: 1234 Address St. Chandler,az \n",
-    two: "   Shayna Torres\n   480-358-8202\n     Chandler,az",
-    three: "   Shayna Torres\n   480-358-8202\n     Chandler,az",
-    four: "   Shayna Torres\n   480-358-8202\n     Chandler,az",
+    two: " We are a family owned private housekeeping service. With over 20 years of experience we will treat your own with the best care and service that we possibly can",
+    three: [
+      "Dusting",
+      "Wiping appliances",
+      "Wipe all hard surfaces",
+      "Sweeping, Mopping, Vacuming",
+      "Clean mirrors and glass",
+      "Clean window ledge/ blinds",
+      "Clean doors and frames",
+      "Clean baseboards",
+      "And more!"
+    ],
+    four: [
+        "$300 (1,500SqFt. 3 bedroom 2 bath",
+        "$400 (1,800SqFt. 4 bedroom 2 bath",
+        "$500 (2,500SqFt. 5 bedroom 3 bath",
+
+      ],
   };
   console.log(data.one);
   return (
@@ -27,11 +42,11 @@ const Lotus2 = () => {
         <motion.div
           className="motion"
           initial={{ scale: 3, opacity: 0 }}
-          animate={{ scale: .7, rotate: 360, opacity:1}}
+          animate={{ scale: 0.7, rotate: 360, opacity: 1 }}
           transition={{ duration: 2 }}
         >
-            <motion.div
-            animate={{ scale: .9, rotate: 33.3 }}
+          <motion.div
+            animate={{ scale: 0.9, rotate: 33.3 }}
             transition={{ duration: 2 }}
             className="lotusContainer2 drop-shadow-2xl"
           >
@@ -42,7 +57,7 @@ const Lotus2 = () => {
             <div className="bottomRight2"></div>
           </motion.div>
           <motion.div
-            animate={{ scale: .8 }}
+            animate={{ scale: 0.8 }}
             transition={{ duration: 2 }}
             className="lotusContainer2 drop-shadow-2xl"
           >
@@ -52,20 +67,75 @@ const Lotus2 = () => {
             <div className="bottomLeft2"></div>
             <div className="bottomRight2"></div>
           </motion.div>
-          <motion.div initial={{scale:.6}} animate={{ scale: .7 }}
-            transition={{ duration: 2 }} className="lotusContainer drop-shadow-2xl">
+          <motion.div
+            initial={{ scale: 0.6 }}
+            animate={{ scale: 0.7 }}
+            transition={{ duration: 2 }}
+            className="lotusContainer drop-shadow-2xl"
+          >
             <div className="flowerCenter"></div>
             <div onClick={() => setOpen1(!open1)} className="topLeft">
-              <div> {open1 ? "Contact Us" : <div className="Petal1">{data.one}<br/><a href="tel: 480-358-8203">Phone: 480-358-8203</a> <br/><a href="email:customers@lotuscleaning.com">Email: Customers@LotusCleaning.com</a></div>} </div>
+              <div>
+                {" "}
+                {open1 ? (
+                  "Contact Us"
+                ) : (
+                  <div className="Petal2">
+                    {data.one}
+                    <br />
+                    <br/><a href="tel: 480-358-8203">Phone: 480-358-8203</a> <br />
+                    <br/><a href="email:customers@lotuscleaning.com">
+                      Customers@LotusCleaning.com
+                    <br/></a>
+                  </div>
+                )}{" "}
+              </div>
             </div>
             <div onClick={() => setOpen2(!open2)} className="topRight">
-              <div> {open2 ? "About Us" : <div className="Petal1">{data.one}<br/><a href="tel: 480-358-8203">Phone: 480-358-8203</a> <br/><a href="email:customers@lotuscleaning.com">Email: Customers@LotusCleaning.com</a></div>}</div>
+              <div>
+                {" "}
+                {open2 ? (
+                  "About Us"
+                ) : (
+                  <div className="Petal2">
+                    {data.two}
+                    <br />
+                    
+                  </div>
+                )}
+              </div>
             </div>
             <div onClick={() => setOpen3(!open3)} className="bottomLeft">
-              <div> {open3 ? "Services" : <div className="Petal1">{data.one}<br/><a href="tel: 480-358-8203">Phone: 480-358-8203</a> <br/><a href="email:customers@lotuscleaning.com">Email: Customers@LotusCleaning.com</a></div>}</div>
+              <div>
+                {open3 ? (
+                  "Services"
+                ) : (
+                  <div className="Petal1">
+                    <ul style={{ listStyleType: "disc" }}>
+                      {data.three.map((info) => {
+                        return <li>{info}</li>;
+                      })}{" "}
+                    </ul>
+                  </div>
+                )}
+              </div>
             </div>
             <div onClick={() => setOpen4(!open4)} className="bottomRight">
-              <div> {open4 ? "Reviews" : <div className="Petal1">{data.one}<br/><a href="tel: 480-358-8203">Phone: 480-358-8203</a> <br/><a href="email:customers@lotuscleaning.com">Email: Customers@LotusCleaning.com</a></div>}</div>
+              <div>
+                {" "}
+                {open4 ? (
+                  "Rates"
+                ) : (
+                  <div className="Petal4">
+                    <ul style={{ listStyleType: "disc" }}>
+                      {data.four.map((info) => {
+                        return <li>{info}</li>;
+                      })}{" "}
+                    </ul>
+                 
+                  </div>
+                )}
+              </div>
             </div>
           </motion.div>
         </motion.div>
