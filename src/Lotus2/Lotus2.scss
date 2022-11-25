@@ -229,7 +229,7 @@ span{
     font-size: 6vmin;
 font-family: cursive;
 position: absolute;
-bottom: 0;
+bottom: 2vmin;
 right:5vmin;
 background: rgba(209, 209, 209, 0.764);
 padding: 1vmin;
@@ -252,3 +252,17 @@ border-radius: 1rem;
     z-index: 1000;
     padding-top: 10vmin;
 }
+
+.A4{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.206);
+    backdrop-filter: blur(0.5rem);
+    padding: 0rem;
+    overflow-y: scroll;
+    padding-bottom: 5rem;
+    padding-top: 3rem;
+  }

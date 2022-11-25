@@ -31,7 +31,7 @@ const [open, setOpen] = useState(false)
         
         </div>
         
-        <div onClick={()=>setOpen(false)} className={open ? "A2" : "A3"}>
+        <div onClick={()=>setOpen(false)} className={open ? "A4" : "A3"}>
         <div className="Application" id="f6f2802e-49e8-477b-b405-8b2b18dded97">
           <Helmet>
             <div id="f6f2802e-49e8-477b-b405-8b2b18dded97"></div>
