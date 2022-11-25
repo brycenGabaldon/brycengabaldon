@@ -91,7 +91,7 @@ const Lotus = () => {
                   className="CardInner drop-shadow-2xl hover:drop-shadow-2xl"
                   style={{ fontSize: "1rem" }}
                 >
-                  <img className={card.image} style={{borderRadius: "2rem"}}/>
+                  <img className={card.image} alt="" style={{borderRadius: "2rem"}}/>
 
                   <div className="Title">{card.title}</div>
                   <div className="Words">{card.description} <div className="backdrop"> </div></div>
