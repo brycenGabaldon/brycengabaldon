@@ -11,7 +11,7 @@ const [open, setOpen] = useState(false)
 <div className='lotus2'>
         <div className='container'>
            <span> Lotus Cleaning Co.</span>
-
+           <button className='jobButton'  onClick={()=> setOpen(true)}>Book An Appointment!</button>
         <div className='lotusContainer2 drop-shadow-2xl'>
 <div className='flowerCenter2'></div>
          <div className='topLeft2'> </div>
@@ -20,7 +20,7 @@ const [open, setOpen] = useState(false)
          <div className='bottomRight2'></div>
         </div>
         <div className='lotusContainer drop-shadow-2xl'>
-<div className='flowerCenter' onClick={()=> setOpen(true)} >Book Appointment</div>
+<div className='flowerCenter' ></div>
          <div className='topLeft'><div>Reviews</div> </div>
          <div className='topRight'><div>Services</div></div>
          <div className='bottomLeft'><div>Contact Us</div></div>
