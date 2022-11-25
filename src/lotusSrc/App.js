@@ -63,7 +63,7 @@ const Lotus = () => {
         >
           <GiLotus />
           Lotus Cleaning Co.</div>
-       <Button style={{            fontSize: "1.5rem",
+       <Button class="drop-shadow-2xl hover:drop-shadow-2xl" style={{            fontSize: "1.5rem",
             position: "fixed",
             right: "0rem",
             top: "6rem",
@@ -94,9 +94,9 @@ const Lotus = () => {
                   className="CardInner drop-shadow-2xl hover:drop-shadow-2xl"
                   style={{ fontSize: "1rem" }}
                 >
-                  <img className={card.image} alt="" />
+                  <img className={card.image}  alt="" />
 
-                  <div className="Title">{card.title}</div>
+                  <div className="Title" >{card.title}</div>
                   <div className="Words">{card.description} <div className="backdrop"> </div></div>
                   <div className="CardContents">
                     <div className="cards"> </div>
