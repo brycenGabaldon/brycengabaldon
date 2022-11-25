@@ -18,6 +18,7 @@ import Youtube from "./components/Files/Youtube";
 import Github from "./components/Files/Github";
 import Mail from "./components/Files/Mail";
 import Lotus from "./lotusSrc/App";
+import Lotus2 from "./Lotus2/Lotus2";
 
 
 
@@ -56,7 +57,7 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
               <Route path="/Jobber" element={  <Lotus/>} />
               <Route path="/Phone" element={  <Component backgroundColor="white"><FB/></Component>} />
               <Route path="/Message" element={  <Component backgroundColor="black"></Component>} />
-              <Route path="/Mail" element={  <Component backgroundColor="blue"></Component>} />
+              <Route path="/Mail" element={  <Component backgroundColor="white "><Lotus2/></Component>} />
               <Route path="/Github" element={  <Component backgroundColor="lightGray"><Github/></Component>} />
               <Route path="/Discord" element={  <Component backgroundColor="rgb(45, 50, 55)"><Discord/></Component>} />
               <Route path="/LinkedIn" element={  <Component backgroundColor="blue"></Component>} />

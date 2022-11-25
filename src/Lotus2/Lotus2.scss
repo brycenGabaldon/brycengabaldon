@@ -1,0 +1,174 @@
+.lotusContainer{
+
+    height: 100vmin;
+    width: 100vmin;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top:50%;
+    left: 50%;
+transform: translate(-83%,-83%);
+scale: .6;
+
+
+
+}
+.lotusContainer2{
+
+    height: 100vmin;
+    width: 100vmin;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top:50%;
+    left: 50%;
+transform: translate(-118%,0%);
+scale: .6;
+rotate: 45deg;
+
+
+}
+.topLeft2{
+       background: url("./Lotus.jpg");
+    background-size: cover;
+    height: 50vmin;
+    width: 50vmin;
+    border-bottom-left-radius: 70%;
+    border-top-right-radius: 70%;
+    border: .2rem solid rgb(217, 176, 120);
+    font-size: smaller;
+    overflow-wrap: break-word;
+}
+.topRight2{
+    background: url("./Lotus.jpg");
+    background-size: cover;
+    height: 50vmin;
+    width: 50vmin;
+    border-top-left-radius: 70%;
+    border-bottom-right-radius: 70%;
+    border: .2rem solid rgb(217, 176, 120);
+}
+.bottomLeft2{
+    background: url("./Lotus.jpg");
+    background-size: cover;
+    border: .2rem solid rgb(217, 176, 120);
+    height: 50vmin;
+    width: 50vmin;
+    border-top-left-radius: 70%;
+    border-bottom-right-radius: 70%;
+}
+.bottomRight2{
+    background: url("./Lotus.jpg");
+ 
+    background-size: cover;
+    height: 50vmin;
+    width: 50vmin;
+    border-bottom-left-radius: 70%;
+    border-top-right-radius: 70%;
+    border: .2rem solid rgb(217, 176, 120);
+}
+.topLeft:hover{
+  
+    scale:2;
+}
+.topLeft{
+    background: url("./Lotus.jpg");
+    background-size: cover;
+    height: 50vmin;
+    width: 50vmin;
+    border-bottom-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border: .2rem solid rgb(217, 176, 120);
+    font-size: smaller;
+    overflow-wrap: break-word;
+}
+
+.topRight:hover{
+ 
+    scale:2;
+}
+.topRight{
+    background: url("./Lotus.jpg");
+    background-size: cover;
+    height: 50vmin;
+    width: 50vmin;
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border: .2rem solid rgb(217, 176, 120);
+}
+
+.bottomLeft:hover{
+
+scale:2;
+}
+.bottomLeft{
+    background: url("./Lotus.jpg");
+    background-size: cover;
+    border: .2rem solid rgb(217, 176, 120);
+    height: 50vmin;
+    width: 50vmin;
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+.bottomRight:hover {
+
+    scale:2
+}
+.bottomRight{
+    background: url("./Lotus.jpg");
+  
+    background-size: cover;
+    height: 50vmin;
+    width: 50vmin;
+    border-bottom-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border: .2rem solid rgb(217, 176, 120);
+}
+.flowerCenter{
+    height: 20vmin;
+    line-height: 8vmin;
+line-clamp: 1;
+    overflow-wrap: break-word;
+    font-size: 1.5rem;
+    width: 20vmin;
+    border-radius: 50%;
+    background: rgb(217, 176, 120);
+    position: absolute ;
+    top: 50%;
+    left:50%;
+    border: .2rem solid rgb(0, 0, 0);
+    transform: translate(-50%,-50%);
+    text-align: center;
+
+
+
+
+   
+}
+.flowerCenter2{
+    height: 20vmin;
+    width: 20vmin;
+    border-radius: 50%;
+    background: whitesmoke;
+    position: absolute ;
+    top: 50%;
+    left:50%;
+    border: .2rem solid rgb(255, 255, 255);
+    transform: translate(-50%,-50%);
+    text-align: center;
+
+
+   
+}
+.container{
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    
+
+}
+span{
+        font-size: 4rem;
+    font-family: cursive;
+}
