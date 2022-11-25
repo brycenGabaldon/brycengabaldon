@@ -7,14 +7,14 @@ const Lotus2 = () => {
         <div className='container'>
            <span> Lotus Cleaning Co.</span>
 
-        <div className='lotusContainer2'>
+        <div className='lotusContainer2 drop-shadow-2xl'>
 <div className='flowerCenter2'></div>
          <div className='topLeft2'> </div>
          <div className='topRight2'></div>
          <div className='bottomLeft2'></div>
          <div className='bottomRight2'></div>
         </div>
-        <div className='lotusContainer'>
+        <div className='lotusContainer drop-shadow-2xl'>
 <div className='flowerCenter'>Book Appointment</div>
          <div className='topLeft'><div>Reviews</div> </div>
          <div className='topRight'><div>Services</div></div>
