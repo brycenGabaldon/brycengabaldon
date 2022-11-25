@@ -20,7 +20,7 @@ const Component = ({children, backgroundColor, className}) => {
     return (
         <div>
         
-        <motion.div className="Outer lotus2" initial={{scale:0}} animate={{scale: 1}}>
+        <motion.div className="Outer" initial={{scale:0}} animate={{scale: 1}}>
         <div className="Inner" style={{backgroundColor}}>
 
 {children}

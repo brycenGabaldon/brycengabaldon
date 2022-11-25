@@ -89,6 +89,7 @@ rotate: 45deg;
     font-size: 6vmin;
     transition: all .5s;
     font-family: cursive;
+    font-weight: 600;
 }
 
 .topRight:hover{
@@ -113,6 +114,7 @@ rotate: 45deg;
     font-size: 6vmin;
     transition: all .5s;
     font-family: cursive;
+    font-weight: 600;
 }
 
 .bottomLeft:hover{
@@ -137,6 +139,7 @@ rotate: 45deg;
     font-size: 6vmin;
     transition: all .5s;
     font-family: cursive;
+    font-weight: 600;
 }
 
 .bottomRight:hover {
@@ -160,6 +163,7 @@ rotate: 45deg;
     border-top-right-radius: 50%;
     border: .1vmin solid rgb(0, 0, 0);
     font-size: 6vmin;
+    font-weight: 600;
     transition: all .5s;
     font-family: cursive;
 }
@@ -172,7 +176,7 @@ rotate: 45deg;
     line-height: 30vmin;
     transition: all .5s;
     overflow-wrap: break-word;
-    font-size: 3vmin;
+    font-size: 3.5vmin;
     width: 30vmin;
     border-radius: 50%;
 background: url("./abstract-gold-background-20261442.jpg");
@@ -184,6 +188,7 @@ background: url("./abstract-gold-background-20261442.jpg");
     transform: translate(-50%,-50%);
     text-align: center;
     font-family: cursive;
+    font-weight: 600;
 
 
 
@@ -220,4 +225,16 @@ span{
 .lotus2 {
     background: url("./white-marble-texture-natural-pattern-high-resolution-background-design-art-work-white-stone-floor-white-marble-112030128.jpg");
     background-size: 150vmin;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 8rem;
+    right: 0;
+    border: 5px solid black;
+    border-radius: 3rem;
+    overflow: hidden;
+    visibility: visible;
+    scale: 1;
+    transition: scale .3s linear;
+    z-index: 1000;
 }

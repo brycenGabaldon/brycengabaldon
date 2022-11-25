@@ -3,7 +3,7 @@ import './Lotus2.scss';
 
 const Lotus2 = () => {
     return (
-
+<div className='lotus2'>
         <div className='container'>
            <span> Lotus Cleaning Co.</span>
 
@@ -24,7 +24,7 @@ const Lotus2 = () => {
 
         
         
-        </div>
+        </div></div>
     );
 };
 
