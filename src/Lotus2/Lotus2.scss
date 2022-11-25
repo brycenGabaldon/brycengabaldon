@@ -242,7 +242,7 @@ z-index: 1000;
     position: fixed;
     top: 0;
     left: 0;
-    bottom: 5rem;
+    bottom: 0rem;
     right: 0;
     border: 5px solid black;
     border-radius: 3rem;
@@ -250,7 +250,7 @@ z-index: 1000;
     visibility: visible;
     scale: 1;
     transition: scale .3s linear;
-    z-index: 1000;
+    z-index: 100;
    
 }
 
