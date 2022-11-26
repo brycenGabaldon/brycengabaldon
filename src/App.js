@@ -6,7 +6,7 @@ import FolderStatus from "./components/FolderIcons"
 import "./components/IconStyle.scss"
 import TaskManager from "./taskManager/TaskManager";
 import ImageUpload from "./ImageUpload";
-import FB from "./fbApp";
+
 import { Route, Routes } from "react-router-dom";
 import Images from "./Images";
 import Component from "./components/Files/ocClick";
