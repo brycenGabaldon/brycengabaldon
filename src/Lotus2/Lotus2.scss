@@ -307,27 +307,32 @@ background: url("./abstract-gold-background-20261442.jpg");
 
 }
 .LotusTitle{
-        font-size: 8vmin;
-        font-family: 'Italiana', serif;
-    position: absolute;
-    top: 5vmin;
-    left:5vmin;
-    text-decoration: underline;
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; 
+  font-size: 6vmin;
+  font-family: 'Italiana', serif;
+position: absolute;
+top: 5vmin;
+left:5vmin;
+background: rgba(255, 255, 255, 0.63);
+padding: 1vmin;
+border-radius: 1rem;
+text-decoration: underline;
+z-index: 1000;
+-webkit-touch-callout: none; /* iOS Safari */
+-webkit-user-select: none; /* Safari */
+-khtml-user-select: none; /* Konqueror HTML */
+ -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+      user-select: none; 
 }
 
 .jobButton{
+  text-decoration: underline;
     font-size: 6vmin;
     font-family: 'Italiana', serif;
 position: absolute;
 bottom: 5vmin;
 right:30vmin;
-background: rgba(209, 209, 209, 0.764);
+background: rgba(255, 255, 255, 0.63);
 padding: 1vmin;
 border-radius: 1rem;
 z-index: 1000;
