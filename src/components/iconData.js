@@ -97,8 +97,8 @@ export const data = {
   active : "active",
   visible : "visible",
   iconClass : "fa-brands fa-linkedin-in",
-  page : "/LinkedIn",
-  href:""
+  page : "/home",
+  href:"https://www.linkedin.com/in/brycen-gabaldon-86aa14253/"
   
 },       { key : 7,
   name : "eight",
