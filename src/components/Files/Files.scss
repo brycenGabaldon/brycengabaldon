@@ -147,4 +147,19 @@ border-radius: 50%;
   flex-direction: column;
 
 }
-
+.gitListContainer{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 3vmin;
+  align-self: center;
+}
+.gitList{
+  background: white;
+  font-size: 5vmin;
+  font-family: italiana;
+text-align: left;
+padding: 8vmin;
+width: 60vmin;
+min-width: 20rem;
+}

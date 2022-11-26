@@ -19,7 +19,31 @@ const Github = () => {
           PostgreSQL/Node.js. AWS Lightsail. Also designing marketing content
           using Illustrator/ ProCreate.
         </p>
+<div className="gitListContainer">
+        <ol style={{ listStyleType: "disc" }} className="gitList">
+            Most Used:
+<li>React.js</li>
+<li>Scss</li>
+<li>Html</li>
+<li>Tailwind</li>
+<li>Framer Motion</li>
+<li>Firebase Hosting</li>
+<li>Firebase Storage</li>
+<li>Firebase Firestore</li>
+<li>Firebase Authentication</li>
+        </ol>
+        <ol style={{ listStyleType: "disc" }} className="gitList">
+            Familiar 6Months+
+<li>Swift</li>
+<li>Java</li>
+<li>Python</li>
+<li>AWS Lightsail</li>
+<li>AWS Lambda</li>
+<li>Typescript</li>
+<li>Postgres</li>
 
+        </ol>
+</div>
         <div className="GitBtn fab fa-github drop-shadow-xl"></div>
         <a target="_blank"
           rel="noopener noreferrer"
