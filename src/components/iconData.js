@@ -53,7 +53,7 @@ export const data = {
         active : "active",
         visible : "visible",
         iconClass : "fa-solid fa-home",
-        page : "/Home",
+        page : "/home",
         href:""
     },
     {
@@ -96,8 +96,8 @@ export const data = {
   active : "active",
   visible : "visible",
   iconClass : "fa-brands fa-linkedin-in",
-  page : "/LinkedIn",
-  href:""
+  page : "/home",
+  href:'https://www.linkedin.com/in/brycen-gabaldon-86aa14253/'
   
 },       { key : 7,
   name : "eight",
@@ -117,7 +117,7 @@ export const data = {
     key : 8,
     name : "two",
     icon : "faAngry",
-    label : "Planner ",
+    label : "Instagram ",
     ref : "refLink",
     onClick : "Function",
     labelClass : "buttonLabel",

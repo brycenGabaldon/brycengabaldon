@@ -50,6 +50,7 @@ const [isFolder, setIsFolder] = useState(true)
               folder={isFolder}
               setIs={setIsFolder}
               iconPass={icon.iconPass}
+              href={String(icon.href)}
             />
           );
         })}

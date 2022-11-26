@@ -25,7 +25,7 @@ console.log(isActive)
   return (
     <div className={"Spacing"} key={Math.floor(1 + Math.random() * 10000)}>
       <motion.div className={buttonClass} key={Math.floor(1 + Math.random() * 10000)} whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }} onClick={isActive && folder && handleSubmit}>
-        <a href={ href }><button
+        <a { ...label === "LinkedIn" ? 'rel="noopener noreferrer"' : "" } {...href === "" ? "": href={href}}><button
           key={Math.floor(1 + Math.random() * 10000)}
           className={iconClass} disabled={!isActive}
   
