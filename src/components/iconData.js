@@ -12,7 +12,6 @@ export const data = {
         active : "active",
         visible : "visible",
         iconClass : "fas fa-phone",
-        page : "/Phone",
         page : "/home",
         href:"tel:602-816-1523"
     },
@@ -54,7 +53,7 @@ export const data = {
         active : "active",
         visible : "visible",
         iconClass : "fa-solid fa-home",
-        page : "/",
+        page : "/Home",
         href:""
     },
     {
@@ -97,8 +96,8 @@ export const data = {
   active : "active",
   visible : "visible",
   iconClass : "fa-brands fa-linkedin-in",
-  page : "/home",
-  href:"https://www.linkedin.com/in/brycen-gabaldon-86aa14253/"
+  page : "/LinkedIn",
+  href:""
   
 },       { key : 7,
   name : "eight",
