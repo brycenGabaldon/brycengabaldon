@@ -49,13 +49,12 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
 
   console.log("app is Open");
   return (
-    <>
+
       <div className="App" key={Math.floor(1 + Math.random() * 10000)}>
         <Clock className="ClockBanner"/>
          
       
-          <Routes exact path="/" element={  <RequireAuth><ModalPortal  handleClick={handleClick} isActive={isActive}> <FolderStatus isActive={isActive} setIsActive={setIsActive}
-                 key={Math.floor(1 + Math.random() * 10000)} /></ModalPortal></RequireAuth>}>
+          <Routes >
                <Route exact path="/Home" element={  <RequireAuth><ModalPortal  handleClick={handleClick} isActive={isActive}> <FolderStatus isActive={isActive} setIsActive={setIsActive}
                  key={Math.floor(1 + Math.random() * 10000)} /></ModalPortal></RequireAuth>}  />
                  <Route exact path="/home" element={  <ModalPortal  handleClick={handleClick} isActive={isActive}> <FolderStatus isActive={isActive} setIsActive={setIsActive}
@@ -64,7 +63,7 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
                  key={Math.floor(1 + Math.random() * 10000)} /></ModalPortal>} />
               <Route path="/ImageUpload" element={  <Component backgroundColor="white"><ImageUpload backgroundColor="white" /></Component>} />
               <Route path="/Images" element={  <Component backgroundColor="black"><Instagram/></Component>} />
-              <Route path="/Jobber" element={  <Lotus2/>} />
+              <Route path="/Jobber" element={<RequireAuth><Lotus2/></RequireAuth>} />
           
               <Route path="/Message" element={  <Component backgroundColor="black"></Component>} />
               <Route path="/Login/*" element={<FB/>}/>
@@ -83,6 +82,6 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
 
         <Mail/>
       </div> 
-    </>
+
   );
 }
