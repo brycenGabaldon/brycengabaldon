@@ -1,32 +1,48 @@
-import React from "react"
-
-
+import React from "react";
 
 const Github = () => {
+  return (
+    <div className="DiscordView">
+      <div className="GithubView">
+        <img
+          className="GitGraph"
+          class="drop-shadow-xl ..."
+          src="https://ghchart.rshah.org/brycengabaldon"
+          alt="2016rshah's Github chart"
+        />
 
-return(
-<div className="DiscordView">
-    <div className="GithubView">
+        <p class="drop-shadow-xl ...">
+          My name is Brycen Gabaldon and I am a Web Developer. Responsible for
+          the design and development of an appointment booking website.
+          Developing Contact forms, integrating APIs, headless CMS, S.P.A using
+          React.js. Animations using Framer motion. Tailwind CSS library.
+          PostgreSQL/Node.js. AWS Lightsail. Also designing marketing content
+          using Illustrator/ ProCreate.
+        </p>
 
-<img className="GitGraph" class="drop-shadow-xl ..." src="https://ghchart.rshah.org/brycengabaldon" alt="2016rshah's Github chart" />
-
-
-    <p class="drop-shadow-xl ...">
-        My name is Brycen Gabaldon and I am a Web Developer.
-        Responsible for the design and development of an appointment
-         booking website. Developing Contact forms, integrating APIs,
-          headless CMS, S.P.A using React.js. Animations using Framer
-           motion. Tailwind CSS library. PostgreSQL/Node.js. AWS 
-           Lightsail. Also designing marketing content using 
-           Illustrator/ ProCreate.
-    </p>
-
-    <div className="GitBtn fab fa-github drop-shadow-xl"></div><button  style={{backgroundColor: "black", height: "4rem", borderRadius: "2rem", color: "white", border: ".2rem solid white", fontWeight: "bold"}} href="https://github.com/brycenGabaldon/brycengabaldon" className="drop-shadow-xl ...">Here is a link to my GitHub Repo!</button>
-</div></div>
-
-)
-
-
-}
+        <div className="GitBtn fab fa-github drop-shadow-xl"></div>
+        <a target="_blank"
+          rel="noopener noreferrer"
+          href="https://github.com/brycenGabaldon/brycengabaldon"
+          style={{
+            backgroundColor: "black",
+            height: "4rem",
+            borderRadius: "2rem",
+            color: "white",
+            border: ".2rem solid white",
+            fontWeight: "bold",
+            textAlign: "center",
+            lineHeight: "4rem"
+          }}
+          className="drop-shadow-xl ..."
+        >
+          
+            Here is a link to my GitHub Repo!
+     
+        </a>
+      </div>
+    </div>
+  );
+};
 
 export default Github;
