@@ -1,50 +1,71 @@
-import { useContext, useState } from "react";
-
-import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../firebase";
-import { useNavigate } from "react-router-dom";
-import {AuthContext} from "../fbcontext/AuthContext"
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { Form, Alert } from "react-bootstrap";
+import { Button } from "react-bootstrap";
+import GoogleButton from "react-google-button";
+import { AuthContext} from "../fbcontext/AuthContext";
 
 const Login = () => {
-  const [error, setError] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const { logIn } = AuthContext();
+  const navigate = useNavigate();
 
-  const navitage = useNavigate()
-
-  const {dispatch} = useContext(AuthContext)
-
-  const handleLogin = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-
-    signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        // Signed in
-        const user = userCredential.user;
-        dispatch({type:"LOGIN", payload:user})
-        navitage("/")
-      })
-      .catch((error) => {
-        setError(true);
-      });
+    setError("");
+    try {
+      await logIn(email, password);
+      navigate("/Home");
+    } catch (err) {
+      setError(err.message);
+    }
   };
 
+
+
   return (
-    <div className="login">
-      <form onSubmit={handleLogin}>
-        <input
-          type="email"
-          placeholder="email"
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <input
-          type="password"
-          placeholder="password"
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <button type="submit">Login</button>
-        {error && <span>Wrong email or password!</span>}
-      </form>
+    <div id="FB">
+      <div className="p-4 box" >
+        <h2 className="mb-3">Firebase Auth Login</h2>
+        {error && <Alert variant="danger">{error}</Alert>}
+        <Form onSubmit={handleSubmit}>
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Control
+              type="email"
+              placeholder="Email address"
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </Form.Group>
+
+          <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Control
+              type="password"
+              placeholder="Password"
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </Form.Group>
+
+          <div className="d-grid gap-2">
+            <Button variant="primary" type="Submit">
+              Log In
+            </Button>
+          </div>
+        </Form>
+        <hr />
+        <div>
+          <GoogleButton
+            className="g-btn"
+            type="dark"
+            onClick=""
+            
+          />
+        </div>
+      </div>
+      <div className="p-4 box mt-3 text-center">
+        Don't have an account? <Link to="/signup">Sign up</Link>
+      </div>
     </div>
   );
 };
