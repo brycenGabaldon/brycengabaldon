@@ -5,7 +5,7 @@
     display: flex;
     flex-wrap: wrap;
     position: absolute;
-    pointer-events: none;
+
 
 
 
@@ -19,7 +19,7 @@
     flex-wrap: wrap;
     position: absolute;
 rotate: 33.3deg;
-pointer-events: none;
+
 
 }
 .topLeft2{
@@ -32,7 +32,6 @@ pointer-events: none;
     border: .3vmin solid rgb(91, 82, 68);
     font-size: smaller;
     overflow-wrap: break-word;
-    pointer-events: none;
 }
 .topRight2{
     background: url("./Lotus.jpg");
@@ -42,7 +41,6 @@ pointer-events: none;
     border-top-left-radius: 70%;
     border-bottom-right-radius: 70%;
     border: .3vmin solid rgb(91, 82, 68);
-    pointer-events: none;
 }
 .bottomLeft2{
     background: url("./Lotus.jpg");
@@ -52,7 +50,6 @@ pointer-events: none;
     width: 50vmin;
     border-top-left-radius: 70%;
     border-bottom-right-radius: 70%;
-    pointer-events: none;
 }
 .bottomRight2{
     background: url("./Lotus.jpg");
@@ -62,13 +59,11 @@ pointer-events: none;
     border-bottom-left-radius: 70%;
     border-top-right-radius: 70%;
     border: .3vmin solid rgb(91, 82, 68);
-    pointer-events: none;
 }
 .topLeft:hover{
   
     scale:2;
     transform: translate(-25%,-25%);
-    pointer-events: none;
 
 }
 .topLeft{
@@ -88,14 +83,12 @@ pointer-events: none;
     transition: all .5s;
     font-family: 'Italiana', serif;
     font-weight: 600;
-    pointer-events: none;
 }
 
 .topRight:hover{
  
     scale:2;
     transform: translate(25%,-25%);
-    pointer-events: none;
 
 }
 .topRight{
@@ -114,14 +107,12 @@ pointer-events: none;
     transition: all .5s;
     font-family: 'Italiana', serif;
     font-weight: 600;
-    pointer-events: none;
 }
 
 .bottomLeft:hover{
 
     scale:2;
     transform: translate(-25%,25%);
-    pointer-events: none;
 
 }
 .bottomLeft{
@@ -140,14 +131,12 @@ pointer-events: none;
     transition: all .5s;
     font-family: 'Italiana', serif;
     font-weight: 600;
-    pointer-events: none;
 }
 
 .bottomRight:hover {
 
     scale:2;
     transform: translate(25%,25%);
-    pointer-events: none;
  
    
 }
@@ -167,7 +156,6 @@ pointer-events: none;
     font-weight: 600;
     transition: all .5s;
     font-family: 'Italiana', serif;
-    pointer-events: none;
  
 }
 
@@ -190,7 +178,6 @@ background: url("./abstract-gold-background-20261442.jpg");
     font-family: 'Berkshire Swash', cursive;
     font-weight: 600;
     cursor: grab;
-    pointer-events: none;
 
 
 
@@ -209,7 +196,6 @@ background: url("./abstract-gold-background-20261442.jpg");
     transform: translate(-50%,-50%);
     text-align: center;
     font-family: 'Berkshire Swash', cursive;
-    pointer-events: none;
 
 
    
@@ -218,7 +204,6 @@ background: url("./abstract-gold-background-20261442.jpg");
     align-content: center;
     justify-content: center;
     display: flex;
-    pointer-events: none;
     
 
 }
@@ -229,7 +214,6 @@ background: url("./abstract-gold-background-20261442.jpg");
     top: 5vmin;
     left:5vmin;
     text-decoration: underline;
-    pointer-events: none;
 }
 
 .jobButton{
@@ -242,7 +226,6 @@ background: rgba(209, 209, 209, 0.764);
 padding: 1vmin;
 border-radius: 1rem;
 z-index: 1000;
-pointer-events: none;
 }
 .lotus2 {
     background: url("./white-marble-texture-natural-pattern-high-resolution-background-design-art-work-white-stone-floor-white-marble-112030128.jpg");
@@ -253,7 +236,6 @@ pointer-events: none;
     bottom: 0rem;
     right: 0;
     border: 5px solid black;
-    pointer-events: none;
   
     overflow: hidden;
     visibility: visible;
@@ -263,8 +245,7 @@ pointer-events: none;
     display: flex;
     align-items: center;
     justify-content: center;
-   pointer-events: none;
-   pointer-events: none;
+   
 }
 .A3 {
     display: none;
@@ -281,7 +262,6 @@ pointer-events: none;
     overflow-y: scroll;
     padding-bottom: 5rem;
     padding-top: 3rem;
-    pointer-events: none;
   }
 
 
@@ -292,7 +272,6 @@ pointer-events: none;
     height: 100vmin;
     width: 100vmin;
     display: flex;
-    pointer-events: none;
   }
 
   .Petal1{
@@ -301,14 +280,12 @@ text-align: left;
 margin-top: 10%;
     height: 100%;
     width: 100%;
-    pointer-events: none;
   }
   .Petal2{
     font-size: 2.5vmin;
 text-align: center;
     height: 100%;
     width: 90%;
-    pointer-events: none;
   }
   .Petal4{
     font-size: 2.5vmin;
@@ -316,5 +293,4 @@ text-align: center;
 margin-top: 10%;
     height: 100%;
     width: 100%;
-    pointer-events: none;
   }
