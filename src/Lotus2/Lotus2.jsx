@@ -10,7 +10,12 @@ const Lotus2 = () => {
   const [open2, setOpen2] = useState(true);
   const [open3, setOpen3] = useState(true);
   const [open4, setOpen4] = useState(true);
-const [spin, setSpin] = useState(false)
+const HandleCenter =(t)=>{
+setOpen1(t);
+setOpen2(t);
+setOpen3(t);
+setOpen4(t);
+}
  
 
   const data = {
@@ -56,7 +61,7 @@ const [spin, setSpin] = useState(false)
             transition={{ duration: 2 }}
             className="lotusContainer2 drop-shadow-2xl"
           >
-            <div className="flowerCenter2"></div>
+            <div className="flowerCenter2" onClick={()=>HandleCenter}></div>
             <div className="topLeft2"> </div>
             <div className="topRight2"></div>
             <div className="bottomLeft2"></div>
@@ -68,7 +73,7 @@ const [spin, setSpin] = useState(false)
             transition={{ duration: 2 }}
             className="lotusContainer2 drop-shadow-2xl"
           >
-            <div className="flowerCenter2"></div>
+            <div className="flowerCenter2" onClick={()=>HandleCenter}></div>
             <div className="topLeft2"> </div>
             <div className="topRight2"></div>
             <div className="bottomLeft2"></div>
@@ -80,7 +85,7 @@ const [spin, setSpin] = useState(false)
             transition={{ duration: 2 }}
             className="lotusContainer drop-shadow-2xl"
           >
-            <div className="flowerCenter" onclick={()=>setSpin(!spin)}></div>
+            <div className="flowerCenter" onClick={()=>HandleCenter(true)}></div>
             <div onClick={() => setOpen1(!open1)} className="topLeft">
               <div>
                 {" "}
