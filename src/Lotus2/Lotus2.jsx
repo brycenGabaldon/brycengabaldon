@@ -44,7 +44,7 @@ const [spin, setSpin] = useState(false)
         </button>
         <motion.div
           className="motion"
-          initial={{ scale: 3, opacity: 0 }}
+          initial={{ scale: 2, opacity: 0 }}
           animate={{   scale: 0.7, rotate: 360, opacity: 1}}
           transition={{ delay: 1 ,duration: 2 }}
           whileTap= {{ rotate: -360}}
