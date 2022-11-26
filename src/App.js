@@ -20,6 +20,7 @@ import Mail from "./components/Files/Mail";
 import { useContext } from "react";
 import Lotus2 from "./Lotus2/Lotus2";
 import FB from "./fbApp";
+import Signup from "./fbcomponents/Signup";
 
 
 
@@ -28,7 +29,7 @@ export default function App() {
   const {currentUser} = useContext(AuthContext)
 
   const RequireAuth = ({ children }) => {
-    return currentUser ? children : <Navigate to="/login" />;
+    return currentUser ? children : <Navigate to="/signup" />;
   };
   
   const [isActive, setIsActive] = useState(false);
@@ -63,8 +64,8 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
                  key={Math.floor(1 + Math.random() * 10000)} /></ModalPortal>} />
               <Route path="/ImageUpload" element={  <Component backgroundColor="white"><ImageUpload backgroundColor="white" /></Component>} />
               <Route path="/Images" element={  <Component backgroundColor="black"><Instagram/></Component>} />
-              <Route path="/Jobber" element={<RequireAuth><Lotus2/></RequireAuth>} />
-          
+              <Route path="/Jobber" element={<Lotus2/>} />
+              <Route path="/signup" element={  <Component backgroundColor="black"><Signup/></Component>} />
               <Route path="/Message" element={  <Component backgroundColor="black"></Component>} />
               <Route path="/Login/*" element={<FB/>}/>
               <Route path="/Github" element={  <Component backgroundColor="lightGray"><Github/></Component>} />
