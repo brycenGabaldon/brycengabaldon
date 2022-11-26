@@ -45,9 +45,9 @@ const [spin, setSpin] = useState(false)
         <motion.div
           className="motion"
           initial={{ scale: 2, opacity: 0 }}
-          animate={{   scale: 0.7, rotate: 360, opacity: 1}}
-          transition={{ delay: 1 ,duration: 2 }}
-          whileTap= {{ rotate: -360}}
+          animate={{   scale: 0.7, rotate: 360, opacity: 1, }}
+          transition={{ delay: .5 ,duration: 2 }}
+          whileTap= {{ rotate: -360, scale:1,}}
         >
           <motion.div
             initial={{ rotate: 33.3}}
