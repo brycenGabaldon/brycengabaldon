@@ -14,7 +14,6 @@ class Discord extends React.Component {
   handleClick() {
     this.api.emit('sendMessage', `Hello world! from \`@widgetbot/react-embed\``)
   }
-
   render() {
     return (
       <div className='DiscordView'>

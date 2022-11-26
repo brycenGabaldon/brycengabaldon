@@ -178,7 +178,7 @@ export const data = {
       active : "active",
       visible : "visible",
       iconClass : "fa-solid fa-icons",
-      page : "/Photos",
+      page : "/New",
       href:""
       },
       { key : 7,

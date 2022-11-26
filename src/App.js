@@ -6,8 +6,7 @@ import FolderStatus from "./components/FolderIcons"
 import "./components/IconStyle.scss"
 import TaskManager from "./taskManager/TaskManager";
 import ImageUpload from "./ImageUpload";
-import { AuthContext } from "./fbcontext/AuthContext";
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Images from "./Images";
 import Component from "./components/Files/ocClick";
 import Resume from "./components/Files/Resume";
@@ -17,20 +16,14 @@ import Discord from "./components/Files/Discord";
 import Youtube from "./components/Files/Youtube";
 import Github from "./components/Files/Github";
 import Mail from "./components/Files/Mail";
-import { useContext } from "react";
-import Lotus2 from "./Lotus2/Lotus2";
-import FB from "./fbApp";
-import Signup from "./fbcomponents/Signup";
 
+import Lotus2 from "./Lotus2/Lotus2";
+import Login from "./components/Files/Login";
 
 
 export default function App() {
 
-  const {currentUser} = useContext(AuthContext)
 
-  const RequireAuth = ({ children }) => {
-    return currentUser ? children : <Navigate to="/signup" />;
-  };
   
   const [isActive, setIsActive] = useState(false);
 
@@ -65,17 +58,17 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
               <Route path="/ImageUpload" element={  <Component backgroundColor="white"><ImageUpload backgroundColor="white" /></Component>} />
               <Route path="/Images" element={  <Component backgroundColor="black"><Instagram/></Component>} />
               <Route path="/Jobber" element={<Lotus2/>} />
-              <Route path="/signup" element={  <Component backgroundColor="black"><Signup/></Component>} />
-              <Route path="/Message" element={  <Component backgroundColor="black"></Component>} />
-              <Route path="/Login/*" element={<FB/>}/>
-              <Route path="/Github" element={  <Component backgroundColor="lightGray"><Github/></Component>} />
-              <Route path="/Discord" element={  <RequireAuth><Component backgroundColor="rgb(45, 50, 55)"><Discord/></Component></RequireAuth>} />
+             <Route path="/Message" element={  <Component backgroundColor="black"></Component>} />
+             <Route path="/Github" element={  <Component backgroundColor="lightGray"><Github/></Component>} />
+              <Route path="/Discord" element={  <Component backgroundColor="rgb(45, 50, 55)"><Discord/></Component>} />
               <Route path="/LinkedIn" element={  <Component backgroundColor="blue"></Component>} />
               <Route path="/Youtube" element={  <Component backgroundColor="black"><Youtube/></Component>} />
               <Route path="/Planner" element={  <Component className="taskmanager" backgroundColor="white"><TaskManager/></Component>} />
               <Route path="/Resume" element={  <Component backgroundColor="white"><Resume/></Component>} />
               <Route path="/Settings" element={  <Component backgroundColor="grey"></Component>} />
               <Route exact path="/Photos" element={  <Component backgroundColor="grey"><Images/></Component>} />
+             
+              <Route path="/Users" element={<Login/>}/>
               <Route path="/Instagram" element={  <Component backgroundColor="black"><Instagram/></Component>} />
           </Routes>
 
