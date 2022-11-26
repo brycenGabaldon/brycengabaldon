@@ -417,6 +417,7 @@ z-index: 1000;
   }
 
   .Petal1{
+    overflow-wrap: break-word;
     font-size:3vmin;
     transform: translate(-4vmin,0);
 text-align: center;
@@ -431,6 +432,7 @@ margin-top: 10%;
             user-select: none; 
   }
   .Petal2{
+    overflow-wrap: break-word;
     transform: translate(3vmin,0);
     font-size: 3vmin;
 text-align: center;
@@ -444,6 +446,7 @@ text-align: center;
             user-select: none; 
   }
   .Petal4{
+    overflow-wrap: break-word;
     transform: translate(-1vmin,1vmin);
     font-size: 3vmin;
 text-align: center;
