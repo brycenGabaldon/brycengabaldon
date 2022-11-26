@@ -6,8 +6,8 @@ import FolderStatus from "./components/FolderIcons"
 import "./components/IconStyle.scss"
 import TaskManager from "./taskManager/TaskManager";
 import ImageUpload from "./ImageUpload";
-
-import { Route, Routes } from "react-router-dom";
+import { AuthContext } from "./fbcontext/AuthContext";
+import { Navigate, Route, Routes } from "react-router-dom";
 import Images from "./Images";
 import Component from "./components/Files/ocClick";
 import Resume from "./components/Files/Resume";
@@ -17,14 +17,19 @@ import Discord from "./components/Files/Discord";
 import Youtube from "./components/Files/Youtube";
 import Github from "./components/Files/Github";
 import Mail from "./components/Files/Mail";
-
+import { useContext } from "react";
 import Lotus2 from "./Lotus2/Lotus2";
+import FB from "./fbApp";
 
 
 
 export default function App() {
 
+  const {currentUser} = useContext(AuthContext)
 
+  const RequireAuth = ({ children }) => {
+    return currentUser ? children : <Navigate to="/login" />;
+  };
   
   const [isActive, setIsActive] = useState(false);
 
@@ -47,10 +52,12 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
     <>
       <div className="App" key={Math.floor(1 + Math.random() * 10000)}>
         <Clock className="ClockBanner"/>
-          <Routes exact path="/" element={  <ModalPortal  handleClick={handleClick} isActive={isActive}> <FolderStatus isActive={isActive} setIsActive={setIsActive}
-                 key={Math.floor(1 + Math.random() * 10000)} /></ModalPortal>}>
-               <Route exact path="/Home" element={  <ModalPortal  handleClick={handleClick} isActive={isActive}> <FolderStatus isActive={isActive} setIsActive={setIsActive}
-                 key={Math.floor(1 + Math.random() * 10000)} /></ModalPortal>}  />
+         
+      
+          <Routes exact path="/" element={  <RequireAuth><ModalPortal  handleClick={handleClick} isActive={isActive}> <FolderStatus isActive={isActive} setIsActive={setIsActive}
+                 key={Math.floor(1 + Math.random() * 10000)} /></ModalPortal></RequireAuth>}>
+               <Route exact path="/Home" element={  <RequireAuth><ModalPortal  handleClick={handleClick} isActive={isActive}> <FolderStatus isActive={isActive} setIsActive={setIsActive}
+                 key={Math.floor(1 + Math.random() * 10000)} /></ModalPortal></RequireAuth>}  />
                  <Route exact path="/home" element={  <ModalPortal  handleClick={handleClick} isActive={isActive}> <FolderStatus isActive={isActive} setIsActive={setIsActive}
                  key={Math.floor(1 + Math.random() * 10000)} /></ModalPortal>}  />
               <Route path="/" element={  <ModalPortal  handleClick={handleClick} isActive={isActive}> <FolderStatus isActive={isActive} setIsActive={setIsActive}
@@ -60,9 +67,9 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
               <Route path="/Jobber" element={  <Lotus2/>} />
           
               <Route path="/Message" element={  <Component backgroundColor="black"></Component>} />
-            
+              <Route path="/Login/*" element={<FB/>}/>
               <Route path="/Github" element={  <Component backgroundColor="lightGray"><Github/></Component>} />
-              <Route path="/Discord" element={  <Component backgroundColor="rgb(45, 50, 55)"><Discord/></Component>} />
+              <Route path="/Discord" element={  <RequireAuth><Component backgroundColor="rgb(45, 50, 55)"><Discord/></Component></RequireAuth>} />
               <Route path="/LinkedIn" element={  <Component backgroundColor="blue"></Component>} />
               <Route path="/Youtube" element={  <Component backgroundColor="black"><Youtube/></Component>} />
               <Route path="/Planner" element={  <Component className="taskmanager" backgroundColor="white"><TaskManager/></Component>} />
@@ -71,7 +78,9 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
               <Route exact path="/Photos" element={  <Component backgroundColor="grey"><Images/></Component>} />
               <Route path="/Instagram" element={  <Component backgroundColor="black"><Instagram/></Component>} />
           </Routes>
+
         <DockIcons />
+
         <Mail/>
       </div> 
     </>

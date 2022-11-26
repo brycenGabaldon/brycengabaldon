@@ -410,7 +410,14 @@ pointer-events: none;
 
 
 }
-a:link{
-  
-  color: white
+
+
+.welcome {
+  height: 50vmin;
+  width: 50vmin;
+  background: white;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 1000;
 }

@@ -326,7 +326,7 @@ background: url("./abstract-gold-background-20261442.jpg");
     font-family: 'Italiana', serif;
 position: absolute;
 bottom: 5vmin;
-right:5vmin;
+right:30vmin;
 background: rgba(209, 209, 209, 0.764);
 padding: 1vmin;
 border-radius: 1rem;
@@ -404,8 +404,8 @@ z-index: 1000;
   }
 
   .Petal1{
-    font-size: 2.5vmin;
-text-align: left;
+    font-size:3.25vmin;
+text-align: center;
 margin-top: 10%;
     height: 100%;
     width: 100%;
@@ -417,8 +417,8 @@ margin-top: 10%;
             user-select: none; 
   }
   .Petal2{
-    font-size: 2.5vmin;
-text-align: center;
+    font-size: 3vmin;
+text-align: right;
     height: 100%;
     width: 90%;
     -webkit-touch-callout: none; /* iOS Safari */
@@ -429,7 +429,7 @@ text-align: center;
             user-select: none; 
   }
   .Petal4{
-    font-size: 2.5vmin;
+    font-size: 4vmin;
 text-align: center;
 margin-top: 10%;
     height: 100%;

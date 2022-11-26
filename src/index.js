@@ -5,17 +5,17 @@ import App from './App';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
-import { UserAuthContextProvider } from "./fbcontext/userAuthContext";
+import { AuthContextProvider } from "./fbcontext/AuthContext";
 import "./fbApp.css";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
-    <UserAuthContextProvider>
+  <AuthContextProvider>
     <BrowserRouter>
       <App />
     </BrowserRouter>
-    </UserAuthContextProvider>
+</AuthContextProvider>
 
 );
 
