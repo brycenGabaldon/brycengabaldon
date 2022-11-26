@@ -10,6 +10,9 @@ const Lotus2 = () => {
   const [open2, setOpen2] = useState(true);
   const [open3, setOpen3] = useState(true);
   const [open4, setOpen4] = useState(true);
+const [spin, setSpin] = useState(false)
+ 
+
   const data = {
     one: " Address: 1234 Address St. Chandler,az \n",
     two: " We are a family owned private housekeeping service. With over 20 years of experience we will treat your own with the best care and service that we possibly can",
@@ -42,11 +45,14 @@ const Lotus2 = () => {
         <motion.div
           className="motion"
           initial={{ scale: 3, opacity: 0 }}
-          animate={{ scale: 0.7, rotate: 360, opacity: 1 }}
-          transition={{ duration: 2 }}
+          animate={{   scale: 0.7, rotate: 360, opacity: 1}}
+          transition={{ delay: 1 ,duration: 2 }}
+          whileTap= {{ rotate: -360}}
         >
           <motion.div
-            animate={{ scale: 0.9, rotate: 33.3 }}
+            initial={{ rotate: 33.3}}
+            animate={{ scale: 0.9}}
+            whileTap= {{ rotate: 360}}
             transition={{ duration: 2 }}
             className="lotusContainer2 drop-shadow-2xl"
           >
@@ -58,6 +64,7 @@ const Lotus2 = () => {
           </motion.div>
           <motion.div
             animate={{ scale: 0.8 }}
+            whileTap= {{ rotate: -360}}
             transition={{ duration: 2 }}
             className="lotusContainer2 drop-shadow-2xl"
           >
@@ -73,7 +80,7 @@ const Lotus2 = () => {
             transition={{ duration: 2 }}
             className="lotusContainer drop-shadow-2xl"
           >
-            <div className="flowerCenter"></div>
+            <div className="flowerCenter" onclick={()=>setSpin(!spin)}></div>
             <div onClick={() => setOpen1(!open1)} className="topLeft">
               <div>
                 {" "}
