@@ -26,6 +26,7 @@ export default function DockIcons() {
               folder={isDock}
               isActive="true"
               setIsActive={setIsDock}
+              href={String(icon.href)}
               
               
             />

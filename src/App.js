@@ -17,7 +17,7 @@ import Discord from "./components/Files/Discord";
 import Youtube from "./components/Files/Youtube";
 import Github from "./components/Files/Github";
 import Mail from "./components/Files/Mail";
-import Lotus from "./lotusSrc/App";
+
 import Lotus2 from "./Lotus2/Lotus2";
 
 
@@ -47,17 +47,20 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
     <>
       <div className="App" key={Math.floor(1 + Math.random() * 10000)}>
         <Clock className="ClockBanner"/>
-          <Routes exact path="/*" element={  <ModalPortal  handleClick={handleClick} isActive={isActive}> <FolderStatus isActive={isActive} setIsActive={setIsActive}
+          <Routes exact path="/" element={  <ModalPortal  handleClick={handleClick} isActive={isActive}> <FolderStatus isActive={isActive} setIsActive={setIsActive}
                  key={Math.floor(1 + Math.random() * 10000)} /></ModalPortal>}>
-               <Route path="/Home" element={  <ModalPortal  handleClick={handleClick} isActive={isActive}> <FolderStatus isActive={isActive} setIsActive={setIsActive}
+               <Route exact path="/Home" element={  <ModalPortal  handleClick={handleClick} isActive={isActive}> <FolderStatus isActive={isActive} setIsActive={setIsActive}
                  key={Math.floor(1 + Math.random() * 10000)} /></ModalPortal>}  />
-              <Route path="/" element={  <Mail/>} />
+                 <Route exact path="/home" element={  <ModalPortal  handleClick={handleClick} isActive={isActive}> <FolderStatus isActive={isActive} setIsActive={setIsActive}
+                 key={Math.floor(1 + Math.random() * 10000)} /></ModalPortal>}  />
+              <Route path="/" element={  <ModalPortal  handleClick={handleClick} isActive={isActive}> <FolderStatus isActive={isActive} setIsActive={setIsActive}
+                 key={Math.floor(1 + Math.random() * 10000)} /></ModalPortal>} />
               <Route path="/ImageUpload" element={  <Component backgroundColor="white"><ImageUpload backgroundColor="white" /></Component>} />
               <Route path="/Images" element={  <Component backgroundColor="black"><Instagram/></Component>} />
-              <Route path="/Jobber" element={  <Lotus/>} />
-              <Route path="/Phone" element={  <Component backgroundColor="white"><FB/></Component>} />
+              <Route path="/Jobber" element={  <Lotus2/>} />
+          
               <Route path="/Message" element={  <Component backgroundColor="black"></Component>} />
-              <Route path="/Mail" element={  <Lotus2/>} />
+            
               <Route path="/Github" element={  <Component backgroundColor="lightGray"><Github/></Component>} />
               <Route path="/Discord" element={  <Component backgroundColor="rgb(45, 50, 55)"><Discord/></Component>} />
               <Route path="/LinkedIn" element={  <Component backgroundColor="blue"></Component>} />
@@ -65,7 +68,7 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
               <Route path="/Planner" element={  <Component className="taskmanager" backgroundColor="white"><TaskManager/></Component>} />
               <Route path="/Resume" element={  <Component backgroundColor="white"><Resume/></Component>} />
               <Route path="/Settings" element={  <Component backgroundColor="grey"></Component>} />
-              <Route path="/Photos" element={  <Component backgroundColor="grey"><Images/></Component>} />
+              <Route exact path="/Photos" element={  <Component backgroundColor="grey"><Images/></Component>} />
               <Route path="/Instagram" element={  <Component backgroundColor="black"><Instagram/></Component>} />
           </Routes>
         <DockIcons />

@@ -35,7 +35,7 @@ const Lotus2 = () => {
   return (
     <div className="lotus2">
       <div className="container">
-        <span> Lotus Cleaning Co.</span>
+        <span className="LotusTitle"> Lotus Cleaning Co.</span>
         <button className="jobButton" onClick={() => setOpen(true)}>
           Book An Appointment!
         </button>

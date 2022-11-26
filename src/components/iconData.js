@@ -12,7 +12,9 @@ export const data = {
         active : "active",
         visible : "visible",
         iconClass : "fas fa-phone",
-        page : "/Phone"
+        page : "/Phone",
+        page : "/home",
+        href:"tel:602-816-1523"
     },
     {
       "key" : 2,
@@ -25,7 +27,8 @@ export const data = {
       "active" : "active",
       "visible" : "visible",
       "iconClass" : "fas fa-comments",
-      page : "/Message"
+      page : "/home",
+      href:"sms:602-816-1523"
     },  {
       "key" : 3,
       "name" : "three",
@@ -37,7 +40,8 @@ export const data = {
       "active" : "active",
       "visible" : "visible",
       "iconClass" : "fa-solid fa-envelope",
-      page : "/Mail"
+      page : "/home",
+      href:"mailto:brycengabaldon@gmail.com"
     },      
     {
         key : 4,
@@ -50,7 +54,8 @@ export const data = {
         active : "active",
         visible : "visible",
         iconClass : "fa-solid fa-home",
-        page : "/Home"
+        page : "/",
+        href:""
     },
     {
         
@@ -64,7 +69,8 @@ export const data = {
     active : "active",
     visible : "visible",
     iconClass : "fab fa-github",
-    page : "/Github"
+    page : "/Github",
+    href:""
     },
     {
       key : 5,
@@ -77,7 +83,8 @@ export const data = {
     active : "active",
     visible : "visible",
     iconClass : "fab fa-discord",
-    page : "/Discord"
+    page : "/Discord",
+    href:""
     
   },       {
     key : 5,
@@ -90,7 +97,8 @@ export const data = {
   active : "active",
   visible : "visible",
   iconClass : "fa-brands fa-linkedin-in",
-  page : "/LinkedIn"
+  page : "/LinkedIn",
+  href:""
   
 },       { key : 7,
   name : "eight",
@@ -103,7 +111,8 @@ export const data = {
   visible : "visible",
   iconClass : "GiLotus",
   iconPass : "GiLotus",
-  page: "/Jobber"
+  page: "/Jobber",
+  href:""
   },
   {
     key : 8,
@@ -116,7 +125,8 @@ export const data = {
     active : "active",
     visible : "visible",
     iconClass : "fa-brands fa-instagram",
-    page : "/Instagram"
+    page : "/Instagram",
+    href:""
   
   }, 
   {
@@ -130,7 +140,8 @@ export const data = {
     active : "active",
     visible : "visible",
     iconClass : "fab fa-youtube",
-    page : "/Youtube"
+    page : "/Youtube",
+    href:""
   
   }, 
     {    key : 3,
@@ -143,7 +154,8 @@ export const data = {
       active : "active",
       visible : "visible",
       iconClass : "fa-solid fa-list",
-      page : "/Planner"
+      page : "/Planner",
+      href:""
       },    {    key : 3,
         name : "four",
         icon : "faAngry",
@@ -154,9 +166,10 @@ export const data = {
         active : "active",
         visible : "visible",
         iconClass : "fas fa-file",
-        page : "/Resume"
+        page : "/Resume",
+        href:""
         },
-    {    key : 3,
+    {    key : 9,
       name : "four",
       icon : "faAngry",
       label : "Images ",
@@ -166,7 +179,8 @@ export const data = {
       active : "active",
       visible : "visible",
       iconClass : "fa-solid fa-icons",
-      page : "/Photos"
+      page : "/Photos",
+      href:""
       },
       { key : 7,
         name : "eight",
@@ -178,7 +192,8 @@ export const data = {
         active : "active",
         visible : "visible",
         iconClass : "",
-        page: "/Home"
+        page: "/Home",
+        href:""
         },
           {
             "key" :11,
@@ -191,7 +206,8 @@ export const data = {
             "active" : "active",
             "visible" : "visible",
             iconClass : "Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50",
-            click : "FB"
+            click : "FB",
+            href:""
 },
             {    key : 12,
               name : "twelve",
@@ -203,7 +219,8 @@ export const data = {
               active : "active",
               visible : "visible",
               iconClass : "Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50",
-              click : "FB"
+              click : "FB",
+              href:""
 
               },
               {
@@ -218,7 +235,8 @@ export const data = {
               active : "active",
               visible : "visible",
               iconClass : "Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50",
-              click : "FB"
+              click : "FB",
+              href:""
 
             
               },
@@ -233,7 +251,8 @@ export const data = {
               active : "active",
               visible : "visible",
               iconClass : "Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 Button",
-              click : "FB"
+              click : "FB",
+              href:""
 
               
             }, 
@@ -248,7 +267,8 @@ export const data = {
               "active" : "active",
               "visible" : "visible",
               iconClass : "Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50",
-              click : "FB"
+              click : "FB",
+              href:""
 },
               {    key : 8,
                 name : "messages",
@@ -260,7 +280,8 @@ export const data = {
                 active : "active",
                 visible : "visible",
                 iconClass : "Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50",
-                click : "FB"
+                click : "FB",
+                href:""
 
                 }
   ]
