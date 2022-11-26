@@ -418,6 +418,7 @@ z-index: 1000;
 
   .Petal1{
     font-size:3vmin;
+    transform: translate(-4vmin,0);
 text-align: center;
 margin-top: 10%;
     height: 100%;
@@ -430,10 +431,11 @@ margin-top: 10%;
             user-select: none; 
   }
   .Petal2{
+    transform: translate(3vmin,0);
     font-size: 3vmin;
 text-align: center;
     height: 100%;
-    width: 100%;
+    width: 90%;
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
      -khtml-user-select: none; /* Konqueror HTML */
@@ -442,11 +444,12 @@ text-align: center;
             user-select: none; 
   }
   .Petal4{
+    transform: translate(-1vmin,1vmin);
     font-size: 3vmin;
 text-align: center;
 margin-top: 10%;
     height: 100%;
-    width: 100%;
+    width: 90%;
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
      -khtml-user-select: none; /* Konqueror HTML */
