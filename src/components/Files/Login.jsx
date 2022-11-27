@@ -6,9 +6,10 @@ import {
   signOut,
 } from "firebase/auth";
 import "./login.scss"
-
+import { signInWithGoogle } from "../../firebase";
 import { auth } from "../../firebase";
 import { useNavigate } from "react-router-dom";
+import GoogleButton from "react-google-button";
 
 function Login() {
   const [registerEmail, setRegisterEmail] = useState("");
@@ -96,15 +97,18 @@ function Login() {
             setLoginPassword(event.target.value);
           }}
         />
-
+<GoogleButton style={{width: "95%"}} class="login-with-google-btn" onClick={signInWithGoogle}>Sign in with Google</GoogleButton>
         <button className="loginButton" onClick={login}> Login</button>
       </div>
 
       <h4 className="loginH3"> User Logged In: </h4>
       {user?.email}
-
-      <button className="loginButtonOut" onClick={logout}> Sign Out </button>
+<button className="loginButtonOut" onClick={logout}> Sign Out </button>
       <button className="loginButtonOut" onClick={continues}> continue </button>
+
+
+      
+
     </div>
   );
 }
