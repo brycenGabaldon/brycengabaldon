@@ -5,7 +5,7 @@ import DockIcons from "./components/DockIcons";
 import FolderStatus from "./components/FolderIcons"
 import "./components/IconStyle.scss"
 import TaskManager from "./taskManager/TaskManager";
-
+import { useNavigate } from "react-router-dom";
 import { Route, Routes } from "react-router-dom";
 import Images from "./Images";
 import Component from "./components/Files/ocClick";
@@ -39,7 +39,16 @@ setIsActive({...isActive, second: true});
 
 }
 useEffect( () => { console.log(isActive); }, [isActive] ); */
+const navigate = useNavigate();
+const handleSubmit = async(page) => {
 
+
+  try {
+    navigate("/login");
+  } catch (err) {
+
+  }
+};
 
   console.log("app is Open");
   return (
@@ -47,7 +56,7 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
       <div className="App" key={Math.floor(1 + Math.random() * 10000)}>
         <Clock className="ClockBanner"/>
          
-     
+     <button page="Login" className="Logging" onClick={handleSubmit}>Logout</button>
           <Routes >
                <Route exact path="/Home" element={  <ModalPortal  handleClick={handleClick} isActive={isActive}> <FolderStatus isActive={isActive} setIsActive={setIsActive}
                  key={Math.floor(1 + Math.random() * 10000)} /></ModalPortal>}  />

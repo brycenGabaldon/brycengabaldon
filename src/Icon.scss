@@ -421,3 +421,16 @@ pointer-events: none;
   left: 50%;
   z-index: 1000;
 }
+.Logging{
+  height: 6vmin;
+  width: 18vmin;
+  position: fixed;
+  top: 3vmin;
+  right: 3vmin;
+  background: white;
+  z-index: 1000;
+  border-radius: 3vmin;
+  text-align: center;
+  line-height: 5.5vmin;
+  font-size: 3vmin;
+}
