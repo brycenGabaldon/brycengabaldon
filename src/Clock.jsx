@@ -1,5 +1,5 @@
 import React from "react";
-import { auth } from "./firebase"
+
 
 export default class Clock extends React.Component {
     constructor(props) {
@@ -22,9 +22,7 @@ export default class Clock extends React.Component {
     render() {
       return (
         <div>
-          <h2 className="Clock">{this.state.date.toLocaleTimeString()}<br/>{auth.currentUser.email}.</h2>
-
-        
+          <h2 className="Clock">{this.state.date.toLocaleTimeString()}</h2>
         </div>
       );
     }
