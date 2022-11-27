@@ -10,7 +10,7 @@ import { signInWithGoogle } from "../../firebase";
 import { auth } from "../../firebase";
 import { useNavigate } from "react-router-dom";
 import GoogleButton from "react-google-button";
-
+import image from "../../images/1000_F_349497933_Ly4im8BDmHLaLzgyKg2f2yZOvJjBtlw5.jpg"
 function Login({profilePic}) {
   const [registerEmail, setRegisterEmail] = useState("");
   const [registerPassword, setRegisterPassword] = useState("");
@@ -102,7 +102,7 @@ function Login({profilePic}) {
         <button className="loginButton" onClick={login}> Login</button>
       </div>
 
-      <img style={{position:"absolute", height: "10vmin", width: "10vmin", zIndex: 1000}} src={auth.currentUser !== null ? auth.currentUser.photoURL : ""} alt="" /><h4 className="loginH3"> User Logged In: </h4>
+      <img style={{borderRadius: "50%",position:"relative", height: "10vmin", width: "10vmin", zIndex: 1000}} src={auth.currentUser !== null ? auth.currentUser.photoURL : image} alt="" /><h4 className="loginH3"> User Logged In: </h4>
       {user?.email}
 <button className="loginButtonOut" onClick={logout}> Sign Out </button>
       <button className="loginButtonOut" onClick={continues}> continue </button>

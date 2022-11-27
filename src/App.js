@@ -20,7 +20,8 @@ import Protected from "./components/Files/Protected"
 import Lotus2 from "./Lotus2/Lotus2";
 import Login from "./components/Files/Login";
 import { auth } from "./firebase";
-
+import image from "./images/1000_F_349497933_Ly4im8BDmHLaLzgyKg2f2yZOvJjBtlw5.jpg"
+import { Translate } from "@mui/icons-material";
 export default function App() {
 
 
@@ -55,8 +56,8 @@ const handleSubmit = async(page) => {
 
       <div className="App" key={Math.floor(1 + Math.random() * 10000)}>
         <Clock className="ClockBanner"/>
-         
-     <button page="Login" className="Logging" onClick={handleSubmit}>{isLoggedIn ? "Logout" : "Login"}<img style={{height: "8rem", width: "8rem", zIndex: 1000}} src={auth.currentUser !== null ? auth.currentUser.photoURL : ""} alt="" /></button>
+         <img style={{borderRadius: "50%", position: "fixed", top:0, left:"50%", transform: "translate(-50%,50%)", height: "8rem", width: "8rem", zIndex: 1000}} src={auth.currentUser !== null ? auth.currentUser.photoURL : image} alt="" />
+     <button page="Login" className="Logging" onClick={handleSubmit}>{isLoggedIn ? "Logout" : "Login"}</button>
           <Routes >
                <Route exact path="/Home" element={  <ModalPortal  handleClick={handleClick} isActive={isActive}> <FolderStatus isActive={isActive} setIsActive={setIsActive}
                  key={Math.floor(1 + Math.random() * 10000)} /></ModalPortal>}  />
