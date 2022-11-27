@@ -11,6 +11,7 @@ import { auth } from "../../firebase";
 import { useNavigate } from "react-router-dom";
 import GoogleButton from "react-google-button";
 import image from "../../images/1000_F_349497933_Ly4im8BDmHLaLzgyKg2f2yZOvJjBtlw5.jpg"
+import { transform } from "framer-motion";
 function Login({profilePic}) {
   const [registerEmail, setRegisterEmail] = useState("");
   const [registerPassword, setRegisterPassword] = useState("");
@@ -103,12 +104,13 @@ const [loginSignin, setLoginSignin] = useState(false)
         
 
         
-<GoogleButton style={{width: "95%", margin:"2vmin"}} class="login-with-google-btn" onClick={signInWithGoogle}>Sign in with Google</GoogleButton>
+<GoogleButton style={{width: "60vmin", margin:"2vmin", position: "relative", left: "50%", transform: "translate(-54%, 0)"}} class="login-with-google-btn" onClick={signInWithGoogle}>Sign in with Google</GoogleButton>
         <button className="loginButton" onClick={!loginSignin ? register: login}> {!loginSignin ? "register" : "login"}</button><button className="loginButton" onClick={()=> setLoginSignin(!loginSignin)}> {loginSignin ? "Create account?" : "Already have an account?"}</button>
       </div>
 
      <h4 className="loginH3"> User Logged In: </h4> <img style={{borderRadius: "50%",position:"relative", left:"42%", height: "10vmin", width: "10vmin", zIndex: 1000}} src={auth.currentUser !== null ? auth.currentUser.photoURL : image} alt="" />
-      {user?.email}
+     
+      {user?.email}<br/>
  {user && <button className="loginButtonOut" onClick={logout}> Sign Out </button> } 
       <button className="loginButtonOut" onClick={continues}> continue </button>
 

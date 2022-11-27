@@ -1,13 +1,15 @@
 .Apppp {
     text-align: center;
-    height: 90vmin;
-    max-height: 700px;
-    min-height: 300px;
-    width: 70vmin;
+
+
     position: fixed;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    top: 4rem;
+    bottom: 10rem;
+left: 50%;
+transform: translate(-50%,0);
+max-width: 70vmin;
+min-width: 350px;
+
     background: lightgray;
     z-index: 1000;
     padding: 1rem;
