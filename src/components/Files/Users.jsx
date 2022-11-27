@@ -33,7 +33,7 @@ const deleteComment = async (id) => {
     };
 
     getComments();
-  },);
+  }, []);
 
   return (
     <div className="Users">

@@ -5,7 +5,7 @@ import DockIcons from "./components/DockIcons";
 import FolderStatus from "./components/FolderIcons"
 import "./components/IconStyle.scss"
 import TaskManager from "./taskManager/TaskManager";
-import ImageUpload from "./ImageUpload";
+
 import { Route, Routes } from "react-router-dom";
 import Images from "./Images";
 import Component from "./components/Files/ocClick";
@@ -55,7 +55,7 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
                  key={Math.floor(1 + Math.random() * 10000)} /></ModalPortal>}  />
               <Route path="/" element={  <ModalPortal  handleClick={handleClick} isActive={isActive}> <FolderStatus isActive={isActive} setIsActive={setIsActive}
                  key={Math.floor(1 + Math.random() * 10000)} /></ModalPortal>} />
-              <Route path="/ImageUpload" element={  <Component backgroundColor="white"><ImageUpload backgroundColor="white" /></Component>} />
+              <Route path="/ImageUpload" element={  <Component backgroundColor="white"><Login backgroundColor="white" /></Component>} />
               <Route path="/Images" element={  <Component backgroundColor="black"><Instagram/></Component>} />
               <Route path="/Jobber" element={<Lotus2/>} />
              <Route path="/Message" element={  <Component backgroundColor="black"></Component>} />
@@ -68,7 +68,7 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
               <Route path="/Settings" element={  <Component backgroundColor="grey"></Component>} />
               <Route exact path="/Photos" element={  <Component backgroundColor="grey"><Images/></Component>} />
              
-              <Route path="/Users" element={<Login/>}/>
+              <Route path="/Login" element={<Login/>}/>
               <Route path="/Instagram" element={  <Component backgroundColor="black"><Instagram/></Component>} />
           </Routes>
 
