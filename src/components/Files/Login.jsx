@@ -8,14 +8,14 @@ import {
 import "./login.scss"
 
 import { auth } from "../../firebase";
-import { Navigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
   const [registerEmail, setRegisterEmail] = useState("");
   const [registerPassword, setRegisterPassword] = useState("");
   const [loginEmail, setLoginEmail] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
-
+  const navigate = useNavigate();
   const [user, setUser] = useState({});
   useEffect(() => {
   onAuthStateChanged(auth, (currentUser) => {
@@ -34,7 +34,16 @@ function Login() {
       console.log(error.message);
     }
   };
+  const continues = async() => {
 
+
+    try {
+      auth.currentUser &&
+      navigate("/home");
+    } catch (err) {
+
+    }
+  };
   const login = async () => {
     try {
       const user = await signInWithEmailAndPassword(
@@ -43,7 +52,7 @@ function Login() {
         loginPassword
       );
       console.log(user);
-      Navigate("/");
+
     } catch (error) {
       console.log(error.message);
     }
@@ -56,9 +65,6 @@ function Login() {
   return (
     <div className="Apppp">
       <div>
-      {user && (
-          <Navigate to="/home" replace={true} />
-        )}
         <h3> Register User </h3>
         <input className="formData"
           placeholder="Email..."
@@ -98,6 +104,7 @@ function Login() {
       {user?.email}
 
       <button className="loginButtonOut" onClick={logout}> Sign Out </button>
+      <button className="loginButtonOut" onClick={continues}> continue </button>
     </div>
   );
 }
