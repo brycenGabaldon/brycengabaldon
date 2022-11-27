@@ -56,7 +56,7 @@ const handleSubmit = async(page) => {
       <div className="App" key={Math.floor(1 + Math.random() * 10000)}>
         <Clock className="ClockBanner"/>
          
-     <button page="Login" className="Logging" onClick={handleSubmit}>{isLoggedIn ? "Logout" : "Login"}</button>
+     <button page="Login" className="Logging" onClick={handleSubmit}>{isLoggedIn ? "Logout" : "Login"}<img style={{height: "8rem", width: "8rem", zIndex: 1000}} src={auth.currentUser !== null ? auth.currentUser.photoURL : ""} alt="" /></button>
           <Routes >
                <Route exact path="/Home" element={  <ModalPortal  handleClick={handleClick} isActive={isActive}> <FolderStatus isActive={isActive} setIsActive={setIsActive}
                  key={Math.floor(1 + Math.random() * 10000)} /></ModalPortal>}  />

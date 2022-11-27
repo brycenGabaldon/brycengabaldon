@@ -107,7 +107,7 @@ function Login({profilePic}) {
 <button className="loginButtonOut" onClick={logout}> Sign Out </button>
       <button className="loginButtonOut" onClick={continues}> continue </button>
 
-
+      <img style={{height: "3rem", width: "3rem", zIndex: 1000}} src={auth.currentUser !== null ? auth.currentUser.photoURL : ""} alt="" />
       
 
     </div>
