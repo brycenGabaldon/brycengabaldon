@@ -103,7 +103,7 @@ const [loginSignin, setLoginSignin] = useState(false)
         
 
         
-<GoogleButton style={{width: "60vmin", margin:"2vmin", position: "relative", left: "50%", transform: "translate(-54%, 0)"}} class="login-with-google-btn" onClick={signInWithGoogle}>Sign in with Google</GoogleButton>
+<GoogleButton style={{fontSize:"3vmin", width: "60vmin", margin:"2vmin", position: "relative", left: "50%", transform: "translate(-54%, 0)"}} class="login-with-google-btn" onClick={signInWithGoogle}>Sign in with Google</GoogleButton>
         <button className="loginButton" onClick={!loginSignin ? register: login}> {!loginSignin ? "register" : "login"}</button><button className="loginButton" onClick={()=> setLoginSignin(!loginSignin)}> {loginSignin ? "Create account?" : "Already have an account?"}</button>
       </div>
 
