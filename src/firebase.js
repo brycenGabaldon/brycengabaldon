@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getAuth,  GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { getAuth,  GoogleAuthProvider, signInWithRedirect } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 
@@ -35,7 +35,7 @@ export const storage = getStorage(app);
 const provider = new GoogleAuthProvider();
 
 export const signInWithGoogle = () => {
-  signInWithPopup(auth, provider)
+  signInWithRedirect(auth, provider)
     .then((result) => {
       const name = result.user.displayName;
       const email = result.user.email;
