@@ -102,12 +102,12 @@ function Login({profilePic}) {
         <button className="loginButton" onClick={login}> Login</button>
       </div>
 
-      <h4 className="loginH3"> User Logged In: </h4>
+      <img style={{position:"absolute", height: "10vmin", width: "10vmin", zIndex: 1000}} src={auth.currentUser !== null ? auth.currentUser.photoURL : ""} alt="" /><h4 className="loginH3"> User Logged In: </h4>
       {user?.email}
 <button className="loginButtonOut" onClick={logout}> Sign Out </button>
       <button className="loginButtonOut" onClick={continues}> continue </button>
 
-      <img style={{height: "3rem", width: "3rem", zIndex: 1000}} src={auth.currentUser !== null ? auth.currentUser.photoURL : ""} alt="" />
+      
       
 
     </div>
