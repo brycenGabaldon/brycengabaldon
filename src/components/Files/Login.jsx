@@ -66,7 +66,7 @@ function Login({profilePic}) {
   return (
     <div className="Apppp">
       <div>
-      <img src={profilePic} />
+      <img src={profilePic} alt=""/>
         <h3 className="loginH3"> Register User </h3>
         <input className="formData"
           placeholder="Email..."
