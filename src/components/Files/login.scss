@@ -21,7 +21,7 @@ min-height: fit-content;
   }
 .formData {
     margin: 1.2vmin;
-    height: 46px;
+    height: 4vmin;
     width: 29vmin;
     padding: 1vmin;
     border-radius: 1vmin;
@@ -33,8 +33,9 @@ background: rgb(50, 170, 255);
 border-radius: .3vmin;
 width: 60vmin;
 margin: 2vmin;
-height: 46px;
-line-height: 46px;
+height: 8vmin;
+max-height: 50px;
+line-height: 7vmin;
 font-family: italiana;
 font-weight: bolder;
 }
