@@ -19,14 +19,14 @@ import Mail from "./components/Files/Mail";
 import Protected from "./components/Files/Protected"
 import Lotus2 from "./Lotus2/Lotus2";
 import Login from "./components/Files/Login";
-
+import { auth } from "./firebase";
 
 export default function App() {
 
 
   
   const [isActive, setIsActive] = useState(false);
-
+const isLoggedIn = auth.currentUser
 
 const handleClick = () => {
   setIsActive(!isActive)
@@ -56,7 +56,7 @@ const handleSubmit = async(page) => {
       <div className="App" key={Math.floor(1 + Math.random() * 10000)}>
         <Clock className="ClockBanner"/>
          
-     <button page="Login" className="Logging" onClick={handleSubmit}>Logout</button>
+     <button page="Login" className="Logging" onClick={handleSubmit}>{isLoggedIn ? "Logout" : "Login"}</button>
           <Routes >
                <Route exact path="/Home" element={  <ModalPortal  handleClick={handleClick} isActive={isActive}> <FolderStatus isActive={isActive} setIsActive={setIsActive}
                  key={Math.floor(1 + Math.random() * 10000)} /></ModalPortal>}  />

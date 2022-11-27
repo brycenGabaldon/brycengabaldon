@@ -427,10 +427,12 @@ pointer-events: none;
   position: fixed;
   top: 3vmin;
   right: 3vmin;
-  background: white;
+  background: rgba(255, 255, 255, 0.308);
+  color: white;
   z-index: 1000;
   border-radius: 3vmin;
   text-align: center;
   line-height: 5.5vmin;
   font-size: 3vmin;
+  backdrop-filter: blur(.5rem);
 }
