@@ -3,12 +3,13 @@
 
 
     position: fixed;
-    top: 4rem;
+    top: 2rem;
     bottom: 10rem;
 left: 50%;
 transform: translate(-50%,0);
 max-width: 70vmin;
 min-width: 350px;
+min-height: fit-content;
 
     background: lightgray;
     z-index: 1000;
