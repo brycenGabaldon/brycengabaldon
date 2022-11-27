@@ -11,7 +11,7 @@ import { auth } from "../../firebase";
 import { useNavigate } from "react-router-dom";
 import GoogleButton from "react-google-button";
 
-function Login() {
+function Login({profilePic}) {
   const [registerEmail, setRegisterEmail] = useState("");
   const [registerPassword, setRegisterPassword] = useState("");
   const [loginEmail, setLoginEmail] = useState("");
@@ -66,6 +66,7 @@ function Login() {
   return (
     <div className="Apppp">
       <div>
+      <img src={profilePic} />
         <h3 className="loginH3"> Register User </h3>
         <input className="formData"
           placeholder="Email..."
