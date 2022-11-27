@@ -1,6 +1,6 @@
 .Apppp {
     text-align: center;
-    height: 70vmin;
+    height: 90vmin;
     width: 70vmin;
     position: fixed;
     top: 50%;
@@ -9,24 +9,25 @@
     background: lightgray;
     z-index: 1000;
     padding: 1rem;
-    border-radius: 2rem;
+    border-radius: 5vmin;
     font-family: italiana;
     font-weight: bolder;
+    font-size: 3vmin;
   }
 .formData {
-    margin: .5rem;
+    margin: .5vmin;
     height: 5vmin;
-    width: 30vmin;
+    width: 50vmin;
     padding: 1vmin;
-    border-radius: 1rem;
+    border-radius: 1vmin;
 }
 
 .loginButton {
 background: rgb(50, 170, 255);
 padding: 1vmin;
-border-radius: .3rem;
+border-radius: .3vmin;
 width: 60vmin;
-margin: 3vmin;
+margin: 2vmin;
 font-family: italiana;
 font-weight: bolder;
 }
@@ -35,7 +36,7 @@ font-weight: bolder;
     padding: 1vmin;
     border-radius: .3rem;
     width: 60vmin;
-    margin: 3vmin;
+    margin: 1vmin;
     color: white
 
     }
@@ -48,4 +49,8 @@ font-weight: bolder;
         height: 100vh;
         width: 100vw;
         z-index: 1000;
+    }
+    .loginH3 {
+        font-size: 4vmin;
+        font-weight: bolder;
     }

@@ -65,7 +65,7 @@ function Login() {
   return (
     <div className="Apppp">
       <div>
-        <h3> Register User </h3>
+        <h3 className="loginH3"> Register User </h3>
         <input className="formData"
           placeholder="Email..."
           onChange={(event) => {
@@ -83,7 +83,7 @@ function Login() {
       </div>
 
       <div>
-        <h3> Login </h3>
+        <h3 className="loginH3"> Login </h3>
         <input className="formData"
           placeholder="Email..."
           onChange={(event) => {
@@ -100,7 +100,7 @@ function Login() {
         <button className="loginButton" onClick={login}> Login</button>
       </div>
 
-      <h4> User Logged In: </h4>
+      <h4 className="loginH3"> User Logged In: </h4>
       {user?.email}
 
       <button className="loginButtonOut" onClick={logout}> Sign Out </button>
