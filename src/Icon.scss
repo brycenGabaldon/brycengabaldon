@@ -423,10 +423,13 @@ pointer-events: none;
 }
 .Logging{
   height: 6vmin;
+  min-height: 2rem;
   width: 18vmin;
+  min-width: 6rem;
+
   position: fixed;
-  top: 3vmin;
-  right: 3vmin;
+  top: 3vh;
+  right: 2vw;
   background: rgba(255, 255, 255, 0.308);
   color: white;
   z-index: 1000;
