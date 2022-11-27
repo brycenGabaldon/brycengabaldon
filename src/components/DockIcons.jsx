@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import { data } from "./iconData"
 import Buttons from "./File";
+import { auth } from "../firebase";
 
 
 export default function DockIcons() {
@@ -9,7 +10,7 @@ export default function DockIcons() {
 
   return (
     <div className="ContainerDock" key={Math.floor(1 + Math.random() * 10000)}>
-        {data.icons.slice(0, 4).map((icon, i) => {
+        {data.icons.slice(0, 5).map((icon, i) => {
           return (
             <Buttons
               key={Math.floor(1 + Math.random() * 10000)}
@@ -27,6 +28,8 @@ export default function DockIcons() {
               isActive="true"
               setIsActive={setIsDock}
               href={String(icon.href)}
+              useIcon={icon.userIcon}
+              userIcon={auth.currentUser}
               
               
             />

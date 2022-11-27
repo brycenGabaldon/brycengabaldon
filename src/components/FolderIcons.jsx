@@ -35,7 +35,7 @@ const [isFolder, setIsFolder] = useState(true)
    
       <div className={folderOpen} key={Math.floor(1 + Math.random() * 10000)}>
         
-        {data.icons.slice(4, 13).map((icon) => {
+        {data.icons.slice(5, 14).map((icon) => {
           return (
             <Buttons
               key={Math.floor(1 + Math.random() * 10000)}

@@ -11,9 +11,10 @@ export const data = {
         labelClass : "buttonLabel",
         active : "active",
         visible : "visible",
-        iconClass : "fas fa-phone",
+        iconClass : "fas fa-phone drop-shadow-lg",
         page : "/home",
-        href:"tel:602-816-1523"
+        href:"tel:602-816-1523",
+    
     },
     {
       "key" : 2,
@@ -25,7 +26,7 @@ export const data = {
       "labelClass" : "buttonLabel",
       "active" : "active",
       "visible" : "visible",
-      "iconClass" : "fas fa-comments",
+      "iconClass" : "fas fa-comments drop-shadow-lg",
       page : "/home",
       href:"sms:602-816-1523"
     },  {
@@ -38,7 +39,7 @@ export const data = {
       "labelClass" : "buttonLabel",
       "active" : "active",
       "visible" : "visible",
-      "iconClass" : "fa-solid fa-envelope",
+      "iconClass" : "fa-solid fa-envelope drop-shadow-lg",
       page : "/home",
       href:"mailto:brycengabaldon@gmail.com"
     },      
@@ -52,10 +53,25 @@ export const data = {
         labelClass : "buttonLabel1",
         active : "active",
         visible : "visible",
-        iconClass : "fa-solid fa-home",
+        iconClass : "fa-solid fa-home drop-shadow-lg",
         page : "/home",
         href:""
     },
+    {
+      key : 4,
+      name : "Home",
+      icon : "",
+      label : "Profile",
+      ref : "refLink",
+      onClick : "Function",
+      labelClass : "buttonLabel1",
+      active : "active",
+      visible : "visible",
+
+      page : "/home",
+      href:"",
+      userIcon: true
+  },
     {
         
       key : 4,
@@ -67,7 +83,7 @@ export const data = {
     labelClass : "buttonLabel",
     active : "active",
     visible : "visible",
-    iconClass : "fab fa-github",
+    iconClass : "fab fa-github drop-shadow-lg",
     page : "/Github",
     href:""
     },
@@ -81,7 +97,7 @@ export const data = {
     labelClass : "buttonLabel",
     active : "active",
     visible : "visible",
-    iconClass : "fab fa-discord",
+    iconClass : "fab fa-discord drop-shadow-lg",
     page : "/Discord",
     href:""
     
@@ -95,7 +111,7 @@ export const data = {
   labelClass : "buttonLabel",
   active : "active",
   visible : "visible",
-  iconClass : "fa-brands fa-linkedin-in",
+  iconClass : "fa-brands fa-linkedin-in drop-shadow-lg",
   page : "/home",
   href:'https://www.linkedin.com/in/brycen-gabaldon-86aa14253/'
   
@@ -109,7 +125,7 @@ export const data = {
   active : "active",
   visible : "visible",
   iconClass : "GiLotus",
-  iconPass : "GiLotus",
+  iconPass : "GiLotus drop-shadow-lg",
   page: "/Jobber",
   href:""
   },
@@ -123,7 +139,7 @@ export const data = {
     labelClass : "buttonLabel",
     active : "active",
     visible : "visible",
-    iconClass : "fa-brands fa-instagram",
+    iconClass : "fa-brands fa-instagram drop-shadow-lg",
     page : "/Instagram",
     href:""
   
@@ -138,7 +154,7 @@ export const data = {
     labelClass : "buttonLabel",
     active : "active",
     visible : "visible",
-    iconClass : "fab fa-youtube",
+    iconClass : "fab fa-youtube drop-shadow-lg",
     page : "/Youtube",
     href:""
   
@@ -152,7 +168,7 @@ export const data = {
       labelClass : "buttonLabel",
       active : "active",
       visible : "visible",
-      iconClass : "fa-solid fa-list",
+      iconClass : "fa-solid fa-list drop-shadow-lg",
       page : "/Planner",
       href:""
       },    {    key : 3,
@@ -164,7 +180,7 @@ export const data = {
         labelClass : "buttonLabel",
         active : "active",
         visible : "visible",
-        iconClass : "fas fa-file",
+        iconClass : "fas fa-file drop-shadow-lg",
         page : "/Resume",
         href:""
         },
@@ -177,7 +193,7 @@ export const data = {
       labelClass : "buttonLabel ",
       active : "active",
       visible : "visible",
-      iconClass : "fa-solid fa-icons",
+      iconClass : "fa-solid fa-icons drop-shadow-lg",
       page : "/Photos",
       href:""
       },
