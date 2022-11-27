@@ -2,7 +2,7 @@
     text-align: center;
     height: 90vmin;
     max-height: 700px;
-    min-height: 400px;
+    min-height: 500px;
     width: 70vmin;
     position: fixed;
     top: 40%;
@@ -17,19 +17,21 @@
     font-size: 3vmin;
   }
 .formData {
-    margin: .5vmin;
+    margin: 1.2vmin;
     height: 4vmin;
-    width: 30vmin;
+    width: 29vmin;
     padding: 1vmin;
     border-radius: 1vmin;
 }
 
 .loginButton {
 background: rgb(50, 170, 255);
-padding: 1vmin;
+
 border-radius: .3vmin;
 width: 60vmin;
 margin: 2vmin;
+height: 46px;
+line-height: 46px;
 font-family: italiana;
 font-weight: bolder;
 }
@@ -53,6 +55,7 @@ font-weight: bolder;
         z-index: 1000;
     }
     .loginH3 {
-        font-size: 3vmin;
+        font-size: 4vmin;
         font-weight: bolder;
+        
     }
