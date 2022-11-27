@@ -21,7 +21,7 @@ import Lotus2 from "./Lotus2/Lotus2";
 import Login from "./components/Files/Login";
 import { auth } from "./firebase";
 import image from "./images/1000_F_349497933_Ly4im8BDmHLaLzgyKg2f2yZOvJjBtlw5.jpg"
-import { Translate } from "@mui/icons-material";
+
 export default function App() {
 
 
