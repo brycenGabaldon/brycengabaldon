@@ -32,10 +32,13 @@ const isLoggedIn = auth.currentUser
 const handleClick = () => {
   setIsActive(!isActive)
 }
-const handleContactClick = () => {
-  setIsContact(!isContact)
-  console.log("this is contact" + isContact)
-}
+const handleContactClick = async(page) => {
+  try {
+    navigate("/home");
+  } catch (err) {
+
+  }
+};
 
 /*   const onClick = () => {
 setIsActive({...isActive, second: true});
@@ -83,7 +86,7 @@ const handleSubmit = async(page) => {
              
               <Route path="/Login" element={<Login/>}/>
               <Route path="/Instagram" element={  <Component backgroundColor="black"><Instagram/></Component>} />
-              <Route path="/contact" element={  <ModalPortal  handleClick={handleClick} isActive={isActive}> <FolderStatus sliceValue1="0" sliceValue2="3" isActive={isContact} setIsActive={setIsActive}
+              <Route path="/contact" element={  <ModalPortal  handleClick={handleContactClick} isActive={true}> <FolderStatus sliceValue1="0" sliceValue2="3" isActive={true} setIsActive={setIsContact}
                  key={Math.floor(1 + Math.random() * 10000)} /></ModalPortal>} />
           </Routes>
 
