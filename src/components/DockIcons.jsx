@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import { data } from "./iconData"
 import Buttons from "./File";
 import { auth } from "../firebase";
@@ -6,7 +6,7 @@ import { auth } from "../firebase";
 
 export default function DockIcons() {
 
-  const [isDock, setIsDock] = useState(true)
+ 
 
   return (
     <div className="ContainerDock" key={Math.floor(1 + Math.random() * 10000)}>
@@ -24,9 +24,9 @@ export default function DockIcons() {
               label={icon.label}
               id={icon.key}
               page={icon.page}
-              folder={isDock}
+              folder={true}
               isActive="true"
-              setIsActive={setIsDock}
+        
               href={String(icon.href)}
               useIcon={icon.userIcon}
               userIcon={auth.currentUser}

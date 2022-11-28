@@ -34,8 +34,8 @@ const Buttons = ({
         key={Math.floor(1 + Math.random() * 10000)}
         whileHover={{ scale: 1.2 }}
         whileTap={{ scale: 0.9 }}
-        onClick={isActive && folder && handleSubmit}
-      ><img className="drop-shadow-lg" style={{borderRadius: '50%'}} src={userIcon ? [useIcon && auth.currentUser.photoURL]  : "" } alt=""/>
+        onClick={isActive && handleSubmit}
+      >
         <a
           target="_blank"
           {...(label === "LinkedIn" ? ' rel="noopener noreferrer" ' : "")}
@@ -45,7 +45,7 @@ const Buttons = ({
             key={Math.floor(1 + Math.random() * 10000)}
             className={iconClass}
             disabled={!isActive}
-          >
+          ><img className="drop-shadow-lg" style={{borderRadius: '1rem'}} src={userIcon ? [useIcon && auth.currentUser.photoURL]  : "" } alt=""/>
             {iconPass ? <GiLotus /> : ""}
             <div
               className={labelClass}

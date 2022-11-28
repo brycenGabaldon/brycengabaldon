@@ -25,20 +25,15 @@ import { auth } from "./firebase";
 export default function App() {
 
   
-  const [isActive, setIsActive] = useState(false);
-  const [isContact, setIsContact] = useState(true)
+  const [isActive, setIsActive] = useState(true);
+
 const isLoggedIn = auth.currentUser
 
 const handleClick = () => {
   setIsActive(!isActive)
+  console.log("this is handle click" + isActive)
 }
-const handleContactClick = async(page) => {
-  try {
-    navigate("/home");
-  } catch (err) {
 
-  }
-};
 
 /*   const onClick = () => {
 setIsActive({...isActive, second: true});
@@ -51,7 +46,7 @@ const handleSubmit = async(page) => {
 
 
   try {
-    navigate("/login");
+    navigate("/Home");
   } catch (err) {
 
   }
@@ -65,10 +60,8 @@ const handleSubmit = async(page) => {
 
      <button page="Login" className="Logging" onClick={handleSubmit}>{isLoggedIn ? "Logout" : "Login"}</button>
           <Routes >
-               <Route exact path="/Home" element={  <ModalPortal  handleClick={handleClick} isActive={isActive}> <FolderStatus sliceValue1="7" sliceValue2="15" isActive={isActive} setIsActive={setIsActive}
-                 key={Math.floor(1 + Math.random() * 10000)} /></ModalPortal>}  />
-                 <Route exact path="/home" element={  <ModalPortal  handleClick={handleClick} isActive={isActive}> <FolderStatus isActive={isActive} setIsActive={setIsActive}
-                 key={Math.floor(1 + Math.random() * 10000)} /></ModalPortal>}  />
+               <Route exact path="/Home" element={  <ModalPortal  handleClick={handleClick} isActive={isActive}> </ModalPortal>}  />
+                 <Route exact path="/home" element={  <ModalPortal  handleClick={handleClick} isActive={isActive}> </ModalPortal>}  />
               <Route path="/" element={  <ModalPortal  handleClick={handleClick} isActive={isActive}> <FolderStatus isActive={isActive} setIsActive={setIsActive}
                  key={Math.floor(1 + Math.random() * 10000)} /></ModalPortal>} />
               <Route path="/ImageUpload" element={  <Component backgroundColor="white"><Login backgroundColor="white" /></Component>} />
@@ -86,8 +79,34 @@ const handleSubmit = async(page) => {
              
               <Route path="/Login" element={<Login/>}/>
               <Route path="/Instagram" element={  <Component backgroundColor="black"><Instagram/></Component>} />
-              <Route path="/contact" element={  <ModalPortal  handleClick={handleContactClick} isActive={true}> <FolderStatus sliceValue1="0" sliceValue2="3" isActive={true} setIsActive={setIsContact}
-                 key={Math.floor(1 + Math.random() * 10000)} /></ModalPortal>} />
+
+              <Route path="/contact" element={  
+                    
+                    isActive ? 
+                    <div><FolderStatus sliceValue1="0" sliceValue2="3" isActive={true}
+                 key={Math.floor(1 + Math.random() * 10000)} /><div onClick={handleSubmit} className="Overlay2" ></div></div>
+                 :
+                 ""
+                 
+                 } />                  <Route path="/Social" element={  
+                    
+                  isActive ? 
+                  <div><FolderStatus sliceValue1="7" sliceValue2="12" isActive={true}
+               key={Math.floor(1 + Math.random() * 10000)} /><div onClick={handleSubmit} className="Overlay2" ></div></div>
+               :
+               ""
+               
+               } />
+
+                  <Route path="/Projects" element={  
+                    
+                    isActive ? 
+                    <div><FolderStatus sliceValue1="12" sliceValue2="16" isActive={true} 
+                 key={Math.floor(1 + Math.random() * 10000)} /><div onClick={handleSubmit} className="Overlay2" ></div></div>
+                 :
+                 ""
+                 
+                 } />
           </Routes>
 
         <DockIcons />

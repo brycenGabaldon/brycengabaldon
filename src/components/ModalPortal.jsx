@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDom from "react-dom";
-
+import { useNavigate } from "react-router-dom";
 const MODAL_STYLES = {
   position: 'fixed',
   top: 0,
@@ -16,15 +16,27 @@ export default function ModalPortal({
   children,
   handleClick
 
-}) {
+}) {console.log("modal"+isActive)
+
+const navigate = useNavigate();
+
+const handleSubmit = async() => {
+
+
+  try {
+    navigate("/home");
+  } catch (err) {
+
+  }
+};
   return ReactDom.createPortal(
     <>
       
-        {isActive ? [
+        {!children ? [
           <div
             className="Overlay"
             style={MODAL_STYLES}
-            onClick={handleClick}>
+            onClick={()=>handleSubmit()}>
             {children}
           </div>
         ]
