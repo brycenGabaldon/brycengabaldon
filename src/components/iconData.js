@@ -1,11 +1,12 @@
 export const data = {
     icons: [
+
       {
         
         key : 1,
         name : "Phone",
         icon : "faAngry",
-        label : "Phone ",
+        label : "Call ",
         ref : "refLink",
         onClick : "Function",
         labelClass : "buttonLabel",
@@ -33,7 +34,7 @@ export const data = {
       "key" : 3,
       "name" : "three",
       "icon" : "faAngry",
-      "label" : "Mail ",
+      "label" : "E-Mail ",
       "ref" : "refLink",
       "onClick" : "Function",
       "labelClass" : "buttonLabel",
@@ -42,7 +43,42 @@ export const data = {
       "iconClass" : "fa-solid fa-envelope drop-shadow-lg",
       page : "/home",
       href:"mailto:brycengabaldon@gmail.com"
-    },      
+    },   
+    {
+        
+      key : 1,
+      name : "Phone",
+      icon : "faAngry",
+      label : "Contact ",
+      ref : "refLink",
+      onClick : "Function",
+      labelClass : "buttonLabel",
+      active : "active",
+      visible : "visible",
+      iconClass : "fa-solid fa-address-card drop-shadow-lg",
+      page : "/contact",
+      href:"",
+  
+  },   
+
+    {
+        
+      key : 4,
+    name : "five",
+    icon : "faAngry",
+    label : "Github ",
+    ref : "tel:602-816-1523",
+    onClick : "Function",
+    labelClass : "buttonLabel",
+    active : "active",
+    visible : "visible",
+    iconClass : "fab fa-github drop-shadow-lg",
+    page : "/Github",
+    href:""
+    },
+
+
+
     {
         key : 4,
         name : "Home",
@@ -72,21 +108,20 @@ export const data = {
       href:"",
       userIcon: true
   },
-    {
-        
-      key : 4,
-    name : "five",
-    icon : "faAngry",
-    label : "Github ",
-    ref : "tel:602-816-1523",
-    onClick : "Function",
-    labelClass : "buttonLabel",
-    active : "active",
-    visible : "visible",
-    iconClass : "fab fa-github drop-shadow-lg",
-    page : "/Github",
-    href:""
-    },
+ { key : 7,
+  name : "eight",
+  icon : "faAngry",
+  label : "Lotus ",
+  ref : "refLink",
+  onClick : "Function",
+  labelClass : "buttonLabel",
+  active : "active",
+  visible : "visible",
+  iconClass : "GiLotus",
+  iconPass : "GiLotus drop-shadow-lg",
+  page: "/Jobber",
+  href:""
+  },
     {
       key : 5,
     name : "six",
@@ -115,20 +150,7 @@ export const data = {
   page : "/home",
   href:'https://www.linkedin.com/in/brycen-gabaldon-86aa14253/'
   
-},       { key : 7,
-  name : "eight",
-  icon : "faAngry",
-  label : "Lotus ",
-  ref : "refLink",
-  onClick : "Function",
-  labelClass : "buttonLabel",
-  active : "active",
-  visible : "visible",
-  iconClass : "GiLotus",
-  iconPass : "GiLotus drop-shadow-lg",
-  page: "/Jobber",
-  href:""
-  },
+},      
   {
     key : 8,
     name : "two",
@@ -285,19 +307,6 @@ export const data = {
               click : "FB",
               href:""
 },
-              {    key : 8,
-                name : "messages",
-                icon : "faAngry",
-                label : "yes?!",
-                ref : "refLink",
-                onClick : "Function",
-                labelClass : "buttonLabel",
-                active : "active",
-                visible : "visible",
-                iconClass : "Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50",
-                click : "FB",
-                href:""
 
-                }
   ]
   }   

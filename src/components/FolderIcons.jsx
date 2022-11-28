@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { data } from "./iconData"
 import Buttons from "./File";
 import { motion } from "framer-motion";
@@ -8,26 +8,21 @@ import { motion } from "framer-motion";
 
 
 
-export default function FolderStatus({isActive, setIsActive}) {
+export default function FolderStatus({isActive, setIsActive, sliceValue1 ,sliceValue2}) {
 
 
   return !isActive
-    ? [<div><motion.div onClick={()=>setIsActive(previsActive => true)} className="folders" ><OpenFolder folderOpen="Hide fadeOut" id="closed" key={Math.floor(1 + Math.random() * 10000)} isActive={isActive}/></motion.div></div>]
+    ? [<div><motion.div onClick={()=>setIsActive(previsActive => true)} className="folders" ><OpenFolder sliceValue1={sliceValue1} sliceValue2={sliceValue2} folderOpen="Hide fadeOut" id="closed" key={Math.floor(1 + Math.random() * 10000)} isActive={isActive}/></motion.div></div>]
 
     : 
     
-    [<div ><motion.div  className="folders" ><OpenFolder folderOpen="Show fadeIn" disabled={isActive} id="open" key={Math.floor(1 + Math.random() * 10000)} isActive={isActive} /></motion.div> </div>];
+    [<div ><motion.div  className="folders" ><OpenFolder sliceValue1={sliceValue1} sliceValue2={sliceValue2} folderOpen="Show fadeIn" disabled={isActive} id="open" key={Math.floor(1 + Math.random() * 10000)} isActive={isActive} /></motion.div> </div>];
 
     
 }
 
 
-function OpenFolder({isActive, folderOpen}) {
-
-  console.log("check is open")
-const [isFolder, setIsFolder] = useState(true)
-
-
+function OpenFolder({isActive, folderOpen, sliceValue1, sliceValue2}) {
 
 
 
@@ -35,7 +30,7 @@ const [isFolder, setIsFolder] = useState(true)
    
       <div className={folderOpen} key={Math.floor(1 + Math.random() * 10000)}>
         
-        {data.icons.slice(5, 14).map((icon) => {
+        {data.icons.slice(sliceValue1, sliceValue2).map((icon) => {
           return (
             <Buttons
               key={Math.floor(1 + Math.random() * 10000)}
@@ -47,8 +42,8 @@ const [isFolder, setIsFolder] = useState(true)
               label={isActive ? icon.label : ""}
               isActive={isActive}
               page={icon.page}
-              folder={isFolder}
-              setIs={setIsFolder}
+              folder={true}
+
               iconPass={icon.iconPass}
               href={String(icon.href)}
             />

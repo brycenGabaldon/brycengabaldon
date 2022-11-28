@@ -24,15 +24,18 @@ import { auth } from "./firebase";
 
 export default function App() {
 
-
   
   const [isActive, setIsActive] = useState(false);
+  const [isContact, setIsContact] = useState(true)
 const isLoggedIn = auth.currentUser
 
 const handleClick = () => {
   setIsActive(!isActive)
 }
-
+const handleContactClick = () => {
+  setIsContact(!isContact)
+  console.log("this is contact" + isContact)
+}
 
 /*   const onClick = () => {
 setIsActive({...isActive, second: true});
@@ -59,7 +62,7 @@ const handleSubmit = async(page) => {
 
      <button page="Login" className="Logging" onClick={handleSubmit}>{isLoggedIn ? "Logout" : "Login"}</button>
           <Routes >
-               <Route exact path="/Home" element={  <ModalPortal  handleClick={handleClick} isActive={isActive}> <FolderStatus isActive={isActive} setIsActive={setIsActive}
+               <Route exact path="/Home" element={  <ModalPortal  handleClick={handleClick} isActive={isActive}> <FolderStatus sliceValue1="7" sliceValue2="15" isActive={isActive} setIsActive={setIsActive}
                  key={Math.floor(1 + Math.random() * 10000)} /></ModalPortal>}  />
                  <Route exact path="/home" element={  <ModalPortal  handleClick={handleClick} isActive={isActive}> <FolderStatus isActive={isActive} setIsActive={setIsActive}
                  key={Math.floor(1 + Math.random() * 10000)} /></ModalPortal>}  />
@@ -80,6 +83,8 @@ const handleSubmit = async(page) => {
              
               <Route path="/Login" element={<Login/>}/>
               <Route path="/Instagram" element={  <Component backgroundColor="black"><Instagram/></Component>} />
+              <Route path="/contact" element={  <ModalPortal  handleClick={handleClick} isActive={isActive}> <FolderStatus sliceValue1="0" sliceValue2="3" isActive={isContact} setIsActive={setIsActive}
+                 key={Math.floor(1 + Math.random() * 10000)} /></ModalPortal>} />
           </Routes>
 
         <DockIcons />
