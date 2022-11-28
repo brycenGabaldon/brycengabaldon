@@ -12,7 +12,7 @@ export default function FolderStatus({isActive, setIsActive, sliceValue1 ,sliceV
 
 
   return !isActive
-    ? [<div><motion.div onClick={()=>setIsActive(previsActive => true)} className="folders" ><OpenFolder sliceValue1={sliceValue1} sliceValue2={sliceValue2} folderOpen="Hide fadeOut" id="closed" key={Math.floor(1 + Math.random() * 10000)} isActive={isActive}/></motion.div><div className="Overlay2"></div></div>]
+    ? ""
 
     : 
     
