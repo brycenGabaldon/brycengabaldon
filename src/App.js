@@ -38,7 +38,6 @@ const handleClick = () => {
 /*   const onClick = () => {
 setIsActive({...isActive, second: true});
     console.log("did something")
-
 }
 useEffect( () => { console.log(isActive); }, [isActive] ); */
 const navigate = useNavigate();

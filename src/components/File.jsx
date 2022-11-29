@@ -34,7 +34,7 @@ const Buttons = ({
         key={Math.floor(1 + Math.random() * 10000)}
         whileHover={{ scale: 1.2 }}
         whileTap={{ scale: 0.9 }}
-        onClick={isActive && handleSubmit}
+        onClick={isActive && folder && handleSubmit}
       >
         <a
           target="_blank"
