@@ -7,7 +7,7 @@ export default function Test() {
         <div className="BrycenHeading "
 >BRYCEN D. GABALDON 
           <br />
-          <div style={{fontSize:"4vmin", color: "linearGradient(rgb(149, 156, 156),rgb(195, 207, 207))",
+          <div style={{fontSize:"4vmin", backround: "linearGradient(rgb(149, 156, 156),rgb(195, 207, 207))",
         lineHeight:"8vmin", color: "rgb(10, 25, 150)"}}>Full Stack Web Developer</div>
           
         </div>
