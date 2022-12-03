@@ -3,8 +3,8 @@ import React, { useState, useEffect } from "react";
 
 
 const HandHold = ({className, color, index}) => {
-const colors1 = (index*2)%255
-const colors2 = (index*3)%255
+const colors1 = (index*2+100)%255
+const colors2 = (index*3+200)%255
 
 const setTimer = 5000
   const [seconds, setSeconds] = useState(0);
@@ -32,7 +32,7 @@ console.log(index)
   return (
     <div 
 onClick={()=>setActive(!isActive)}
-style={{left:xP, background: "rgb("  +colors2+  ", "+colors1+", "+index+") "}}
+style={{left:xP, background: "radial-gradient(rgb("  +colors2+  ", "+colors1+", "+index+"),rgb("  +colors1+  ", "+index+", "+colors2+"))"}}
 
 className={!isActive ? "handHold" : "handHold2"}
  setActive={setActive}
