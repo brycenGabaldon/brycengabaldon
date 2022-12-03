@@ -55,24 +55,16 @@ export default function Resume() {
                   Lotus Co. 6/2022- 12/-2022
                   <br />
                   <br />
-                  <ol
-                    style={{
-                      float: "left",
-                      width: "40%",
-                      listStyleType: "disc",
-                    }}
+                  <ol className="oltags"
+
                   >
                     <li>implementing REST APIs</li>
                     <li> developing single-page applications</li>
                     <li>designing responsive UI/UX</li>
                     <li>utilizing database storage</li>
                   </ol>
-                  <ol
-                    style={{
-                      float: "right",
-                      width: "30%",
-                      listStyleType: "disc",
-                    }}
+                  <ol className="oltags2"
+
                   >
                     {" "}
                     <li>React</li>
@@ -83,12 +75,8 @@ export default function Resume() {
                     <li>Swift</li>
                     <li>C++</li>
                   </ol>
-                  <ol
-                    style={{
-                      float: "right",
-                      width: "30%",
-                      listStyleType: "disc",
-                    }}
+                  <ol className="oltags3"
+
                   >
                     <li>Tailwind</li>
                     <li>Bootstrap</li>
