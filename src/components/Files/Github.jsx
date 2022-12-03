@@ -1,3 +1,4 @@
+import { margin } from "@mui/system";
 import React from "react";
 
 const Github = () => {
@@ -11,17 +12,18 @@ const Github = () => {
           alt="2016rshah's Github chart"
         />
 
-        <p class="drop-shadow-xl ...">
-          My name is Brycen Gabaldon and I am a Web Developer. Responsible for
+        <p className="drop-shadow-xl " style={{fontSize: "3vmin", margin: "2vmin"}}>
+          My name is Brycen Gabaldon and I am a Full Stack Web Developer. Responsible for
           the design and development of an appointment booking website.
           Developing Contact forms, integrating APIs, headless CMS, S.P.A using
           React.js. Animations using Framer motion. Tailwind CSS library.
           PostgreSQL/Node.js. AWS Lightsail. Also designing marketing content
-          using Illustrator/ ProCreate.
+          using Illustrator/ ProCreate / Adobe XD / Figma.
         </p>
 <div className="gitListContainer">
-        <ol style={{ listStyleType: "disc" }} className="gitList">
-            Most Used:
+        <ol style={{ listStyleType: "disc"}} className="gitList">
+           <span style={{ textDecoration: "underline" ,  marginLeft:"-2rem"}}> Most Used:</span>
+            <br/>     <br/>
 <li>React.js</li>
 <li>Scss</li>
 <li>Html</li>
@@ -33,7 +35,8 @@ const Github = () => {
 <li>Firebase Authentication</li>
         </ol>
         <ol style={{ listStyleType: "disc" }} className="gitList">
-            Familiar 6Months+
+         <span style={{ textDecoration: "underline", marginLeft:"-2rem"}}>  Familiar over 6 Months:</span> 
+            <br/>     
 <li>Swift</li>
 <li>Java</li>
 <li>Python</li>

@@ -150,15 +150,17 @@ h2 {
   flex-wrap: wrap;
   padding: 3vmin;
   align-self: center;
+
 }
 .gitList {
   background: white;
   font-size: 5vmin;
   font-family: italiana;
   text-align: left;
-  padding: 15vmin;
-  width: 60vmin;
-  min-width: 20rem;
+  padding: 12vmin;
+
+  min-width: 20rem; 
+   border: 2px solid black;
 }
 
 .floatLeft {
@@ -205,6 +207,10 @@ h2 {
   .floatRight {
     width: 100%;
 min-width: 220px;
+  }
+  .gitList{
+    width:100%
+
   }
   .MainText {
     width: 100%;
