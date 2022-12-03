@@ -17,7 +17,7 @@ const setTimer = 5000
     return () => clearInterval(interval);
   }, [setTimer]);
 
-
+console.log(seconds)
   useEffect(() => {
     const move = setInterval(() => {
       setXP((xP) => Math.floor(1 + Math.random() * 1000));//spacing
