@@ -18,7 +18,7 @@ const HandHold = ({className}) => {
 
   useEffect(() => {
     const move = setInterval(() => {
-      setXP((xP) => Math.floor(1 + Math.random() * 10000));//spacing
+      setXP((xP) => Math.floor(1 + Math.random() * 1000));//spacing
     },[5000]);//rerender
 
     return () => clearInterval(move);
