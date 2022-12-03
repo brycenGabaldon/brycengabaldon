@@ -225,8 +225,8 @@ export const data = {
       labelClass: "buttonLabel",
       active: "active",
       visible: "visible",
-      iconClass: "GiLotus",
-      iconPass: "GiLotus drop-shadow-lg",
+      iconClass: "fa-solid fa-fan",
+ 
       page: "/Jobber",
       href: "",
     },
