@@ -5,7 +5,7 @@ z-index: 10;
     display: flex;
     flex-direction: column;
     backdrop-filter: blur(.5rem);
-
+  
 }
 
 
@@ -18,7 +18,7 @@ margin:0;
     opacity: 1;
     visibility: visible;
     transition: opacity 2s linear;
-    pointer-events:fill;
+
 }
 .rowContainerHide{
     height: 15px;
