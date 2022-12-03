@@ -203,11 +203,11 @@ h2 {
 }
 @media only screen and (max-width: 1000px) {
   .floatRight {
-    width: 40%;
+    width: 100%;
 min-width: 220px;
   }
   .MainText {
-    width: 60%;
+    width: 100%;
     min-width: 200px;
     float: left;
     overflow: hidden;
@@ -219,16 +219,23 @@ font-family: 'Encode Sans Expanded', sans-serif;
   .ContactHeading{
     width: 100%;
   }
+  .ResumeHeading{
+
+    height: 100vmin;
+
+  
+  
+  }
 
 
 }
   .BrycenHeading{
-    font-size: 3.4rem;
+    font-size: 10vmin;
     font-family: italiana;
     width: 100%;
     text-align: center;
-    line-height: 4rem;
-    margin-top: 1.5rem;
+    line-height: 10vmin;
+    margin-top: 1vmin;
     font-weight: bolder;
 
     float: left;
@@ -239,7 +246,7 @@ font-family: 'Encode Sans Expanded', sans-serif;
   background: linear-gradient(40deg,rgb(161, 169, 174),rgb(255, 255, 249), rgb(74, 74, 74));
   color: black;
   border: 1px solid black;
-  height: 15rem;
+  height: 45vmin;
   font-family: 'Encode Sans Expanded', sans-serif;
 
   width: 80%;
@@ -263,8 +270,8 @@ font-family: 'Encode Sans Expanded', sans-serif;
 
   min-width: 60%;
   height: 30%;
-  line-height: 1rem;
-  font-size: 1rem;
+  line-height: 3vmin;
+  font-size: 2.5vmin;
   font-weight: bold;
   font-family: roboto;
   text-align: center;
