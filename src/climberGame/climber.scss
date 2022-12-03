@@ -15,7 +15,7 @@ z-index: 1000;
     height: 100px;
 margin:0;
 border-top: 1px solid black;
-    background: rgba(173, 216, 230, 0.422);
+    background: rgba(44, 44, 44, 0.695);
     float: left;
     opacity: 1;
     visibility: visible;
@@ -45,13 +45,13 @@ visibility: hidden;
 
   .handHold{
     position: relative;
-    height: 80px;
+    height: 100px;
     border-radius: 50%;
     aspect-ratio: 1/1;
     top: 0px;
     
     left: xP + px;
-    background: rgba(0, 0, 0, 0.604);
+    background: radial-gradient(rgb(147, 0, 0), black)
   }
   .handHold2{
     position: relative;
@@ -61,7 +61,7 @@ visibility: hidden;
     top: 0px;
     
     left: xP + px;
-    background: blue;
+    background: radial-gradient(blue, white);
   }
 .die{
     display: none

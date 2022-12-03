@@ -28,9 +28,9 @@ const HandHold = ({className}) => {
 
   return (
     <div 
-onClick={()=>setActive(true)}
+onClick={()=>setActive(!isActive)}
 style={{left:xP}}
-      whileHover={{ scale: 1.2 }}
+
 className={!isActive ? "handHold" : "handHold2"}
  setActive={setActive}
     ></div>
