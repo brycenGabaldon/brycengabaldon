@@ -1,21 +1,19 @@
 .climbingContainer{
     height: 300vh;
     width: 100vw;
-z-index: 100;
+z-index: 10;
     display: flex;
     flex-direction: column;
-    background: white;
+    backdrop-filter: blur(.5rem);
     pointer-events: none;
 }
-.wrapper{
-    background: rgb(211, 211, 211);
-}
+
 
 .live{
     height: 100px;
 margin:0;
 
-backdrop-filter: blur(.5rem);
+
     float: left;
     opacity: 1;
     visibility: visible;
@@ -72,13 +70,14 @@ background: radial-gradient(rgb(241, 232, 232), rgb(221, 189, 189));
 }
 .GameBack{
 position: fixed;
-bottom: 2.5rem;
+bottom: 2rem;
 left: 50%;
 transform: translate(-50%,0);
-height: 10vmin;
-width: 35vmin;
+height: 5rem;
+width: 15rem;
+border: 2px solid black;
 border-radius: 2rem;
-background: rgba(255, 255, 255, 0.804);
+background: rgba(255, 255, 255, 0.393);
 z-index: 1000;
 font-family: italiana;
 font-size: 8vmin;
