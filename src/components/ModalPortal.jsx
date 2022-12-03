@@ -35,7 +35,7 @@ const handleSubmit = async() => {
         {!children ? [
           <div
             className="Overlay"
-            style={MODAL_STYLES}
+            style={{background: "white"}}
             onClick={()=>handleSubmit()}>
             {children}
           </div>

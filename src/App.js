@@ -20,6 +20,9 @@ import Protected from "./components/Files/Protected"
 import Lotus2 from "./Lotus2/Lotus2";
 import Login from "./components/Files/Login";
 import { auth } from "./firebase";
+import MainGame from "./climberGame/MainGame";
+
+
 
 
 export default function App() {
@@ -29,10 +32,10 @@ export default function App() {
 
 const isLoggedIn = auth.currentUser
 
-const handleClick = () => {
+/* const handleClick = () => {
   setIsActive(!isActive)
   console.log("this is handle click" + isActive)
-}
+} */
 
 
 /*   const onClick = () => {
@@ -47,6 +50,7 @@ const handleSubmit2 = async(page) => {
 
   try {
     navigate("/Login");
+    setIsActive(isActive)
   } catch (err) {
 
   }
@@ -69,10 +73,9 @@ const handleSubmit = async(page) => {
 
      <button page="Login" className="Logging" onClick={handleSubmit2}>{isLoggedIn ? "Logout" : "Login"}</button>
           <Routes >
-               <Route exact path="/Home" element={  <ModalPortal  handleClick={handleClick} isActive={isActive}> </ModalPortal>}  />
-                 <Route exact path="/home" element={  <ModalPortal  handleClick={handleClick} isActive={isActive}> </ModalPortal>}  />
-              <Route path="/" element={  <ModalPortal  handleClick={handleClick} isActive={isActive}> <FolderStatus isActive={isActive} setIsActive={setIsActive}
-                 key={Math.floor(1 + Math.random() * 10000)} /></ModalPortal>} />
+               <Route exact path="/Home" element={ ""}  />
+                 <Route exact path="/home" element={  ""}  />
+              <Route path="/" element={  ""} />
               <Route path="/ImageUpload" element={  <Component backgroundColor="white"><Login backgroundColor="white" /></Component>} />
               <Route path="/Images" element={  <Component backgroundColor="black"><Instagram/></Component>} />
               <Route path="/Jobber" element={ <Protected><Lotus2/></Protected>} />
@@ -82,10 +85,10 @@ const handleSubmit = async(page) => {
               <Route path="/LinkedIn" element={  <Component backgroundColor="blue"></Component>} />
               <Route path="/Youtube" element={  <Component backgroundColor="black"><Youtube/></Component>} />
               <Route path="/Planner" element={  <Component className="taskmanager" backgroundColor="white"><TaskManager/></Component>} />
-              <Route path="/Resume" element={  <Component backgroundColor="white"><Resume/></Component>} />
+              <Route path="/Resume" element={  <div style={{width: "100vw", height:"100vh", background: "white", zIndex: " 1000"}} ><Resume/></div>} />
               <Route path="/Settings" element={  <Component backgroundColor="grey"></Component>} />
               <Route exact path="/Photos" element={  <Component backgroundColor="grey"><Images/></Component>} />
-             
+              <Route exact path="/Climber" element={  <ModalPortal><MainGame/></ModalPortal>}/>
               <Route path="/Login" element={<Login/>}/>
               <Route path="/Instagram" element={  <Component backgroundColor="black"><Instagram/></Component>} />
 

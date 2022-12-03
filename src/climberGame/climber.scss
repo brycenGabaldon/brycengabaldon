@@ -1,0 +1,68 @@
+.climbingContainer{
+    height: 300vh;
+    width: 100vw;
+z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    background: white;
+   
+}
+.wrapper{
+    background: white;
+}
+
+.live{
+    height: 100px;
+margin:0;
+border-top: 1px solid black;
+    background: rgba(173, 216, 230, 0.422);
+    float: left;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 2s linear;
+
+}
+.rowContainerHide{
+    height: 15px;
+   aspect-ratio: 1/1;
+opacity: 1;
+visibility: hidden;
+
+}
+.handHoldContainer{
+    height: 15px;
+    aspect-ratio: 1/1;
+   
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+
+}
+
+
+
+  .handHold{
+    position: relative;
+    height: 80px;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    top: 0px;
+    
+    left: xP + px;
+    background: rgba(0, 0, 0, 0.604);
+  }
+  .handHold2{
+    position: relative;
+    height: 80px;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    top: 0px;
+    
+    left: xP + px;
+    background: blue;
+  }
+.die{
+    display: none
+}

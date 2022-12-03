@@ -43,3 +43,19 @@ renderSwitch(param) {
       return 'foo';
   }
 }
+==============
+
+https://codingbeautydev.com/blog/react-remove-item-from-state-array/
+
+
+================
+https://freecontent.manning.com/managing-component-state-with-the-usestate-hook/
+
+================
+
+    https://beta.reactjs.org/learn/updating-arrays-in-state
+
+
+    https://dev.to/andyrewlee/how-to-update-an-array-of-objects-in-react-state-3d
+
+    
