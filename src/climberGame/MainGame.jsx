@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import "./climber.scss";
 import Row from './Row';
-import { motion } from 'framer-motion';
+
 
 
 
@@ -15,7 +15,7 @@ const [folder, setFolder ] = useState([1,2,3,4,5,6,7,8,9,10]);
 
 
 const changeFolder = () => {
-    const newFolder = folder.slice(1,300).map((folders) => {
+    const newFolder = folder.slice(1,400).map((folders) => {
 return "" });
   
     setFolder(newFolder);
@@ -35,8 +35,8 @@ return "" });
  
         setFolder(prev => [...prev, seconds+1])
       console.log(folder)
-      folder.length < 400 && handleAdd()
-      folder.length = 400 && changeFolder()
+      folder.length < 500 && handleAdd()
+      folder.length = 500 && changeFolder()
 
        
       }, .001);
@@ -57,7 +57,7 @@ return "" });
 console.log("folder")
     return (
         <div className=" wrapper ">
-      <motion.div >
+      <div >
        <div className="climbingContainer" >
 
             {folder.map((item, i) => (
@@ -69,7 +69,7 @@ console.log("folder")
           ))}
 
 
-        </div></motion.div></div>
+        </div></div></div>
     );
 };
 
