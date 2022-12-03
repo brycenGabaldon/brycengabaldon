@@ -26,8 +26,7 @@ const setTimer = 5000
     return () => clearInterval(move);
   }, []);
 
-  console.log(seconds)
-  console.log("index")
+
 
   return (
     <div 

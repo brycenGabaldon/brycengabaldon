@@ -11,8 +11,6 @@ const Row = ({ position, onClick, timers, className, number, index }) => {
     setSeconds(seconds);
     return () => clearInterval(interval);
   }, [seconds]);
-  console.log(Number(number))
-  console.log("key")
 
   return (
     <div

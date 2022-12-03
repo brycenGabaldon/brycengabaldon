@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import "./climber.scss";
 import Row from './Row';
-
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -10,9 +10,19 @@ const MainGame = () => {
     const [seconds, setSeconds] = useState(0);
 
 const [folder, setFolder ] = useState([1,2,3,4,5,6,7,8,9,10]);
+const navigate = useNavigate();
 
 
 
+const handleBackButton = async() => {
+
+
+    try {
+      navigate("/home");
+    } catch (err) {
+
+    }
+  };
 
 const changeFolder = () => {
     const newFolder = folder.slice(1,400).map((folders) => {
@@ -34,7 +44,7 @@ return "" });
         setSeconds(seconds => seconds+1);
  
         setFolder(prev => [...prev, seconds+1])
-      console.log(folder)
+
       folder.length < 500 && handleAdd()
       folder.length = 500 && changeFolder()
 
@@ -54,9 +64,10 @@ return "" });
         }})} */
 
 
-console.log("folder")
+
     return (
         <div className=" wrapper ">
+            <button className='GameBack' onClick={()=>handleBackButton()}>Exit</button>
       <div >
        <div className="climbingContainer" >
 

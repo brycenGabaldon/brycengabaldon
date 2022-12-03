@@ -113,7 +113,7 @@ const handleSubmit = async(page) => {
                   <Route path="/Projects" element={  
                     
                     !isActive ? 
-                    <div><FolderStatus sliceValue1="12" sliceValue2="16" isActive={true} 
+                    <div><FolderStatus sliceValue1="12" sliceValue2="17" isActive={true} 
                  key={Math.floor(1 + Math.random() * 10000)} /><div onClick={handleSubmit} className="Overlay2" ></div></div>
                  :
                  ""
