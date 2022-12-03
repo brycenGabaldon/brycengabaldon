@@ -34,7 +34,7 @@ export default function Resume() {
       <h2 className="Mission">
         <div>
           <div className="Mission2">
-            <span style={{ fontSize: "4vmin" }}> My Goal: </span> <br />I strive
+            <span style={{ fontSize: "5vmin" }}> My Goal: </span> <br />I strive
             to be Innovative, Efficient, and Effective. My goal is to add
             maximum value to customers and employers. I aim to create value that
             can not be found anywhere else. I am fast-learning and hard-working.
