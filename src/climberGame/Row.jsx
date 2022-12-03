@@ -12,13 +12,11 @@ const Row = ({position, onClick, timers, className, index}) => {
 
     useEffect(() => {
       const interval = setInterval(() => {
-        setSeconds(seconds => seconds + 3);
-      
-       
+        setSeconds(seconds => seconds+1);
       }, 4000);
       setSeconds(seconds)
       return () => clearInterval(interval);
-    },);
+    },[seconds]);
 
 
 
