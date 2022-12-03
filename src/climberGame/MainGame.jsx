@@ -15,7 +15,7 @@ const [folder, setFolder ] = useState([1,2,3,4,5,6,7,8,9,10]);
 
 
 const changeFolder = () => {
-    const newFolder = folder.slice(200,1000).map((folders) => {
+    const newFolder = folder.slice(1,300).map((folders) => {
 return "" });
   
     setFolder(newFolder);
@@ -35,8 +35,8 @@ return "" });
  
         setFolder(prev => [...prev, seconds+1])
       console.log(folder)
-      folder.length < 1000 && handleAdd()
-      folder.length = 1000 && changeFolder()
+      folder.length < 400 && handleAdd()
+      folder.length = 400 && changeFolder()
 
        
       }, .001);
@@ -63,7 +63,7 @@ console.log("folder")
             {folder.map((item, i) => (
 
           
-            <Row  position={-seconds*5}  className="live"
+            <Row  position={-seconds*5} number={seconds%255} className="live"
          
             />
           ))}

@@ -8,14 +8,14 @@ z-index: 1000;
     pointer-events: none;
 }
 .wrapper{
-    background: white;
+    background: rgb(211, 211, 211);
 }
 
 .live{
     height: 100px;
 margin:0;
-border-top: 1px solid black;
-    background: rgba(44, 44, 44, 0.695);
+
+    background: rgba(255, 255, 255, 0.695);
     float: left;
     opacity: 1;
     visibility: visible;
@@ -49,21 +49,22 @@ visibility: hidden;
     border-radius: 50%;
     aspect-ratio: 1/1;
     top: 0px;
-    
+scale: 1;
     left: xP + px;
-    background: radial-gradient(rgb(147, 0, 0), black)
+   
   }
   .handHold2{
     position: relative;
-    height: 80px;
+    scale: .5;
     border-radius: 50%;
     aspect-ratio: 1/1;
-    top: 0px;
-    opacity:0;
-
+    top: -5000px;
+   
+    opacity:1;
+background: radial-gradient(rgb(241, 232, 232), rgb(221, 189, 189));
     transition: all 0.5s;
   
-    background: radial-gradient(blue, white);
+   
   }
 .die{
     display: none
