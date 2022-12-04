@@ -19,7 +19,7 @@ import Mail from "./components/Files/Mail";
 import Protected from "./components/Files/Protected"
 import Lotus2 from "./Lotus2/Lotus2";
 import Login from "./components/Files/Login";
-import { auth } from "./firebase";
+import {auth} from "./firebase";
 import MainGame from "./climberGame/MainGame";
 
 
@@ -27,10 +27,10 @@ import MainGame from "./climberGame/MainGame";
 
 export default function App() {
 
-  
+  const user2 = auth.currentUser === null ? "guest": auth.currentUser.email
   const [isActive, setIsActive] = useState(false);
-
 const isLoggedIn = auth.currentUser
+
 
 /* const handleClick = () => {
   setIsActive(!isActive)
@@ -55,6 +55,8 @@ const handleSubmit2 = async(page) => {
 
   }
 };
+
+
 const handleSubmit = async(page) => {
 
 
@@ -65,13 +67,17 @@ const handleSubmit = async(page) => {
   }
 };
 
-  console.log("app is Open");
+
+
+
+  console.log("url data");
   return (
 
-      <div className="App" key={Math.floor(1 + Math.random() * 10000)}>
-        <Clock className="ClockBanner"/>
+      <div className="App ">< img className="UserBackground" src={user2 === "guest" ? "": auth.currentUser.photoURL} alt=""/>
+        <Clock className="ClockBanner"/> 
 
      <button page="Login" className="Logging" onClick={handleSubmit2}>{isLoggedIn ? "Logout" : "Login"}</button>
+     
           <Routes >
                <Route exact path="/Home" element={ ""}  />
                  <Route exact path="/home" element={  ""}  />

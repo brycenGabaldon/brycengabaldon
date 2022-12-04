@@ -7,9 +7,11 @@ import {
 } from "firebase/auth";
 import "./login.scss"
 import { signInWithGoogle } from "../../firebase";
-import { auth } from "../../firebase";
+import { auth} from "../../firebase";
 import { useNavigate } from "react-router-dom";
 import GoogleButton from "react-google-button";
+
+
 import image from "../../images/1000_F_349497933_Ly4im8BDmHLaLzgyKg2f2yZOvJjBtlw5.jpg"
 function Login({profilePic}) {
   const [registerEmail, setRegisterEmail] = useState("");
@@ -19,6 +21,10 @@ function Login({profilePic}) {
   const navigate = useNavigate();
   const [user, setUser] = useState({});
 const [loginSignin, setLoginSignin] = useState(false)
+
+
+
+
 
 
   useEffect(() => {
@@ -45,6 +51,8 @@ const [loginSignin, setLoginSignin] = useState(false)
     try {
       auth.currentUser &&
       navigate("/home");
+
+
     } catch (err) {
 
     }
