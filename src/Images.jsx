@@ -198,6 +198,24 @@ console.log(description)
             {" "}
             {profile > 3 ? "Done, Next?" : "Set as Profile Now!"}
           </button>
+          
+        )}
+                {profile >= 3 && (
+          <button
+            style={{
+              backgroundColor: profile === 3 ? "red" : "green",
+              color: "white",
+              height: "2rem",
+              margin: ".5rem",
+              width: "100%",
+              float: "left",
+            }}
+            onClick={() => updateProfile()}
+          >
+            {" "}
+            {profile > 3 ? "Done, Next?" : "Use Default Background"}
+          </button>
+          
         )}
 
         {profile <= 2 && (
