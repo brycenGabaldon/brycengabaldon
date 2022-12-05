@@ -326,7 +326,7 @@ margin: 20px;
   }
   .ContainerFolder,
   .ContainerDock {
-
+background: rgba(0, 0, 0, 0.484);
     border: 0.01rem solid rgba(162, 162, 162, 0.414);
   }
   .buttonLabel {
@@ -345,6 +345,7 @@ margin: 20px;
   .Show21,
   .ContainerDock,
   .Hide {
+    background: rgba(255, 255, 255, 0.197);
 
     border: 0.01rem solid rgba(162, 162, 162, 0.414);
   }

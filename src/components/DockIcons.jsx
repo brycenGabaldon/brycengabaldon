@@ -2,7 +2,7 @@ import React from "react";
 import { data } from "./iconData"
 import Buttons from "./File";
 import { auth } from "../firebase";
-import { motion } from "framer-motion";
+
 export default function DockIcons() {
 
  
