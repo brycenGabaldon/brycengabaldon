@@ -265,18 +265,7 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
 
 
 
-      <div className={!overlayContact ? "Overlay22" : "Overlay2"} style={ !overlayContact ?
-{
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-
-  zIndex: 100} : {
-    display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-
-      zIndex: 100} }
+      <div className={!overlayContact ? "Overlay22" : "Overlay2"} style={ { zIndex: 100} }
       
       onClick={()=>setOverlayContact(!overlayContact)}>
           <FolderStatus
@@ -291,18 +280,7 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
 
 
     
-        <div className={!overlayProjects ? "Overlay22" : "Overlay2"} style={ !overlayProjects ?
-{
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-
-  zIndex: 100} : {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-
-    zIndex: 100} }
+        <div className={!overlayProjects ? "Overlay22" : "Overlay2"} style={{zIndex: 100} }
       
       onClick={()=>setOverlayProjects(!overlayProjects)}>
           <FolderStatus
