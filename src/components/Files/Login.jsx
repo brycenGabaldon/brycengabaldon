@@ -45,6 +45,17 @@ const [loginSignin, setLoginSignin] = useState(false)
       console.log(error.message);
     }
   };
+  const continues2 = async() => {
+
+
+    try {
+      navigate("/home");
+
+
+    } catch (err) {
+
+    }
+  };
   const continues = async() => {
 
 
@@ -116,12 +127,12 @@ const [loginSignin, setLoginSignin] = useState(false)
       </div>
 
      <h4 className="loginH3"> User Logged In: </h4> <img style={{borderRadius: "50%",position:"relative", left:"42%", height: "10vmin", width: "10vmin", zIndex: 1000}} src={auth.currentUser !== null ? auth.currentUser.photoURL : image} alt="" />
-     
+     {!user && "Not logged in"}
       {user?.email}<br/>
  {user && <button className="loginButtonOut" onClick={logout}> Sign Out </button> } 
-      <button className="loginButtonOut" onClick={continues}> continue </button>
-
-      
+     { user && <button className="loginButtonOut" onClick={continues}> Continue </button>
+    }  {!user &&<button className="loginButtonOut" onClick={continues2}> Continue as Guest</button>
+}
       
 
     </div>

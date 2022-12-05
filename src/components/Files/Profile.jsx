@@ -2,8 +2,14 @@ import React, {useState} from "react";
     import { updateProfile } from "firebase/auth";
 import { auth, db} from "../../firebase";
 import {collection, addDoc, Timestamp} from 'firebase/firestore'
+import { CenterFocusStrong} from "@mui/icons-material";
+import { FormControlLabel, Switch, SwitchProps } from "@mui/material";
+import { styled } from '@mui/material/styles';
 
-const Profile = () => {
+
+
+
+const Profile = ({setBackground, setBackground2}) => {
 
 
 
@@ -15,6 +21,57 @@ const [url, setUrl] = useState(user.photoURL)
 const [displayName, setDisplayName] = useState(user.displayName)
 const [fireToggle, setFireToggle] = useState(false)
 const [profileToggle, setProfileToggle] = useState(false)
+
+const IOSSwitch = styled((props) => (
+  <Switch focusVisibleClassName=".Mui-focusVisible" disableRipple {...props} />
+))(({ theme }) => ({
+  width: 42,
+  height: 26,
+  padding: 0,
+  '& .MuiSwitch-switchBase': {
+    padding: 0,
+    margin: 2,
+    transitionDuration: '300ms',
+    '&.Mui-checked': {
+      transform: 'translateX(16px)',
+      color: '#fff',
+      '& + .MuiSwitch-track': {
+        backgroundColor: theme.palette.mode === 'dark' ? '#2ECA45' : '#65C466',
+        opacity: 1,
+        border: 0,
+      },
+      '&.Mui-disabled + .MuiSwitch-track': {
+        opacity: 0.5,
+      },
+    },
+    '&.Mui-focusVisible .MuiSwitch-thumb': {
+      color: '#33cf4d',
+      border: '6px solid #fff',
+    },
+    '&.Mui-disabled .MuiSwitch-thumb': {
+      color:
+        theme.palette.mode === 'light'
+          ? theme.palette.grey[100]
+          : theme.palette.grey[600],
+    },
+    '&.Mui-disabled + .MuiSwitch-track': {
+      opacity: theme.palette.mode === 'light' ? 0.7 : 0.3,
+    },
+  },
+  '& .MuiSwitch-thumb': {
+    boxSizing: 'border-box',
+    width: 22,
+    height: 22,
+  },
+  '& .MuiSwitch-track': {
+    borderRadius: 26 / 2,
+    backgroundColor: theme.palette.mode === 'light' ? '#E9E9EA' : '#39393D',
+    opacity: 1,
+    transition: theme.transitions.create(['background-color'], {
+      duration: 500,
+    }),
+  },
+}));
 
     updateProfile(user, {
       displayName: displayName, 
@@ -44,9 +101,12 @@ const handleSubmit = async (e) => {
       alert(err)
     }
   }
+
+  const user2 = auth.currentUser === null ? "guest" : auth.currentUser.email;
   return (
     <div className="ProfileBackground">
-      {user !== null ? (
+
+      {user2 !== "guest" ? (
         <div>
           {" "}
 
@@ -93,6 +153,17 @@ const handleSubmit = async (e) => {
       ) : (
         <div>Not Logged in, youre on the guest profile</div>
       )}
+            <div style={{alignItems: CenterFocusStrong, display: "flex", justifyContent: "center" , background: "white", height: "80px"}}>
+            <FormControlLabel
+        control={<IOSSwitch sx={{ m: 1 }}  />}
+        label="Use Default Background"
+        onChange={setBackground2}
+        checked={!setBackground}
+      />
+              
+              </div>  
+
+
     </div>
   );
 };

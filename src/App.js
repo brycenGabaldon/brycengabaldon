@@ -22,11 +22,14 @@ import Login from "./components/Files/Login";
 import { auth } from "./firebase";
 import MainGame from "./climberGame/MainGame";
 import Profile from "./components/Files/Profile";
-import { motion } from "framer-motion";
 export default function App() {
   const user2 = auth.currentUser === null ? "guest" : auth.currentUser.email;
   const [isActive, setIsActive] = useState(false);
   const isLoggedIn = auth.currentUser;
+  const handleSetbackground =() => {
+    setSetbackground(!setBackground)
+    console.log(setBackground)
+  }
 
   /* const handleClick = () => {
   setIsActive(!isActive)
@@ -42,7 +45,7 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
   const [overlayProjects, setOverlayProjects] = useState(true);
   const [overlayContact, setOverlayContact] = useState(true);
   const [overlaySocials, setOverlaySocials] = useState(true);
-  
+  const [setBackground, setSetbackground] = useState(false)
   const handleProjects = () => {
     setOverlayProjects(!overlayProjects);
     console.log(overlayProjects);
@@ -72,11 +75,11 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
   console.log("url data");
   return (
     <div className="App">
-      <img
+      {setBackground && <img
         className={"UserBackground"}
         src={user2 === "guest" ? "" : auth.currentUser.photoURL}
         alt=""
-      />
+      />}
       <Clock className="ClockBanner" />
 
       <button page="Login" className="Logging" onClick={handleSubmit2}>
@@ -189,12 +192,16 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
           }
         />
         <Route path="/Login" element={<Login />} />
+        
+        
         <Route
           path="/profile"
           element={
+            <Protected>
             <Component backgroundColor="white">
-              <Profile />
+              <Profile setBackground2={handleSetbackground} setBackground={setBackground}/>
             </Component>
+            </Protected>
           }
         />
         <Route
@@ -243,7 +250,7 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
         />
       </Routes>
 
-      <motion.div whileTap={{scale: 0.7}} 
+      <div
         onClick={() => setOverlaySocials(true)}
         className={overlaySocials ? "Overlay21" : "Overlay2"}
       >
@@ -256,10 +263,10 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
             key={Math.floor(1 + Math.random() * 10000)}
           />
         </div>
-      </motion.div>
+      </div>
       <div className={!overlaySocials ? "Overlay3" : "Overlay31"} />
 
-      <motion.div whileTap={{scale: 0.7}} 
+      <div
         onClick={() => setOverlayContact(true)}
         className={overlayContact ? "Overlay21" : "Overlay2"}
       >
@@ -272,10 +279,10 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
             key={Math.floor(1 + Math.random() * 10000)}
           />
         </div>
-      </motion.div>
+      </div>
       <div className={!overlayContact ? "Overlay3" : "Overlay31"} />
 
-      <motion.div whileTap={{scale: 0.7}} 
+      <div
         onClick={() => setOverlayProjects(true)}
         className={overlayProjects ? "Overlay21" : "Overlay2"}
       >
@@ -288,7 +295,7 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
             key={Math.floor(1 + Math.random() * 10000)}
           />
         </div>
-      </motion.div>
+      </div>
       <div className={!overlayProjects ? "Overlay3" : "Overlay31"} />
       <DockIcons
         handleProjects={handleProjects}
@@ -296,7 +303,7 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
         handleContact={handleContact}
       />
 
-     {!isLoggedIn && <Mail />}
+     {!setBackground && <Mail />}
     </div>
   );
 }
