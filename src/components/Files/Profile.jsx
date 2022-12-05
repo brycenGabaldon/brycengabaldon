@@ -3,7 +3,7 @@ import React, {useState} from "react";
 import { auth, db} from "../../firebase";
 import {collection, addDoc, Timestamp} from 'firebase/firestore'
 import { CenterFocusStrong} from "@mui/icons-material";
-import { FormControlLabel, Switch, SwitchProps } from "@mui/material";
+import { FormControlLabel, Switch} from "@mui/material";
 import { styled } from '@mui/material/styles';
 
 

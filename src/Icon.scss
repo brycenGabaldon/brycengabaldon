@@ -310,17 +310,24 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  scale: 0.8;
+  scale: 1.2;
   height: 100%;
   background-color: rgba(255, 255, 255, 0);
   z-index: 1000;
   transition: scale .5s, opacity 1s, bottom 1s, z-index 1s;
   opacity: 1;
 }
+@media only screen and (max-width: 600px) {
+  .Overlay2 {
+scale: 0.7
+}
+
+}
+
 .Overlay21 {
   opacity: 0;
   position: fixed;
-  scale: 3;
+  scale: 2;
   top: 0;
   left: 0;
   right: 0;
