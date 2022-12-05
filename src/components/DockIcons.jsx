@@ -8,12 +8,8 @@ export default function DockIcons() {
  
 
   return (
-    <motion.div 
-    initial={{x:"-50%",y:"500px", opacity: 0, scale: 3}}
-    animate={{x:"-50%", y:0, scale: 1, opacity: 1}}
-    transition={{
-      duration: .5
-    }}
+    <div 
+
     
     className="ContainerDock" key={Math.floor(1 + Math.random() * 10000)}>
         {data.icons.slice(3, 7).map((icon, i) => {
@@ -42,7 +38,7 @@ export default function DockIcons() {
             />
           );
         })}
-      </motion.div>
+      </div>
 
   );
 }
