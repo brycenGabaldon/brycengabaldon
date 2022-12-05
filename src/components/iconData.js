@@ -55,7 +55,7 @@ export const data = {
       iconClass: "drop-shadow-lg",
       page: "/profile",
       href: "",
-      userIcon: false,
+ 
       iconPass: true
      
     },          {
