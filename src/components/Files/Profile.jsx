@@ -25,15 +25,15 @@ const [profileToggle, setProfileToggle] = useState(false)
 const IOSSwitch = styled((props) => (
   <Switch focusVisibleClassName=".Mui-focusVisible" disableRipple {...props} />
 ))(({ theme }) => ({
-  width: 42,
-  height: 26,
+  width: "8.4vmin",
+  height: "5.2vmin",
   padding: 0,
   '& .MuiSwitch-switchBase': {
     padding: 0,
     margin: 2,
     transitionDuration: '300ms',
     '&.Mui-checked': {
-      transform: 'translateX(16px)',
+      transform: 'translateX(3.2vmin)',
       color: '#fff',
       '& + .MuiSwitch-track': {
         backgroundColor: theme.palette.mode === 'dark' ? '#2ECA45' : '#65C466',
@@ -60,11 +60,11 @@ const IOSSwitch = styled((props) => (
   },
   '& .MuiSwitch-thumb': {
     boxSizing: 'border-box',
-    width: 22,
-    height: 22,
+    width: "4.8vmin",
+    height: "4.8vmin",
   },
   '& .MuiSwitch-track': {
-    borderRadius: 26 / 2,
+    borderRadius: 52 / 2,
     backgroundColor: theme.palette.mode === 'light' ? '#E9E9EA' : '#39393D',
     opacity: 1,
     transition: theme.transitions.create(['background-color'], {
