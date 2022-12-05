@@ -232,24 +232,7 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
             )
           }
         />{" "}
-        <Route
-          path="/Social"
-          element={
-            !isActive ? (
-              <div>
-                <FolderStatus
-                  sliceValue1="7"
-                  sliceValue2="12"
-                  isActive={true}
-                  key={Math.floor(1 + Math.random() * 10000)}
-                />
-                <div onClick={handleSubmit} className="Overlay2"></div>
-              </div>
-            ) : (
-              ""
-            )
-          }
-        />
+  
       </Routes>
 
       <div className={!overlaySocials ? "Overlay22" : "Overlay2"} style={{zIndex:"100"}}
@@ -257,7 +240,7 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
  onClick={()=>setOverlaySocials(!overlaySocials)}>
           <FolderStatus
             sliceValue1="7"
-            sliceValue2="12"
+            sliceValue2="10"
             isActive={!overlaySocials}
             key={Math.floor(1 + Math.random() * 10000)}
           />
@@ -284,8 +267,8 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
       
       onClick={()=>setOverlayProjects(!overlayProjects)}>
           <FolderStatus
-            sliceValue1="12"
-            sliceValue2="17"
+            sliceValue1="10"
+            sliceValue2="14"
             isActive={!overlayProjects}
             key={Math.floor(1 + Math.random() * 10000)}
           />

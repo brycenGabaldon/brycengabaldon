@@ -3,13 +3,17 @@ import { data } from "./iconData"
 import Buttons from "./File";
 import { auth } from "../firebase";
 import { motion } from "framer-motion";
-export default function DockIcons({handleProjects, handleContact, handleSocials}) {
+export default function DockIcons() {
 
  
 
   return (
     <motion.div 
-
+    initial={{x:"-50%",y:"500px", opacity: 0, scale: 3}}
+    animate={{x:"-50%", y:0, scale: 1, opacity: 1}}
+    transition={{
+      duration: .5
+    }}
     
     className="ContainerDock" key={Math.floor(1 + Math.random() * 10000)}>
         {data.icons.slice(3, 7).map((icon, i) => {
@@ -17,9 +21,7 @@ export default function DockIcons({handleProjects, handleContact, handleSocials}
             <Buttons
               key={Math.floor(1 + Math.random() * 10000)}
               iconClass={"Icons2 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50 " + icon.label + icon.iconClass}
-     handleProjects= {handleProjects}
-     handleContact= { handleContact}
-     handleSocials= {handleSocials}
+     
               labelClass="buttonLabel1"
               name={icon.name}
               buttonClass="buttons2 aspect-w-1 aspect-h-1"

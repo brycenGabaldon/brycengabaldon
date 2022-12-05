@@ -17,13 +17,10 @@ const Buttons = ({
   folder,
   iconPass,
   userIcon,
-  useIcon,
-  handleProjects,
-  handleSocials,
-  handleContact
-
+  useIcon
 }) => {
   const navigate = useNavigate();
+console.log( {iconPass})
   const handleSubmit = async () => {
     try {
       navigate(String(page));
@@ -31,13 +28,13 @@ const Buttons = ({
   };
   console.log(isActive);
   return (
-    <div className={"Spacing"} key={Math.floor(1 + Math.random() * 10000)} >
+    <div className={"Spacing"} key={Math.floor(1 + Math.random() * 10000)}>
       <motion.div
         className={buttonClass}
         key={Math.floor(1 + Math.random() * 10000)}
         whileHover={{ scale: 1.2 }}
         whileTap={{ scale: 0.9 }}
-        onClick={label === "Projects " ? handleProjects : label=== "Socials " ? handleSocials: label=== "Contact " ? handleContact : handleSubmit}
+        onClick={isActive && folder && handleSubmit}
       >
         <a
           target="_blank"
@@ -47,15 +44,14 @@ const Buttons = ({
           <button
             key={Math.floor(1 + Math.random() * 10000)}
             className={iconClass}
-            disabled={isActive}
-            onClick={label === "Projects " ? handleProjects : label=== "Socials " ? handleSocials: label=== "Contact " ? handleContact : handleSubmit}
+            disabled={!isActive}
           ><img className="drop-shadow-lg" style={{borderRadius: '1rem'}} src={userIcon ? [useIcon && auth.currentUser.photoURL]  : "" } alt=""/>
             {iconPass ? <FaHouseUser color="white" size="100%" /> : ""}
             <div
               className={labelClass}
               key={Math.floor(1 + Math.random() * 10000)}
             >
-              { !iconPass && label}
+              {label}
             </div>
           </button>
         </a>

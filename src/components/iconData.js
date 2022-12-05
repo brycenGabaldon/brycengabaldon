@@ -58,51 +58,37 @@ export const data = {
  
       iconPass: true
      
-    },          {
-      key: 4,
-      name: "Home",
-      icon: "",
-      label: "Socials ",
-      ref: "refLink",
-      onClick: "Function",
-      labelClass: "buttonLabel",
-      active: "active",
-      visible: "visible",
-      iconClass: "fa-solid fa-hashtag drop-shadow-lg",
-      page: "/Social",
-      href: "",
-    },  {
-      key: 1,
-      name: "Phone",
+    },              {
+      key: 3,
+      name: "four",
       icon: "faAngry",
-      label: "Contact ",
+      label: "Resume ",
       ref: "refLink",
       onClick: "Function",
       labelClass: "buttonLabel",
       active: "active",
       visible: "visible",
-      iconClass: "fa-solid fa-address-card drop-shadow-lg",
-      page: "/contact",
+      iconClass: "fas fa-file drop-shadow-lg",
+      page: "/Resume",
       href: "",
     },
     
+    
     {
-      key: 4,
-      name: "Home",
-      icon: "",
-      label: "Projects ",
+      key: 5,
+      name: "six",
+      icon: "faAngry",
+      label: "Discord ",
       ref: "refLink",
       onClick: "Function",
       labelClass: "buttonLabel",
       active: "active",
       visible: "visible",
-      iconClass: "fa-solid fa-hammer drop-shadow-lg",
-      page: "/Projects",
+      iconClass: "fab fa-discord drop-shadow-lg",
+      page: "/Discord",
       href: "",
     },
-
-
-
+    
     {
       key: 4,
       name: "five",
@@ -119,20 +105,7 @@ export const data = {
     },
 
 
-    {
-      key: 5,
-      name: "six",
-      icon: "faAngry",
-      label: "Discord ",
-      ref: "refLink",
-      onClick: "Function",
-      labelClass: "buttonLabel",
-      active: "active",
-      visible: "visible",
-      iconClass: "fab fa-discord drop-shadow-lg",
-      page: "/Discord",
-      href: "",
-    },
+
     {
       key: 5,
       name: "six",
@@ -189,20 +162,7 @@ export const data = {
       page: "/Planner",
       href: "",
     },
-    {
-      key: 3,
-      name: "four",
-      icon: "faAngry",
-      label: "Resume ",
-      ref: "refLink",
-      onClick: "Function",
-      labelClass: "buttonLabel",
-      active: "active",
-      visible: "visible",
-      iconClass: "fas fa-file drop-shadow-lg",
-      page: "/Resume",
-      href: "",
-    },
+
     {
       key: 9,
       name: "four",
