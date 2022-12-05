@@ -167,7 +167,7 @@ className="ClockBanner" />
                 zIndex: " 1000",
               }}
             >
-              <Resume />
+              <Component><Resume /></Component>
             </div>
           }
         />
