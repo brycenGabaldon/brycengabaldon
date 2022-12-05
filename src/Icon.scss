@@ -1,9 +1,5 @@
 .App {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-content: flex-start;
+
   height: 100%;
   width: 100%;
   position: fixed;
@@ -304,7 +300,7 @@ background: rgba(0, 0, 0, 0.443);
 .Overlay2{
 scale: .2;
 margin: -125px;
-float: right;
+float: left;
 position: relative;
 transition: all .5s;
 
