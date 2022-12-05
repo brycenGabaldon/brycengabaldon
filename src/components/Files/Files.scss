@@ -30,7 +30,7 @@
   left: 0;
   right: 0;
 opacity: 1;
-background: linear-gradient(rgba(255, 255, 255, 0.362), rgba(0, 0, 0, 0.618));
+background: linear-gradient(35deg,rgba(0, 0, 0, 0.838), rgba(255, 255, 255, 0.54), rgba(1, 1, 1, 0.881));
 
 transition: all .5s, z-index 0s;
   z-index: 200;
@@ -45,7 +45,7 @@ transition: all .5s, z-index 0s;
   opacity: 0;
 
 opacity: 0;
-background: linear-gradient(rgba(255, 255, 255, 0.362), rgba(0, 0, 0, 0.618));
+background: linear-gradient(35deg,rgb(108, 108, 108),rgba(255, 255, 255, 0.362), rgba(112, 112, 112, 0.618));
 transition: all .5s, z-index 0s;
   z-index: 100;
 }

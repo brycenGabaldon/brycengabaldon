@@ -66,9 +66,9 @@
   padding: 0.75rem;
   border-radius: 2rem;
   padding-left: 1.5rem;
-  background: rgba(43, 43, 43, 0.418);
+
   border: 0.01rem solid rgba(162, 162, 162, 0.414);
-  backdrop-filter: blur(0.5rem);
+background: rgba(0, 0, 0, 0.443);
   z-index: 1000;
   scale: 1;
 
@@ -125,7 +125,7 @@
   padding-left: 1.5rem;
   background: rgba(43, 43, 43, 0.418);
   border: 0.01rem solid rgba(162, 162, 162, 0.414);
-  backdrop-filter: blur(0.5rem);
+  background: radial-gradient(35deg, black, white, black);
   z-index: 1000;
   scale: 1;
 
@@ -228,16 +228,16 @@
   padding-top: 0.5rem;
   left: 50%;
   transform: translate(-50%, 0%);
-  backdrop-filter: blur(0.5rem);
+
   z-index: 100;
   border-radius: 1.5rem;
-  background: rgba(43, 43, 43, 0.418);
+  background: radial-gradient(35deg, black, white, black);
   border: 0.01rem solid rgba(162, 162, 162, 0.414);
   .buttons2 {
     //Dock
     height: 5rem;
     width: 4rem;
-    background: rgba(255, 255, 255, 0);
+
     align-content: center;
     align-self: center;
     display: flex;
