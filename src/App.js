@@ -252,20 +252,7 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
         />
       </Routes>
 
-      <div className={!overlaySocials ? "Overlay22" : "Overlay2"} style=
-{ !overlaySocials ?
-{
-display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-
-
-  zIndex: 100} : {
-    display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-
-      zIndex: 100} }
+      <div className={!overlaySocials ? "Overlay22" : "Overlay2"} style={{zIndex:"100"}}
  
  onClick={()=>setOverlaySocials(!overlaySocials)}>
           <FolderStatus
