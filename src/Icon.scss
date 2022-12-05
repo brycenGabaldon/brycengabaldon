@@ -326,12 +326,12 @@ justify-content: center;
 
   background-color: rgba(255, 255, 255, 0);
   z-index: 110;
-  transition: all .5s;
+  transition: all 1s;
   scale: 1;
   opacity: 1;
 }
 .Overlay21 {
-  scale: 0;
+  scale: .001;
   opacity: 0;
   position: fixed;
   top: 40%;
@@ -347,7 +347,7 @@ justify-content: center;
     background-color: rgba(255, 255, 255, 0);
     z-index: 100;
     opacity: 0;
-transition: all .5s;
+transition: all 1s;
   }
 
 

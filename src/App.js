@@ -41,7 +41,7 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
   const navigate = useNavigate();
   const [overlayProjects, setOverlayProjects] = useState(true);
   const [overlayContact, setOverlayContact] = useState(true);
-  const [overlaySocials, setOverlaySocials] = useState(false);
+  const [overlaySocials, setOverlaySocials] = useState(true);
   
   const handleProjects = () => {
     setOverlayProjects(!overlayProjects);
