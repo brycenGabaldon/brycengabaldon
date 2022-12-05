@@ -34,7 +34,7 @@ export default function Resume() {
       <h2 className="Mission">
         <div>
           <div className="Mission2">
-            <span style={{ fontSize: "5vmin" }}> My Goal: </span> <br />I strive
+            <span style={{ fontSize: "4vmin" }}> My Goal: </span> <br />I strive
             to be Innovative, Efficient, and Effective. My goal is to add
             maximum value to customers and employers. I aim to create value that
             can not be found anywhere else. I am fast-learning and hard-working.
@@ -48,24 +48,23 @@ export default function Resume() {
         <div className="floatLeft">
           <h2 className="Odd">
             <div>
-              <div className="MainText">
+              <div className="MainText" >
                 <p>
                   <span>Web Developer</span>
                   <br />
-                  Lotus Co. 6/2022- 12/-2022
+                  Lotus Co. 6/2017- 11/2022
                   <br />
                   <br />
-                  <ol className="oltags"
-
-                  >
-                    <li>implementing REST APIs</li>
-                    <li> developing single-page applications</li>
-                    <li>designing responsive UI/UX</li>
-                    <li>utilizing database storage</li>
+                  <ol className="oltags" >
+                    <li>Implementing REST APIs</li>
+                    <li>Develope Single-page applications</li>
+                    <li>Responsive UI/UX Designs</li>
+                    <li>Utilizing cloud database storage</li>
+                    <li>Integrating Authentication</li>
+                    <li>UI animations and responses </li>
+                    <li>Form design and development</li>
                   </ol>
-                  <ol className="oltags2"
-
-                  >
+                  <ol className="oltags2">
                     {" "}
                     <li>React</li>
                     <li>HTML5</li>
@@ -75,9 +74,7 @@ export default function Resume() {
                     <li>Swift</li>
                     <li>C++</li>
                   </ol>
-                  <ol className="oltags3"
-
-                  >
+                  <ol className="oltags3">
                     <li>Tailwind</li>
                     <li>Bootstrap</li>
                     <li>Node</li>
@@ -92,16 +89,15 @@ export default function Resume() {
             <div>
               <div class="" className="floatRight">
                 <p>
-                  <span>Digital Work: </span>
+                  <span>Overview: </span>
                   <br />
                   <br />
                   <ol style={{ listStyleType: "disc" }}>
-                    <li>Type speed of 40wpm Touch Type</li>
-                    <li>Proficient in Microsolf Office </li>
-                    <li>Attention to micro-details</li>
-                    <li>Data-Entry skills</li>
-                    <li>Organized and Efficient</li>
-                 
+                    <li>Quickly adapts to new technologies and languages</li>
+                    <li>Over 7 years in web / software development</li>
+                    <li>Clean design style for a beautiful UX experience</li>
+                    <li>Full Cloud Service / API Intergration</li>
+                    <li>Fully custom design and development</li>
                   </ol>
                 </p>
               </div>
@@ -112,37 +108,38 @@ export default function Resume() {
         <br />
         <div className="floatLeft">
           <h2 className="Odd">
-     
-              <div className="MainText">
-                <p>
-                  <span>Bartender / Server</span> <br />
-                  La Ristra - New Mexican Kitchen &Tequila Bar
-                  <br />
-                  WildHorse Pass Resort & Casino <br /> <br />
-                </p>
-<p>
-                <ol style={{ listStyleType: "disc" }} >
+            <div className="MainText">
+              <p>
+                <span>Bartender / Server</span> <br />
+                La Ristra - New Mexican Kitchen & Tequila Bar
+                <br />
+                WildHorse Pass Resort & Casino <br /> <br />
+              </p>
+              <p>
+                <ol style={{ listStyleType: "disc" }}>
                   <li>Responsible for opening and closing the business</li>
                   <li>Cash handling experience</li>
                   <li>Industry where great service is number one</li>
-                  <li>Worked all bar atmospheres from Nightclub to High Limit</li>
+                  <li>
+                    Worked all bar atmospheres from nightclub to fine dining
+                  </li>
                   <li>Effective time management and memory recall</li>
-                </ol></p>
-              </div>
-         
-            <div style={{ height: "fit-content", background: "blue" }}>
+                </ol>
+              </p>
+            </div>
+
+            <div style={{ height: "fit-content" }}>
               <div class="drop-shadow-xl ..." className="floatRight">
                 <p>
-                  <span> Customer Service:</span>
+                  <span> Overview: </span>
                   <br />
                   <br />
                   <ol style={{ listStyleType: "disc" }}>
+                  <li>3 years of experience as bartender / server</li>
+                  <li>Completed training at The Bartending Academy of Arizona</li>
+                  <li>Experience with fast-paced high-volume work</li>
                     <li>Great Experience with Customer Service</li>
-                    <li>
-                      Increased revenue from being knowledgable of the best
-                      service to offer
-                    </li>
-                    <li>Increase sales and customer satisfaction</li>
+                    <li>Aim to increase sales and customer satisfaction</li>
                   </ol>
                 </p>
               </div>
@@ -175,7 +172,7 @@ export default function Resume() {
             <div>
               <div class="drop-shadow-xl ..." className="floatRight">
                 <p>
-                  <span> Key Points:</span>
+                  <span> Overview:</span>
                   <br />
                   <br />
                   <ol style={{ listStyleType: "disc" }}>

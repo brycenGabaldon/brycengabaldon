@@ -167,7 +167,7 @@ className="ClockBanner" />
                 zIndex: " 1000",
               }}
             >
-              <Component><Resume /></Component>
+             <Resume />
             </div>
           }
         />
@@ -235,7 +235,7 @@ className="ClockBanner" />
   
       </Routes>
 
-      <div className={!overlaySocials ? "Overlay22" : "Overlay2"} style={{zIndex:"100"}}
+      <div className={!overlaySocials ? "Overlay22" : "Overlay2 space1"} style={{zIndex:"100"}}
  
  onClick={()=>setOverlaySocials(!overlaySocials)}>
           <FolderStatus
@@ -248,7 +248,7 @@ className="ClockBanner" />
 
 
 
-      <div className={!overlayContact ? "Overlay22" : "Overlay2"} style={ { zIndex: 100} }
+      <div className={!overlayContact ? "Overlay22" : "Overlay2 s"} style={ { zIndex: 100} }
       
       onClick={()=>setOverlayContact(!overlayContact)}>
           <FolderStatus

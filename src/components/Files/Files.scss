@@ -87,7 +87,7 @@ h1 {
 }
 
 p {
-  font-size: small;
+  font-size: 1.2vmin;
   font-weight: 600;
 }
 h2 {
@@ -182,7 +182,7 @@ h2 {
   height: 100%;
   float: left;
   font-family: "Encode Sans Expanded", sans-serif;
-  font-size: 1rem;
+  font-size: 5vmin;
 }
 
 .Odd {
@@ -202,6 +202,7 @@ h2 {
   overflow: hidden;
   overflow-wrap: break-word;
   font-weight: bold;
+  font-size: 1vmin;
 }
 .floatRight {
   width: 40%;
@@ -224,6 +225,7 @@ h2 {
   .floatRight {
     width: 100%;
     min-width: 220px;
+  
   }
   .gitList {
     width: 100%;
@@ -234,23 +236,24 @@ h2 {
     float: left;
     overflow: hidden;
     overflow-wrap: break-word;
-    font-size: 1rem;
+
     font-weight: bold;
     font-family: "Encode Sans Expanded", sans-serif;
   }
   .ContactHeading {
     width: 100%;
+  
   }
   .ResumeHeading {
     height: 100vmin;
   }
 }
 .BrycenHeading {
-  font-size: 10vmin;
+  font-size: 6vmin;
   font-family: italiana;
   width: 100%;
   text-align: center;
-  line-height: 10vmin;
+  line-height: 6vmin;
   margin-top: 1vmin;
   font-weight: bolder;
 
@@ -266,7 +269,7 @@ h2 {
   );
   color: black;
   border: 1px solid black;
-  height: 50vmin;
+  height: 35vmin;
   font-family: "Encode Sans Expanded", sans-serif;
 
   width: 80%;
@@ -288,7 +291,7 @@ h2 {
   min-width: 60%;
   height: 30%;
   line-height: 3vmin;
-  font-size: 2.5vmin;
+  font-size: 2vmin;
   font-weight: bold;
   font-family: roboto;
   text-align: center;
@@ -296,14 +299,16 @@ h2 {
   font-family: "Encode Sans Expanded", sans-serif;
 }
 .modalPadding {
-  width: 100%;
-  height: 100%;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
   border: 2px solid black;
 
   z-index: 1000;
   span {
     color: rgb(10, 25, 150);
-    font-size: 1.5rem;
+    font-size: 2.5vmin;
     font-family: italiana;
   }
 }
@@ -313,12 +318,13 @@ h2 {
   background: none;
   border-radius: 0.5rem;
   text-align: center;
+
   margin-top: -1.5rem;
   color: rgb(0, 0, 0);
 }
 .Mission2 {
   font-weight: 600;
-  font-size: 2.5vmin;
+  font-size: 2vmin;
 }
 .oltags {
   float: left;
