@@ -47,7 +47,8 @@ const Buttons = ({
           <button
             key={Math.floor(1 + Math.random() * 10000)}
             className={iconClass}
-            disabled={!isActive}
+            disabled={isActive}
+            onClick={label === "Projects " ? handleProjects : label=== "Socials " ? handleSocials: label=== "Contact " ? handleContact : handleSubmit}
           ><img className="drop-shadow-lg" style={{borderRadius: '1rem'}} src={userIcon ? [useIcon && auth.currentUser.photoURL]  : "" } alt=""/>
             {iconPass ? <FaHouseUser color="white" size="100%" /> : ""}
             <div

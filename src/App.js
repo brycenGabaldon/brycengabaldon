@@ -22,6 +22,7 @@ import Login from "./components/Files/Login";
 import { auth } from "./firebase";
 import MainGame from "./climberGame/MainGame";
 import Profile from "./components/Files/Profile";
+import zIndex from "@mui/material/styles/zIndex";
 export default function App() {
   const user2 = auth.currentUser === null ? "guest" : auth.currentUser.email;
   const [isActive, setIsActive] = useState(false);
@@ -250,9 +251,22 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
         />
       </Routes>
 
-      <div className={!overlaySocials ? "Overlay2" : "Overlay21"}
-        onClick={() => setOverlaySocials(true)} 
-        >
+      <div className={!overlaySocials ? "Overlay22" : "Overlay2"} style=
+{ !overlaySocials ?
+{
+display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+
+
+  zIndex: 100} : {
+    display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+
+      zIndex: 100} }
+ 
+ onClick={()=>setOverlaySocials(!overlaySocials)}>
           <FolderStatus
             sliceValue1="7"
             sliceValue2="12"
@@ -260,13 +274,23 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
             key={Math.floor(1 + Math.random() * 10000)}
           />
         </div>
-  
 
 
-  
-        <div className={!overlayContact ? "Overlay2" : "Overlay21"}
-        onClick={() => setOverlayContact(true)} 
-        >
+
+      <div className={!overlayContact ? "Overlay22" : "Overlay2"} style={ !overlayContact ?
+{
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+
+  zIndex: 100} : {
+    display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+
+      zIndex: 100} }
+      
+      onClick={()=>setOverlayContact(!overlayContact)}>
           <FolderStatus
             sliceValue1="0"
             sliceValue2="3"
@@ -274,10 +298,25 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
             key={Math.floor(1 + Math.random() * 10000)}
           />
         </div>
-   
-        <div className={!overlayProjects ? "Overlay2" : "Overlay21"}
-        onClick={() => setOverlayProjects(true)} 
-        >
+  
+
+
+
+    
+        <div className={!overlayProjects ? "Overlay22" : "Overlay2"} style={ !overlayProjects ?
+{
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+
+  zIndex: 100} : {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+
+    zIndex: 100} }
+      
+      onClick={()=>setOverlayProjects(!overlayProjects)}>
           <FolderStatus
             sliceValue1="12"
             sliceValue2="17"
@@ -285,8 +324,8 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
             key={Math.floor(1 + Math.random() * 10000)}
           />
         </div>
- 
   
+   
       <DockIcons
         handleProjects={handleProjects}
         handleSocials={handleSocials}
