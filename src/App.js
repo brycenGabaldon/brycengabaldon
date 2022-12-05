@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Icon.scss";
-import Clock from "./Clock";
+
 import DockIcons from "./components/DockIcons";
 import FolderStatus from "./components/FolderIcons";
 import "./components/IconStyle.scss";
