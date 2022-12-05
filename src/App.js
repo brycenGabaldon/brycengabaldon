@@ -22,7 +22,7 @@ import Login from "./components/Files/Login";
 import { auth } from "./firebase";
 import MainGame from "./climberGame/MainGame";
 import Profile from "./components/Files/Profile";
-import zIndex from "@mui/material/styles/zIndex";
+
 export default function App() {
   const user2 = auth.currentUser === null ? "guest" : auth.currentUser.email;
   const [isActive, setIsActive] = useState(false);
