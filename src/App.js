@@ -250,12 +250,9 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
         />
       </Routes>
 
-      <div
-        onClick={() => setOverlaySocials(true)}
-        className={overlaySocials ? "Overlay21" : "Overlay2"}
-      >
-        {" "}
-        <div>
+      <div className={!overlaySocials ? "Overlay2" : "Overlay21"}
+        onClick={() => setOverlaySocials(true)} 
+        >
           <FolderStatus
             sliceValue1="7"
             sliceValue2="12"
@@ -263,15 +260,13 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
             key={Math.floor(1 + Math.random() * 10000)}
           />
         </div>
-      </div>
-      <div className={!overlaySocials ? "Overlay3" : "Overlay31"} />
+  
 
-      <div
-        onClick={() => setOverlayContact(true)}
-        className={overlayContact ? "Overlay21" : "Overlay2"}
-      >
-        {" "}
-        <div>
+
+  
+        <div className={!overlayContact ? "Overlay2" : "Overlay21"}
+        onClick={() => setOverlayContact(true)} 
+        >
           <FolderStatus
             sliceValue1="0"
             sliceValue2="3"
@@ -279,15 +274,10 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
             key={Math.floor(1 + Math.random() * 10000)}
           />
         </div>
-      </div>
-      <div className={!overlayContact ? "Overlay3" : "Overlay31"} />
-
-      <div
-        onClick={() => setOverlayProjects(true)}
-        className={overlayProjects ? "Overlay21" : "Overlay2"}
-      >
-        {" "}
-        <div>
+   
+        <div className={!overlayProjects ? "Overlay2" : "Overlay21"}
+        onClick={() => setOverlayProjects(true)} 
+        >
           <FolderStatus
             sliceValue1="12"
             sliceValue2="17"
@@ -295,8 +285,8 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
             key={Math.floor(1 + Math.random() * 10000)}
           />
         </div>
-      </div>
-      <div className={!overlayProjects ? "Overlay3" : "Overlay31"} />
+ 
+  
       <DockIcons
         handleProjects={handleProjects}
         handleSocials={handleSocials}

@@ -24,7 +24,6 @@ const Buttons = ({
 
 }) => {
   const navigate = useNavigate();
-console.log( {iconPass})
   const handleSubmit = async () => {
     try {
       navigate(String(page));
@@ -32,7 +31,7 @@ console.log( {iconPass})
   };
   console.log(isActive);
   return (
-    <div className={"Spacing"} key={Math.floor(1 + Math.random() * 10000)}>
+    <div className={"Spacing"} key={Math.floor(1 + Math.random() * 10000)} >
       <motion.div
         className={buttonClass}
         key={Math.floor(1 + Math.random() * 10000)}
