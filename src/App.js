@@ -81,7 +81,8 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
         src={user2 === "guest" ? "" : auth.currentUser.photoURL}
         alt=""
       />}
-      <Clock className="ClockBanner" />
+      <div>
+      <Clock className="ClockBanner" /></div>
 
       <button page="Login" className="Logging" onClick={handleSubmit2}>
         {isLoggedIn ? "Logout" : "Login"}

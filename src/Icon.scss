@@ -303,9 +303,7 @@ background: rgba(0, 0, 0, 0.443);
 
 .Overlay2{
 scale: .3;
-margin-right: -100px;
-margin-left: -100px;
-margin-bottom: -100px;
+margin: -100px;
 float: left;
 position: relative;
 transition: all .5s;
@@ -381,12 +379,10 @@ margin: 20px;
 }
 
 .Clock {
-  position: fixed;
-  top: 0;
-  left: 50%;
+position: relative;
   height: fit-content;
   font-size: 1rem;
-  transform: translate(-50%, 0%);
+width: 100vw;
   background: rgba(255, 255, 255, 0.421);
   border-radius: 1rem;
   padding-top: 0.25rem;
@@ -397,8 +393,8 @@ margin: 20px;
 }
 
 .ClockBanner {
-  height: 3%;
-  width: 100vmax;
+  height: 100px;
+  width: 100vw;
   pointer-events: none;
 }
 .UnderBannner {
