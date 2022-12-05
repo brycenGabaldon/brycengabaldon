@@ -296,7 +296,7 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
         handleContact={handleContact}
       />
 
-      <Mail />
+     {!isLoggedIn && <Mail />}
     </div>
   );
 }
