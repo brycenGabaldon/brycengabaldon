@@ -22,7 +22,7 @@ import Login from "./components/Files/Login";
 import { auth } from "./firebase";
 import MainGame from "./climberGame/MainGame";
 import Profile from "./components/Files/Profile";
-
+import { motion } from "framer-motion";
 export default function App() {
   const user2 = auth.currentUser === null ? "guest" : auth.currentUser.email;
   const [isActive, setIsActive] = useState(false);
@@ -243,7 +243,7 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
         />
       </Routes>
 
-      <div
+      <motion.div whileTap={{scale: 0.7}} 
         onClick={() => setOverlaySocials(true)}
         className={overlaySocials ? "Overlay21" : "Overlay2"}
       >
@@ -256,10 +256,10 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
             key={Math.floor(1 + Math.random() * 10000)}
           />
         </div>
-      </div>
+      </motion.div>
       <div className={!overlaySocials ? "Overlay3" : "Overlay31"} />
 
-      <div
+      <motion.div whileTap={{scale: 0.7}} 
         onClick={() => setOverlayContact(true)}
         className={overlayContact ? "Overlay21" : "Overlay2"}
       >
@@ -272,10 +272,10 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
             key={Math.floor(1 + Math.random() * 10000)}
           />
         </div>
-      </div>
+      </motion.div>
       <div className={!overlayContact ? "Overlay3" : "Overlay31"} />
 
-      <div
+      <motion.div whileTap={{scale: 0.7}} 
         onClick={() => setOverlayProjects(true)}
         className={overlayProjects ? "Overlay21" : "Overlay2"}
       >
@@ -288,7 +288,7 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
             key={Math.floor(1 + Math.random() * 10000)}
           />
         </div>
-      </div>
+      </motion.div>
       <div className={!overlayProjects ? "Overlay3" : "Overlay31"} />
       <DockIcons
         handleProjects={handleProjects}
