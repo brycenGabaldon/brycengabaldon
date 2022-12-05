@@ -9,8 +9,6 @@ export default function DockIcons() {
 
   return (
     <div 
-
-    
     className="ContainerDock" key={Math.floor(1 + Math.random() * 10000)}>
         {data.icons.slice(3, 7).map((icon, i) => {
           return (
