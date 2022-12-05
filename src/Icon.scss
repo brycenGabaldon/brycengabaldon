@@ -59,10 +59,7 @@
   }
 }
 .Show {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -60%);
+
 
   display: flex;
   flex-direction: row;
@@ -79,8 +76,67 @@
   backdrop-filter: blur(0.5rem);
   z-index: 1000;
   scale: 1;
-  animation: fadeIn ease .5s;
-  animation-fill-mode: backwards;
+
+  .buttons1 {
+    //Open
+    height: 6.2rem;
+    width: 5.5rem;
+    background: rgba(254, 6, 6, 0);
+
+    align-self: center;
+
+    position: relative;
+    align-content: center;
+    justify-items: center;
+  }
+  .Icons1 {
+    //Open
+    border-radius: 25%;
+    min-width: 4.5rem;
+    min-height: 4.5rem;
+    align-self: center;
+    justify-self: center;
+
+    justify-items: center;
+    position: relative;
+    font-size: 3rem;
+
+    z-index: 1;
+  }
+  .buttonLabel {
+    //Open
+    height: 0.8vmin;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: -8%;
+    z-index: 1000;
+    font-family: "Roboto", sans-serif;
+  }
+}
+
+.Show21 {
+
+
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  height: 20rem;
+  width: 20rem;
+  padding: 0.75rem;
+  border-radius: 2rem;
+  padding-left: 1.5rem;
+  background: rgba(43, 43, 43, 0.418);
+  border: 0.01rem solid rgba(162, 162, 162, 0.414);
+  backdrop-filter: blur(0.5rem);
+  z-index: 1000;
+  scale: 1;
+
   .buttons1 {
     //Open
     height: 6.2rem;
@@ -123,8 +179,9 @@
 
 .Hide {
   position: fixed;
-  top: 3rem;
-  left: 2rem;
+  bottom: 3rem;
+  left: 50%;
+  transform: translate(-50%, 0);
   height: 6rem;
   width: 6rem;
   padding: 0.25rem;
@@ -136,10 +193,8 @@
   align-content: flex-start;
   background: rgba(43, 43, 43, 0.418);
   border: 0.01rem solid rgba(162, 162, 162, 0.414);
-  z-index: 10;
+  z-index: 1000;
   scale: 1;
-  animation: fadeIn1 ease 0.5s;
-  animation-fill-mode: both;
   .buttons {
     //Closed
     height: 1.75rem;
@@ -263,12 +318,38 @@ top:0;
 left:0;
 right:0;
 bottom:0;
-  backdrop-filter: blur(1rem);
+display: flex;
+align-items: center;
+justify-content: center;
+
   height: 100%;
-  transform: translate(0, -10);
-  background-color: rgba(255, 255, 255, 0.017);
+
+  background-color: rgba(255, 255, 255, 0);
   z-index: 110;
+  transition: all .5s;
+  scale: 1;
+  opacity: 1;
 }
+.Overlay21 {
+  scale: 0;
+  opacity: 0;
+  position: fixed;
+  top: 40%;
+  left:0;
+  right:0;
+  bottom:0;
+  display: flex;
+align-items: center;
+justify-content: center;
+
+    height: 100%;
+
+    background-color: rgba(255, 255, 255, 0);
+    z-index: 100;
+    opacity: 0;
+transition: all .5s;
+  }
+
 
 @media (prefers-color-scheme: dark) {
   .App {
@@ -296,7 +377,7 @@ bottom:0;
     height: 100vh;
     width: 100vw;
   }
-  .Show,
+  .Show, .Show21,
   .ContainerDock,
   .Hide {
     background: rgba(232, 232, 232, 0.378);
@@ -452,7 +533,6 @@ pointer-events: none;
   height: 100vh;
   width: 100vw;
 position: fixed;
-
 z-index: 10;
 
 }

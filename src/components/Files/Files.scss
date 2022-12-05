@@ -24,15 +24,27 @@
 }
 
 .Overlay3 {
-  position: absolute;
-  top: 0%;
+  position: fixed;
+  top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+opacity: 1;
+  backdrop-filter: blur(2rem);
+transition: all .5s, z-index 0s;
+  z-index: 101;
+}
+.Overlay31 {
 
-  backdrop-filter: blur(1rem);
-  background-color: rgba(255, 255, 255, 0.017);
-  z-index: 999;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+opacity: 0;
+  backdrop-filter: blur(2rem);
+  transition: all .5s;
+  z-index: 1;
 }
 
 .Button {
@@ -150,7 +162,6 @@ h2 {
   flex-wrap: wrap;
   padding: 3vmin;
   align-self: center;
-
 }
 .gitList {
   background: white;
@@ -159,28 +170,26 @@ h2 {
   text-align: left;
   padding: 12vmin;
 
-  min-width: 20rem; 
-   border: 2px solid black;
+  min-width: 20rem;
+  border: 2px solid black;
 }
 
 .floatLeft {
   width: 100%;
   height: 100%;
   float: left;
-  font-family: 'Encode Sans Expanded', sans-serif;
+  font-family: "Encode Sans Expanded", sans-serif;
   font-size: 1rem;
-
 }
 
 .Odd {
   width: 100%;
   float: left;
   background: white;
-  border-radius: .5rem;
-  font-family: 'Encode Sans Expanded', sans-serif;
+  border-radius: 0.5rem;
+  font-family: "Encode Sans Expanded", sans-serif;
   border: 1px solid black;
   box-shadow: 5px 5px 5px rgba(66, 66, 66, 0.668);
-  
 }
 
 .MainText {
@@ -195,22 +204,26 @@ h2 {
   width: 40%;
   min-width: 220px;
   float: right;
-  background: linear-gradient(40deg,rgb(161, 169, 174),rgb(255, 255, 249), rgb(74, 74, 74));
+  background: linear-gradient(
+    40deg,
+    rgb(161, 169, 174),
+    rgb(255, 255, 249),
+    rgb(74, 74, 74)
+  );
   padding: 1%;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   border: 1px solid black;
   height: 100%;
-  font-family: 'Encode Sans Expanded', sans-serif;
+  font-family: "Encode Sans Expanded", sans-serif;
   box-shadow: 5px 5px 5px rgba(66, 66, 66, 0.668);
 }
 @media only screen and (max-width: 1000px) {
   .floatRight {
     width: 100%;
-min-width: 220px;
+    min-width: 220px;
   }
-  .gitList{
-    width:100%
-
+  .gitList {
+    width: 100%;
   }
   .MainText {
     width: 100%;
@@ -218,62 +231,57 @@ min-width: 220px;
     float: left;
     overflow: hidden;
     overflow-wrap: break-word;
-font-size: 1rem;
-font-weight: bold;
-font-family: 'Encode Sans Expanded', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: "Encode Sans Expanded", sans-serif;
   }
-  .ContactHeading{
+  .ContactHeading {
     width: 100%;
   }
-  .ResumeHeading{
-
+  .ResumeHeading {
     height: 100vmin;
-
-  
-  
   }
-
-
 }
-  .BrycenHeading{
-    font-size: 10vmin;
-    font-family: italiana;
-    width: 100%;
-    text-align: center;
-    line-height: 10vmin;
-    margin-top: 1vmin;
-    font-weight: bolder;
+.BrycenHeading {
+  font-size: 10vmin;
+  font-family: italiana;
+  width: 100%;
+  text-align: center;
+  line-height: 10vmin;
+  margin-top: 1vmin;
+  font-weight: bolder;
 
-    float: left;
-
-  }
-.ResumeHeading{
-  border-radius: .5rem;
-  background: linear-gradient(40deg,rgb(161, 169, 174),rgb(255, 255, 249), rgb(74, 74, 74));
+  float: left;
+}
+.ResumeHeading {
+  border-radius: 0.5rem;
+  background: linear-gradient(
+    40deg,
+    rgb(161, 169, 174),
+    rgb(255, 255, 249),
+    rgb(74, 74, 74)
+  );
   color: black;
   border: 1px solid black;
   height: 50vmin;
-  font-family: 'Encode Sans Expanded', sans-serif;
+  font-family: "Encode Sans Expanded", sans-serif;
 
   width: 80%;
   z-index: 1000;
 
   margin-left: 10%;
   box-shadow: 5px 5px 5px rgba(66, 66, 66, 0.668);
-
-
 }
-.lotusTextArea{
+.lotusTextArea {
   background: rgb(206, 206, 206);
   height: 100%;
   width: 80%;
   font-size: 1rem;
   padding: 1rem;
-  font-family: 'Encode Sans Expanded', sans-serif;
+  font-family: "Encode Sans Expanded", sans-serif;
   color: rgb(25, 25, 100);
 }
-.ContactHeading{
-
+.ContactHeading {
   min-width: 60%;
   height: 30%;
   line-height: 3vmin;
@@ -282,51 +290,104 @@ font-family: 'Encode Sans Expanded', sans-serif;
   font-family: roboto;
   text-align: center;
   color: rgb(0, 0, 0);
-  font-family: 'Encode Sans Expanded', sans-serif;
-
+  font-family: "Encode Sans Expanded", sans-serif;
 }
-.modalPadding{
-width: 100%;
-height: 100%;
-border: 2px solid black;
+.modalPadding {
+  width: 100%;
+  height: 100%;
+  border: 2px solid black;
 
-z-index: 1000;
-span{
-  color: rgb(10, 25, 150);
-  font-size: 1.5rem;
-  font-family: italiana;
-}
+  z-index: 1000;
+  span {
+    color: rgb(10, 25, 150);
+    font-size: 1.5rem;
+    font-family: italiana;
+  }
 }
 
 .Mission {
-border: 0;
-background: none;
-  border-radius: .5rem;
+  border: 0;
+  background: none;
+  border-radius: 0.5rem;
   text-align: center;
   margin-top: -1.5rem;
   color: rgb(0, 0, 0);
-
-
-
 }
 .Mission2 {
-
-    font-weight: 600;
+  font-weight: 600;
   font-size: 2.5vmin;
-
 }
-.oltags{
-  float: left;
- 
-  list-style: disc;
-}
-.oltags2{
+.oltags {
   float: left;
 
   list-style: disc;
 }
-.oltags3{
+.oltags2 {
   float: left;
 
   list-style: disc;
+}
+.oltags3 {
+  float: left;
+
+  list-style: disc;
+}
+.profileFormList {
+  background: rgb(240, 240, 240);
+  position: fixed;
+  top: 0rem;
+  bottom: 0rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+}
+.profileFormItem {
+  display: flex;
+  align-self: center;
+  background: rgb(255, 255, 255);
+  width: 90%;
+  margin: 2%;
+  height: 50px;
+  padding: 5px;
+  border-radius: .5rem;
+  box-shadow: 5px 5px 10px rgba(66, 66, 66, 0.668);
+}
+.profileFormItem:focus {
+
+  box-shadow: 5px 5px 20px rgba(68, 71, 246, 0.668);
+}
+
+.profileSubmitButton{
+  background: rgb(196, 211, 255);
+  color: rgb(0, 0, 0);
+  font-weight: 900;
+  width: 90%;
+  margin: 2%;
+  height: 50px;
+  padding: 5px;
+  border-radius: .5rem;
+  box-shadow: 5px 5px 10px rgba(66, 66, 66, 0.668);
+  transition: all .6s;
+}
+.profileSubmitButton:Hover{
+transition: all .6s;
+background: rgb(0, 238, 255);
+color: rgb(0, 0, 0);
+  box-shadow: 5px 5px 20px rgb(0, 0, 0);
+}
+.profileSubmitButton2{
+  background: rgb(255, 0, 0);
+  color: rgb(0, 0, 0);
+  font-weight: 900;
+  width: 90%;
+  margin: 2%;
+  height: 50px;
+  padding: 5px;
+  border-radius: .5rem;
+  box-shadow: 5px 5px 10px rgba(66, 66, 66, 0.668);
+  transition: all .6s;
 }

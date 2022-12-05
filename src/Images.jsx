@@ -116,6 +116,8 @@ console.log(description)
 
   updateProfile(auth.currentUser, {
     photoURL: !active ? "" : String(tasks[0].data.description),
+    phoneNumber: !active ? "" : String(tasks[0].data.description),
+
   })
     .then(() => {
       // Profile updated!

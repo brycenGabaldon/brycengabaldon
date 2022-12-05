@@ -46,16 +46,18 @@ export const data = {
       key: 4,
       name: "Home",
       icon: "",
-      label: "Home",
+      label: "Profile ",
       ref: "refLink",
       onClick: "Function",
       labelClass: "buttonLabel1",
       active: "active",
       visible: "visible",
-
-      page: "/home",
+      iconClass: "drop-shadow-lg",
+      page: "/profile",
       href: "",
-      userIcon: true,
+      userIcon: false,
+      iconPass: true
+     
     },          {
       key: 4,
       name: "Home",
