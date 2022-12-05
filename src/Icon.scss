@@ -320,6 +320,10 @@
 @media only screen and (max-width: 600px) {
   .Overlay2 {
 scale: 0.7
+}}
+@media only screen and (max-height: 600px) {
+  .Overlay2 {
+scale: 0.7
 }
 
 }

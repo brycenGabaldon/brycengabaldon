@@ -60,8 +60,8 @@ const IOSSwitch = styled((props) => (
   },
   '& .MuiSwitch-thumb': {
     boxSizing: 'border-box',
-    width: "4.8vmin",
-    height: "4.8vmin",
+    width: "4.7vmin",
+    height: "4.7vmin",
   },
   '& .MuiSwitch-track': {
     borderRadius: 52 / 2,
