@@ -235,7 +235,7 @@ className="ClockBanner" />
   
       </Routes>
 
-      <div className={!overlaySocials ? "Overlay22 " : "Overlay2 space1"} style={{color: "white", fontSize:"8vmin", textAlign: "center", zIndex: 100 }}
+      <div className={!overlaySocials ? "Overlay22 " : "Overlay2 space1"} style={{color: "white", fontSize:"80px", textAlign: "center", zIndex: 100 }}
  
  onClick={()=>[handleContact(true), handleProjects(true), handleSocials(!overlaySocials)]} >
           <FolderStatus
@@ -248,7 +248,7 @@ className="ClockBanner" />
 
 
 
-        <div className={!overlayContact ? "Overlay22" : "Overlay2 space2"} style={{color: "white", fontSize:"8vmin", textAlign: "center", zIndex: 100 }}
+        <div className={!overlayContact ? "Overlay22" : "Overlay2 space2"} style={{color: "white", fontSize:"80px", textAlign: "center", zIndex: 100 }}
       
       onClick={()=>[handleContact(!overlayContact), handleProjects(true), handleSocials(true)]}>
           <FolderStatus
@@ -263,7 +263,7 @@ className="ClockBanner" />
 
 
     
-        <div className={!overlayProjects ? "Overlay22" : "Overlay2 space3"} style={{color: "white", fontSize:"8vmin", textAlign: "center", zIndex: 100 }}
+        <div className={!overlayProjects ? "Overlay22" : "Overlay2 space3"} style={{color: "white", fontSize:"80px", textAlign: "center", zIndex: 100 }}
       
       onClick={()=>[handleContact(true), handleProjects(!overlayProjects), handleSocials(true)]} >
           <FolderStatus
