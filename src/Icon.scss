@@ -297,20 +297,46 @@ background: rgba(0, 0, 0, 0.443);
   margin: 2rem;
 }
 
-.Overlay2{
-scale: .2;
-margin: -120px;
-float: left;
-position: relative;
-transition: all .5s;
+.space1{ position: absolute;
+  top: 10vmin;
+  left: 5vmin;
 
 }
+.space2{ position: absolute;
+  top: 10vmin;
+  left: 25vmin;
+
+}
+.space3{ position: absolute;
+  top: 10vmin;
+  left: 45vmin;
+
+}
+.space4{ position: absolute;
+  top: 10vmin;
+  left: 65vmin;
+
+}
+.space5{ position: absolute;
+  top: 10vmin;
+  left: 85vmin;
+
+}
+
+.Overlay2{
+scale: .25;
+margin: -120px;
+
+transition: all .5s;
+}
 .Overlay22 {
-  float: right;
-position: relative;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
 scale:1;
 transition: all .5s;
-
+z-index: 1;
 
 
 margin: 20px;
