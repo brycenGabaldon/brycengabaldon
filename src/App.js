@@ -27,10 +27,10 @@ export default function App() {
   const user2 = auth.currentUser === null ? "guest" : auth.currentUser.email;
   const [isActive, setIsActive] = useState(false);
   const isLoggedIn = auth.currentUser;
-  const handleSetbackground =() => {
-    setSetbackground(!setBackground)
-    console.log(setBackground)
-  }
+  const handleSetbackground = () => {
+    setSetbackground(!setBackground);
+    console.log(setBackground);
+  };
 
   /* const handleClick = () => {
   setIsActive(!isActive)
@@ -46,7 +46,7 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
   const [overlayProjects, setOverlayProjects] = useState(true);
   const [overlayContact, setOverlayContact] = useState(true);
   const [overlaySocials, setOverlaySocials] = useState(true);
-  const [setBackground, setSetbackground] = useState(false)
+  const [setBackground, setSetbackground] = useState(false);
   const handleProjects = (i) => {
     setOverlayProjects(i);
     console.log(overlayProjects);
@@ -76,15 +76,16 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
   console.log("url data");
   return (
     <div className="App">
-      {setBackground && <img
-        className={"UserBackground"}
-        src={user2 === "guest" ? "" : auth.currentUser.photoURL}
-        alt=""
-      />}
-      <div
-className="ClockBanner" />
+      {setBackground && (
+        <img
+          className={"UserBackground"}
+          src={user2 === "guest" ? "" : auth.currentUser.photoURL}
+          alt=""
+        />
+      )}
+      <div className="ClockBanner" />
 
-      <button page="Login" className="Logging" onClick={handleSubmit2}>
+      <button page="Login" className="Logging" onClick={()=>handleSubmit2}>
         {isLoggedIn ? "Logout" : "Login"}
       </button>
 
@@ -167,7 +168,7 @@ className="ClockBanner" />
                 zIndex: " 1000",
               }}
             >
-             <Resume />
+              <Resume />
             </div>
           }
         />
@@ -194,15 +195,16 @@ className="ClockBanner" />
           }
         />
         <Route path="/Login" element={<Login />} />
-        
-        
         <Route
           path="/profile"
           element={
             <Protected>
-            <Component backgroundColor="white">
-              <Profile setBackground2={handleSetbackground} setBackground={setBackground}/>
-            </Component>
+              <Component backgroundColor="white">
+                <Profile
+                  setBackground2={handleSetbackground}
+                  setBackground={setBackground}
+                />
+              </Component>
             </Protected>
           }
         />
@@ -214,72 +216,93 @@ className="ClockBanner" />
             </Component>
           }
         />
-        <Route
-          path="/contact"
-          element={
-            !isActive ? (
-              <div>
-                <FolderStatus
-                  sliceValue1="0"
-                  sliceValue2="3"
-                  isActive={true}
-                  key={Math.floor(1 + Math.random() * 10000)}
-                />
-                <div onClick={handleSubmit} className="Overlay2"></div>
-              </div>
-            ) : (
-              ""
-            )
-          }
-        />{" "}
-  
+
       </Routes>
 
-      <div className={!overlaySocials ? "Overlay22 " : "Overlay2 space1"} style={{color: "white", fontSize:"80px", textAlign: "center", zIndex: overlaySocials? 100: 1000}}
- 
- onClick={()=>[handleContact(true), handleProjects(true), handleSocials(false)]} >
-          <FolderStatus
-            sliceValue1="7"
-            sliceValue2="10"
-            isActive={!overlaySocials}
-            key={Math.floor(1 + Math.random() * 10000)}
-          />Socials
-        </div>
+      <div
+        className={!overlaySocials ? "Overlay22 " : "Overlay2 space1"}
+        style={{
+          color: "white",
+          fontSize: "80px",
+          textAlign: "center",
+          zIndex: overlaySocials ? 100 : 1000,
+        }}
+        onClick={() => [
+          handleContact(true),
+          handleProjects(true),
+          handleSocials(false),
+        ]}
+      >
+        <FolderStatus
+          sliceValue1="7"
+          sliceValue2="10"
+          isActive={!overlaySocials}
+          key={Math.floor(1 + Math.random() * 10000)}
+        />
+        Socials
+      </div>
 
+      <div
+        className={!overlayContact ? "Overlay22" : "Overlay2 space2"}
+        style={{
+          color: "white",
+          fontSize: "80px",
+          textAlign: "center",
+          zIndex: overlayContact ? 100 : 1000,
+        }}
+        onClick={() => [
+          handleContact(false),
+          handleProjects(true),
+          handleSocials(true),
+        ]}
+      >
+        <FolderStatus
+          sliceValue1="0"
+          sliceValue2="3"
+          isActive={!overlayContact}
+          key={Math.floor(1 + Math.random() * 10000)}
+        />
+        Contact
+      </div>
 
+      <div
+        className={!overlayProjects ? "Overlay22" : "Overlay2 space3"}
+        style={{
+          color: "white",
+          fontSize: "80px",
+          textAlign: "center",
+          zIndex: overlayProjects ? 100 : 1000,
+        }}
+        onClick={() => [
+          handleContact(true),
+          handleProjects(false),
+          handleSocials(true),
+        ]}
+      >
+        <FolderStatus
+          sliceValue1="10"
+          sliceValue2="14"
+          isActive={!overlayProjects}
+          key={Math.floor(1 + Math.random() * 10000)}
+        />
+        Projects
+      </div>
+      <div
+        className={
+          !overlayProjects || !overlayContact || !overlaySocials
+            ? "Overlay3"
+            : "Overlay31"
+        }
+        onClick={() => [
+          handleProjects(true),
+          handleContact(true),
+          handleSocials(true),
+        ]}
+      ></div>
 
-        <div className={!overlayContact ? "Overlay22" : "Overlay2 space2"} style={{color: "white", fontSize:"80px", textAlign: "center", zIndex: overlayContact? 100: 1000}}
-      
-      onClick={()=>[handleContact(false), handleProjects(true), handleSocials(true)]}>
-          <FolderStatus
-            sliceValue1="0"
-            sliceValue2="3"
-            isActive={!overlayContact}
-            key={Math.floor(1 + Math.random() * 10000)}
-          />Contact
-        </div>
-  
+      <DockIcons />
 
-
-
-    
-        <div className={!overlayProjects ? "Overlay22" : "Overlay2 space3"} style={{color: "white", fontSize:"80px", textAlign: "center", zIndex: overlayProjects? 100: 1000}}
-      
-      onClick={()=>[handleContact(true), handleProjects(false), handleSocials(true)]} >
-          <FolderStatus
-            sliceValue1="10"
-            sliceValue2="14"
-            isActive={!overlayProjects}
-            key={Math.floor(1 + Math.random() * 10000)}
-          />Projects
-        </div>
-<div className={!overlayProjects || !overlayContact || !overlaySocials ? "Overlay3" : "Overlay31"} onClick={()=>[handleProjects(true), handleContact(true), handleSocials(true)]} ></div>
-   
-      <DockIcons
-
-      />
-
-     {!setBackground && <Mail />}
+      {!setBackground && <Mail />}
     </div>
   );
 }
