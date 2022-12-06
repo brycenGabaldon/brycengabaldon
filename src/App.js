@@ -10,7 +10,7 @@ import { Route, Routes } from "react-router-dom";
 import Images from "./Images";
 import Component from "./components/Files/ocClick";
 import Resume from "./components/Files/Resume";
-import ModalPortal from "./components/ModalPortal";
+
 import Instagram from "./components/Files/Instagram";
 import Discord from "./components/Files/Discord";
 import Youtube from "./components/Files/Youtube";
@@ -20,7 +20,7 @@ import Protected from "./components/Files/Protected";
 import Lotus2 from "./Lotus2/Lotus2";
 import Login from "./components/Files/Login";
 import { auth } from "./firebase";
-import MainGame from "./climberGame/MainGame";
+
 import Profile from "./components/Files/Profile";
 
 export default function App() {
@@ -67,11 +67,7 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
     } catch (err) {}
   };
 
-  const handleSubmit = async (page) => {
-    try {
-      navigate("/Home");
-    } catch (err) {}
-  };
+
 
   console.log("url data");
   return (
@@ -185,15 +181,7 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
             </Component>
           }
         />
-        <Route
-          exact
-          path="/Climber"
-          element={
-            <ModalPortal>
-              <MainGame />
-            </ModalPortal>
-          }
-        />
+
         <Route path="/Login" element={<Login />} />
         <Route
           path="/profile"
