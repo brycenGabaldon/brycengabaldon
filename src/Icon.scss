@@ -300,17 +300,17 @@ float: left;
 
 .space1{ position: absolute;
   top: 0vmin;
-  left: 5vmin;
+  left: 10%;
 
 }
 .space2{ position: absolute;
   top: 0vmin;
-  left: 25vmin;
+  left: 35%;
 
 }
 .space3{ position: absolute;
   top: 0vmin;
-  left: 45vmin;
+  left: 60%;
 
 }
 .space4{ position: absolute;
@@ -325,7 +325,7 @@ float: left;
 }
 
 .Overlay2{
-scale: .25;
+scale: .2;
 margin: -120px;
 
 transition: all .5s;
