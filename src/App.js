@@ -46,7 +46,7 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
   const [overlayProjects, setOverlayProjects] = useState(true);
   const [overlayContact, setOverlayContact] = useState(true);
   const [overlaySocials, setOverlaySocials] = useState(true);
-  const [setBackground, setSetbackground] = useState(false);
+  const [setBackground, setSetbackground] = useState(true);
   const handleProjects = (i) => {
     setOverlayProjects(i);
     console.log(overlayProjects);
