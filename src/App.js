@@ -81,7 +81,7 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
       )}
       <div className="ClockBanner" />
 
-      <button page="Login" className="Logging" onClick={()=>handleSubmit2}>
+      <button page="Login" className="Logging" onClick={handleSubmit2}>
         {isLoggedIn ? "Logout" : "Login"}
       </button>
 
@@ -250,7 +250,7 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
           isActive={!overlayContact}
           key={Math.floor(1 + Math.random() * 10000)}
         />
-        Contact!!!
+        Contact
       </div>
 
       <div
