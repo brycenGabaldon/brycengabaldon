@@ -22,6 +22,7 @@ import Login from "./components/Files/Login";
 import { auth } from "./firebase";
 import picture from "./images/macOS-Graphic-Light.webp"
 import Profile from "./components/Files/Profile";
+import ProfileContainer from "./components/Files/ProfileContainer";
 
 export default function App() {
   const user2 = auth.currentUser === null ? "guest" : auth.currentUser.email;
@@ -188,10 +189,11 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
           element={
             <Protected>
               <Component backgroundColor="white">
+                <ProfileContainer>
                 <Profile
                   setBackground2={handleSetbackground}
                   setBackground={setBackground}
-                />
+                /></ProfileContainer>
               </Component>
             </Protected>
           }
