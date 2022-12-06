@@ -46,7 +46,7 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
   const [overlayProjects, setOverlayProjects] = useState(true);
   const [overlayContact, setOverlayContact] = useState(true);
   const [overlaySocials, setOverlaySocials] = useState(true);
-  const [setBackground, setSetbackground] = useState(true);
+  const [setBackground, setSetbackground] = useState(false);
   const handleProjects = (i) => {
     setOverlayProjects(i);
     console.log(overlayProjects);
@@ -218,7 +218,7 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
         onClick={() => [
           handleContact(true),
           handleProjects(true),
-          handleSocials(false),
+          handleSocials(!overlaySocials),
         ]}
       >
         <FolderStatus
@@ -239,7 +239,7 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
           zIndex: overlayContact ? 100 : 1000,
         }}
         onClick={() => [
-          handleContact(false),
+          handleContact(!overlayContact),
           handleProjects(true),
           handleSocials(true),
         ]}
@@ -263,7 +263,7 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
         }}
         onClick={() => [
           handleContact(true),
-          handleProjects(false),
+          handleProjects(!overlayProjects),
           handleSocials(true),
         ]}
       >
