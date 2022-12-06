@@ -211,7 +211,7 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
         className={!overlaySocials ? "Overlay22 " : "Overlay2 space1"}
         style={{
           color: "white",
-          fontSize: "80px",
+          fontSize: "60px",
           textAlign: "center",
           zIndex: overlaySocials ? 100 : 1000,
         }}
@@ -234,7 +234,7 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
         className={!overlayContact ? "Overlay22" : "Overlay2 space2"}
         style={{
           color: "white",
-          fontSize: "80px",
+          fontSize: "60px",
           textAlign: "center",
           zIndex: overlayContact ? 100 : 1000,
         }}
@@ -257,7 +257,7 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
         className={!overlayProjects ? "Overlay22" : "Overlay2 space3"}
         style={{
           color: "white",
-          fontSize: "80px",
+          fontSize: "60px",
           textAlign: "center",
           zIndex: overlayProjects ? 100 : 1000,
         }}
