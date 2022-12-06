@@ -20,7 +20,7 @@ import Protected from "./components/Files/Protected";
 import Lotus2 from "./Lotus2/Lotus2";
 import Login from "./components/Files/Login";
 import { auth } from "./firebase";
-
+import picture from "./images/macOS-Graphic-Light.webp"
 import Profile from "./components/Files/Profile";
 
 export default function App() {
@@ -76,7 +76,7 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
         <img
           className={"UserBackground"}
           src={user2 === "guest" ? "" : auth.currentUser.photoURL}
-          alt=""
+          alt={picture}
         />
       )}
       <div className="ClockBanner" />
