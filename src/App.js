@@ -235,9 +235,9 @@ className="ClockBanner" />
   
       </Routes>
 
-      <div className={!overlaySocials ? "Overlay22 " : "Overlay2 space1"} style={{color: "white", fontSize:"80px", textAlign: "center", zIndex: 100 }}
+      <div className={!overlaySocials ? "Overlay22 " : "Overlay2 space1"} style={{color: "white", fontSize:"80px", textAlign: "center", zIndex: overlaySocials? 100: 1000}}
  
- onClick={()=>[handleContact(true), handleProjects(true), handleSocials(!overlaySocials)]} >
+ onClick={()=>[handleContact(true), handleProjects(true), handleSocials(false)]} >
           <FolderStatus
             sliceValue1="7"
             sliceValue2="10"
@@ -248,9 +248,9 @@ className="ClockBanner" />
 
 
 
-        <div className={!overlayContact ? "Overlay22" : "Overlay2 space2"} style={{color: "white", fontSize:"80px", textAlign: "center", zIndex: 100 }}
+        <div className={!overlayContact ? "Overlay22" : "Overlay2 space2"} style={{color: "white", fontSize:"80px", textAlign: "center", zIndex: overlayContact? 100: 1000}}
       
-      onClick={()=>[handleContact(!overlayContact), handleProjects(true), handleSocials(true)]}>
+      onClick={()=>[handleContact(false), handleProjects(true), handleSocials(true)]}>
           <FolderStatus
             sliceValue1="0"
             sliceValue2="3"
@@ -263,9 +263,9 @@ className="ClockBanner" />
 
 
     
-        <div className={!overlayProjects ? "Overlay22" : "Overlay2 space3"} style={{color: "white", fontSize:"80px", textAlign: "center", zIndex: 100 }}
+        <div className={!overlayProjects ? "Overlay22" : "Overlay2 space3"} style={{color: "white", fontSize:"80px", textAlign: "center", zIndex: overlayProjects? 100: 1000}}
       
-      onClick={()=>[handleContact(true), handleProjects(!overlayProjects), handleSocials(true)]} >
+      onClick={()=>[handleContact(true), handleProjects(false), handleSocials(true)]} >
           <FolderStatus
             sliceValue1="10"
             sliceValue2="14"
@@ -273,7 +273,7 @@ className="ClockBanner" />
             key={Math.floor(1 + Math.random() * 10000)}
           />Projects
         </div>
-  
+<div className={!overlayProjects || !overlayContact || !overlaySocials ? "Overlay3" : "Overlay31"} onClick={()=>[handleProjects(true), handleContact(true), handleSocials(true)]} ></div>
    
       <DockIcons
 
