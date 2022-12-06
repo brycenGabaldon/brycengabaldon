@@ -298,27 +298,27 @@ background: rgba(0, 0, 0, 0.443);
 }
 
 .space1{ position: absolute;
-  top: 10vmin;
+  top: 0vmin;
   left: 5vmin;
 
 }
 .space2{ position: absolute;
-  top: 10vmin;
+  top: 0vmin;
   left: 25vmin;
 
 }
 .space3{ position: absolute;
-  top: 10vmin;
+  top: 0vmin;
   left: 45vmin;
 
 }
 .space4{ position: absolute;
-  top: 10vmin;
+  top: 0vmin;
   left: 65vmin;
 
 }
 .space5{ position: absolute;
-  top: 10vmin;
+  top: 0vmin;
   left: 85vmin;
 
 }
@@ -334,6 +334,7 @@ position: absolute;
 top: 50%;
 left: 50%;
 transform: translate(-50%,-50%);
+transform: translateZ(1px);
 scale:1;
 transition: all .5s;
 z-index: 1;

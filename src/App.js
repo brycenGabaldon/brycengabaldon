@@ -235,7 +235,7 @@ className="ClockBanner" />
   
       </Routes>
 
-      <div className={!overlaySocials ? "Overlay22 " : "Overlay2 space1"} style={{zIndex:"1000"}}
+      <div className={!overlaySocials ? "Overlay22 " : "Overlay2 space1"} style={{color: "white", fontSize:"8vmin", textAlign: "center", zIndex: 100 }}
  
  onClick={()=>setOverlaySocials(!overlaySocials)}>
           <FolderStatus
@@ -243,12 +243,12 @@ className="ClockBanner" />
             sliceValue2="10"
             isActive={!overlaySocials}
             key={Math.floor(1 + Math.random() * 10000)}
-          />
+          />Socials
         </div>
 
 
 
-      <div className={!overlayContact ? "Overlay22" : "Overlay2 space2"} style={ { zIndex: 100} }
+      <div className={!overlayContact ? "Overlay22" : "Overlay2 space2"} style={{color: "white", fontSize:"8vmin", textAlign: "center", zIndex: 100 }}
       
       onClick={()=>setOverlayContact(!overlayContact)}>
           <FolderStatus
@@ -256,22 +256,22 @@ className="ClockBanner" />
             sliceValue2="3"
             isActive={!overlayContact}
             key={Math.floor(1 + Math.random() * 10000)}
-          />
+          />Contact
         </div>
   
 
 
 
     
-        <div className={!overlayProjects ? "Overlay22" : "Overlay2 space3"} style={{zIndex: 100} }
+        <div className={!overlayProjects ? "Overlay22" : "Overlay2 space3"} style={{color: "white", fontSize:"8vmin", textAlign: "center", zIndex: 100 }}
       
-      onClick={()=>setOverlayProjects(!overlayProjects)}>
+      onClick={()=>setOverlayProjects(!overlayProjects)} >
           <FolderStatus
             sliceValue1="10"
             sliceValue2="14"
             isActive={!overlayProjects}
             key={Math.floor(1 + Math.random() * 10000)}
-          />
+          />Projects
         </div>
   
    
