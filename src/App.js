@@ -47,16 +47,16 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
   const [overlayContact, setOverlayContact] = useState(true);
   const [overlaySocials, setOverlaySocials] = useState(true);
   const [setBackground, setSetbackground] = useState(false)
-  const handleProjects = () => {
-    setOverlayProjects(!overlayProjects);
+  const handleProjects = (i) => {
+    setOverlayProjects(i);
     console.log(overlayProjects);
   };
-  const handleContact = () => {
-    setOverlayContact(!overlayContact);
+  const handleContact = (i) => {
+    setOverlayContact(i);
     console.log(overlayContact);
   };
-  const handleSocials = () => {
-    setOverlaySocials(!overlaySocials);
+  const handleSocials = (i) => {
+    setOverlaySocials(i);
     console.log(overlaySocials);
   };
 
@@ -237,7 +237,7 @@ className="ClockBanner" />
 
       <div className={!overlaySocials ? "Overlay22 " : "Overlay2 space1"} style={{color: "white", fontSize:"8vmin", textAlign: "center", zIndex: 100 }}
  
- onClick={()=>setOverlaySocials(!overlaySocials)}>
+ onClick={()=>[handleContact(true), handleProjects(true), handleSocials(!overlaySocials)]} >
           <FolderStatus
             sliceValue1="7"
             sliceValue2="10"
@@ -248,9 +248,9 @@ className="ClockBanner" />
 
 
 
-      <div className={!overlayContact ? "Overlay22" : "Overlay2 space2"} style={{color: "white", fontSize:"8vmin", textAlign: "center", zIndex: 100 }}
+        <div className={!overlayContact ? "Overlay22" : "Overlay2 space2"} style={{color: "white", fontSize:"8vmin", textAlign: "center", zIndex: 100 }}
       
-      onClick={()=>setOverlayContact(!overlayContact)}>
+      onClick={()=>[handleContact(!overlayContact), handleProjects(true), handleSocials(true)]}>
           <FolderStatus
             sliceValue1="0"
             sliceValue2="3"
@@ -265,7 +265,7 @@ className="ClockBanner" />
     
         <div className={!overlayProjects ? "Overlay22" : "Overlay2 space3"} style={{color: "white", fontSize:"8vmin", textAlign: "center", zIndex: 100 }}
       
-      onClick={()=>setOverlayProjects(!overlayProjects)} >
+      onClick={()=>[handleContact(true), handleProjects(!overlayProjects), handleSocials(true)]} >
           <FolderStatus
             sliceValue1="10"
             sliceValue2="14"
@@ -276,9 +276,7 @@ className="ClockBanner" />
   
    
       <DockIcons
-        handleProjects={handleProjects}
-        handleSocials={handleSocials}
-        handleContact={handleContact}
+
       />
 
      {!setBackground && <Mail />}

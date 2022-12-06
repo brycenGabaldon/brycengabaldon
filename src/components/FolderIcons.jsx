@@ -11,7 +11,7 @@ import { motion } from "framer-motion";
 export default function FolderStatus({isActive, setIsActive, sliceValue1 ,sliceValue2}) {
 
 
-  return (<div ><motion.div  
+  return (<div style={{zIndex:100}}><motion.div  
       
       className="folders" ><OpenFolder sliceValue1={sliceValue1} sliceValue2={sliceValue2} folderOpen={isActive ? "Show": "Show21"} disabled={isActive} id="open" key={Math.floor(1 + Math.random() * 10000)} isActive={isActive} /></motion.div> </div>)}
 
@@ -34,7 +34,7 @@ function OpenFolder({isActive, folderOpen, sliceValue1, sliceValue2}) {
               icon={icon.icon}
               iconName={icon.iconName}
               label={icon.label}
-              isActive={!isActive}
+              isActive={isActive}
               page={icon.page}
               folder={true}
 

@@ -23,6 +23,7 @@ const Buttons = ({
 console.log( {iconPass})
   const handleSubmit = async () => {
     try {
+
       navigate(String(page));
     } catch (err) {}
   };
@@ -46,7 +47,7 @@ console.log( {iconPass})
             className={iconClass}
             disabled={!isActive}
           ><img className="drop-shadow-lg" style={{borderRadius: '1rem'}} src={userIcon ? [useIcon && auth.currentUser.photoURL]  : "" } alt=""/>
-            {iconPass ? <FaHouseUser color="white" size="100%" /> : ""}
+                   {iconPass ? <FaHouseUser color="white" size="100%" /> : ""}
             <div
               className={labelClass}
               key={Math.floor(1 + Math.random() * 10000)}
