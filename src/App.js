@@ -69,7 +69,6 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
   };
 
 
-
   console.log("url data");
   return (
     <div className="App">
