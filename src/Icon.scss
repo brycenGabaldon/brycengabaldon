@@ -334,7 +334,7 @@ transform: translate(-67%,-85%) !important;
 scale: .2;
 margin: -120px;
 transform: translateZ(0);
-transition: all .5s, scale 1s;
+transition: all .5s;
 }
 .Overlay22 {
 position: relative;
@@ -345,7 +345,7 @@ transform: translate(-50%,-50%);
 height: fit-content;
 width: fit-content;
 transform-origin: center;
-transition: all .5s, scale .8s, ;
+transition: all .5s;
 z-index: 1000;
 
 
