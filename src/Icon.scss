@@ -325,10 +325,9 @@ float: left;
 }
 @media only screen and (max-width: 1000px) {
 .Overlay22{
-  scale:.7;
-  top: 40% !important;
-left: 40%  !important;
+  scale:.8;
 
+transform: translate(-70%,-70%) !important;
 }
 }
 .Overlay2{
