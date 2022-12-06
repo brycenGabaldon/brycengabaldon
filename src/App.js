@@ -75,7 +75,7 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
       {setBackground && (
         <img
           className={"UserBackground"}
-          src={user2 === "guest" ? "" : auth.currentUser.photoURL}
+          src={user2 === "guest" ? picture : auth.currentUser.photoURL}
           alt={picture}
         />
       )}
