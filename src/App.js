@@ -209,9 +209,9 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
                 <Route
           path="/laristra"
           element={
-            <Component backgroundColor="black">
+           
            <Laristra/>
-            </Component>
+          
           }
         />
 
