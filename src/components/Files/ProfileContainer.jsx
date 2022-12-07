@@ -13,7 +13,7 @@ const ProfileContainer = () => {
 <span style={{color:"white", fontSize: "40px", float: "left", wordWrap: "break-word", lineHeight: "40px", fontWeight: 300}} >{user.displayName}</span> 
          
          </div>
-            <div className="profileContainers2 ContainerDockSettings">
+            <div className="profileContainers2"><div className="IconContainer">
 {data.icons.map((icon, i) => {
     return (
         icon.label === "Instagram "&&
@@ -40,7 +40,7 @@ const ProfileContainer = () => {
         
       />
     )
-})}
+})}</div>
 </div>
 <div className="profileContainers">
 {}

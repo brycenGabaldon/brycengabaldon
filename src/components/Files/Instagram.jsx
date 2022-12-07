@@ -16,7 +16,7 @@ const Instagram = () => {
 
   const user = auth.currentUser === null ? "guest" : auth.currentUser.email;
   const [tasks, setTasks] = useState([]);
-  const [url, setUrl] = useState("");
+  const [url, setUrl] = useState("https://widget.tagembed.com/75514?view");
   const [loaded, setLoaded] = useState(false)
 
 
@@ -33,10 +33,11 @@ const Instagram = () => {
               }))
             );
             setUrl(tasks[0].data.url)
+           loaded === false && setLoaded(true)
           });
        
-          console.log(loaded)
-        }, [loaded, user, tasks]);
+    console.log(loaded)
+        }, [tasks,loaded, user]);
 
 
 
@@ -47,7 +48,7 @@ const Instagram = () => {
      
 
     
-           
+           console.log(loaded)
           }, 1000);
           return () => clearInterval(interval);
     
