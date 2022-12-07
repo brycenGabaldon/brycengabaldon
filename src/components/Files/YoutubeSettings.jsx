@@ -9,7 +9,7 @@ import {
   Timestamp
 } from "firebase/firestore";
 
-const InstagramSettings = () => {
+const YoutubeSettings = () => {
 const [url, setUrl] = useState("");
 const [ complete, setComplete] = useState(false)
 
@@ -17,11 +17,11 @@ const [ complete, setComplete] = useState(false)
     const handleSubmit = async (e) => {
         e.preventDefault()
         try {
-          await addDoc(collection(db, user+ "InstagramSettings/"), {
+          await addDoc(collection(db, user+ "YoutubeSettings/"), {
             email: user,
             url: url,
-            Setting: "Instagram",
-            id: "InstagramSetting",
+            Setting: "Youtube",
+            id: "YoutubeSetting",
             created: Timestamp.now()
           })
           setComplete(true)
@@ -37,7 +37,7 @@ const [ complete, setComplete] = useState(false)
     useEffect(() => {
 try {
     const taskColRef = query(
-        collection(db, user + "InstagramSettings/"),
+        collection(db, user + "YoutubeSetting/"),
         orderBy("created", "desc")
       );
       onSnapshot(taskColRef, (snapshot) => {
@@ -61,21 +61,21 @@ try {
             <input
               type="text"
               className="profileFormItem"
-              placeholder="https://widget.tagembed.com/75514?view"
+              placeholder="https://www.youtube.com/embed/videoseries?list=PLLY5dnxMW-q2xebdvfab4Nog-aVVrgHBM"
               value={url}
               onChange={(e) => setUrl(e.target.value)}
             ></input>
-            {!complete && <button onClick={()=>handleSubmit}> Update Instagram</button>}
+            {!complete && <button onClick={()=>handleSubmit}> Update Youtube</button>}
             </form>
             <div><br/>
-                <ol style={{listStyle: "list", marginLeft:"5%", fontSize: "4vmin", fontFamily: "roboto"}}><span style={{fontSize: "6vmin", fontWeight: "bold"}}>How to Connect your Account</span> <br/><br/>
-                    <li>Sign up for Tag embed at TagEmbed.com</li>
-                    <li>Connect Tag Embed with Instagram</li>
-                    <li>Embed Feed</li>
-                    <li>Select "other" from provider list</li>
-                    <li>Copy the "iFrame" Url</li>
-                    <li>Cut down Url to just between the quotes</li>
-                    <li>Paste url into textbox and submit</li>
+                <ol style={{listStyle: "list", marginLeft:"5%", fontSize: "4vmin", fontFamily: "roboto"}}><span style={{fontSize: "6vmin", fontWeight: "bold"}}>How to Embed Youtube</span> <br/><br/>
+                    <li>Go to youtube.com</li>
+                    <li>Find a public playlist or video to share</li>
+                    <li>Select "Share"</li>
+                    <li>Select embed</li>
+                    <li>Copy the "iFrame" URL</li>
+                    <li>Cut down URL to just between the "src" quotes</li>
+                    <li>Paste URL into textbox and submit</li>
                     <li>Youre all connected!</li>
                 </ol>
             </div>
@@ -83,4 +83,4 @@ try {
     );
 };
 
-export default InstagramSettings;
+export default YoutubeSettings;

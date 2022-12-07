@@ -25,6 +25,7 @@ import Profile from "./components/Files/Profile";
 import ProfileContainer from "./components/Files/ProfileContainer";
 import Laristra from "./components/Files/Laristra/Laristra";
 import InstagramSettings from "./components/Files/InstagramSettings";
+import YoutubeSettings from "./components/Files/YoutubeSettings";
 
 export default function App() {
   const user2 = auth.currentUser === null ? "guest" : auth.currentUser.email;
@@ -209,6 +210,14 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
           element={
             <Component backgroundColor="white">
               <InstagramSettings />
+            </Component>
+          }
+        />
+                        <Route
+          path="/profile/YoutubeSettings"
+          element={
+            <Component backgroundColor="white">
+              <YoutubeSettings />
             </Component>
           }
         />

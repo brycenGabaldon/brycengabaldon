@@ -80,7 +80,8 @@ const ProfileContainer = () => {
         <FaInstagram />
         Instagram
       </div>
-      <div className="profileContainers2">
+      <div className="profileContainers2"
+              onClick={() => handleSubmit("youtubesettings")}>
         <FaYoutube />
         Youtube
       </div>
