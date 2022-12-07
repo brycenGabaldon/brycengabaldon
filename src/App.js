@@ -208,10 +208,18 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
           }
         />
                 <Route
-          path="/InstagramSettings"
+          path="/profile/InstagramSettings"
           element={
             <Component backgroundColor="white">
               <InstagramSettings />
+            </Component>
+          }
+        />
+                        <Route
+          path="/profile/ProfileSettings"
+          element={
+            <Component backgroundColor="white">
+              <Profile setBackground={setBackground} setBackground2={handleSetbackground}/>
             </Component>
           }
         />

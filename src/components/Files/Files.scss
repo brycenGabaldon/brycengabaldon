@@ -404,38 +404,39 @@ color: rgb(0, 0, 0);
 }
 .ProContainerBack{
   background: black;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+padding: 5%;
   font-size: 50px;
   color: white;
   font-weight: 900;
+  overflow-y: scroll;
 }
 .profileContainers{
-  height: 150px;
+  height: 350px;
   width: 100%;
   border-top: 1px solid darkgray;
   border-bottom: 1px solid darkgray;
   background: rgb(25, 25, 25);
   margin-top: 2rem;
-  display: flex;
-  flex-direction: row;
+
   word-wrap: break-word;
   display: flex;
   align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 .profileContainers2{
   height: 150px;
-  width: 100%;
-display: flex;
+  width: 100vw;
+  font-size: 7vmin;
+padding-left: 5%;
 align-items: center;
-
+text-align: right;
+display: flex;
   border-bottom: 1px solid darkgray;
   background: rgb(25, 25, 25);
-
+cursor: pointer;
 }
-.IconContainer{
 
-}
 

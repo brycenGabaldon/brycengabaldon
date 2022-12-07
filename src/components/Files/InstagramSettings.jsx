@@ -10,7 +10,8 @@ import {
 } from "firebase/firestore";
 
 const InstagramSettings = () => {
-const [url, setUrl] = useState("")
+const [url, setUrl] = useState("");
+const [ complete, setComplete] = useState(false)
 
 
     const handleSubmit = async (e) => {
@@ -23,7 +24,7 @@ const [url, setUrl] = useState("")
             id: "InstagramSetting",
             created: Timestamp.now()
           })
-    
+          setComplete(true)
         } catch (err) {
           alert(err)
         }
@@ -64,8 +65,20 @@ try {
               value={url}
               onChange={(e) => setUrl(e.target.value)}
             ></input>
-            <button onClick={()=>handleSubmit}> Update</button>
+            {!complete && <button onClick={()=>handleSubmit}> Update</button>}
             </form>
+            <div><br/>
+                <ol style={{listStyle: "list", marginLeft:"5%", fontSize: "4vmin", fontFamily: "roboto"}}><span style={{fontSize: "6vmin", fontWeight: "bold"}}>How to Connect your Account</span> <br/><br/>
+                    <li>Sign up for Tag embed at TagEmbed.com</li>
+                    <li>Connect Tag Embed with Instagram</li>
+                    <li>Embed Feed</li>
+                    <li>Select "other" from provider list</li>
+                    <li>Copy the "iFrame" Url</li>
+                    <li>Cut down Url to just between the quotes</li>
+                    <li>Paste url into textbox and submit</li>
+                    <li>Youre all connected!</li>
+                </ol>
+            </div>
         </div>
     );
 };
