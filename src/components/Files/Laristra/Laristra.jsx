@@ -24,11 +24,11 @@ const ArrAbout = [
       <div className="RistraButtonContainer0">
         <div className="RistraButtonContainer2">
           <div className="RistraButton">
-            <Carousel>
-              {[1, 2, 3, 4].map((item, i) => (
+            <Carousel interval="7000">
+              {ArrAbout.map((item, i) => (
                 <img
                   draggable="false"
-                  src={`./${item}.jpg`}
+                  src={item}
                   key={i}
                   width="100%"
                   alt=""
@@ -40,11 +40,11 @@ const ArrAbout = [
 
        
           <div className="RistraButton">
-            <Carousel>
-              {[1, 2, 3, 4].map((item, i) => (
+            <Carousel interval="4000">
+              {ArrAbout.map((item, i) => (
                 <img
                   draggable="false"
-                  src={`./${item}.jpg`}
+                  src={item}
                   key={i}
                   width="100%"
                   alt=""
@@ -53,11 +53,11 @@ const ArrAbout = [
             </Carousel>
           </div>
           <div className="RistraButton">
-            <Carousel>
-              {[1, 2, 3, 4].map((item, i) => (
+            <Carousel interval="6000">
+              {ArrAbout.map((item, i) => (
                 <img
                   draggable="false"
-                  src={`./${item}.jpg`}
+                  src={item}
                   key={i}
                   width="100%"
                   alt=""
@@ -67,7 +67,7 @@ const ArrAbout = [
           </div>
 
           <div className="RistraButton">
-            <Carousel interval="3000">
+            <Carousel interval="5000">
               {ArrAbout.map((item, i) => (
                 <img
                   draggable="false"
@@ -75,6 +75,7 @@ const ArrAbout = [
                   key={i}
                   width="100%"
                   alt=""
+                 
              
                 />
               ))}
