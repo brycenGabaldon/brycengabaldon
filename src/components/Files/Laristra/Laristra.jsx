@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 import Carousel from "framer-motion-carousel";
 import "./LaRistra.scss";
 const Laristra = () => {

@@ -1,18 +1,65 @@
 
 import React from "react";
 import "./Files.scss"
-
+import { useState, useEffect } from "react";
+import { db, auth } from "../../firebase";
+import {
+  collection,
+  query,
+  orderBy,
+  onSnapshot,
+} from "firebase/firestore";
 
 
 
 const Instagram = () => {
 
+  const user = auth.currentUser === null ? "guest" : auth.currentUser.email;
+  const [tasks, setTasks] = useState([]);
+  const [url, setUrl] = useState("");
+  const [loaded, setLoaded] = useState(false)
+
+
+  useEffect(() => {
+        const taskColRef = query(
+            collection(db, user + "InstagramSettings/"),
+            orderBy("created", "desc")
+          ); 
+          onSnapshot(taskColRef, (snapshot) => {
+            setTasks(
+              snapshot.docs.map((doc) => ({
+                id: doc.id,
+                data: doc.data(),
+              }))
+            );
+            setUrl(tasks[0].data.url)
+          });
+       
+          console.log(loaded)
+        }, [loaded, user]);
+
+
+
+        useEffect(() => {
+   
+          const interval = setInterval(() => {
+            setLoaded(true)
+     
 
     
+           
+          }, 1000);
+          return () => clearInterval(interval);
+    
+        },);
+
+ 
     return (
       <div className="DiscordView">
-
-<iframe title="instagram" src="https://widget.tagembed.com/75514?view" style={{width:"100%", height:"100%", overflow: "auto"}} frameBorder="0" allowtransparency="true"></iframe>
+        <button onClick={()=>setLoaded(!loaded)} style={{width: "100%", float: "right", background: "rgb(75,75,75)", color: "white"}}>Reload</button>
+        
+{loaded && [<iframe title="instagram" src={url} style={{width:"100%", height:"100%", overflow: "auto"}} frameBorder="0" allowtransparency="true"></iframe>]}
+<div > not loaded </div>
 
         </div>
  

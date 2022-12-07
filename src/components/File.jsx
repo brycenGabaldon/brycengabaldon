@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { FaHouseUser } from "react-icons/fa";
-import { auth } from "../firebase";
+
 
 const Buttons = ({
   iconClass,
@@ -10,14 +10,13 @@ const Buttons = ({
   labelClass,
   href,
   buttonClass,
-  id,
-  iconName,
+
   page,
   isActive,
   folder,
   iconPass,
-  userIcon,
-  useIcon
+
+  style
 }) => {
   const navigate = useNavigate();
 console.log( {iconPass})
@@ -36,6 +35,7 @@ console.log( {iconPass})
         whileHover={{ scale: 1.2 }}
         whileTap={{ scale: 0.9 }}
         onClick={isActive && folder && handleSubmit}
+        style={style}
       >
         <a
           target="_blank"
@@ -46,7 +46,7 @@ console.log( {iconPass})
             key={Math.floor(1 + Math.random() * 10000)}
             className={iconClass}
             disabled={!isActive}
-          ><img className="drop-shadow-lg" style={{borderRadius: '1rem'}} src={label === "LaRistra "? "https://firebasestorage.googleapis.com/v0/b/brycengabaldon-41bc3.appspot.com/o/207432691_5746020535440191_3198068188816278373_n.png?alt=media&token=506ada26-889b-4188-9b63-9bbf3136abac"  : "" } alt=""/>
+          ><img className="drop-shadow-lg" style={{borderRadius: '1rem', backgroundSize: "contain",  scale: ".9", }} src={label === "LaRistra "? ["https://firebasestorage.googleapis.com/v0/b/brycengabaldon-41bc3.appspot.com/o/207432691_5746020535440191_3198068188816278373_n.png?alt=media&token=506ada26-889b-4188-9b63-9bbf3136abac"]  : [ label === "Lotus " ? "https://firebasestorage.googleapis.com/v0/b/brycengabaldon-41bc3.appspot.com/o/Screenshot%202022-12-07%20at%2010.04.12%20AM.png?alt=media&token=3e984a42-7150-4d3c-9425-95b937a86c34" : ""] }  alt=""/>
                    {iconPass ? <FaHouseUser color="white" size="100%" /> : ""}
             <div
               className={labelClass}

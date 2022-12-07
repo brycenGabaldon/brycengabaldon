@@ -1,7 +1,7 @@
 import React from "react";
 import { data } from "./iconData"
 import Buttons from "./File";
-import { auth } from "../firebase";
+
 
 export default function DockIcons() {
 
@@ -20,16 +20,12 @@ export default function DockIcons() {
               name={icon.name}
               buttonClass="buttons2 aspect-w-1 aspect-h-1"
               icon={icon.icon}
-              iconName={"/"+icon.iconName}
               label={icon.label}
-              id={icon.key}
               page={icon.page}
               folder={true}
               isActive="true"
               iconPass={icon.iconPass}
               href={String(icon.href)}
-              useIcon={icon.userIcon}
-              userIcon={auth.currentUser}
 
               
               

@@ -20,10 +20,11 @@ import Protected from "./components/Files/Protected";
 import Lotus2 from "./Lotus2/Lotus2";
 import Login from "./components/Files/Login";
 import { auth } from "./firebase";
-import picture from "./images/macOS-Graphic-Light.webp"
+import picture from "./images/macOS-Graphic-Light.webp";
 import Profile from "./components/Files/Profile";
 import ProfileContainer from "./components/Files/ProfileContainer";
 import Laristra from "./components/Files/Laristra/Laristra";
+import InstagramSettings from "./components/Files/InstagramSettings";
 
 export default function App() {
   const user2 = auth.currentUser === null ? "guest" : auth.currentUser.email;
@@ -68,7 +69,6 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
       setIsActive(isActive);
     } catch (err) {}
   };
-
 
   console.log("url data");
   return (
@@ -190,10 +190,11 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
             <Protected>
               <Component backgroundColor="white">
                 <ProfileContainer>
-                <Profile
-                  setBackground2={handleSetbackground}
-                  setBackground={setBackground}
-                /></ProfileContainer>
+                  <Profile
+                    setBackground2={handleSetbackground}
+                    setBackground={setBackground}
+                  />
+                </ProfileContainer>
               </Component>
             </Protected>
           }
@@ -207,14 +208,21 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
           }
         />
                 <Route
-          path="/laristra"
+          path="/InstagramSettings"
           element={
-            <Component backgroundColor="black">
-           <Laristra/>
+            <Component backgroundColor="white">
+              <InstagramSettings />
             </Component>
           }
         />
-
+        <Route
+          path="/laristra"
+          element={
+            <Component backgroundColor="black">
+              <Laristra />
+            </Component>
+          }
+        />
       </Routes>
 
       <div
