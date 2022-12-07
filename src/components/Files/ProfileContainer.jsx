@@ -35,6 +35,7 @@ const ProfileContainer = () => {
             style={{
               aspectRatio: "1/1",
               width: "25vmin",
+              minWidth: "150px",
               borderRadius: "50%",
               marginLeft: "auto",
               marginRight: "auto",
