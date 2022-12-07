@@ -188,14 +188,11 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
           path="/profile"
           element={
             <Protected>
-              <Component backgroundColor="white">
+          
                 <ProfileContainer>
-                  <Profile
-                    setBackground2={handleSetbackground}
-                    setBackground={setBackground}
-                  />
+
                 </ProfileContainer>
-              </Component>
+      
             </Protected>
           }
         />
