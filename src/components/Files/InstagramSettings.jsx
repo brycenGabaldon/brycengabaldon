@@ -49,10 +49,10 @@ try {
       });
       setLoaded(true)
 } catch(err) {
-    console.error();
+    console.log(loaded);
 }
 
-    }, [tasks, user]);
+    }, [tasks, user, loaded]);
     return (
         <div>
            

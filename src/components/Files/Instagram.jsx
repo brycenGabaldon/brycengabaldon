@@ -36,7 +36,7 @@ const Instagram = () => {
           });
        
           console.log(loaded)
-        }, [loaded, user]);
+        }, [loaded, user, tasks]);
 
 
 
