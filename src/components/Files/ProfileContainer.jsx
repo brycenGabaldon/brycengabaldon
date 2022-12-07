@@ -24,18 +24,19 @@ const ProfileContainer = () => {
     <div className="ProContainerBack">
       Settings
       <div className="profileContainers">
-        <div      
+        <div  className="ImgDivPro"    
           onClick={() => handleSubmit("profilesettings")}
         style={{
               display: "flex",
               flexDirection: "column",
+            
     
               }}>
           <img
             style={{
               aspectRatio: "1/1",
             
-              width: "150px",
+              height: "150px",
               borderRadius: "50%",
               marginLeft: "auto",
               marginRight: "auto",
@@ -61,8 +62,8 @@ const ProfileContainer = () => {
           >
             {user.displayName}
           </span>
-          <br />
-          <span style={{ fontSize: " 2vmin", fontWeight: "lighter",    textAlign: "center", color: "white", marginTop: "3%",  }}>
+
+          <span style={{ fontSize: " 2vmin",lineHeight: "2vmin", fontWeight: "lighter",    textAlign: "center", color: "white", marginTop: "3%",  }}>
             Account Settings: Email, Username, Profile Image, Name, Phone, Etc.
           </span>
         </div>
