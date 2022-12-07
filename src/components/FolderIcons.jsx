@@ -37,7 +37,8 @@ function OpenFolder({isActive, folderOpen, sliceValue1, sliceValue2}) {
               isActive={isActive}
               page={icon.page}
               folder={true}
-
+              useIcon={icon.userIcon}
+            userIcon={icon.label}
               iconPass={icon.iconPass}
               href={String(icon.href)}
             />

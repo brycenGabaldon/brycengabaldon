@@ -23,6 +23,7 @@ import { auth } from "./firebase";
 import picture from "./images/macOS-Graphic-Light.webp"
 import Profile from "./components/Files/Profile";
 import ProfileContainer from "./components/Files/ProfileContainer";
+import Laristra from "./components/Files/Laristra/Laristra";
 
 export default function App() {
   const user2 = auth.currentUser === null ? "guest" : auth.currentUser.email;
@@ -205,6 +206,14 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
             </Component>
           }
         />
+                <Route
+          path="/laristra"
+          element={
+            <Component backgroundColor="black">
+           <Laristra/>
+            </Component>
+          }
+        />
 
       </Routes>
 
@@ -270,7 +279,7 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
       >
         <FolderStatus
           sliceValue1="10"
-          sliceValue2="14"
+          sliceValue2="15"
           isActive={!overlayProjects}
           key={Math.floor(1 + Math.random() * 10000)}
         />

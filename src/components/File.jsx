@@ -46,7 +46,7 @@ console.log( {iconPass})
             key={Math.floor(1 + Math.random() * 10000)}
             className={iconClass}
             disabled={!isActive}
-          ><img className="drop-shadow-lg" style={{borderRadius: '1rem'}} src={userIcon ? [useIcon && auth.currentUser.photoURL]  : "" } alt=""/>
+          ><img className="drop-shadow-lg" style={{borderRadius: '1rem'}} src={label === "LaRistra "? "https://firebasestorage.googleapis.com/v0/b/brycengabaldon-41bc3.appspot.com/o/207432691_5746020535440191_3198068188816278373_n.png?alt=media&token=506ada26-889b-4188-9b63-9bbf3136abac"  : "" } alt=""/>
                    {iconPass ? <FaHouseUser color="white" size="100%" /> : ""}
             <div
               className={labelClass}
