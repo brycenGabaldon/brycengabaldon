@@ -1,8 +1,9 @@
 import React from 'react';
+import "./foodtruck.scss"
 
 const FoodTruck = () => {
     return (
-        <div>
+        <div className='FoodBack'>
             Food truck
         </div>
     );
