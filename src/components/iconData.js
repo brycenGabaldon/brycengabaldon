@@ -72,22 +72,7 @@ export const data = {
       page: "/Resume",
       href: "",
     },
-    
-    
-    {
-      key: 5,
-      name: "six",
-      icon: "faAngry",
-      label: "Discord ",
-      ref: "refLink",
-      onClick: "Function",
-      labelClass: " buttonLabel ",
-      active: "active",
-      visible: "visible",
-      iconClass: "fab fa-discord drop-shadow-lg",
-      page: "/Discord",
-      href: "",
-    },
+
     
     {
       key: 4,
@@ -103,8 +88,33 @@ export const data = {
       page: "/Github",
       href: "",
     },
+    {
+      key: 4,
+      name: "five",
+      icon: "faAngry",
+      label: "Overview ",
+      onClick: "Function",
+      labelClass: " buttonLabel ", 
+      active: "active",
+      visible: "visible",
+      iconClass: " fa-solid fa-exclamation drop-shadow-lg ",
+      page: "/Overview",
+      href: "",
+    },
 
-
+     { key: 5,
+      name: "six",
+      icon: "faAngry",
+      label: "Discord ",
+      ref: "refLink",
+      onClick: "Function",
+      labelClass: " buttonLabel ",
+      active: "active",
+      visible: "visible",
+      iconClass: "fab fa-discord drop-shadow-lg",
+      page: "/Discord",
+      href: "",
+    },
 
     {
       key: 5,
@@ -228,14 +238,15 @@ export const data = {
       key: 12,
       name: "twelve",
       icon: "faAngry",
-      label: "yes?!",
+      label: "FoodTruck ",
       ref: "refLink",
       onClick: "Function",
       labelClass: "buttonLabel",
       active: "active",
       visible: "visible",
+      page: "/foodtruck",
       iconClass:
-        "Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50",
+        "fa-solid fa-truck-fast ",
       click: "FB",
       href: "",
     },

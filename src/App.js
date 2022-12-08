@@ -26,6 +26,8 @@ import ProfileContainer from "./components/Files/ProfileContainer";
 import Laristra from "./components/Files/Laristra/Laristra";
 import InstagramSettings from "./components/Files/InstagramSettings";
 import YoutubeSettings from "./components/Files/YoutubeSettings";
+import Overview from "./components/Files/Overview";
+import FoodTruck from "./components/Files/FoodTruck/FoodTruck";
 
 export default function App() {
   const user2 = auth.currentUser === null ? "guest" : auth.currentUser.email;
@@ -127,6 +129,14 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
             </Component>
           }
         />
+                <Route
+          path="/foodtruck"
+          element={
+            <Component backgroundColor="lightGray">
+              <FoodTruck />
+            </Component>
+          }
+        />
         <Route
           path="/Discord"
           element={
@@ -221,6 +231,14 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
             </Component>
           }
         />
+                                <Route
+          path="/Overview"
+          element={
+            <Component backgroundColor="white">
+              <Overview/>
+            </Component>
+          }
+        />
                         <Route
           path="/profile/ProfileSettings"
           element={
@@ -255,7 +273,7 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
       >
         <FolderStatus
           sliceValue1="7"
-          sliceValue2="10"
+          sliceValue2="11"
           isActive={!overlaySocials}
           key={Math.floor(1 + Math.random() * 10000)}
         />
@@ -300,8 +318,8 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
         ]}
       >
         <FolderStatus
-          sliceValue1="10"
-          sliceValue2="15"
+          sliceValue1="11"
+          sliceValue2="17"
           isActive={!overlayProjects}
           key={Math.floor(1 + Math.random() * 10000)}
         />
