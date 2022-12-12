@@ -92,7 +92,7 @@ const handleSubmit = async (e) => {
     e.preventDefault()
     try {
       await setDoc(doc(db, "Users", auth.currentUser.displayName), {
-        email: email,
+         email: email,
         displayName: displayName,
         phoneNumber: phoneNumber,
         instagram: instagram,

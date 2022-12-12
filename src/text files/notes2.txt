@@ -1,0 +1,65 @@
+https://www.techiediaries.com/react-usestate-hook-update-array/
+
+helps with state array
+
+https://stackoverflow.com/questions/72164551/how-to-toggle-only-one-element-of-a-collection-of-elements-on-click-in-reactjs
+
+https://stackoverflow.com/questions/61826918/mapping-over-an-array-onclick-button-in-react
+mapping onclick/functions
+
+https://stackoverflow.com/questions/71985011/calling-onclick-inside-map-function
+mapping onclick
+
+https://www.kirupa.com/html5/css3_animations_vs_transitions.htm
+css animations
+=========================
+  const HandleClick = (variable, can receive as parameter) => {
+    useImages({...images,  variable : true});
+  console.log("image was clicked")
+  this.setState({ variable });
+}
+========================
+
+const HandleClick = (index) => {
+  console.log("toggled index", index);
+  console.log("selected state", this.state.images);
+  useImages(prevState => {
+    // copy state and update index
+    const images = {...prevState.images};
+    images[index] = !images[index];
+    return { images };
+  });
+  ===========================
+indiviual states!
+
+https://stackoverflow.com/questions/60750302/unable-to-toggle-individual-item-of-an-array-in-react
+
+
+renderSwitch(param) {
+  switch(param) {
+    case 'foo':
+      return 'bar';
+    default:
+      return 'foo';
+  }
+}
+==============
+
+https://codingbeautydev.com/blog/react-remove-item-from-state-array/
+
+
+================
+https://freecontent.manning.com/managing-component-state-with-the-usestate-hook/
+
+================
+
+    https://beta.reactjs.org/learn/updating-arrays-in-state
+
+
+    https://dev.to/andyrewlee/how-to-update-an-array-of-objects-in-react-state-3d
+
+    https://stackoverflow.com/questions/74492778/firebase-version-uncaught-in-promise-firebaseerror-expected-type-xc-but
+    //helped with using setdoc firebase
+
+    https://widget.tagembed.com/78521?view
+    https://widget.tagembed.com/78521?view

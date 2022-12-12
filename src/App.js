@@ -1,69 +1,80 @@
-import React, { useState } from "react";
-import "./Icon.scss";
+import React, { useState, useEffect } from "react";
+import "./Main.scss";
 
 import DockIcons from "./components/DockIcons";
 import FolderStatus from "./components/FolderIcons";
 import "./components/IconStyle.scss";
-import TaskManager from "./taskManager/TaskManager";
+import TaskManager from "./apps/taskManager/TaskManager";
 import { useNavigate } from "react-router-dom";
 import { Route, Routes } from "react-router-dom";
-import Images from "./Images";
-import Component from "./components/Files/ocClick";
-import Resume from "./components/Files/Resume";
-
-import Instagram from "./components/Files/Instagram";
-import Discord from "./components/Files/Discord";
-import Youtube from "./components/Files/Youtube";
-import Github from "./components/Files/Github";
-import Mail from "./components/Files/Mail";
-import Protected from "./components/Files/Protected";
-import Lotus2 from "./Lotus2/Lotus2";
-import Login from "./components/Files/Login";
-import { auth } from "./firebase";
+import Images from "./apps/Images";
+import Component from "./components/ocClick";
+import Resume from "./apps/Resume";
+import Instagram from "./apps/Instagram/Instagram";
+import Discord from "./apps/Discord";
+import Youtube from "./apps/Youtube/Youtube";
+import Github from "./apps/Github";
+import Mail from "./apps/Mail";
+import Protected from "./components/Protected";
+import Lotus2 from "./apps/Lotus2/Lotus2";
+import Login from "./apps/Login/Login";
+import { auth, db } from "./firebase";
 import picture from "./images/macOS-Graphic-Light.webp";
-import Profile from "./components/Files/Profile";
-import ProfileContainer from "./components/Files/ProfileContainer";
-import Laristra from "./components/Files/Laristra/Laristra";
-import InstagramSettings from "./components/Files/InstagramSettings";
-import YoutubeSettings from "./components/Files/YoutubeSettings";
-import Overview from "./components/Files/Overview";
-import FoodTruck from "./components/Files/FoodTruck/FoodTruck";
+import Profile from "./apps/Profile/Profile";
+import ProfileContainer from "./apps/Profile/ProfileContainer";
+import Laristra from "./apps/Laristra/Laristra";
+import InstagramSettings from "./apps/Instagram/InstagramSettings";
+import YoutubeSettings from "./apps/Youtube/YoutubeSettings";
+import Overview from "./apps/Overview";
+import FoodTruck from "./apps/FoodTruck/FoodTruck";
+import {
+  collection,
+  query,
+  where,
+  getDocs,
+  orderBy
+} from "firebase/firestore";
+
+
+
 
 export default function App() {
-  const user2 = auth.currentUser === null ? "guest" : auth.currentUser.email;
+ const [loaded, setLoaded] = useState(false)
+
+
+  const user2 = auth.currentUser === null ? "guest" : auth.currentUser.email ;
   const [isActive, setIsActive] = useState(false);
+
+ 
   const isLoggedIn = auth.currentUser;
   const handleSetbackground = () => {
     setSetbackground(!setBackground);
-    console.log(setBackground);
+
   };
 
-  /* const handleClick = () => {
-  setIsActive(!isActive)
-  console.log("this is handle click" + isActive)
-} */
-
-  /*   const onClick = () => {
-setIsActive({...isActive, second: true});
-    console.log("did something")
-}
-useEffect( () => { console.log(isActive); }, [isActive] ); */
+useEffect( () => { console.log(isActive); }, [isActive] ); 
   const navigate = useNavigate();
   const [overlayProjects, setOverlayProjects] = useState(true);
   const [overlayContact, setOverlayContact] = useState(true);
   const [overlaySocials, setOverlaySocials] = useState(true);
   const [setBackground, setSetbackground] = useState(false);
+  const [viewingUser, setViewingUser] = useState("BrycenG")
+  const handleViewingUser = (value) =>{
+    console.log(viewingUser)
+    setViewingUser(value);
+   
+  }
   const handleProjects = (i) => {
     setOverlayProjects(i);
-    console.log(overlayProjects);
+  
   };
   const handleContact = (i) => {
     setOverlayContact(i);
-    console.log(overlayContact);
+  
   };
   const handleSocials = (i) => {
     setOverlaySocials(i);
-    console.log(overlaySocials);
+
   };
 
   const handleSubmit2 = async (page) => {
@@ -73,7 +84,40 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
     } catch (err) {}
   };
 
-  console.log("url data");
+  const [instagram, setInstagram] = useState("")
+console.log(instagram)
+  const settingsRef = collection(db, viewingUser);
+  const q = query(
+    settingsRef,
+    where("Setting", "==", "Instagram" ),
+    orderBy("created", "asc")
+  );
+  const getPublicProfile = async () => {
+    
+    const querySnapshot = await getDocs(q);
+    querySnapshot.forEach((doc) => {
+      // doc.data() is never undefined for query doc snapshots
+
+      setInstagram(doc.data().url);
+console.log(doc.data().url)
+
+
+    });
+  };
+  
+
+  useEffect(() => {
+
+    const interval = setInterval(() => {
+ !loaded &&
+      getPublicProfile();
+      setLoaded(true)
+
+    }, 1000);
+    return () => clearInterval(interval);
+
+  },);
+
   return (
     <div className="App">
       {setBackground && (
@@ -88,7 +132,7 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
       <button page="Login" className="Logging" onClick={handleSubmit2}>
         {isLoggedIn ? "Logout" : "Login"}
       </button>
-
+<button style={{background: "white" , zIndex:1000, position :"fixed", top: 0}}></button>
       <Routes>
         <Route exact path="/Home" element={""} />
         <Route exact path="/home" element={""} />
@@ -105,7 +149,7 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
           path="/Images"
           element={
             <Component backgroundColor="black">
-              <Instagram />
+              <Instagram viewingUser={viewingUser}/>
             </Component>
           }
         />
@@ -199,19 +243,15 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
           path="/profile"
           element={
             <Protected>
-          
-                <ProfileContainer>
-
-                </ProfileContainer>
-      
+                <ProfileContainer></ProfileContainer>
             </Protected>
           }
         />
         <Route
-          path="/Instagram"
+          path="/Instagram/"
           element={
             <Component backgroundColor="black">
-              <Instagram />
+              <Instagram viewingUser={instagram}/>
             </Component>
           }
         />
@@ -243,7 +283,7 @@ useEffect( () => { console.log(isActive); }, [isActive] ); */
           path="/profile/ProfileSettings"
           element={
             <Component backgroundColor="white">
-              <Profile setBackground={setBackground} setBackground2={handleSetbackground}/>
+              <Profile setBackground={setBackground} setBackground2={handleSetbackground} viewingUser={viewingUser} handleViewingUser={handleViewingUser}/>
             </Component>
           }
         />

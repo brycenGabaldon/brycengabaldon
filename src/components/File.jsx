@@ -22,8 +22,10 @@ const Buttons = ({
 console.log( {iconPass})
   const handleSubmit = async () => {
     try {
-
+console.log(page)
+console.log("page")
       navigate(String(page));
+      
     } catch (err) {}
   };
   console.log(isActive);
