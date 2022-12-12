@@ -32,7 +32,7 @@ import {
   query,
   where,
   getDocs,
-  orderBy
+  orderBy, limit
 } from "firebase/firestore";
 
 
@@ -58,7 +58,7 @@ useEffect( () => { console.log(isActive); }, [isActive] );
   const [overlayContact, setOverlayContact] = useState(true);
   const [overlaySocials, setOverlaySocials] = useState(true);
   const [setBackground, setSetbackground] = useState(false);
-  const [viewingUser, setViewingUser] = useState("BrycenG")
+  const [viewingUser, setViewingUser] = useState(false)
   const handleViewingUser = (value) =>{
     console.log(viewingUser)
     setViewingUser(value);
@@ -83,48 +83,59 @@ useEffect( () => { console.log(isActive); }, [isActive] );
       setIsActive(isActive);
     } catch (err) {}
   };
-
-  const [instagram, setInstagram] = useState("")
-console.log(instagram)
-  const settingsRef = collection(db, viewingUser);
-  const q = query(
-    settingsRef,
-    where("Setting", "==", "Instagram" ),
-    orderBy("created", "asc")
-  );
-  const getPublicProfile = async () => {
-    
-    const querySnapshot = await getDocs(q);
-    querySnapshot.forEach((doc) => {
-      // doc.data() is never undefined for query doc snapshots
-
-      setInstagram(doc.data().url);
-console.log(doc.data().url)
-
-
-    });
-  };
+   
+    const [viewUser, setViewUser] = useState("")
+    const [url, setUrl] = useState("");
+const changeLoaded = (value) => {
+  setLoaded(value)
+}
   
-
-  useEffect(() => {
-
-    const interval = setInterval(() => {
- !loaded &&
-      getPublicProfile();
-      setLoaded(true)
-
-    }, 1000);
-    return () => clearInterval(interval);
-
-  },);
-
+  
+  
+  
+  const settingsRef = collection(db, "Users");
+  const q = query(settingsRef, where("displayName", "==", auth.currentUser.displayName), orderBy("created", "desc"), limit(1));
+  const getUser = async()=>{
+  console.log("getting data")
+    const querySnapshot = await getDocs(q);
+  querySnapshot.forEach((doc) => {
+    // doc.data() is never undefined for query doc snapshots
+   
+    setViewUser(doc.data().viewUser);
+  
+  
+  });
+  }
+  const q2 = query(settingsRef, where("displayName", "==", viewUser), orderBy("created", "desc"), limit(1));
+  const getUrl = async()=>{
+  
+    const querySnapshot = await getDocs(q2);
+  querySnapshot.forEach((doc) => {
+    // doc.data() is never undefined for query doc snapshots
+   
+    setUrl(doc.data().url);
+  return(url )
+  
+  });
+  }
+          useEffect(() => {
+  
+            const interval = setInterval(() => {
+                !viewingUser &&  
+                getUser();
+              getUrl();
+              setLoaded(true)
+            }, 1000);
+            return () => clearInterval(interval);
+      
+          },);
   return (
     <div className="App">
       {setBackground && (
         <img
           className={"UserBackground"}
-          src={user2 === "guest" ? picture : auth.currentUser.photoURL}
-          alt={picture}
+          src={url || ""}
+          alt={""}
         />
       )}
       <div className="ClockBanner" />
@@ -149,7 +160,8 @@ console.log(doc.data().url)
           path="/Images"
           element={
             <Component backgroundColor="black">
-              <Instagram viewingUser={viewingUser}/>
+              <Instagram viewingUser={viewingUser} handleViewingUser={handleViewingUser
+              }/>
             </Component>
           }
         />
@@ -251,7 +263,7 @@ console.log(doc.data().url)
           path="/Instagram/"
           element={
             <Component backgroundColor="black">
-              <Instagram viewingUser={instagram}/>
+              <Instagram />
             </Component>
           }
         />
@@ -283,7 +295,7 @@ console.log(doc.data().url)
           path="/profile/ProfileSettings"
           element={
             <Component backgroundColor="white">
-              <Profile setBackground={setBackground} setBackground2={handleSetbackground} viewingUser={viewingUser} handleViewingUser={handleViewingUser}/>
+              <Profile setBackground={setBackground} setBackground2={handleSetbackground} viewingUser={viewingUser} handleViewingUser={handleViewingUser} />
             </Component>
           }
         />

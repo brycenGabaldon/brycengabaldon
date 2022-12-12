@@ -7,8 +7,9 @@ import {
   query,
   orderBy,
   onSnapshot,
-  addDoc,
+
   Timestamp,
+  doc, setDoc
 } from "firebase/firestore";
 import { getAuth, updateProfile } from "firebase/auth";
 import Task2 from "./taskManager/Task2";
@@ -100,12 +101,12 @@ console.log(description)
   };
 
   /* function to add new task to firestore */
+  const userRef = doc(db, "Users", auth.currentUser.displayName)
   const handleSubmit = async (e) => {
-    await addDoc(collection(db, user), {
-      title: user,
-      description: imageUrls[isSelected],
+    await setDoc(userRef,{
+      backgroundUrl: imageUrls[isSelected],
       created: Timestamp.now(),
-    });
+    }, { merge: true });
     console.log("button works");
   };
 

@@ -16,7 +16,7 @@ import {
 const Instagram = () => {
 
 
-const [viewUser, setViewUser] = useState("BrycenG")
+const [viewUser, setViewUser] = useState("")
   const [url, setUrl] = useState("");
   const [loaded, setLoaded] = useState(false)
 
@@ -38,12 +38,14 @@ querySnapshot.forEach((doc) => {
 }
 const q2 = query(settingsRef, where("displayName", "==", viewUser), orderBy("created", "desc"), limit(1));
 const getUrl = async()=>{
-
+getUser();
   const querySnapshot = await getDocs(q2);
 querySnapshot.forEach((doc) => {
   // doc.data() is never undefined for query doc snapshots
  
   setUrl(doc.data().instagram);
+  console.log("got instagram")
+  console.log(url)
 
 
 });

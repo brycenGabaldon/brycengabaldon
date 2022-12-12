@@ -9,7 +9,7 @@ import { styled } from '@mui/material/styles';
 
 
 
-const Profile = ({setBackground, setBackground2}) => {
+const Profile = ({setBackground, setBackground2, handleViewingUser}) => {
 
 
 
@@ -88,10 +88,11 @@ const IOSSwitch = styled((props) => (
       // An error occurred
       // ...
     });
+    const userRef = doc(db, "Users", auth.currentUser.displayName)
 const handleSubmit = async (e) => {
     e.preventDefault()
     try {
-      await setDoc(doc(db, "Users", auth.currentUser.displayName), {
+      await setDoc(userRef, {
          email: email,
         displayName: displayName,
         phoneNumber: phoneNumber,
@@ -101,8 +102,8 @@ const handleSubmit = async (e) => {
         url: url,
         completed: false,
         created: Timestamp.now()
-      })
-
+      }, {merge:true})
+handleViewingUser(false);
     } catch (err) {
       alert(err)
     }
@@ -146,8 +147,8 @@ const handleSubmit = async (e) => {
             <input
               type="text"
               className="profileFormItem"
-              placeholder="url"
-              value={url}
+              placeholder={user.photoURL}
+              value={user.photoURL}
               onChange={(e) => setUrl(e.target.value)}
             ></input>
                         <input
