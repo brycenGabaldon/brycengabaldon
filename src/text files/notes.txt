@@ -1,198 +1,134 @@
-import React, {useState} from "react";
-    import { updateProfile } from "firebase/auth";
-import { auth, db} from "../../firebase";
-import {setDoc, doc, Timestamp} from 'firebase/firestore'
-import { CenterFocusStrong} from "@mui/icons-material";
-import { FormControlLabel, Switch} from "@mui/material";
-import { styled } from '@mui/material/styles';
+import { motion } from "framer-motion";
+import React, {useState, useEffect} from "react";
+import { useNavigate } from "react-router-dom";
+import { FaHouseUser } from "react-icons/fa";
+import { auth, db} from "../firebase";
+import {where, query, orderBy, limit, getDocs, collection} from 'firebase/firestore'
 
+const Buttons = ({
+  iconClass,
+  label,
+  labelClass,
+  href1,
+  buttonClass,
+  page,
+  isActive,
+  folder,
+  iconPass,
 
-
-
-const Profile = ({setBackground, setBackground2}) => {
-
-
-
-
-const user = auth.currentUser
-const [email, setEmail] = useState(user.email)
-const [instagram, setInstagram] = useState("")
-const [viewUser, setViewUser] = useState("")
-const [youtube, setYoutube] = useState("")
-const [phoneNumber, setPhoneNumber] = useState(user.phoneNumber)
-const [url, setUrl] = useState(user.photoURL)
-const [displayName, setDisplayName] = useState(user.displayName)
-const [fireToggle, setFireToggle] = useState(false)
-const [profileToggle, setProfileToggle] = useState(false)
-
-const IOSSwitch = styled((props) => (
-  <Switch focusVisibleClassName=".Mui-focusVisible" disableRipple {...props} />
-))(({ theme }) => ({
-  width: "8.4vmin",
-  height: "5.2vmin",
-  padding: 0,
-  '& .MuiSwitch-switchBase': {
-    padding: 0,
-    margin: 2,
-    transitionDuration: '300ms',
-    '&.Mui-checked': {
-      transform: 'translateX(3.2vmin)',
-      color: '#fff',
-      '& + .MuiSwitch-track': {
-        backgroundColor: theme.palette.mode === 'dark' ? '#2ECA45' : '#65C466',
-        opacity: 1,
-        border: 0,
-      },
-      '&.Mui-disabled + .MuiSwitch-track': {
-        opacity: 0.5,
-      },
-    },
-    '&.Mui-focusVisible .MuiSwitch-thumb': {
-      color: '#33cf4d',
-      border: '6px solid #fff',
-    },
-    '&.Mui-disabled .MuiSwitch-thumb': {
-      color:
-        theme.palette.mode === 'light'
-          ? theme.palette.grey[100]
-          : theme.palette.grey[600],
-    },
-    '&.Mui-disabled + .MuiSwitch-track': {
-      opacity: theme.palette.mode === 'light' ? 0.7 : 0.3,
-    },
-  },
-  '& .MuiSwitch-thumb': {
-    boxSizing: 'border-box',
-    width: "4.7vmin",
-    height: "4.7vmin",
-  },
-  '& .MuiSwitch-track': {
-    borderRadius: 52 / 2,
-    backgroundColor: theme.palette.mode === 'light' ? '#E9E9EA' : '#39393D',
-    opacity: 1,
-    transition: theme.transitions.create(['background-color'], {
-      duration: 500,
-    }),
-  },
-}));
-
-    updateProfile(user, {
-      displayName: displayName, 
-      photoURL: url,
-      phoneNumber: phoneNumber,
-      email: email,
-    }).then(() => {
-    
-      // ...
-    }).catch((error) => {
-      // An error occurred
-      // ...
-    });
-const handleSubmit = async (e) => {
-    e.preventDefault()
+  style
+}) => {
+  const navigate = useNavigate();
+console.log( {iconPass})
+  const handleSubmit = async () => {
     try {
-      await setDoc(doc(db, "Users", auth.currentUser.displayName), {
-        email: email,
-        displayName: displayName,
-        phoneNumber: phoneNumber,
-        instagram: instagram,
-        viewUser: viewUser,
-        youtube: youtube,
-        url: url,
-        completed: false,
-        created: Timestamp.now()
-      })
+console.log(page)
+console.log("page")
+      navigate(String(page));
+      
+    } catch (err) {}
+  };
+  console.log(isActive);
 
-    } catch (err) {
-      alert(err)
-    }
-  }
+const hrefPhone = href1 === "PHONE" && "href=tel:"+phoneNumber
+const hrefSMS = href1 === "SMS" && "href=sms:"+phoneNumber
+const hrefEmail = href1 === "EMAIL" && "href=mailto:"+email
+  const [viewUser, setViewUser] = useState("")
+  const [url, setUrl] = useState("");
+  const [loaded, setLoaded] = useState(false)
+  const [phoneNumber, setPhoneNumber] = useState("")
+  const [email, setEmail] = useState("")
 
-  const user2 = auth.currentUser === null ? "guest" : auth.currentUser.email;
+
+
+const settingsRef = collection(db, "Users");
+const q = query(settingsRef, where("displayName", "==", auth.currentUser.displayName), orderBy("created", "desc"), limit(1));
+const getUser = async()=>{
+
+  const querySnapshot = await getDocs(q);
+querySnapshot.forEach((doc) => {
+  // doc.data() is never undefined for query doc snapshots
+ 
+  setViewUser(doc.data().viewUser);
+
+
+});
+}
+const q2 = query(settingsRef, where("displayName", "==", viewUser), orderBy("created", "desc"), limit(1));
+const getUrl = async()=>{
+getUser();
+  const querySnapshot = await getDocs(q2);
+querySnapshot.forEach((doc) => {
+  // doc.data() is never undefined for query doc snapshots
+ 
+  setPhoneNumber(doc.data().phoneNumber);
+  setEmail(doc.data().email);
+  console.log("got Data")
+
+
+
+
+});
+}
+
+
+        useEffect(() => {
+
+          const interval = setInterval(() => {
+              !loaded &&  
+            getUrl();
+            setLoaded(true) 
+     
+
+    
+           
+          }, 1000);
+          return () => clearInterval(interval);
+    
+        },);
+ 
   return (
-    <div className="ProfileBackground">
-
-      {user2 !== "guest" ? (
-        <div>
-          {" "}
-
-          <form className="profileFormList" onSubmit={handleSubmit}>
-            <span>Display name: {user.displayName}</span>
-            <input
-              type="text"
-              className="profileFormItem"
-              placeholder="display"
-              value={displayName}
-              onChange={(e) => setDisplayName(e.target.value)}
-            ></input>
-   <span>E-Mail: {user.email}</span>
-            <input
-              type="text"
-              className="profileFormItem"
-              placeholder="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            ></input>
-               <span>Phone: {user.phoneNumber} </span>
-            <input
-              type="text"
-              className="profileFormItem"
-              placeholder= "phone not verified"
-              value={phoneNumber}
-              onChange={(e) => setPhoneNumber(e.target.value)}
-              
-            ></input>
-               <span>Profile Image:</span>
-            <input
-              type="text"
-              className="profileFormItem"
-              placeholder="url"
-              value={url}
-              onChange={(e) => setUrl(e.target.value)}
-            ></input>
-                        <input
-              type="text"
-              className="profileFormItem"
-              placeholder="instagram"
-              value={instagram}
-              onChange={(e) => setInstagram(e.target.value)}
-            ></input>
-                        <input
-              type="text"
-              className="profileFormItem"
-              placeholder="youtube"
-              value={youtube}
-              onChange={(e) => setYoutube(e.target.value)}
-            ></input>
-                                    <input
-              type="text"
-              className="profileFormItem"
-              placeholder="viewUser"
-              value={viewUser}
-              onChange={(e) => setViewUser(e.target.value)}
-            ></input>
-
-
-<button className={!fireToggle? "profileSubmitButton": "profileSubmitButton2"} onClick={()=>[handleSubmit(),setFireToggle(true)]}>{!fireToggle? "Submit to Firebase": "Saved in Firebase!"}</button>
-<button className={!profileToggle? "profileSubmitButton": "profileSubmitButton2"} onClick={()=>[updateProfile(),setProfileToggle(true)]}>{!profileToggle? "Update Profile": "Profile Updated!"}</button>
-          </form>
-        </div>
-      ) : (
-        <div>Not Logged in, youre on the guest profile</div>
-      )}
-            <div style={{alignItems: CenterFocusStrong, display: "flex", justifyContent: "center" , background: "white", height: "80px"}}>
-            <FormControlLabel
-        control={<IOSSwitch sx={{ m: 1 }}  />}
-        label="Use Default Background"
-        onChange={setBackground2}
-        checked={!setBackground}
-      />
-              
-              </div>  
-
-
+    <div className={"Spacing"} key={Math.floor(1 + Math.random() * 10000)}>
+      <motion.div
+        className={buttonClass}
+        key={Math.floor(1 + Math.random() * 10000)}
+        whileHover={{ scale: 1.2 }}
+        whileTap={{ scale: 0.9 }}
+        onClick={isActive && folder && handleSubmit}
+        style={style}
+      >
+   <a
+          target="_blank"
+          {...(label === "LinkedIn" ? ' rel="noopener noreferrer" ' : "")}
+ 
+        >
+        
+          <button
+            key={Math.floor(1 + Math.random() * 10000)}
+            className={iconClass}
+            disabled={!isActive}
+          ><img className="drop-shadow-lg" style={{borderRadius: '1rem', backgroundSize: "contain",  scale: ".9", }} src={label === "LaRistra "? ["https://firebasestorage.googleapis.com/v0/b/brycengabaldon-41bc3.appspot.com/o/207432691_5746020535440191_3198068188816278373_n.png?alt=media&token=506ada26-889b-4188-9b63-9bbf3136abac"]  : [ label === "Lotus " ? "https://firebasestorage.googleapis.com/v0/b/brycengabaldon-41bc3.appspot.com/o/Screenshot%202022-12-07%20at%2010.04.12%20AM.png?alt=media&token=3e984a42-7150-4d3c-9425-95b937a86c34" : ""] }  alt=""/>
+                   {iconPass ? <FaHouseUser color="white" size="100%" /> : ""}
+            <div
+              className={labelClass}
+              key={Math.floor(1 + Math.random() * 10000)}
+            >
+              {label}
+            </div>
+          </button>
+        </a>
+      </motion.div>
     </div>
   );
 };
 
-export default Profile;
+export default Buttons;
+
+/* {
+  [
+    "section_btn",
+    tab === id ? "active" : null // <-- conditionally apply active class
+  ]
+    .filter(Boolean)
+    .join(" ")
+} */

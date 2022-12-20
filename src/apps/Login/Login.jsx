@@ -7,13 +7,14 @@ import {
 } from "firebase/auth";
 import "./login.scss"
 import { signInWithGoogle } from "../../firebase";
-import { auth} from "../../firebase";
+import { auth, db} from "../../firebase";
 import { useNavigate } from "react-router-dom";
 import GoogleButton from "react-google-button";
+import {setDoc, doc, Timestamp} from 'firebase/firestore'
 
 
 import image from "../../images/1000_F_349497933_Ly4im8BDmHLaLzgyKg2f2yZOvJjBtlw5.jpg"
-function Login({profilePic}) {
+function Login({profilePic, toggleLoaded}) {
   const [registerEmail, setRegisterEmail] = useState("");
   const [registerPassword, setRegisterPassword] = useState("");
   const [loginEmail, setLoginEmail] = useState("");
@@ -21,8 +22,20 @@ function Login({profilePic}) {
   const navigate = useNavigate();
   const [user, setUser] = useState({});
 const [loginSignin, setLoginSignin] = useState(false)
-
-
+const [viewUser2, setViewUser2] =useState("")
+const userRef = doc(db, "Users", auth.currentUser.displayName)
+const handleChangeViewUser = async () => {
+  
+    try {
+      await setDoc(userRef, {
+        viewUser: viewUser2,
+        created: Timestamp.now()
+      }, {merge:true})
+toggleLoaded(false)
+    } catch (err) {
+      alert(err)
+    }
+  }
 
 
 
@@ -133,7 +146,15 @@ const [loginSignin, setLoginSignin] = useState(false)
      { user && <button className="loginButtonOut" onClick={continues}> Continue </button>
     }  {!user &&<button className="loginButtonOut" onClick={continues2}> Continue as Guest</button>
 }
-      
+<button onClick={()=> handleChangeViewUser()}>View Other Profile:</button>
+                                    <input
+              type="text"
+              className="profileFormItem"
+              placeholder="view user"
+          
+              value={viewUser2}
+             onChange={(e) => setViewUser2(e.target.value)}
+            ></input>
 
     </div>
   );

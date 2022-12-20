@@ -9,20 +9,28 @@ import {
 } from "react-icons/fa";
 import { useNavigate } from "react-router";
 
+
 import { auth } from "../../firebase";
 import image from "../../images/1000_F_349497933_Ly4im8BDmHLaLzgyKg2f2yZOvJjBtlw5.jpg";
-const ProfileContainer = () => {
+const ProfileContainer = ({user, url, displayName, viewUser}) => {
   const navigate = useNavigate();
+
 
   const handleSubmit = async (page) => {
     try {
       navigate(String(page));
     } catch (err) {}
   };
-  const user = auth.currentUser;
+
   return (
+
+
     <div className="ProContainerBack">
       Settings
+
+     { String(viewUser) === String(auth.currentUser.displayName) && 
+  <div>
+
       <div className="profileContainers">
         <div  className="ImgDivPro"    
           onClick={() => handleSubmit("profilesettings")}
@@ -45,7 +53,7 @@ const ProfileContainer = () => {
               marginTop: "auto",
               marginBottom: "1%",
             }}
-            src={auth.currentUser.photoURL}
+            src={url}
             alt={image}
           />
 
@@ -60,7 +68,7 @@ const ProfileContainer = () => {
               textAlign: "center",
             }}
           >
-            {user.displayName}
+            {displayName}
           </span>
 
           <span style={{ fontSize: " 2vmin",lineHeight: "2vmin", fontWeight: "lighter",    textAlign: "center", color: "white", marginTop: "3%",  }}>
@@ -103,7 +111,7 @@ const ProfileContainer = () => {
       </div>
       <div className="profileContainers2">
         <FaPhoneAlt />
-      </div>
+      </div></div> }
     </div>
   );
 };

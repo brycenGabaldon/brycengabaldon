@@ -18,8 +18,8 @@ import Mail from "./apps/Mail";
 import Protected from "./components/Protected";
 import Lotus2 from "./apps/Lotus2/Lotus2";
 import Login from "./apps/Login/Login";
-import { auth, db } from "./firebase";
-import picture from "./images/macOS-Graphic-Light.webp";
+import { auth } from "./firebase";
+import Bartending from "./apps/Bartending";
 import Profile from "./apps/Profile/Profile";
 import ProfileContainer from "./apps/Profile/ProfileContainer";
 import Laristra from "./apps/Laristra/Laristra";
@@ -27,37 +27,28 @@ import InstagramSettings from "./apps/Instagram/InstagramSettings";
 import YoutubeSettings from "./apps/Youtube/YoutubeSettings";
 import Overview from "./apps/Overview";
 import FoodTruck from "./apps/FoodTruck/FoodTruck";
-import {
-  collection,
-  query,
-  where,
-  getDocs,
-  orderBy, limit
-} from "firebase/firestore";
 
 
 
 
-export default function App() {
- const [loaded, setLoaded] = useState(false)
 
 
-  const user2 = auth.currentUser === null ? "guest" : auth.currentUser.email ;
+export default function App({instagram, youtube, phoneNumber, url, backgroundUrl, displayName, viewUser, email, user, background, toggleLoaded, authMatch, loaded}) {
+
+
+
+
   const [isActive, setIsActive] = useState(false);
 
  
   const isLoggedIn = auth.currentUser;
-  const handleSetbackground = () => {
-    setSetbackground(!setBackground);
 
-  };
 
 useEffect( () => { console.log(isActive); }, [isActive] ); 
   const navigate = useNavigate();
   const [overlayProjects, setOverlayProjects] = useState(true);
   const [overlayContact, setOverlayContact] = useState(true);
   const [overlaySocials, setOverlaySocials] = useState(true);
-  const [setBackground, setSetbackground] = useState(false);
   const [viewingUser, setViewingUser] = useState(false)
   const handleViewingUser = (value) =>{
     console.log(viewingUser)
@@ -83,58 +74,24 @@ useEffect( () => { console.log(isActive); }, [isActive] );
       setIsActive(isActive);
     } catch (err) {}
   };
-   
-    const [viewUser, setViewUser] = useState("")
-    const [url, setUrl] = useState("");
-const changeLoaded = (value) => {
-  setLoaded(value)
-}
   
-  
-  
-  
-  const settingsRef = collection(db, "Users");
-  const q = query(settingsRef, where("displayName", "==", auth.currentUser.displayName), orderBy("created", "desc"), limit(1));
-  const getUser = async()=>{
-  console.log("getting data")
-    const querySnapshot = await getDocs(q);
-  querySnapshot.forEach((doc) => {
-    // doc.data() is never undefined for query doc snapshots
-   
-    setViewUser(doc.data().viewUser);
-  
-  
-  });
-  }
-  const q2 = query(settingsRef, where("displayName", "==", viewUser), orderBy("created", "desc"), limit(1));
-  const getUrl = async()=>{
-  
-    const querySnapshot = await getDocs(q2);
-  querySnapshot.forEach((doc) => {
-    // doc.data() is never undefined for query doc snapshots
-   
-    setUrl(doc.data().url);
-  return(url )
-  
-  });
-  }
+
           useEffect(() => {
-  
+
             const interval = setInterval(() => {
-                !viewingUser &&  
-                getUser();
-              getUrl();
-              setLoaded(true)
+          
             }, 1000);
             return () => clearInterval(interval);
       
           },);
+
+          
   return (
     <div className="App">
-      {setBackground && (
-        <img
+      {background && (
+        <img 
           className={"UserBackground"}
-          src={url || ""}
+          src={backgroundUrl || ""}
           alt={""}
         />
       )}
@@ -240,22 +197,27 @@ const changeLoaded = (value) => {
           path="/Settings"
           element={<Component backgroundColor="grey"></Component>}
         />
+                <Route
+          path="/bartending"
+          element={<Bartending/>}
+        />
         <Route
           exact
           path="/Photos"
           element={
             <Component backgroundColor="grey">
-              <Images />
+              <Images viewUser= { viewUser}/>
             </Component>
           }
         />
 
-        <Route path="/Login" element={<Login />} />
+        <Route path="/Login" element={<Login toggleLoaded={toggleLoaded}/>} />
         <Route
           path="/profile"
           element={
             <Protected>
-                <ProfileContainer></ProfileContainer>
+              <Component>
+                <ProfileContainer user={user} url={url} displayName={displayName} authMatch={authMatch} viewUser={viewUser}></ProfileContainer></Component>
             </Protected>
           }
         />
@@ -263,7 +225,7 @@ const changeLoaded = (value) => {
           path="/Instagram/"
           element={
             <Component backgroundColor="black">
-              <Instagram />
+              <Instagram instagram={instagram} loaded={loaded} />
             </Component>
           }
         />
@@ -291,12 +253,14 @@ const changeLoaded = (value) => {
             </Component>
           }
         />
+
                         <Route
           path="/profile/ProfileSettings"
           element={
+            <Protected>
             <Component backgroundColor="white">
-              <Profile setBackground={setBackground} setBackground2={handleSetbackground} viewingUser={viewingUser} handleViewingUser={handleViewingUser} />
-            </Component>
+              <Profile displayName={displayName} email={email} instagram={instagram} viewUser={viewUser} youtube={youtube} phoneNumber={phoneNumber} user={user} backgroundUrl={backgroundUrl} url={url} toggleLoaded={toggleLoaded} background={background}/>
+            </Component></Protected>
           }
         />
         <Route
@@ -308,7 +272,7 @@ const changeLoaded = (value) => {
           }
         />
       </Routes>
-
+      {loaded && <div style={{height:"100vh", width: "100vw"}}>
       <div
         className={!overlaySocials ? "Overlay22 " : "Overlay2 space1"}
         style={{
@@ -327,6 +291,9 @@ const changeLoaded = (value) => {
           sliceValue1="7"
           sliceValue2="11"
           isActive={!overlaySocials}
+          phoneNumber={phoneNumber}
+          email={email}
+          loaded={loaded}
           key={Math.floor(1 + Math.random() * 10000)}
         />
         Socials
@@ -351,11 +318,14 @@ const changeLoaded = (value) => {
           sliceValue2="3"
           isActive={!overlayContact}
           key={Math.floor(1 + Math.random() * 10000)}
+        phoneNumber={phoneNumber}
+        email={email}
+        loaded={loaded}
+        
         />
         Contact
       </div>
-
-      <div
+<div
         className={!overlayProjects ? "Overlay22" : "Overlay2 space3"}
         style={{
           color: "white",
@@ -369,11 +339,16 @@ const changeLoaded = (value) => {
           handleSocials(true),
         ]}
       >
+      
         <FolderStatus
           sliceValue1="11"
-          sliceValue2="17"
+          sliceValue2="18"
+          phoneNumber={phoneNumber}
+          email={email}
+          loaded={loaded}
           isActive={!overlayProjects}
           key={Math.floor(1 + Math.random() * 10000)}
+        
         />
         Projects
       </div>
@@ -388,11 +363,12 @@ const changeLoaded = (value) => {
           handleContact(true),
           handleSocials(true),
         ]}
-      ></div>
+      ></div></div>}
+      
 
       <DockIcons />
 
-      {!setBackground && <Mail />}
+      { !loaded && !background && <Mail />}
     </div>
   );
 }

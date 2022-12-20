@@ -12,7 +12,8 @@ export const data = {
       visible: "visible",
       iconClass: "fas fa-phone drop-shadow-lg",
       page: "/home",
-      href: "tel:602-816-1523",
+      
+      href: `PHONE`,
     },
     {
       key: 2,
@@ -26,7 +27,7 @@ export const data = {
       visible: "visible",
       iconClass: "fas fa-comments drop-shadow-lg",
       page: "/home",
-      href: "sms:602-816-1523",
+      href: "PHONESMS",
     },
     {
       key: 3,
@@ -40,7 +41,7 @@ export const data = {
       visible: "visible",
       iconClass: "fa-solid fa-envelope drop-shadow-lg",
       page: "/home",
-      href: "mailto:brycengabaldon@gmail.com",
+      href: "EMAIL",
     },
     {
       key: 4,
@@ -79,7 +80,7 @@ export const data = {
       name: "five",
       icon: "faAngry",
       label: "Github ",
-      ref: "tel:602-816-1523",
+      ref: "",
       onClick: "Function",
       labelClass: "buttonLabel",
       active: "active",
@@ -254,16 +255,12 @@ export const data = {
       key: 13,
       name: "thirteen",
       icon: "faAngry",
-      label: "Phone",
-      ref: "tel:602-816-1523",
+      label: "Bartending ",
       onClick: "Function",
       labelClass: "buttonLabel",
       active: "active",
       visible: "visible",
-      iconClass:
-        "Icons1 aspect-w-1 aspect-h-1 shadow-lg  hover:shadow-gray-500/50",
-      click: "FB",
-      href: "",
+      page: "/bartending",
     },
     {
       key: 14,

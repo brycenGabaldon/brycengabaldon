@@ -14,7 +14,8 @@ import {
 import { getAuth, updateProfile } from "firebase/auth";
 import Task2 from "./taskManager/Task2";
 
-function Images() {
+
+function Images({viewUser}) {
   const auth = getAuth();
 
   const [firebaseActive, setFirebaseActive] = useState(1);
@@ -22,8 +23,9 @@ function Images() {
 
   const [imageUpload, setImageUpload] = useState(null);
   const [imageUrls, setImageUrls] = useState([]);
-  const user = auth.currentUser === null ? "guest" : auth.currentUser.email;
-
+  const user2 = viewUser
+  const user = auth.currentUser === null ? "guest" : auth.currentUser.displayName;
+const usersEqual = user === user2 ? true: false
   const [active, setActive] = useState(false);
 
   const todo = [];
@@ -53,7 +55,7 @@ function Images() {
     setTodos(newTodos);
   };
 
-  const imagesListRef = ref(storage, user + "/");
+  const imagesListRef = ref(storage, viewUser + "/");
   const uploadFile = () => {
     if (imageUpload == null) return;
     const imageRef = ref(storage, `${user}/${imageUpload.name + v4()}`);
@@ -101,7 +103,7 @@ console.log(description)
   };
 
   /* function to add new task to firestore */
-  const userRef = doc(db, "Users", auth.currentUser.displayName)
+  const userRef = doc(db, "Users", viewUser)
   const handleSubmit = async (e) => {
     await setDoc(userRef,{
       backgroundUrl: imageUrls[isSelected],
@@ -137,6 +139,7 @@ console.log(description)
           setImageUpload(event.target.files[0]);
         }}
       />
+      { usersEqual &&
       <div>
         <button
           style={{
@@ -238,7 +241,7 @@ console.log(description)
           </button>
         )}
       </div>
-
+}
       {firebaseActive === 3 &&
         tasks.map((task) => (
           <Task2

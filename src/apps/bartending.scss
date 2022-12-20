@@ -1,0 +1,126 @@
+.outerBartending{
+    background: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+}
+.rail{
+    position: fixed;
+    padding-top: 5px;
+    bottom :0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: darkgray;
+}
+.rail2{
+    position: fixed;
+    top :0;
+    left: 50%;
+    right: 0;
+    height: 100px;
+    background: blue;
+}
+.bottles{
+height: 100%;
+aspect-ratio: 1/1;
+background: white;
+border-radius: 50%;
+float: left;
+font-size: 8px;
+line-height: 30px;
+text-align: center;
+
+}
+.bottles2{
+    height: 100%;
+    aspect-ratio: 1/1;
+    background: white;
+    border-radius: 50%;
+    float: right;
+    font-size: 8px;
+    line-height: 30px;
+    text-align: center;
+    z-index: 1000;
+    
+    }
+.bottlesActive{
+    height: 100%;
+    aspect-ratio: 1/1;
+    background: yellow;
+    border-radius: 50%;
+    float: left;
+    font-size: 8px;
+line-height: 30px;
+text-align: center;
+    }
+.railRow{
+height: 30px;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-around;
+}
+.railRow2{
+    height: 30px;
+    float: right;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    }
+.recipes{
+    position: fixed;
+    top: 0;
+    left: 5%;
+    right: 0;
+bottom: 50%;
+z-index: 1000;
+}
+.sideBar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 60%;
+    bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    background: lightgray;
+}
+.railRowGarnish{
+    height: 30px;
+    float: right;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    }
+    .railRowMixers{
+        height: 30px;
+        width: 70px;
+        float: left;
+
+        }
+        .railRowExtras{
+            height: 30px;
+            width: 70px;
+            float: right;
+
+            }
+.mixerGroup{
+    position: fixed;
+    bottom: 100px;
+    width: 40vw;
+    height: 300px;
+
+}
+.railRowBitters{
+    height: 30px;
+    width: 100%;
+margin-top: 260px;
+
+
+}

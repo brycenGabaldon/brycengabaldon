@@ -3,38 +3,50 @@
 import React from "react";
 import "../AppStyles.scss"
 import { useState, useEffect } from "react";
-import { db, auth } from "../../firebase";
+import { db, auth} from "../../firebase";
 import {
   collection,
   query,
   where,
   getDocs,
-  orderBy
+  orderBy, limit
 } from "firebase/firestore";
-
-
 
 
 const Youtube = () => {
 
-  const user = auth.currentUser === null ? "guest" : auth.currentUser.email;
 
-  const [url, setUrl] = useState("https://www.youtube.com/embed/videoseries?list=PLLY5dnxMW-q2xebdvfab4Nog-aVVrgHBM");
+const [viewUser, setViewUser] = useState("")
+  const [url, setUrl] = useState("");
   const [loaded, setLoaded] = useState(false)
 
 
 
 
-const settingsRef = collection(db, user);
-const q = query(settingsRef, where("Setting", "==", "Youtube",), orderBy("created", "asc"));
-const getUrl = async()=>{
+const settingsRef = collection(db, "Users");
+const q = query(settingsRef, where("displayName", "==", auth.currentUser.displayName), orderBy("created", "desc"), limit(1));
+const getUser = async()=>{
 
   const querySnapshot = await getDocs(q);
 querySnapshot.forEach((doc) => {
   // doc.data() is never undefined for query doc snapshots
  
-  setUrl(doc.data().url);
+  setViewUser(doc.data().viewUser);
+
+
+});
+}
+const q2 = query(settingsRef, where("displayName", "==", viewUser), orderBy("created", "desc"), limit(1));
+const getUrl = async()=>{
+getUser();
+  const querySnapshot = await getDocs(q2);
+querySnapshot.forEach((doc) => {
+  // doc.data() is never undefined for query doc snapshots
+ 
+  setUrl(doc.data().youtube);
+  console.log("got Youtube")
   console.log(url)
+
 
 });
 }
@@ -43,7 +55,6 @@ querySnapshot.forEach((doc) => {
         useEffect(() => {
 
           const interval = setInterval(() => {
-
               !loaded &&  
             getUrl();
             setLoaded(true)
@@ -55,7 +66,6 @@ querySnapshot.forEach((doc) => {
           return () => clearInterval(interval);
     
         },);
-
  
     return (
       <div className="DiscordView">
