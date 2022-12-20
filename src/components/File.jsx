@@ -41,6 +41,7 @@ console.log("page")
   const user = auth.currentUser == null ? "guest" : auth.currentUser.displayName
   const  [viewUser, setViewUser] = useState("");
   const [email, setEmail] = useState("");
+  console.log(email)
   const [phoneNumber, setPhoneNumber] = useState("");
   const settingsRef = collection(db, "Users");
   const [loaded, setLoaded] = useState(false);
