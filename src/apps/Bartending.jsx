@@ -447,9 +447,7 @@ setLime(false)
         {recipes.slice(recipe, recipe + 1).map((rec) => {
           return (
             <div className="recipes">
-              <span style={{ fontWeight: "bold" }}>{rec.Name}</span>
-              <br />
-              <br />
+              <span style={{ fontWeight: "bold" }}>{rec.Name}</span><hr style={{width: "40%"}}/>        
               <span>{rec.liquor1}</span>
               <br />
               <span>{rec.liquor2}</span>
@@ -457,7 +455,7 @@ setLime(false)
               <span>{rec.liquor3}</span>
               <br />
               <span>{rec.liquor4}</span>
-              <br />
+              <hr style={{width: "40%"}}/>
               <br />
               <span>{rec.mixer1}</span>
               <br />
@@ -466,8 +464,7 @@ setLime(false)
               <span>{rec.mixer3}</span>
               <br />
               <span>{rec.mixer4}</span>
-              <br />
-              <br />
+              <hr style={{width: "40%"}}/>
               <span>{rec.prep}</span>
               <br />
               <span>{rec.glass}</span>
@@ -679,6 +676,7 @@ setLime(false)
           >
             Merlet
           </div>
+          <div className="vLine"></div>
           <div
             className={chile ? "bottles" : "bottlesActive"}
             onClick={() => setChile(!chile)}
@@ -766,7 +764,7 @@ setLime(false)
             onClick={() => setDead(!dead)}
           >
             Dead
-          </div>
+          </div>      <div className="vLine"></div>
           <div
             className={rasp ? "bottles" : "bottlesActive"}
             onClick={() => setRasp(!rasp)}
