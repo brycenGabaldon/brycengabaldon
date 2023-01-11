@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
@@ -7,7 +7,7 @@ import {
 } from "firebase/auth";
 import "./login.scss"
 import { signInWithGoogle } from "../../firebase";
-import { auth, db} from "../../firebase";
+import { auth} from "../../firebase";
 import { useNavigate } from "react-router-dom";
 import GoogleButton from "react-google-button";
 
