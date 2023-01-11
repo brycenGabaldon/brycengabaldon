@@ -25,7 +25,9 @@ const [loginSignin, setLoginSignin] = useState(false)
 const [viewUser2, setViewUser2] =useState("")
 // const userRef = doc(db, "Users", auth.currentUser.displayName)
 
-
+const handlesetuser = () => {
+  setUser(user)
+}
 
   const register = async () => {
     try {
@@ -34,6 +36,7 @@ const [viewUser2, setViewUser2] =useState("")
         registerEmail,
         registerPassword
       );
+      handlesetuser();
       console.log(user);
     } catch (error) {
       console.log(error.message);
