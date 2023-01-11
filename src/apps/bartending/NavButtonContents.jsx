@@ -8,7 +8,7 @@ const navigate = useNavigate()
     const [buttonOpen2, setButtonOpen2] = useState(false)
     const [buttonOpen3, setButtonOpen3] = useState(false)
     const [buttonOpen4, setButtonOpen4] = useState(false)
-    const [bartending, setBartending] = useState(false)
+  
 
 const handleButtonToggle1 = () => {
 setButtonOpen(!buttonOpen)
