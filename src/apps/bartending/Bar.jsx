@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { Route, Routes } from "react-router-dom";
+
 import BarNav from './BarNav';
-import Bartending from './Bartending';
+
 
 const Bar = () => {
     return (

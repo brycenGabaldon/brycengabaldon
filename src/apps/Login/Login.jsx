@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
-  onAuthStateChanged,
+
   signOut,
 } from "firebase/auth";
 import "./login.scss"
@@ -10,7 +10,7 @@ import { signInWithGoogle } from "../../firebase";
 import { auth, db} from "../../firebase";
 import { useNavigate } from "react-router-dom";
 import GoogleButton from "react-google-button";
-import {setDoc, doc, Timestamp} from 'firebase/firestore'
+
 
 
 import image from "../../images/1000_F_349497933_Ly4im8BDmHLaLzgyKg2f2yZOvJjBtlw5.jpg"

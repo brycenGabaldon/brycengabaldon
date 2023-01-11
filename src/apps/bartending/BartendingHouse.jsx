@@ -8,8 +8,6 @@ const BartendingHouse = (i) => {
     const [toggle, setToggle] = useState(false)
     const [bartending, setBartending] = useState(false)
     const [number, setNumber] = useState(0) 
-    const navigate = useNavigate()
-    const [ recipeActive, setRecipeActive] = useState([])
     const handleRecipeClick = (i) => {
         setNumber(i+1)
    setBartending(true)

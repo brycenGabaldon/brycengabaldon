@@ -28,9 +28,6 @@ import YoutubeSettings from "./apps/Youtube/YoutubeSettings";
 import Overview from "./apps/Overview";
 import FoodTruck from "./apps/FoodTruck/FoodTruck";
 import Tracker from "./tracker/Tracker";
-import Bar from "./apps/bartending/Bar";
-import BartendingHouse from "./apps/bartending/BartendingHouse";
-import BarNav from "./apps/bartending/BarNav";
 import BarNavComponents from "./apps/bartending/BarNavComponents";
 
 
