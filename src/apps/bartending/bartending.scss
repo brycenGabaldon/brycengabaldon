@@ -1,0 +1,356 @@
+.outerBartending{
+    background: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+}
+.rail{
+    position: fixed;
+    padding-top: 5px;
+    bottom :0;
+    left: 0;
+    right: 0;
+    height: 20vh;
+    background: darkgray;
+    
+}
+.rail2{
+    position: fixed;
+    top :2vh;
+    left: 50%;
+    right: 0;
+    height: 100px;
+    background: blue;
+}
+.bottles{
+height: 100%;
+aspect-ratio: 1.5/1;
+background: white;
+border-radius: 15%;
+margin: 2%;
+float: left;
+font-size: 8px;
+line-height: 25px;
+text-align: center;
+
+}
+.bottles2{
+    height: 100%;
+    aspect-ratio: 1/1;
+    background: white;
+    border-radius: 5%;
+    float: right;
+    font-size: 8px;
+    line-height: 20px;
+    text-align: center;
+    z-index: 1000;
+    
+    }
+.bottlesActive{
+    height: 100%;
+    aspect-ratio: 1/1;
+    background: yellow;
+    border-radius: 5%;
+    float: left;
+    font-size: 8px;
+line-height: 25px;
+text-align: center;
+    }
+.railRow{
+height: 25px;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-around;
+margin-bottom: 2vh;
+}
+.railRow2{
+    height: 25px;
+    float: right;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    }
+.recipes{
+    position: fixed;
+    top: 0;
+    left: 5%;
+    right: 0;
+    font-size: 2vmax;
+bottom: 50%;
+z-index: 1000;
+}
+.sideBar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 50%;
+    bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    background: lightgray;
+}
+.railRowGarnish{
+    height: 25px;
+    float: right;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    }
+    .railRowMixers{
+        height: 25px;
+        width: 70px;
+        float: left;
+
+        }
+        .railRowExtras{
+            height: 25px;
+            width: 70px;
+            float: right;
+
+            }
+.mixerGroup{
+    position: fixed;
+    bottom: 30px;
+    width: 50vw;
+    height: 280px;
+
+}
+.railRowBitters{
+    height: 25px;
+    width: 100%;
+    justify-content: space-around;
+    display: flex;
+margin-top: 180px;
+
+
+}
+.vLine{
+    width: 1px;
+height: 100%;
+border: 1px solid black;
+}
+.BarNavOuterClosed{
+    height: 50px;
+z-index: 2000;
+
+
+    background: black;
+    position: absolute;
+    top: 2vmin;
+    right: 2vmin;
+    width: 50px;
+
+display: flex;
+
+justify-content: center;
+color: black;
+line-height: 50px;
+font-size: 30px;
+    z-index: 1100;
+    transition: all .5s;
+    border-radius: 5px;
+    background: rgb(216, 19, 19);
+    border: 1px solid black;
+    box-shadow: 2px 2px 8px rgb(61, 61, 61);
+}
+.BarNavOuterOpen{
+    box-shadow: 2px 2px 8px rgb(61, 61, 61);
+border-radius: 5px;
+
+height: 96vh;
+width: 96vw;
+    background: linear-gradient(30deg, rgb(19, 19, 19), rgb(80, 80, 80), black);
+    position: absolute;
+    top: 2vmin;
+
+    right: 2vmin;
+    
+display: flex;
+
+justify-content: center;
+
+line-height: 50px;
+font-size: 30px;
+    z-index: 1100;
+    transition: all .5s;
+}
+.ClosedNavButton{
+    color: red;
+    opacity: 1;
+    transition: all .25s;
+    transition-delay: .25s;
+}
+.OpenNavButton{
+   opacity: 0;
+   transition: all .25s;
+}
+.ClosedNavButton1{
+    color: black;
+    opacity: 1;
+    transition: all .25s;
+
+float: right;
+
+}
+.OpenNavButton1{
+   opacity: 0;
+   transition: all .25s;
+float: right;
+}
+.NavButtonContents{
+
+    height: 100%;
+    width: 100%;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+
+justify-content: center;
+
+}
+
+.BarMenuButton{
+
+    float: left;
+width: 80vw;
+margin: 2vmin;
+height: 20vh;
+
+border-radius: 10px;
+
+box-shadow: 5px 5px 10px rgba(61, 61, 61, 0.832);
+color: black;
+text-align: center;
+transition: all .25s;
+;
+}
+.BarMenuButton2{
+    width: 85vw;
+    margin: 2vmin;
+height: 60vh;
+
+border-radius: 10px;
+
+box-shadow: 5px 5px 10px rgba(61, 61, 61, 0.832);
+color: black;
+text-align: center;
+transition: all .25s;
+}
+.BarMenuButton3{
+    width: 85vw;
+    margin: 1vmin;
+height: 9vh;
+line-height: 4vh;
+font-size: 4vh;
+
+border-radius: 10px;
+box-shadow: 5px 5px 10px rgba(61, 61, 61, 0.832);
+color: black;
+text-align: center;
+transition: all .25s;
+}
+.BarCloseNav{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    line-height: 35px;
+    font-size: 20px;
+    text-align: center;
+    background: black;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    cursor: pointer;
+
+}
+.BarButton1{
+    background-image: url("https://www.thespruceeats.com/thmb/MmDghXG76LQVYRsTEtjW3frzgbg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/bar101-cocktails-504754220-580e83415f9b58564cf470b9.jpg");
+    width: 80vw;
+    height: 20vh;
+
+
+}
+.BarMenuButton2{
+
+    width: 90vw;
+line-height: 5vh;
+color: black;
+}
+.ButtonButtonBottles1{
+    width: inherit;
+    height: inherit;
+    position: relative;
+    bottom: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+.ButtonButtonBottles1a{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    position: absolute;
+
+}
+.ButtonButtonBottles2{
+    width: 40%;
+    border-radius: 5px;
+    height: 40%;
+    backdrop-filter: blur(1rem);
+    background: rgba(255, 255, 255, 0.413);
+}
+.BarOuter{position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: rgba(255, 255, 255, 0.345);
+z-index: 1000;
+    
+}
+.BarHouseOut{
+    background: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    overflow-y: scroll;
+}
+.RecipeBox{
+    width: 100vw;
+    height: 10vh;
+    background: lightgray;
+    margin: 1vmin;
+    padding: 1vmin;
+}
+.RecipeImg{
+    height: 100%;
+    aspect-ratio: 1/1;
+    margin-right: 5vmin;
+    float: right;
+    background: blue;
+    z-index: 3000;
+}
+.IngredientCardOut{
+height: 100vh;
+width: 100vw;
+    background: white;
+    z-index: 2000;
+}

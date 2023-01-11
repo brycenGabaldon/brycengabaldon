@@ -23,27 +23,8 @@ function Login({profilePic, toggleLoaded}) {
   const [user, setUser] = useState({});
 const [loginSignin, setLoginSignin] = useState(false)
 const [viewUser2, setViewUser2] =useState("")
-const userRef = doc(db, "Users", auth.currentUser.displayName)
-const handleChangeViewUser = async () => {
-  
-    try {
-      await setDoc(userRef, {
-        viewUser: viewUser2,
-        created: Timestamp.now()
-      }, {merge:true})
-toggleLoaded(false)
-    } catch (err) {
-      alert(err)
-    }
-  }
+// const userRef = doc(db, "Users", auth.currentUser.displayName)
 
-
-
-
-  useEffect(() => {
-  onAuthStateChanged(auth, (currentUser) => {
-    setUser(currentUser);
-  });});
 
 
   const register = async () => {
@@ -146,7 +127,7 @@ toggleLoaded(false)
      { user && <button className="loginButtonOut" onClick={continues}> Continue </button>
     }  {!user &&<button className="loginButtonOut" onClick={continues2}> Continue as Guest</button>
 }
-<button onClick={()=> handleChangeViewUser()}>View Other Profile:</button>
+<button >View Other Profile:</button>
                                     <input
               type="text"
               className="profileFormItem"

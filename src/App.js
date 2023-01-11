@@ -19,7 +19,7 @@ import Protected from "./components/Protected";
 import Lotus2 from "./apps/Lotus2/Lotus2";
 import Login from "./apps/Login/Login";
 import { auth } from "./firebase";
-import Bartending from "./apps/Bartending";
+import Bartending from "./apps/bartending/Bartending";
 import Profile from "./apps/Profile/Profile";
 import ProfileContainer from "./apps/Profile/ProfileContainer";
 import Laristra from "./apps/Laristra/Laristra";
@@ -27,6 +27,11 @@ import InstagramSettings from "./apps/Instagram/InstagramSettings";
 import YoutubeSettings from "./apps/Youtube/YoutubeSettings";
 import Overview from "./apps/Overview";
 import FoodTruck from "./apps/FoodTruck/FoodTruck";
+import Tracker from "./tracker/Tracker";
+import Bar from "./apps/bartending/Bar";
+import BartendingHouse from "./apps/bartending/BartendingHouse";
+import BarNav from "./apps/bartending/BarNav";
+import BarNavComponents from "./apps/bartending/BarNavComponents";
 
 
 
@@ -101,6 +106,8 @@ useEffect( () => { console.log(isActive); }, [isActive] );
         {isLoggedIn ? "Logout" : "Login"}
       </button>
 <button style={{background: "white" , zIndex:1000, position :"fixed", top: 0}}></button>
+     
+     
       <Routes>
         <Route exact path="/Home" element={""} />
         <Route exact path="/home" element={""} />
@@ -109,7 +116,7 @@ useEffect( () => { console.log(isActive); }, [isActive] );
           path="/ImageUpload"
           element={
             <Component backgroundColor="white">
-              <Login backgroundColor="white" />
+              <Login backgroundColor="blue" />
             </Component>
           }
         />
@@ -120,6 +127,14 @@ useEffect( () => { console.log(isActive); }, [isActive] );
               <Instagram viewingUser={viewingUser} handleViewingUser={handleViewingUser
               }/>
             </Component>
+          }
+        />
+                <Route
+          path="/tracker"
+          element={
+          
+<Tracker/>
+       
           }
         />
         <Route
@@ -199,8 +214,18 @@ useEffect( () => { console.log(isActive); }, [isActive] );
         />
                 <Route
           path="/bartending"
-          element={<Bartending/>}
+          element={<Component><Bartending/></Component>}
         />
+
+
+
+      <Route
+        path="components"
+        element={<BarNavComponents/>}
+      />
+
+
+
         <Route
           exact
           path="/Photos"
@@ -211,7 +236,7 @@ useEffect( () => { console.log(isActive); }, [isActive] );
           }
         />
 
-        <Route path="/Login" element={<Login toggleLoaded={toggleLoaded}/>} />
+        <Route path="/Login" element={<Login toggleLoaded={!toggleLoaded}/>} />
         <Route
           path="/profile"
           element={
@@ -368,7 +393,7 @@ useEffect( () => { console.log(isActive); }, [isActive] );
 
       <DockIcons />
 
-      { !loaded && !background && <Mail />}
+      { !loaded && !background && <Mail />} 
     </div>
   );
 }

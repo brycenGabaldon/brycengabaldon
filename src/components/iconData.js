@@ -259,8 +259,11 @@ export const data = {
       onClick: "Function",
       labelClass: "buttonLabel",
       active: "active",
+      iconClass: "fa-solid fa-martini-glass ",
       visible: "visible",
       page: "/bartending",
+      click: "FB",
+      href: "",
     },
     {
       key: 14,
